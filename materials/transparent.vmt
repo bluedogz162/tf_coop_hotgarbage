@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "effects/transparent"
+	$no_draw 1
+}

@@ -1,0 +1,5 @@
+weapon_manifest
+{
+	"file"		"scripts/weapon_ifm_steadycam.txt"
+	"file"		"scripts/weapon_ar2.txt"
+}
