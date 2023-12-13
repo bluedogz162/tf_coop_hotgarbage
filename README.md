@@ -12,11 +12,14 @@ Credits:
 
 Hot Garbage Fortress :D
 By YOW#0082/eeeyow (discord)
+
+YOW: Lead* Programmer, getting the game to actually run (LFE's code is barely functional bruh), Item Lead, etc.
+*Lead, as in lead-poisoned, I can NOT do this stuff very well
 Other contributors will be added here
 
 Lambdagon: Lambda Fortress: Community Edition, where I developed the idea for this mod. (I'm sorry for everything...)
 Damien/Seamusmario: Various playermodel code, from an older version of LFCE.
-
+Loyalists (GameBanana): Several playermodels ported to the TF2 rig
 
 
 
