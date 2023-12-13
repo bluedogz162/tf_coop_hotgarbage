@@ -17,9 +17,9 @@ YOW: Lead* Programmer, getting the game to actually run (LFE's code is barely fu
 *Lead, as in lead-poisoned, I can NOT do this stuff very well
 Other contributors will be added here
 
-Lambdagon: Lambda Fortress: Community Edition, where I developed the idea for this mod. (I'm sorry for everything...)
-Damien/Seamusmario: Various playermodel code, from an older version of LFCE.
-Loyalists (GameBanana): Several playermodels ported to the TF2 rig
+Lambdagon: Lambda Fortress: Community Edition, where I developed the idea for this mod. (I'm sorry for everything...) </br>
+Damien/Seamusmario: Various playermodel code, from an older version of LFCE.	</br>
+Loyalists (GameBanana): Several playermodels ported to the TF2 rig	</br>
 
 
 
