@@ -1,21 +1,21 @@
 # tf_coop_hotgarbage
 Crossover sourcemod based on LF:E.
 
-Installation:
-1: Clone into your sourcemods/ folder.
-2: Restart Steam for the mod to show up
-3: That's it!
+Installation:</br>
+1: Clone into your sourcemods/ folder.</br>
+2: Restart Steam for the mod to show up</br>
+3: That's it!</br>
 
 
 
-Credits:
+Credits:</br>
 
-Hot Garbage Fortress :D
-By YOW#0082/eeeyow (discord)
+Hot Garbage Fortress :D</br>
+By YOW#0082/eeeyow (discord)</br>
 
-YOW: Lead* Programmer, getting the game to actually run (LFE's code is barely functional bruh), Item Lead, etc.
-*Lead, as in lead-poisoned, I can NOT do this stuff very well
-Other contributors will be added here
+YOW: Lead* Programmer, getting the game to actually run (LFE's code is barely functional bruh), Item Lead, etc.</br>
+*Lead, as in lead-poisoned, I can NOT do this stuff very well</br>
+Other contributors will be added here</br>
 
 Lambdagon: Lambda Fortress: Community Edition, where I developed the idea for this mod. (I'm sorry for everything...) </br>
 Damien/Seamusmario: Various playermodel code, from an older version of LFCE.	</br>
