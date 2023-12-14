@@ -28,16 +28,16 @@ PlayerClass
 	
 	AmmoMax
 	{
-		"tf_ammo_primary"	"0"
-		"tf_ammo_secondary"	"0"
-		"tf_ammo_metal"		"0"
-		"tf_ammo_grenades1"	"0"
-		"tf_ammo_grenades2"	"0"
+		"tf_ammo_primary"	"1"
+		"tf_ammo_secondary"	"1"
+		"tf_ammo_metal"		"1"
+		"tf_ammo_grenades1"	"1"
+		"tf_ammo_grenades2"	"1"
 	}	
 
 	// Death Sounds
-	"sound_death"				"NPC_Antlion.Pain"
-	"sound_crit_death"			"NPC_Antlion.Pain"
-	"sound_melee_death"			"NPC_Antlion.Pain"
-	"sound_explosion_death"		"NPC_Antlion.Pain"
+	"sound_death"				""
+	"sound_crit_death"			""
+	"sound_melee_death"			""
+	"sound_explosion_death"		""
 }

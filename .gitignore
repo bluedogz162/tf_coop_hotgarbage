@@ -5,3 +5,6 @@ scripts/tf_inventory.txt
 tf2_playerstats.dmx
 modelsounds.cache
 demoheader.tmp
+custom/*
+cfg/config.cfg
+scripts/tf_inventory.txt
