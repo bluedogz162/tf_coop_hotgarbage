@@ -8,3 +8,8 @@ demoheader.tmp
 custom/*
 cfg/config.cfg
 scripts/tf_inventory.txt
+*.ain
+download/*
+demoheader.tmp
+modelsounds.cache
+media/viewed.res
