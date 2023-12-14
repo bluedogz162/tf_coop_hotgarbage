@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/playermodels/cursed_heavy"
+	"$translucent" 1
+}

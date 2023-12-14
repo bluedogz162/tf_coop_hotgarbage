@@ -2473,7 +2473,7 @@
 			"image_inventory"	"backpack/weapons/v_models/v_fist_heavy"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	""
+			"model_player"	"models/empty.mdl"
 			"attach_to_hands" "1"
 			"used_by_classes"
 			{
@@ -5623,6 +5623,14 @@
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
+			"attributes"
+			{
+				"syringe uber flavortext"
+				{
+					"attribute_class"	"add_onhit_ubercharge"
+					"value"	"0.015"
+				}
+			}
 		}
 
 		"weapon_targe"
@@ -7039,6 +7047,11 @@
 				{
 					"attribute_class"	"add_health_regen"
 					"value"	"-2"
+				}
+				"syringe uber flavortext"
+				{
+					"attribute_class"	"add_onhit_ubercharge"
+					"value"	"0.015"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -10738,6 +10751,11 @@
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"0.85"
+				}
+				"syringe uber flavortext"
+				{
+					"attribute_class"	"add_onhit_ubercharge"
+					"value"	"0.015"
 				}
 			}
 			"visuals"
@@ -19461,6 +19479,14 @@
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+			"attributes"
+			{
+							"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"3.5"
+				}
+			}
 			"visuals"
 			{
 				"animation_replacement"
@@ -19506,9 +19532,9 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"SET BONUS: chance of bitches"
 				{
-					"attribute_class"	"mult_dmg"
+					"attribute_class"	"chance_of_bitches_increase"
 					"value"	"5"
 				}
 			}
@@ -19963,7 +19989,7 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
-		"6901"
+		"6900"
 		{
 			"name"	"Nitori Playermodel"
 			"prefab"		"base_hat"
@@ -20001,6 +20027,74 @@
 			}
 			"attributes"
 			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6901"
+		{
+			"name"	"Marisa Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Player Model"
+			"baseitem"	"0"
+			"item_name"	"Kirisame Marisa"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by schwarz
+			
+			She looks so goofy with boxing gloves"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/marisa"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/marisa/c_heavy_arms.mdl"
+			"model_world"	"models/player/marisa/heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+				"move speed bonus"
+				{
+					"attribute_class"		"mult_player_movespeed"
+					"value"		"1.25"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"-75"
+				}
 
 			}
 			"visuals"
@@ -20010,6 +20104,226 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"6902"
+		{
+			"name"	"Cursed Heavy Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Demonic Possession"
+			"baseitem"	"0"
+			"item_name"	"Cursed Heavy"
+			"item_description"	"Curse Concocted by Stacknt (GameBanana)"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/cursed_heavy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_models/c_heavy_arms.mdl"
+			"model_world"	"models/player/cursed_heavy/heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"attributes"
+			{
+
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6902"
+		{
+			"name"	"Fempyro Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Genderbend"
+			"baseitem"	"0"
+			"item_name"	"Fempyro"
+			"item_description"	"Sierra Foxtrot"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/fempyro"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_models/c_pyro_arms.mdl"
+			"model_world"	"models/player/fempyro_og/pyro.mdl"
+			"used_by_classes"
+			{
+				"pyro"	"1"
+			}
+			"attributes"
+			{
+				"override footstep sound set"
+				{
+					"attribute_class"		"override_footstep_sound_set"
+					"value"		"1"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+//UNUSED, CAMERA WEAPON 
+//MAYBE I'LL IMPLEMENT IT IF I CAN MAKE STUNS ACTUALLY CONSEQUENCIAL
+//		"6902"
+//		{
+//			"name"	"The Photo Op"
+//			"first_sale_date"	"2011/08/11"
+//			"item_class"	"tf_weapon_revolver"
+//			"craft_material_type"	"weapon"
+//			"craft_class"	"weapon"
+//			"capabilities"
+//			{
+//				"nameable"		"1"
+//				"can_craft_count"	"1"
+//			}
+//			"tags"
+//			{
+//				"can_deal_damage"			"1"
+//				"can_deal_critical_damage"	"1"
+//				"can_deal_mvm_penetration_damage"	"1"
+//				"can_deal_long_distance_damage"	"1"
+//			}
+//			"show_in_armory"	"1"
+//			"item_type_name"	"Camera"
+//			"item_name"	"The Photo Op"
+//			"item_description"	"
+//			Yep, this one's going in my cringe compilation...
+//			Model by Wowza
+//			
+//			...Don't ask why it fires bullets..."
+//			"item_slot"	"secondary"
+//			"anim_slot"	"secondary"
+//			"item_quality"	"unique"
+//			"propername"	"1"
+//		"item_logname"	"diamondback"
+//			"item_iconname"	"diamondback"
+//			"min_ilevel"	"5"
+//			"max_ilevel"	"5"
+//			
+//			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_dex_revolver/c_dex_revolver"
+//			"image_inventory_size_w"		"128"
+//			"image_inventory_size_h"		"82"
+//			"inspect_panel_dist" 			"32"
+//			"model_player"	"models/weapons/c_models/c_camranger.mdl"
+//			"attach_to_hands" "1"
+//			"used_by_classes"
+//			{
+//				"spy"	"1"
+//			}
+//			"static_attrs"
+//			{
+//				"min_viewmodel_offset"		"10 0 -6"				
+//			}
+//			"attributes"
+//			{
+//
+//
+//				"crit mod disabled"
+//				{
+//					"attribute_class"	"mult_crit_chance"
+//					"value"	"9999999"
+//				}
+//				"crit forces victim to laugh"
+//				{
+//					"attribute_class"	"crit_forces_victim_to_laugh"
+//					"value" "1"
+//				}
+//				"crit from behind"
+//				{
+//					"attribute_class"	"crit_from_behind"
+//					"value" "1"
+//				}
+//
+//				"bullets per shot bonus"
+//				{
+//					"attribute_class"	"mult_bullets_per_shot"
+//					"value" "100"
+//				}
+//
+//				"mod max primary clip override"
+//				{
+//					"attribute_class"	"mod_max_primary_clip_override"
+//					"value"	"-1"
+//				}
+//				"maxammo secondary reduced"
+//				{
+//					"attribute_class"	"mult_maxammo_secondary"
+//					"value" "0.2"
+//				}
+//				"clip size penalty"
+//				{
+//					"attribute_class"	"mult_clipsize"
+//					"value"	"0.5"
+//				}
+//				"crit does no damage"
+//				{
+//					"attribute_class"	"crit_does_no_damage"
+//					"value" "1"
+//				}
+//				"mod ammo per shot"
+//				{
+//					"attribute_class"	"mod_ammo_per_shot"
+//					"value"	"3"
+//				}
+//				"damage penalty"
+//				{
+//					"attribute_class"	"mult_dmg"
+//					"value"	"0"
+//				}
+//				"fire rate penalty"
+//				{
+//					"attribute_class"	"mult_postfiredelay"
+//					"value"	"3"
+//				}
+//			}
+//			"visuals"
+//			{
+//				"sound_single_shot"	"Camera.SnapShotMultiple"
+//				"sound_burst"	"Camera.SnapShotMultiple"
+//				"muzzle_flash"	"muzzle_bignasty"
+//				"tracer_effect"	""
+//			}
+//			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+//			"drop_sound"		"ui/item_light_gun_drop.wav"
+//		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -29389,6 +29703,28 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42000"
+		{
+			"name"	"SET BONUS: chance of bitches"
+			"attribute_class"	"chance_of_bitches_increase"
+			"description_string"	"#Attrib_ChanceOfPussyIncrease"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"is_set_bonus"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42001"
+		{
+			"name"	"syringe uber flavortext"
+			"attribute_class"	"add_onhit_ubercharge"
+			"description_string"	"Attrib_SyringeGunUberInfo"
+			"description_format"	"value_is_additive_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"armory_desc"	"on_hit"
 			"stored_as_integer"	"0"
 		}
 	}

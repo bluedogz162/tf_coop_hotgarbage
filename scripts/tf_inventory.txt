@@ -3,7 +3,7 @@
 	"scout"
 	{
 		"primary"		"0"
-		"secondary"		"0"
+		"secondary"		"5"
 		"melee"		"0"
 		"building"		"0"
 		"pda"		"0"
@@ -72,8 +72,8 @@
 	}
 	"heavy"
 	{
-		"primary"		"3"
-		"secondary"		"1"
+		"primary"		"0"
+		"secondary"		"0"
 		"melee"		"0"
 		"building"		"0"
 		"pda"		"0"
@@ -81,7 +81,7 @@
 		"head"		"0"
 		"misc"		"0"
 		"action"		"0"
-		"misc2"		"0"
+		"misc2"		"1"
 		"taunt"		"0"
 	}
 	"pyro"
@@ -95,13 +95,13 @@
 		"head"		"0"
 		"misc"		"0"
 		"action"		"0"
-		"misc2"		"0"
+		"misc2"		"1"
 		"taunt"		"0"
 	}
 	"spy"
 	{
 		"primary"		"0"
-		"secondary"		"0"
+		"secondary"		"2"
 		"melee"		"0"
 		"building"		"0"
 		"pda"		"0"
@@ -114,7 +114,7 @@
 	}
 	"engineer"
 	{
-		"primary"		"3"
+		"primary"		"0"
 		"secondary"		"0"
 		"melee"		"0"
 		"building"		"0"
@@ -123,7 +123,7 @@
 		"head"		"0"
 		"misc"		"0"
 		"action"		"0"
-		"misc2"		"1"
+		"misc2"		"0"
 		"taunt"		"0"
 	}
 	"civilian"

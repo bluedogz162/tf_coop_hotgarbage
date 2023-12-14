@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/playermodels/fempyro_large"
+	"$translucent" 1
+}

@@ -1,10 +1,10 @@
 "GameInfo"
 {
-	game			"Hot Garbage Fortress"
-	type			multiplayer_only
+	game			"Lambda Fortress: Extended"
+	type 			multiplayer_only
 	GameData		"tf_coop_extended.fgd"
 	icon			"resource/game"
-	developer		"YOW#0082"
+	developer		"LFE Team"
 	developer_url	"http://lfe.tf/"
 
 	nomodels	1
@@ -12,7 +12,7 @@
 	nocrosshair 0
 	advcrosshair 1
 	supportsvr	0
-	hasportals	1
+	hasportals	0
 
 	hidden_maps
 	{
@@ -57,8 +57,8 @@
 
 	FileSystem
 	{
+	
 		SteamAppId		243750	// Source SDK Base 2013 Multiplayer
-
 		SearchPaths
 		{
 			// Firstly, mount all user customizations.  This will search for VPKs and subfolders
@@ -75,16 +75,35 @@
 			gamebin				|gameinfo_path|bin
 
 			// Search shared VPK files.
+			game+mod			|gameinfo_path|lfe_misc_dir.vpk
+			game+mod			|gameinfo_path|lfe_textures_dir.vpk
+
+			// Search shared VPK files.
 			game_lv				hl2/hl2_lv.vpk
 			game				|all_source_engine_paths|hl2/hl2_textures.vpk
 			game				|all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
 			game				|all_source_engine_paths|hl2/hl2_sound_misc.vpk
 			game				|all_source_engine_paths|hl2/hl2_misc.vpk
 			platform			|all_source_engine_paths|platform/platform_misc.vpk
-			
+
 			// Mount in shared loose files.
 			game				|all_source_engine_paths|hl2
 			platform			|all_source_engine_paths|platform
+
+			// Mount live TF2 and hammer editor stuff
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_sound_misc.vpk"
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_misc.vpk"
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_sound_vo_english.vpk"
+			game				"|all_source_engine_paths|../Team Fortress 2/tf/tf2_textures.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/ep2/ep2_sound_vo_english.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/ep2/ep2_pak.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/episodic/ep1_sound_vo_english.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/episodic/ep1_pak.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/lostcoast/lostcoast_sound_vo_english.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/lostcoast/lostcoast_pak.vpk"
+			game				"|all_source_engine_paths|../Portal/portal/portal_sound_vo_english_pak.vpk"
+			game				"|all_source_engine_paths|../Portal/portal/portal_pak.vpk"
+			game				"|all_source_engine_paths|../Half-Life 2/hl1/hl1_pak.vpk"
 
 			// Random files downloaded from gameservers go into a seperate directory, so
 			// that it's easy to keep those files segregated from the official game files

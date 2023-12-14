@@ -1,6 +1,6 @@
 "GameInfo"
 {
-	game			"Untitled Shitposty Lambda Fortress Mod"
+	game			"Hot Garbage Fortress"
 	type			multiplayer_only
 	GameData		"tf_coop_extended.fgd"
 	icon			"resource/game"

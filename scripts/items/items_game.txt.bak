@@ -19461,6 +19461,14 @@
 			{
 				"min_viewmodel_offset"		"10 0 -7"
 			}
+			"attributes"
+			{
+							"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"3.5"
+				}
+			}
 			"visuals"
 			{
 				"animation_replacement"
@@ -19506,9 +19514,9 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"SET BONUS: chance of bitches"
 				{
-					"attribute_class"	"mult_dmg"
+					"attribute_class"	"chance_of_bitches_increase"
 					"value"	"5"
 				}
 			}
@@ -19963,7 +19971,7 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
-		"6901"
+		"42000"
 		{
 			"name"	"Nitori Playermodel"
 			"prefab"		"base_hat"
@@ -19979,7 +19987,8 @@
 			"item_type_name" "Player Model"
 			"baseitem"	"0"
 			"item_name"	"Nitori Kawashiro"
-			"item_description"	"Model ported by Loyalists on GameBanana, original model by lootz, tamo"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by lootz, tamo"
 			"item_slot"	"misc2"
 			"anim_slot"	"FORCE_NOT_USED"
 			"equip_region"	"hat"
@@ -20000,7 +20009,62 @@
 			}
 			"attributes"
 			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
 
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"42001"
+		{
+			"name"	"Marisa Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Player Model"
+			"baseitem"	"0"
+			"item_name"	"Kirisame Marisa"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by schwarz"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/marisa"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/marisa/c_heavy_arms.mdl"
+			"model_world"	"models/player/marisa/heavy.mdl"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
 			}
 			"visuals"
 			{
@@ -29387,6 +29451,17 @@
 			"attribute_class"	"stickybomb_quickie"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42000"
+		{
+			"name"	"SET BONUS: chance of bitches"
+			"attribute_class"	"chance_of_bitches_increase"
+			"description_string"	"#Attrib_ChanceOfPussyIncrease"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"is_set_bonus"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
