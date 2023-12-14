@@ -1,6 +1,6 @@
 //
 // Team Fortress - Medic Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.

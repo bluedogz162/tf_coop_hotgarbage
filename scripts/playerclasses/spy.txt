@@ -1,6 +1,6 @@
 //
 // Team Fortress - Spy Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.

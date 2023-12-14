@@ -1,6 +1,6 @@
 //
 // Team Fortress - Soldier Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.

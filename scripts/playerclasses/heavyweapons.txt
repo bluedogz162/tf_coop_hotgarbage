@@ -1,6 +1,6 @@
 //
 // Team Fortress - HeavyWeapons Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.

@@ -1,6 +1,6 @@
 //
 // Team Fortress - Sniper Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.

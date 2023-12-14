@@ -1,6 +1,6 @@
 //
 // Team Fortress - Demoman Player Class
-//
+//h
 PlayerClass
 {
 	// Attributes.
