@@ -13,3 +13,6 @@ download/*
 demoheader.tmp
 modelsounds.cache
 media/viewed.res
+*.ztmp
+modelsounds.cache
+GameState.txt

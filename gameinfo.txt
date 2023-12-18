@@ -1,10 +1,10 @@
 "GameInfo"
 {
-	game			"Lambda Fortress: Extended"
+	game			"Hot Garbage Fortress"
 	type 			multiplayer_only
 	GameData		"tf_coop_extended.fgd"
 	icon			"resource/game"
-	developer		"LFE Team"
+	developer		"YOW"
 	developer_url	"http://lfe.tf/"
 
 	nomodels	1

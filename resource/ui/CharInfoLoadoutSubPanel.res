@@ -270,7 +270,7 @@
 		"ControlName"		"ImageButton"
 		"fieldName"			"wildcard"
 		"xpos"				"c-50"
-		"ypos"				"190"
+		"ypos"				"210"
 		"zpos"				"6"
 		"wide"				"60"
 		"tall"				"120"

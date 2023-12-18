@@ -19856,7 +19856,7 @@
 			"name"	"Medic Playermodel"
 			"prefab"		"base_hat"
 			"hidden"	"0"
-			"item_class"	"tf_wearable"
+			"item_class"	"tf_wearable_vm"
 			"capabilities"
 			{
 				"paintable"		"1"
