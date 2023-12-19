@@ -1,0 +1,91 @@
+"Pistol.HelpingHandRetract"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.20"
+	"wave"		")weapons/pistol/gunother/pistol_helpinghandretract.wav"
+}
+
+"Pistol.HelpingHandExtend"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.50"
+	"wave"		")weapons/pistol/gunother/pistol_helpinghandextend.wav"
+}
+
+"Pistol.ItemPickupRetract"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.20"
+	"wave"		")weapons/pistol/gunother/pistol_helpinghandretract.wav"
+}
+
+"Pistol.ItemPickupExtend"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.50"
+	"wave"		")weapons/pistol/gunother/pistol_helpinghandextend.wav"
+}
+
+"Pistol_L4D.Deploy"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_NORM"
+	"volume"		"0.80,0.77"
+	"wave"		")weapons/pistol/gunother/pistol_deploy_1.wav"
+}
+
+"Pistol_L4D.ClipIn"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"		")weapons/pistol/gunother/pistol_clip_in_1.wav"
+}
+
+"Pistol_L4D.ClipOut"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"		")weapons/pistol/gunother/pistol_clip_out_1.wav"
+}
+
+"Pistol_L4D.ClipLocked"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"		")weapons/pistol/gunother/pistol_clip_locked_1.wav"
+}
+
+"Pistol.Slideback"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"		")weapons/pistol/gunother/pistol_slideback_1.wav"
+}
+
+"Pistol.SlideForward"
+{
+	"channel"		"CHAN_ITEM"
+	"soundlevel"		"SNDLVL_NORM"
+	"wave"		")weapons/pistol/gunother/pistol_slideforward_1.wav"
+}
+
+"Pistol.Fire"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_TALKING"
+	"volume"		"0.65"
+	"wave"		")weapons/pistol/gunfire/pistol_fire.wav"
+}
+
+"Pistol.DualFire"
+{
+	"channel"		"CHAN_WEAPON"
+	"soundlevel"		"SNDLVL_TALKING"
+	"volume"		"0.75"
+	"pitch"		"95,105"
+	"wave"		")weapons/pistol/gunfire/pistol_dual_fire.wav"
+}

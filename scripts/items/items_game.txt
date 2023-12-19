@@ -10917,6 +10917,72 @@
 				"sound_burst"	"Weapon_Liberty_Launcher.SingleCrit"
 			}
 		}
+		"9999"
+		{
+			"name"	"The Test Weapon"
+			"first_sale_date"	"2011/03/23"
+			"item_class"	"tf_weapon_shotgun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"The Test Weapon"
+			"item_name"	"The Test Weapon"
+			"item_description"	"(The Test Weapon)"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"item_logname"	"liberty_launcher"
+			"item_iconname"	"liberty_launcher"
+			"propername"	"1"
+			"min_ilevel"	"25"
+			"max_ilevel"	"25"
+			"inspect_panel_dist" "68"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_liberty_launcher/c_liberty_launcher"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_shotgun/c_shotgun.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+				"pyro"		"1"
+				"heavy"		"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -3 -10"				
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"projectile entity name"
+				{
+					"attribute_class"	"projectile_entity_name"
+					"value" "tf_projectile_syringe"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_Liberty_Launcher.Single"
+				"sound_burst"	"Weapon_Liberty_Launcher.SingleCrit"
+				
+				"muzzle_flash"	"_flamethrower_REAL"
+			}
+		}
 		"415"
 		{
 			"name"	"The Reserve Shooter"
@@ -12079,6 +12145,7 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+
 		"526"
 		{
 			"name"	"The Machina"
@@ -19608,11 +19675,7 @@
 			"attributes"
 			{
 
-			"lunchbox adds minicrits"
-				{
-					"attribute_class"	"view_height_multiplier"
-					"value"	"5"
-				}
+
 			}
 			"visuals"
 			{
@@ -19658,7 +19721,11 @@
 			}
 			"attributes"
 			{
-
+			"additional halloween response criteria name"
+				{
+					"attribute_class"	"additional_halloween_response_criteria_name"
+					"value"	"IsSoldierMaggotHat:1"
+				}
 			}
 			"visuals"
 			{
@@ -20150,7 +20217,7 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
-		"6902"
+		"6903"
 		{
 			"name"	"Fempyro Playermodel"
 			"prefab"		"base_hat"
@@ -20200,130 +20267,96 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
-//UNUSED, CAMERA WEAPON 
-//MAYBE I'LL IMPLEMENT IT IF I CAN MAKE STUNS ACTUALLY CONSEQUENCIAL
-//		"6902"
-//		{
-//			"name"	"The Photo Op"
-//			"first_sale_date"	"2011/08/11"
-//			"item_class"	"tf_weapon_revolver"
-//			"craft_material_type"	"weapon"
-//			"craft_class"	"weapon"
-//			"capabilities"
-//			{
-//				"nameable"		"1"
-//				"can_craft_count"	"1"
-//			}
-//			"tags"
-//			{
-//				"can_deal_damage"			"1"
-//				"can_deal_critical_damage"	"1"
-//				"can_deal_mvm_penetration_damage"	"1"
-//				"can_deal_long_distance_damage"	"1"
-//			}
-//			"show_in_armory"	"1"
-//			"item_type_name"	"Camera"
-//			"item_name"	"The Photo Op"
-//			"item_description"	"
-//			Yep, this one's going in my cringe compilation...
-//			Model by Wowza
-//			
-//			...Don't ask why it fires bullets..."
-//			"item_slot"	"secondary"
-//			"anim_slot"	"secondary"
-//			"item_quality"	"unique"
-//			"propername"	"1"
-//		"item_logname"	"diamondback"
-//			"item_iconname"	"diamondback"
-//			"min_ilevel"	"5"
-//			"max_ilevel"	"5"
-//			
-//			"image_inventory"	"backpack/workshop_partner/weapons/c_models/c_dex_revolver/c_dex_revolver"
-//			"image_inventory_size_w"		"128"
-//			"image_inventory_size_h"		"82"
-//			"inspect_panel_dist" 			"32"
-//			"model_player"	"models/weapons/c_models/c_camranger.mdl"
-//			"attach_to_hands" "1"
-//			"used_by_classes"
-//			{
-//				"spy"	"1"
-//			}
-//			"static_attrs"
-//			{
-//				"min_viewmodel_offset"		"10 0 -6"				
-//			}
-//			"attributes"
-//			{
-//
-//
-//				"crit mod disabled"
-//				{
-//					"attribute_class"	"mult_crit_chance"
-//					"value"	"9999999"
-//				}
-//				"crit forces victim to laugh"
-//				{
-//					"attribute_class"	"crit_forces_victim_to_laugh"
-//					"value" "1"
-//				}
-//				"crit from behind"
-//				{
-//					"attribute_class"	"crit_from_behind"
-//					"value" "1"
-//				}
-//
-//				"bullets per shot bonus"
-//				{
-//					"attribute_class"	"mult_bullets_per_shot"
-//					"value" "100"
-//				}
-//
-//				"mod max primary clip override"
-//				{
-//					"attribute_class"	"mod_max_primary_clip_override"
-//					"value"	"-1"
-//				}
-//				"maxammo secondary reduced"
-//				{
-//					"attribute_class"	"mult_maxammo_secondary"
-//					"value" "0.2"
-//				}
-//				"clip size penalty"
-//				{
-//					"attribute_class"	"mult_clipsize"
-//					"value"	"0.5"
-//				}
-//				"crit does no damage"
-//				{
-//					"attribute_class"	"crit_does_no_damage"
-//					"value" "1"
-//				}
-//				"mod ammo per shot"
-//				{
-//					"attribute_class"	"mod_ammo_per_shot"
-//					"value"	"3"
-//				}
-//				"damage penalty"
-//				{
-//					"attribute_class"	"mult_dmg"
-//					"value"	"0"
-//				}
-//				"fire rate penalty"
-//				{
-//					"attribute_class"	"mult_postfiredelay"
-//					"value"	"3"
-//				}
-//			}
-//			"visuals"
-//			{
-//				"sound_single_shot"	"Camera.SnapShotMultiple"
-//				"sound_burst"	"Camera.SnapShotMultiple"
-//				"muzzle_flash"	"muzzle_bignasty"
-//				"tracer_effect"	""
-//			}
-//			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
-//			"drop_sound"		"ui/item_light_gun_drop.wav"
-//		}
+		"6904"
+		{
+			"name" "Wildcard L4D Pistol"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_smg"
+			"craft_class"	"weapon"
+			"baseitem"		"1"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"#TF_Weapon_Pistol"
+			"item_logname"	"pep_pistol"
+			"item_iconname"	"pep_pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/l4d/v_models/v_pistol.mdl"
+			"model_world"	"models/l4d/w_models/w_pistol_1911.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "2.5"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "3.0"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"32767"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.48"
+				}
+
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Pistol.Fire"
+				"sound_burst"			"Pistol.DualFire"
+				"muzzle_flash"		"weapon_muzzle_flash_pistol"
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
