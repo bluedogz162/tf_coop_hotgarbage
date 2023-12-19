@@ -20297,7 +20297,7 @@
 			"max_ilevel"	"10"
 			"show_in_armory"	"1"
 			"attach_to_hands"	"2"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_pep_pistol/c_pep_pistol"
+			"image_inventory"	"backpack/weapons/l4d_pistol"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"

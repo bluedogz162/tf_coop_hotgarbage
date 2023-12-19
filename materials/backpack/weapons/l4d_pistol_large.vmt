@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/weapons/l4d_pistol"
+	"$translucent" 1
+}
