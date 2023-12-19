@@ -20288,7 +20288,7 @@
 			"baseitem"		"1"
 			"craft_material_type"	"weapon"
 			"item_type_name"	"#TF_Weapon_Pistol"
-			"item_name"	"#TF_Weapon_Pistol"
+			"item_name"	"M1911"
 			"item_logname"	"pep_pistol"
 			"item_iconname"	"pep_pistol"
 			"item_slot"	"secondary"
@@ -20348,10 +20348,17 @@
 			{
 				"sound_single_shot"		"Pistol.Fire"
 				"sound_burst"			"Pistol.DualFire"
-				"muzzle_flash"		"weapon_muzzle_flash_pistol"
+				"sound_reload"			"Pistol_L4D.ClipLocked"
 				"animation_replacement"
 				{
 					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
+					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
