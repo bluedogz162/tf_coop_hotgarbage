@@ -50,7 +50,7 @@
 		"tabPosition"		"0"
 		"labelText"			""
 		"textAlignment"		"south-west"
-		"Command"			"joinclass random"
+		"Command"			"joinclass wildcard"
 		"Default"			"1"
 		"font"				"MenuKeys"
 		"fgcolor"			"TanDark"
