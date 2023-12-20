@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/playermodels/megu"
+	"$translucent" 1
+}

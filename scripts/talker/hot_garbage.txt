@@ -1,0 +1,13 @@
+criterion "IsKleinerModel" "playermodel" "models/player/kleiner.mdl" "required"
+
+Response PlayerHelpHeavy
+{
+	scene "scenes/Player/Heavy/low/243.vcd" 
+	scene "scenes/Player/Heavy/low/244.vcd" 
+	scene "scenes/Player/Heavy/low/245.vcd" 
+}
+Rule PlayerHelpHeavy
+{
+	criteria ConceptPlayerHelp IsHeavy
+	Response PlayerHelpHeavy
+}

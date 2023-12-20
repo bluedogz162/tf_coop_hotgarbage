@@ -17,3 +17,5 @@ media/viewed.res
 modelsounds.cache
 GameState.txt
 demoheader.tmp
+materials/temp/*
+materials/vgui/logos/*

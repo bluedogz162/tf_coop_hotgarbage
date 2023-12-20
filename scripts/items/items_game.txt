@@ -20364,6 +20364,130 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+		"6905"
+		{
+			"name"	"Megumin Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Magical Girl"
+			"baseitem"	"0"
+			"item_name"	"Megumin"
+			"item_description"	"Model ported by Litronom"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/megu"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/nitori/c_engineer_arms.mdl"
+			"model_world"	"models/custom/player/megumin/megumin.mdl"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"-20"
+				}
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value" "0.4"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6906"
+		{
+			"name"	"Megumin Staff"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Magical Girl"
+			"baseitem"	"0"
+			"item_name"	"Megumin"
+			"item_description"	"Model ported by Litronom"
+			"item_slot"	"primary"
+			"anim_slot"	"MELEE_ALLCLASS"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/weapons/megustaff"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/megustaff/c_caber.mdl"
+			"used_by_classes"
+			{
+				"sniper"	"1"
+			}
+			"attributes"
+			{
+				"mod ammo per shot"
+				{
+					"attribute_class"	"mod_ammo_per_shot"
+					"value"	"5"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"3.5"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"

@@ -746,4 +746,4 @@ criterion "ConceptPlayerMatchOverComp" "Concept" "TLK_MATCH_OVER_COMP" required
 #include "talker/Medic_auto.txt"
 #include "talker/Pyro_auto.txt"
 #include "talker/Spy_auto.txt"
-
+#include "talker/hot_garbage.txt"
