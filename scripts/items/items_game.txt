@@ -19590,12 +19590,16 @@
 			"image_inventory"	"backpack/playermodels/kleiner"
 			"image_inventory_size_w"		"16"
 			"image_inventory_size_h"		"16"
+			"response_criteria"			"IsKleinerModel"
 			"drop_type"	"drop"
 			"model_player"	"models/weapons/c_arms_citizen.mdl"
 			"model_world"	"models/player/kleiner.mdl"
 			"used_by_classes"
 			{
 				"wildcard"	"1"
+			}
+			"static_attrs"
+			{		
 			}
 			"attributes"
 			{
@@ -19661,6 +19665,7 @@
 			"attach_to_hands_vm_only"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
+			"response_criteria"			"IsZombieCostume"
 			"max_ilevel"	"10"
 			"image_inventory"	"vgui/class_icons/filter_scout"
 			"image_inventory_size_w"		"128"

@@ -316,7 +316,7 @@ criterion "IsCivilian" "playerclass" "Civilian" "required"
 criterion "IsCombineSoldier" "playerclass" "Combine" "required"
 criterion "IsZombie" "playerclass" "Zombie" "required"
 criterion "IsZombine" "playerclass" "Zombine" "required"
-criterion "IsAntlion" "playerclass" "Antlion" "required"
+criterion "IsWildcard" "playerclass" "Wildcard" "required"
 criterion "IsAntlionWorker" "playerclass" "AntlionWorker" "required"
 
 criterion "IsNotScout" "playerclass" "!=Scout" "required" 
@@ -333,7 +333,7 @@ criterion "IsNotCivilian" "playerclass" "!=Civilian" "required"
 criterion "IsNotCombineSoldier" "playerclass" "!=Combine" "required"
 criterion "IsNotZombie" "playerclass" "!=Zombie" "required"
 criterion "IsNotZombine" "playerclass" "!=Zombine" "required"
-criterion "IsNotAntlion" "playerclass" "!=Antlion" "required"
+criterion "IsNotWildcard" "playerclass" "!=Wildcard" "required"
 criterion "IsNotAntlionWorker" "playerclass" "!=AntlionWorker" "required"
 
 
@@ -349,7 +349,7 @@ criterion "IsVictimEngineer" "victimclass" "Engineer" "required"  weight 0
 criterion "IsVictimCivilian" "victimclass" "Civilian" "required"  weight 0
 criterion "IsVictimCombineSoldier" "victimclass" "Combine" "required"  weight 0
 criterion "IsVictimZombie" "victimclass" "Zombie" "required"  weight 0
-criterion "IsVictimAntlion" "victimclass" "Antlion" "required"  weight 0
+criterion "IsVictimWildcard" "victimclass" "Wildcard" "required"  weight 0
 
 criterion "IsNotVictimScout" "victimclass" "!=Scout" "required" weight 0
 criterion "IsNotVictimSniper" "victimclass" "!=Sniper" "required" weight 0
@@ -363,7 +363,9 @@ criterion "IsNotVictimEngineer" "victimclass" "!=Engineer" "required" weight 0
 criterion "IsNotVictimCivilian" "victimclass" "!=Civilian" "required" weight 0
 criterion "IsNotVictimCombineSoldier" "victimclass" "!=Combine" "required" weight 0
 criterion "IsNotVictimZombie" "victimclass" "!=Zombie" "required" weight 0
-criterion "IsNotVictimAntlion" "victimclass" "!=Antlion" "required" weight 0
+criterion "IsNotVictimWildcard" "victimclass" "!=Wildcard" "required" weight 0
+
+
 
 
 criterion "2PercentChance"   "randomnum"               "=>98"   required
