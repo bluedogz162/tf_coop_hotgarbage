@@ -9,7 +9,7 @@
 
 	"$phongexponent" "0"
 	"$phongboost" "0"	
-	"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$lightwarptexture" "models/custom/player/megumin/cartoon_shader"
 	"$phongfresnelranges"	"[0.05 1 5]"
 //	"$phongtint"			"[0 0.5 1]"
 	"$halflambert" "1"

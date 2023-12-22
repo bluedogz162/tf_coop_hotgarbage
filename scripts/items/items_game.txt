@@ -19667,7 +19667,7 @@
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/playermodels/miku"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 //			"model_player"	"models/player/hatsune_miku/scout.mdl"
@@ -20598,6 +20598,10 @@
 			{
 				"sound_single_shot"		"coast.thumper_dust"
 				"sound_burst"		"coast.thumper_dust"
+				"animation_replacement"
+				{
+					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
+				}
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
