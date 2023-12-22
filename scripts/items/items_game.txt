@@ -20550,10 +20550,10 @@
 			}
 			"loadondemand" "1"
 			"show_in_armory"	"1"
-			"item_type_name" "Magical Girl"
+			"item_type_name" "Magical Implement"
 			"baseitem"	"0"
-			"item_name"	"Megumin"
-			"item_description"	"Model ported by Litronom"
+			"item_name"	"Megumin's Explosion Staff"
+			"item_description"	""
 			"item_slot"	"primary"
 			"anim_slot"	"MELEE_ALLCLASS"
 			"equip_region"	"hat"
@@ -20596,7 +20596,8 @@
 			}
 			"visuals"
 			{
-
+				"sound_single_shot"		"coast.thumper_dust"
+				"sound_burst"		"coast.thumper_dust"
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
