@@ -20662,7 +20662,77 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
-
+		"6908"
+		{
+			"name"	"Klobb"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_smg"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Škorpion vz. 61"
+			"baseitem"	"0"
+			"item_name"	"Klobb"
+			"item_description"	"Model from GoldenEye: Source"
+			"item_slot"	"secondary"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/weapons/klobb"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/klobb/v_klobb.mdl"
+			"model_world"	"models/weapons/klobb/w_klobb.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"attributes"
+			{
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.8"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.50"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"800"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Klobb.Fire"
+				"sound_burst"		"Klobb.Fire"
+				"sound_reload"		"GoldenEye.AutoReload"
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
+					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"

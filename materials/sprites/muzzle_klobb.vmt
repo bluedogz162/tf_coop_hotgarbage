@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	"$baseTexture" "sprites/muzzle_klobb"
+	"$surfaceprop"	"no_decal"
+	"$additive"	1
+	"$vertexcolor"	1
+	"$vertexalpha"	1
+}
+
+// Used by: Klobb, ZMG

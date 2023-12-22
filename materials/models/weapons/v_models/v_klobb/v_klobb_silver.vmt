@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\v_models\v_klobb\v_klobb"
+	"$bumpmap" "models\weapons\v_models\v_klobb\v_klobb_normal"
+
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmapcontrast" "1"
+	"$envmaptint" "[.28 .28 .30]"
+
+	"$phong" "1"
+	"$phongexponent" "40"
+	//"$phongexponenttexture" "models\weapons\v_models\v_klobb\v_klobb_phong"
+	"$phongboost"	"80"
+	//"$phongalbedotint" "1"
+	"$phongfresnelranges"	"[0.1 2 5]" //[Front/Back - Left/Right - Top/Bottom]
+	"$halflambert" "1"
+
+	"$color2"		 "{160 160 160}"
+
+}
