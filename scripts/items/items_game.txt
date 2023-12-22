@@ -19558,7 +19558,13 @@
 			{
 				"animation_replacement"
 				{
-
+					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_RUN_MELEE"	"ACT_HL2MP_RUN_MELEE"
+					"ACT_MP_AIRWALK_MELEE"	"ACT_HL2MP_AIRWALK_MELEE"
+					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_SWIM_MELEE"
+					"ACT_MP_JUMP_MELEE"	"ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_HL2MP_WALK_CROUCH_MELEE"
 				}
 			}
 		}
@@ -20602,6 +20608,56 @@
 				{
 					"ACT_VM_PRIMARYATTACK" 					"ACT_MELEE_ALLCLASS_VM_SWINGHARD"
 				}
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6905"
+		{
+			"name"	"Ganyu Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Goat Girl"
+			"baseitem"	"0"
+			"item_name"	"Ganyu (Lewd)"
+			"item_description"	"Model ported by Vaz0w, MDJSN, Alvaro"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/gan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/ganyu_vm.mdl"
+			"model_world"	"models/ganyu_pm.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
+
 			}
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"

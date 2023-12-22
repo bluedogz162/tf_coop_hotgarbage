@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "genshin/ganyu/skin_base_ganyu_painted_nip_newnip_dq"
+	"$lightwarptexture" "genshin/ganyu/basewarp"
+         "$bumpmap" "genshin/ganyu/normal"
+        "$nocull" 1
+	"$nodecal" 1
+	"$phong" "1"
+	"$phongboost"	".02"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges"	"[1 .1 .1]"
+	"$PhongExponent" "1.0"
+	"$halflambert" "1"
+}
+
