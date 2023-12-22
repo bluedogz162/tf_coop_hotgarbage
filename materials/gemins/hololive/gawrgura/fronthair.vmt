@@ -1,0 +1,6 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "Gemins/hololive/GawrGura/hair"
+	"$lightwarpTexture" "Gemins/hololive/GawrGura\basewarp"
+	"$bumpmap" "Gemins/hololive/GawrGura\Normal"
+}

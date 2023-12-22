@@ -19701,6 +19701,54 @@
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
 			}
+		"10100"
+		{
+			"name"	"Gawr Gura"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Shark"
+			"item_name"	"Gawr Gura"
+			"item_description"	"Model by Hololive/Cover"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/gemins/hololive/gawrgura_player.mdl"
+			"model_player"	"models/gemins/hololive/gawrgura_arms.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+		}
 		"20071"
 		{
 			"name"	"Scout Playermodel"
