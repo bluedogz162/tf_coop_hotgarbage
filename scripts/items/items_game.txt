@@ -20737,6 +20737,87 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
+		"6909"
+		{
+			"name"	"Juandeag"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_smg"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Desert Eagle"
+			"baseitem"	"0"
+			"item_name"	"Magnum Pistol"
+			"item_description"	""
+			"item_slot"	"secondary"
+			"equip_region"	"hat"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/weapons/deag"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_pist_deagle.mdl"
+			"model_world"	"models/weapons/w_pist_deagle.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"attributes"
+			{
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.28"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"5.50"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"14"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}		
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"5.0"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_DEagle.Single"
+				"sound_burst"		"Weapon_DEagle.Single"
+				"sound_reload"		"Weapon_DEagle.ClipIn"
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
+					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
