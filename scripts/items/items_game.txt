@@ -20716,6 +20716,11 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value"				"800"
 				}
+				"dmg pierces resists absorbs"
+				{
+					"attribute_class"	"mod_pierce_resists_absorbs"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -20813,6 +20818,72 @@
 					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
 					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
 					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"6910"
+		{
+			"name"	"SPAS-12"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_shotgun"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "SPAS-12"
+			"baseitem"	"1"
+			"item_name"	"Shotgun (HL2)"
+			"item_description"	""
+			"item_slot"	"primary"
+			"equip_region"	"hat"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"item_iconname"		"shotgun"
+			"item_iconname"		"HL2_Shotgun"
+			"image_inventory"	"backpack/weapons/spas"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_shotgun.mdl"
+			"model_world"	"models/weapons/w_shotgun.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"attributes"
+			{
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.3"
+				}
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"32"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.4"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
+				"sound_burst"		"HL2_Weapon_Shotgun.Double"
+				"sound_reload"		""
+				"animation_replacement"
+				{
+
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
