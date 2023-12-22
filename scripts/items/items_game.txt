@@ -19670,7 +19670,8 @@
 			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/player/hatsune_miku/scout.mdl"
+//			"model_player"	"models/player/hatsune_miku/scout.mdl"
+			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
 			"model_world"	"models/player/hatsune_miku/scout.mdl"
 			"used_by_classes"
 			{
@@ -19697,6 +19698,8 @@
 			}
 			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
 			}
 		"20071"
 		{
