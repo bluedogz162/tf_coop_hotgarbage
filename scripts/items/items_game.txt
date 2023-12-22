@@ -19751,6 +19751,11 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0"
 				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"0.8"
+				}
 			}
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
@@ -19779,7 +19784,6 @@
 			"attach_to_hands_vm_only"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
-			"response_criteria"			"IsZombieCostume"
 			"max_ilevel"	"10"
 			"image_inventory"	"vgui/class_icons/filter_scout"
 			"image_inventory_size_w"		"128"
