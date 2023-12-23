@@ -20858,12 +20858,16 @@
 			{
 				"wildcard"	"1"
 			}
+			"static_attrs"
+			{
+
+			}
 			"attributes"
 			{
 				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.3"
+					"value"	"1.7"
 				}
 				"hidden primary max ammo bonus"
 				{
@@ -20874,6 +20878,11 @@
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"	"1.4"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"viewpunch_mult"
+					"value"	"9"
 				}
 			}
 			"visuals"
