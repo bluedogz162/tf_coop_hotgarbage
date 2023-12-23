@@ -5373,13 +5373,13 @@
 					{
 						"skin_red"	"0"
 						"skin_blu"	"1"
-						"selectable"	"0"
+						"selectable"	"1"
 					}
 					"1"
 					{
 						"skin_red"	"2"
 						"skin_blu"	"3"
-						"selectable"	"0"
+						"selectable"	"1"
 						"image_inventory"	"backpack/weapons/c_models/c_smg/c_smg_gold"
 					}
 				}
