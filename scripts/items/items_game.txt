@@ -20847,7 +20847,7 @@
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"item_iconname"		"shotgun"
-			"item_iconname"		"HL2_Shotgun"
+			"item_logname"		"HL2_Shotgun"
 			"image_inventory"	"backpack/weapons/spas"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -20944,15 +20944,15 @@
 			}
 			"attributes"
 			{
+				"sticky detonate mode"
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"	"1"
+				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
 					"value"	"3"
-				}
-				"fuse bonus"
-				{
-					"attribute_class"	"fuse_mult"
-					"value"	"39"
 				}
 			}
 			"visuals"
