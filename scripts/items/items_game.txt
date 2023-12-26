@@ -20962,6 +20962,72 @@
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
+		"6912"
+		{
+			"name"	"Koishi Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Player Model"
+			"baseitem"	"0"
+			"item_name"	"Komeiji Koishi"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			'Quit starin' at me with them big old eyes!'"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/koishi"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/koishi/c_spy_arms.mdl"
+			"model_world"	"models/player/koishi/spy.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"attributes"
+			{
+				"move speed bonus"
+				{
+					"attribute_class"		"mult_player_movespeed"
+					"value"		"1.25"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"-25"
+				}
+				"mult decloak rate"
+				{
+					"attribute_class"	"mult_decloak_rate"
+					"value"				"0.2"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
