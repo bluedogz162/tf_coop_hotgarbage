@@ -6,6 +6,9 @@ Installation:</br>
 2: Restart Steam for the mod to show up</br>
 3: That's it!</br>
 
+\\\\\\\\ Discord Server \\\\\\\\
+https://discord.gg/CvAESsZrKJ
+\\\\\\\\ Discord Server \\\\\\\\
 
 
 Credits:</br>
