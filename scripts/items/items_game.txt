@@ -21013,6 +21013,11 @@
 					"attribute_class"	"mult_decloak_rate"
 					"value"				"0.2"
 				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"				"0"
+				}
 
 			}
 			"visuals"
