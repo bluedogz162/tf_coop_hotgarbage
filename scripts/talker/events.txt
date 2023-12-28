@@ -17,26 +17,8 @@ criterion "ConceptHalloweenPlayerPitFall" "Concept" "HalloweenLongFall" required
 //---------------TEST----------------------
 
 
-criterion "PMKleiner" "player_activity" "ACT_RESET" required
 
-Response PlayerKleinerTest
-{
-	scene "scenes/Player/Heavy/low/243.vcd" 
-	scene "scenes/Player/Heavy/low/244.vcd" 
-	scene "scenes/Player/Heavy/low/245.vcd" 
-}
-Rule KleinTestIGuess
-{
 
-	criteria ConceptPlayerBattleCry PMKleiner
-	applycontext "scoutZombieNoises:1:30"
-	Response PlayerKleinerTest
-}
-Rule PlayerHelpKleinerModel
-{
-	criteria PMKleiner ConceptPlayerHelp
-	Response PlayerKleinerTest
-}
 
 
 

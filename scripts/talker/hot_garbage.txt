@@ -1,0 +1,26 @@
+//////KLEINER//////
+Response PlayerKleinerBattleCry
+{
+	scene "scenes/Player/Heavy/low/243.vcd" 
+}
+Response PlayerKleinerYes
+{
+	speak "Player_Kleiner.Yes" 
+}
+Rule KleinerBattleCry
+{
+
+	criteria ConceptPlayerBattleCry IsMedicDoubleFace IsWildcard
+	Response PlayerKleinerBattleCry
+}
+Rule KleinerYes
+{
+	criteria ConceptPlayerYes IsMedicDoubleFace IsWildcard
+	Response PlayerKleinerYes
+}
+Criterion	"IsZTest"		"IsZombieCostume"	"2" "required" weight 100
+Rule TestTestyTestofTests
+{
+	criteria ConceptPlayerNo IsZTest IsWildcard
+	Response PlayerFairyNoiseHeavy
+}

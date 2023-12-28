@@ -155,3 +155,17 @@
 
 	"wave"			"weapons/DEagle/de_slideback.wav"
 }
+
+// KLEINER MODEL
+
+"Player_Kleiner.Yes"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"sound/player/kleiner/kleiner_yes01.wav"
+		"wave"			"sound/player/kleiner/kleiner_yes02.wav"
+		"wave"			"sound/player/kleiner/kleiner_yes03.wav"
+	}
+}
