@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$baseTexture" "models\Extella_Link\adidasAstolfo/M_Jacket_HoodieXL_Head_01"
+                "$alphatest" "1"
+
+	"$model" 1
+}
