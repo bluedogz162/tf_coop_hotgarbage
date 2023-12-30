@@ -1,0 +1,37 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "zeron\bini\scavenger\Clothing_rgb_c"
+    "$bumpmap" "zeron\bini\scavenger\Clothing_n"
+    "$phongexponenttexture" "zeron\bini\scavenger\Clothing_e"
+
+    "$phong" "1"
+    "$phongboost" ".5"
+    "$phongalbedotint" "1"
+    "$phongalbedoboost" "15"                                //toy around with this
+    "$phongfresnelranges" "[1 3 5]"
+
+   // "$color2" "[0 0 0]" //testing
+    //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+       
+    /////////////////
+    "$normalmapalphaenvmapmask" "1"                         //do not touch this
+    /////////////////
+
+    "$envmap" "zeron\bini\scavenger\specularity_00"
+    "$envmaptint" "[0.169 0.118 0.082]"                 
+
+	"$blendtintbybasealpha" "1"
+	"$blendtintcoloroverbase" "0"
+	
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar	$color2
+			default		1 0 0
+		}
+	}
