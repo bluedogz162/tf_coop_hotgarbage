@@ -1,0 +1,19 @@
+"VertexlitGeneric"
+{
+//Base
+	"$basetexture" 					"models\hlvr\characters\combine_captain\combine_captain_legs_d"
+	"$bumpmap" 						"models\hlvr\characters\combine_captain\combine_captain_legs_n"
+	"$phongexponenttexture" 		"models\hlvr\characters\combine_captain\combine_captain_legs_p"
+
+	"$phongalbedotint"				"1"
+
+//Phong
+	"$phong" 						"1"
+	"$phongboost"					"2"
+	"$phongfresnelranges"			"[.05 .5 .5]"
+	"$phongexponent"					"3"
+
+	"$ambientocclusion"				"0.7"
+	"$nocull" 			"1"
+
+}

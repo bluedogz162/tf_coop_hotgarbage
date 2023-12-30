@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+//Base
+	"$basetexture" 					"models\hlvr\characters\combine_captain\torch\torch_d"
+	"$bumpmap" 						"models\hlvr\characters\combine_captain\torch\torch_n"
+	"$phongexponenttexture" 		"models\hlvr\characters\combine_captain\torch\torch_e"
+
+	"$phongalbedotint"				"1"
+
+"$normalmapalphaenvmapmask" "1"
+	"$envmap" "env_cubemap"
+	"$envmaptint"	"[0.03 0.03 0.03]"
+	"$envmapfresnel"	"1"
+
+//Phong
+	"$phong" 						"1"
+	"$phongboost"					"5"
+	"$phongfresnelranges"			"[0.87 0.9 1]"
+	"$phongexponent"					"1"
+
+	"$ambientocclusion"				"1"
+	"$nocull" 			"1"
+}
