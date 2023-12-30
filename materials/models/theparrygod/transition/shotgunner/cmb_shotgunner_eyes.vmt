@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\theparrygod\transition\shotgunner\cmb_shotgunner_eyes"
+    "$selfillum" "1"
+    "$selfillummask" "models\theparrygod\transition\shotgunner\cmb_shotgunner_eyes"
+}
