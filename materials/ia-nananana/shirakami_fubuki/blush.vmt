@@ -1,0 +1,9 @@
+VertexLitGeneric
+{
+	"$basetexture" "IA-NanaNana\Shirakami_Fubuki\hbk"
+	"$bumpmap" "IA-NanaNana\Shirakami_Fubuki\normal"
+	"$lightwarptexture" "IA-NanaNana\Shirakami_Fubuki\shader\basewarp"
+	$translucent 1
+	$nocull 1
+	$nodecal 1
+}

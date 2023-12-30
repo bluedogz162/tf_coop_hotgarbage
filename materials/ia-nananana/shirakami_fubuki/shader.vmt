@@ -1,0 +1,23 @@
+VertexLitGeneric
+{
+	"$bumpmap" "ia-nananana\Shirakami_Fubuki\normal"
+	"$lightwarptexture" "ia-nananana\Shirakami_Fubuki\shader\basewarp"
+	
+	"$phong" "1"
+	"$phongboost"	".1"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "ia-nananana\Shirakami_Fubuki\phong_exp"
+	"$phongfresnelranges"	"[0 .0 .0]"
+	$phongexponent 5
+	
+	"$rimlight"               "1"
+	"$rimlightexponent"       "3"
+	"$rimlightboost"          "4"
+	
+	$alphatest 1
+	$allowalphatocoverage 1
+	$nocull 1
+	$nodecal 1
+	$halflambert 1
+	$ambientocclusion 1
+}

@@ -1,0 +1,14 @@
+patch
+{
+	include "materials\ia-nananana\Kurokami_Fubuki\shader.vmt"
+	insert
+	{
+		"$basetexture" "ia-nananana\Kurokami_Fubuki\hbk"
+	}
+	replace
+	{
+		"$lightwarptexture" "ia-nananana\Kurokami_Fubuki\shader\basewarp"
+		$alphatest 0
+		"$phongboost"	".5"
+	}
+}
