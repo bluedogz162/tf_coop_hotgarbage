@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 				"models\MGRRevengeance\Characters\Armstrong\head"
+	"$bumpmap" 					"models\MGRRevengeance\Characters\Armstrong\head_n"
+
+	"$phongalbedotint" 1
+	"$phongfresnelranges"			"[5 7 8]"
+
+	"$phongexponenttexture" "models\MGRRevengeance\shared\green"
+	"$phong" "1"
+	"$phongexponent"				"6"
+	"$phongboost"					"0.2"
+}
+

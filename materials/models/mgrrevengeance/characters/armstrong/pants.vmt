@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 				"models\MGRRevengeance\Characters\Armstrong\pants"
+	"$bumpmap" 					"models\MGRRevengeance\Characters\Armstrong\pants_n"
+
+	"$phongalbedotint" 1
+
+	"$phongexponenttexture" "models\MGRRevengeance\shared\green"
+	"$phongfresnelranges"			"[5 7 8]"
+
+	"$phong" "1"
+	"$phongexponent"				"3"
+	"$phongboost"					"0.3"
+}
+
