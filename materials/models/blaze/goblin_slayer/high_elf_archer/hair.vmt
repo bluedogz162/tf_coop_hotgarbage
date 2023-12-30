@@ -1,0 +1,18 @@
+"VertexlitGeneric"
+//"UnlitGeneric"
+{
+	"$basetexture" 		"models/blaze/goblin_slayer/high_elf_archer/body"
+	"$bumpmap" 		"models/blaze/fate_extella_link/shared/normal"	
+//	"$ambientocclusion"	"0"
+//	"$nocull" 			"1"
+
+	"$phong" 		"1"
+	"$phongexponent" 		"14"
+	"$phongexponenttexture" 	"models/blaze/fate_extella_link/shared/green"
+	"$phongboost"		"5"
+	"$phongfresnelranges"	"[0.5 0.5 1.5]"
+	"$phongalbedotint" 		"1"
+	"$color2"			"[.9 .9 .9]"
+	"$lightwarptexture"		"models/blaze/fate_extella_link/shared/hairlw"
+//	"$lightwarptexture" 		"models/blaze/fate_extella_link/shared/lightwarp2"
+}

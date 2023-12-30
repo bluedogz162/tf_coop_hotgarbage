@@ -1,0 +1,19 @@
+"EyeRefract"
+{
+	"$iris"               		"models/blaze/goblin_slayer/high_elf_archer/eye"
+	"$corneatexture"      	"models/blaze/fate_extella_link/shared/eyen"
+	"$corneabumpstrength" 	"1"
+
+	"$parallaxstrength" 		"0"	
+	"$dilation" 		"0.5"
+	"$envmap"             		"engine/eye-reflection-cubemap-.vtf"
+	"$glossiness" 		"0.3"
+	"$ambientoccltexture" 	"models/blaze/fate_extella_link/shared/black"
+	"$ambientocclcolor" 	"[.8 .8 .8]"
+	"$eyeballradius" 		".5"
+
+	"$halflambert" 		"1"
+	"$nodecal" 		"1"
+	"$lightwarptexture" 		"models/blaze/fate_extella_link/shared/lightwarp2"
+}
+
