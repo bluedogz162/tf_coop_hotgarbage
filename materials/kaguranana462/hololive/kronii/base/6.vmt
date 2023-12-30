@@ -1,0 +1,13 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "kaguranana462/hololive/kronii/base/6"
+	$bumpmap "dev/dev_normal"
+	$lightwarptexture "kaguranana462/hololive/kronii/base/facewarp"
+	$phong 1
+	$phongboost .02
+	$phongfresnelranges 1 .1 .1
+	"$halflambert" 1
+	"$nocull" 1
+	"$nodecal" 1
+	"$alphatest" 1
+}
