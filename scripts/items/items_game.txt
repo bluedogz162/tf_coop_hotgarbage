@@ -20025,7 +20025,7 @@
 		}
 		"10106"
 		{
-			"name"	"test3"
+			"name"	"Raphtalia"
 			"first_sale_date"	"1969/04/20"
 			"prefab"	"valve base_misc"
 			"hidden"	"0"
@@ -20043,9 +20043,9 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"128"
 			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 test"
-			"item_name"	"test"
-			"item_description"	"Model by test"
+			"item_type_name"	"Level 1 Raccoon"
+			"item_name"	"Raphtalia"
+			"item_description"	"Model by Skugly"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -20055,6 +20055,52 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/player/dewobedil/the_rising_of_the_shield_hero/raphtalia/default_p.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10107"
+		{
+			"name"	"Pikachu"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Rat"
+			"item_name"	"Pikachu"
+			"item_description"	"Model by Nintendo/HorsePlants"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/pokemon/pikachu.mdl"
 			"model_player"	"models/empty.mdl"
 			"used_by_classes"
 			{
