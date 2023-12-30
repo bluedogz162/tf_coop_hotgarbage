@@ -1,0 +1,322 @@
+		"10111"
+		{
+			"name"	"Shirakami Fubuki"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 CatWife"
+			"item_name"	"Shirakami Fubuki"
+			"item_description"	"Model by Schwarz/NanaNana"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/ikanadea/fubuki/fubuki_pm.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10112"
+		{
+			"name"	"Kurokami Fubuki"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 ScaryWife"
+			"item_name"	"Kurokami Fubuki"
+			"item_description"	"Model by Schwarz/NanaNana"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/ia-nananana/kurokami_pm.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10119"
+		{
+			"name"	"Hitori Gotou"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 99 Bocchi"
+			"item_name"	"Hitori Gotou"
+			"item_description"	"Model by james94/goobus"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/player/bocchi/bocchi.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10121"
+		{
+			"name"	"Korra"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Avatar"
+			"item_name"	"Korra"
+			"item_description"	"Model by Platinumgames/Benno"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/player/legendofkorra/korra_player.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10122"
+		{
+			"name"	"All Might"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 99 Hero"
+			"item_name"	"All Might"
+			"item_description"	"Model by AshraldRails"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/oj/allmight.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10125"
+		{
+			"name"	"Mimi-chan Sentry"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Sentry"
+			"item_name"	"Mimi-chan Sentry"
+			"item_description"	"Model by mochi/slavdemidov"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/player/mimi_sentry.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}
+		"10126"
+		{
+			"name"	"Seiki"
+			"first_sale_date"	"1969/04/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"128"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 19 FoxGirl"
+			"item_name"	"Seiki"
+			"item_description"	"Model by CakeLord/CyanBlue"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/cyanblue/seiki/seiki.mdl"
+			"model_player"	"models/empty.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+		}

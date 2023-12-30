@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+    "$basetexture" "models\theparrygod\transition\shotgunner\shotgunner_d"
+    "$bumpmap" "models\theparrygod\transition\shotgunner\shotgunner_n"
+
+    "$phongexponenttexture" "models\theparrygod\transition\shotgunner\shotgunner_s"
+
+    "$phong" "1"
+    "$phongboost"    "1"
+
+    "$phongfresnelranges"    "[0.1 0.23 0.945]"
+
+    "$phongdisablehalflambert"    "1"
+
+    "$envmap" "models\cubemaps\fallout4cube_dithered_grey"
+    "$normalmapalphaenvmapmask"        "1"
+    "$envmapfresnel"    "1"
+
+    "$envmaptint"        0
+$nocull 1
+}

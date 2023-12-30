@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models/tf2moe/mimi/vtf/Base/Emission_Red"
+    "$nocull" "1"
+    "$selfillum" "5"
+    "$selfillummask" "models/tf2moe/mimi/vtf/Base/Emission_Red"
+    "$selfiummtint" "200 200 200"
+    "$nodecal" "1"
+    "$model" "1"
+}

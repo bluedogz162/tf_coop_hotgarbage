@@ -1,0 +1,20 @@
+"VertexlitGeneric"
+{
+     "$basetexture" "models\theparrygod\transition\shotgunner\details_d"
+    "$bumpmap" "models\theparrygod\transition\shotgunner\details_n"
+
+    "$phongexponenttexture" "models\theparrygod\transition\shotgunner\details_s"
+
+    "$phongalbedotint"    "1"
+
+    "$color2"            "[0.4 0.4 0.4]"
+    "$translucent"        "1"
+
+    "$phong" "1"
+    "$phongboost"    "10.986979"
+
+    "$phongfresnelranges"    "[0.87 0.9 1]"
+    "$ambientocclusion"    "0"
+$nocull 1
+}
+

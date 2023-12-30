@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 				"models\MGRRevengeance\Characters\Armstrong\hair"
+
+	"$alphatest" "1"
+	"$ambientocclusion" 0
+	
+
+}
+

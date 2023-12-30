@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+    "$basetexture" "color/black"
+    "$nodecal" 1
+}

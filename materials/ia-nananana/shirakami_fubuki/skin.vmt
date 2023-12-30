@@ -1,0 +1,14 @@
+patch
+{
+	include "materials\IA-NanaNana\Shirakami_Fubuki\shader.vmt"
+	insert
+	{
+		"$basetexture" "IA-NanaNana\Shirakami_Fubuki\hbk"
+	}
+	replace
+	{
+		"$lightwarptexture" "IA-NanaNana\Shirakami_Fubuki\shader\skinwarp"
+		$alphatest 0
+		$nocull 0
+	}
+}

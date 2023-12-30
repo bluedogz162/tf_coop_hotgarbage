@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/onesjustice/AllMightBody"
+	"$bumpmap" "models/onesjustice/bodyn"
+	"$phong" "1"
+        "$phongtint" "[0.5 0.5 0.5]"
+	"$phongalbedotint" "1"
+	"$phongexponent" "30"
+	"$phongboost" "0.01"
+	"$phongfresnelranges" "[3 5 7]"
+
+
+	"$color2" "[1 1 1]"
+
+
+}

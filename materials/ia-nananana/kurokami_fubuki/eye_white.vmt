@@ -1,0 +1,19 @@
+patch
+{
+	include "materials\ia-nananana\Kurokami_Fubuki\shader.vmt"
+	insert
+	{
+		"$basetexture" "ia-nananana\Kurokami_Fubuki\hbk"
+
+		"$detail" "ia-nananana\Kurokami_Fubuki\black"
+		"$detailscale" "1"
+		"$detailblendfactor" ".3"
+		"$detailblendmode" "5"
+	}
+	replace
+	{
+		"$lightwarptexture" "ia-nananana\Kurokami_Fubuki\shader\eyewarp"
+		"$phongboost"	"24"
+		"$phongfresnelranges"	"[0 0 1]"
+	}
+}

@@ -1,0 +1,37 @@
+"VertexlitGeneric"
+{
+//Base
+	"$basetexture" 					"models\hlvr\characters\combine_captain\combine_captain_radio_d"
+	"$bumpmap" 						"models\hlvr\characters\combine_captain\combine_captain_radio_n"
+	"$phongexponenttexture" 		"models\hlvr\characters\combine_captain\combine_captain_radio_e"
+
+	"$phongalbedotint"				"1"
+
+//Phong
+	"$phong" 						"1"
+	"$phongboost"					"13"
+	"$phongfresnelranges"			"[0.87 0.9 1]"
+	"$phongexponent"					"5"
+
+	"$ambientocclusion"				"0.7"
+	"$nocull" 			"1"
+
+//EMISSIVE
+	$emissiveBlendEnabled 1
+	$emissiveBlendTexture	"dev\null"
+	$emissiveBlendBaseTexture	"models\hlvr\characters\combine_captain\combine_captain_radio_g"
+	$emissiveBlendFlowTexture	"dev\null"
+//	$emissiveBlendTint "[2.52 0.64 0.036]"
+	$emissiveBlendStrength 1
+	$emissiveBlendScrollVector "[0 0]"
+
+    "Proxies"
+    {
+        "UniformNoise"
+        {
+            "resultVar" "$emissiveBlendTint"
+            "minval" 1
+            "maxval" 2
+        }
+    }
+}

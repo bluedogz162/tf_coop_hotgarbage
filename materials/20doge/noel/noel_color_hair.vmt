@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "20doge/noel/Noel_Color_Hair"
+         "$bumpmap" "20doge/noel/normal"
+        "$nocull" 1
+	"$nodecal" 1
+	"$phong" "1"
+	"$phongboost"	".02"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges"	"[0 0 4]"
+	"$PhongExponent" "1.0"
+	"$lightwarptexture" "20doge/noel/toon_hair"
+	"$phongexponenttexture" "20doge/noel/phong"
+	"$phongdisablehalflambert"  "1"
+
+	"$rimlight"               "1"
+	"$rimlightexponent"       "3"
+	"$rimlightboost"          "4"
+}

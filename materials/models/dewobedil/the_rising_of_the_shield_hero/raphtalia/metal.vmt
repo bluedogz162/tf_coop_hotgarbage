@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dewobedil/the_rising_of_the_shield_hero/raphtalia/metal"
+	"$nodecal" 1
+	"$halflambert" 1
+	"$phongboost"	"1"
+	"$phongexponent" "30"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges"	"[1 .1 .1]"
+	"$lightwarptexture" "models/dewobedil/the_rising_of_the_shield_hero/raphtalia/toon_all"
+	"$rimlight"               "1"
+	"$rimlightexponent"       "5"
+	"$rimlightboost"          "3"
+}

@@ -1,0 +1,22 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/onesjustice/AllMightEye"
+	"$bumpmap" "models/onesjustice/shared_normal"
+	"$phong" "1"
+        "$phongtint" "[0.5 0.5 0.5]"
+	"$phongalbedotint" "1"
+	"$phongexponent" "30"
+	"$phongboost" "0.01"
+	"$phongfresnelranges" "[3 5 7]"
+
+
+	"$color2" "[1 1 1]"
+
+	"$envmap"  "models/onesjustice/cubemap_softsilver"
+	"$envmaptint" "[0.005 0.005 0.005]"
+	"$envmapcontrast" "0"
+	"$envmapfresnel" "0"
+	"$fresnelreflection" "0"
+
+
+}
