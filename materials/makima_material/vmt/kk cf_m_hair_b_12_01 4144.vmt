@@ -1,0 +1,20 @@
+VertexLitGeneric
+{
+	$basetexture "Makima_material/KK cf_m_hair_b_12_01 4144"
+	$bumpmap "makima_material/shader/bump"
+
+	$lightwarptexture "makima_material/shader/face_shader"
+
+	$alphatest 1
+	$nocull 1
+
+	$phong 1
+	$phongexponenttexture "makima_material/shader/exp"
+	$phongfresnelranges "[0.3 0.3 2]"
+	$phongalbedotint 1
+	$phongboost 0.03
+
+	$ambientocclusion 0.2
+	$color2[0.95 "0.93 0.93]"
+	$envmapintensity 0.225
+}
