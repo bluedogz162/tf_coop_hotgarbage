@@ -1,0 +1,13 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dewobedil/the_rising_of_the_shield_hero/raphtalia/bb2e8b4c3ee4446b9883ac258d78cb72"
+	"$nocull" 1
+	"$alphatest" 1
+	"$allowalphatocoverage" 1
+	"$nodecal" 1
+	"$phong" "1"
+	"$lightwarptexture" "models/dewobedil/the_rising_of_the_shield_hero/raphtalia/toon_all"
+	"$rimlight"               "1"
+	"$rimlightexponent"       "5"
+	"$rimlightboost"          "1"
+}
