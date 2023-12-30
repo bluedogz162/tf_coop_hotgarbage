@@ -1,0 +1,20 @@
+VertexLitGeneric
+{
+	$basetexture "Power_materials/_08"
+
+	$lightwarptexture "power_materials/lightwarp"
+
+	$alphatest 1
+	$nocull 1
+
+	$phong 1
+	$phongfresnelranges "[0.1 0.1 0.1]"
+	$phongexponent 10
+	$phongboost 0.2
+
+	$rimlight 1
+	$rimlightexponent 50
+	$rimlightboost 1
+
+	$ambientocclusion 0.2
+}
