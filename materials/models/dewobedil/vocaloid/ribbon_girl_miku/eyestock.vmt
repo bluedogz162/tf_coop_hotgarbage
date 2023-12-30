@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/dewobedil/vocaloid/ribbon_girl_miku/face_5"
+	"$ambientocclusion" "0"
+	"$halflambert" "1"
+	"$nodecal" 1
+	"$phong" "1"
+	"$lightwarptexture" "models/dewobedil/vocaloid/ribbon_girl_miku/toon_head"
+}
