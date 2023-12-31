@@ -1,0 +1,30 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\seiki/BodyM"
+                $color2 "[ 1 1 1]"
+	$surfaceprop Flesh
+
+                $normalmapalphaenvmapmask "1"
+
+
+                $lightwarptexture "models\seiki/toon_n"
+
+	$alphatest 1
+                $nocull 0
+
+	$phong 1
+                "$phongfresnelranges"    "[1 1 0.945]"
+	$phongalbedotint 0
+                $phongtint "[ 1 1 1]"
+	$phongexponent 0.1
+	$phongboost 0.00001
+	$phongalbedoboost 4
+
+	$rimlight 1
+	$rimlightexponent 5
+	$rimlightboost 0.5
+	$rimlightmask 1
+
+
+	$rimmask 1
+}
