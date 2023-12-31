@@ -19952,7 +19952,7 @@
 			"image_inventory_size_h"		"128"
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 1 MajiTenshi"
-			"item_name"	"test"
+			"item_name"	"Tokoyami Towa"
 			"item_description"	"Model by twentydoge"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
