@@ -1,9 +1,0 @@
-"VertexLitGeneric"
-{
-	"$baseTexture" 				"models\MGRRevengeance\Characters\Armstrong\eyebrows"
-
-	"$translucent" "1"
-	"$nocull" "1"
-	"$ambientocclusion" 0
-}
-
