@@ -8,9 +8,9 @@
 
 
 	"$AmbientOcclusion"		"1"
-	"$EyeballRadius"		"0.5"
-	"$Dilation"				"0.55"
-	"$ParallaxStrength"		"0.25"
+	"$EyeballRadius"		"0.03"
+	"$Dilation"				"1"
+	"$ParallaxStrength"		"0"
 	"$CorneaBumpStrength"	"0.05"
 	"$Glossiness"			"0.05"
 

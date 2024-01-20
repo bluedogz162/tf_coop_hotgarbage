@@ -1242,7 +1242,7 @@ Response PlayerHelpScout
 }
 Rule PlayerHelpScout
 {
-	criteria ConceptPlayerHelp IsScout
+	criteria ConceptPlayerHelp IsScout IsADefaultPlayermodel
 	Response PlayerHelpScout
 }
 

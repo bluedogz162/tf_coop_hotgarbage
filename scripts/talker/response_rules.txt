@@ -319,6 +319,79 @@ criterion "IsZombine" "playerclass" "Zombine" "required"
 criterion "IsWildcard" "playerclass" "Wildcard" "required"
 criterion "IsAntlionWorker" "playerclass" "AntlionWorker" "required"
 
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/scout.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/soldier.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/pyro.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/demoman.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/heavy.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/engineer.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/medic.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/sniper.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/spy.mdl"
+criterion "IsADefaultPlayermodel" "playermodel" "models/player/civilian.mdl"
+
+
+
+
+
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/scout.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/soldier.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/pyro.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/demoman.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/heavy.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/engineer.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/medic.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/sniper.mdl" "required"
+criterion "IsNotDefaultPlayermodel" "playermodel" "!=models/player/spy.mdl" "required"
+
+//EXPERIMENTAL: Per-playermodel responses for the nine default classes. Didn't work...
+//criterion "IsScout" "playermodel" "models/player/scout.mdl" "required" weight 100
+//criterion "IsSniper" "playermodel" "models/player/sniper.mdl" "required"	weight 100
+//criterion "IsSoldier" "playermodel" "models/player/soldier.mdl" "required"	weight 100
+//criterion "IsDemoman" "playermodel" "models/player/demoman.mdl" "required"
+//criterion "IsMedic" "playermodel" "models/player/medic.mdl" "required"
+//criterion "IsHeavy" "playermodel" "models/player/heavy.mdl" "required"
+//criterion "IsPyro" "playermodel" "models/player/pyro.mdl" "required"
+//criterion "IsSpy" "playermodel" "models/player/spy.mdl" "required"
+//criterion "IsEngineer" "playermodel" "models/player/engineer.mdl" "required"
+//criterion "IsCivilian" "playermodel" "models/player/civilian.mdl" "required"
+
+//criterion "IsClassScout" "playerclass" "Scout" "required" 
+//criterion "IsClassSniper" "playerclass" "Sniper" "required"
+//criterion "IsClassSoldier" "playerclass" "Soldier" "required"
+//criterion "IsClassDemoman" "playerclass" "Demoman" "required"
+//criterion "IsClassMedic" "playerclass" "Medic" "required"
+//criterion "IsClassHeavy" "playerclass" "Heavy" "required"
+//criterion "IsClassPyro" "playerclass" "Pyro" "required"
+//criterion "IsClassSpy" "playerclass" "Spy" "required"
+//criterion "IsClassEngineer" "playerclass" "Engineer" "required"
+//criterion "IsClassMetropolice" "playerclass" "Metropolice" "required"
+//criterion "IsClassCivilian" "playerclass" "Civilian" "required"
+//criterion "IsClassCombineSoldier" "playerclass" "Combine" "required"
+//criterion "IsClassZombie" "playerclass" "Zombie" "required"
+//criterion "IsClassZombine" "playerclass" "Zombine" "required"
+//criterion "IsClassWildcard" "playerclass" "Wildcard" "required"
+//criterion "IsClassAntlionWorker" "playerclass" "AntlionWorker" "required"
+
+
+//EXPERIMENTAL: Replacing these with per-playermodel responses.
+//criterion "IsScout" "playerclass" "Scout" "required" 
+//criterion "IsSniper" "playerclass" "Sniper" "required"
+//criterion "IsSoldier" "playerclass" "Soldier" "required"
+//criterion "IsDemoman" "playerclass" "Demoman" "required"
+//criterion "IsMedic" "playerclass" "Medic" "required"
+//criterion "IsHeavy" "playerclass" "Heavy" "required"
+//criterion "IsPyro" "playerclass" "Pyro" "required"
+//criterion "IsSpy" "playerclass" "Spy" "required"
+//criterion "IsEngineer" "playerclass" "Engineer" "required"
+//criterion "IsMetropolice" "playerclass" "Metropolice" "required"
+//criterion "IsCivilian" "playerclass" "Civilian" "required"
+//criterion "IsCombineSoldier" "playerclass" "Combine" "required"
+//criterion "IsZombie" "playerclass" "Zombie" "required"
+//criterion "IsZombine" "playerclass" "Zombine" "required"
+//criterion "IsWildcard" "playerclass" "Wildcard" "required"
+//criterion "IsAntlionWorker" "playerclass" "AntlionWorker" "required"
+
 criterion "IsNotScout" "playerclass" "!=Scout" "required" 
 criterion "IsNotSniper" "playerclass" "!=Sniper" "required"
 criterion "IsNotSoldier" "playerclass" "!=Soldier" "required"

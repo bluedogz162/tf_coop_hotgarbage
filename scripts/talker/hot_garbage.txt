@@ -1,26 +1,44 @@
 //////KLEINER//////
+Criterion	"IsZTest"	"playermodel"	 "models/player/kleiner.mdl" "required" weight 100
 Response PlayerKleinerBattleCry
 {
-	scene "scenes/Player/Heavy/low/243.vcd" 
+	speak "Player_Kleiner.BattleCry" noscene delay 1
+}
+Response PlayerKleinerJeers
+{
+	speak "Player_Kleiner.Jeers" noscene delay 1
 }
 Response PlayerKleinerYes
 {
-	speak "Player_Kleiner.Yes" 
+	speak "Player_Kleiner.Yes" noscene delay 1
+}
+Response PlayerKleinerNo
+{
+	speak "Player_Kleiner.No" noscene delay 1
+}
+Response PlayerKleinerThanks
+{
+	speak "Player_Kleiner.Thanks" noscene delay 1
 }
 Rule KleinerBattleCry
 {
-
-	criteria ConceptPlayerBattleCry IsMedicDoubleFace IsWildcard
+	criteria ConceptPlayerBattleCry IsZTest IsWildcard
 	Response PlayerKleinerBattleCry
 }
 Rule KleinerYes
 {
-	criteria ConceptPlayerYes IsMedicDoubleFace IsWildcard
+	criteria ConceptPlayerYes IsZTest IsWildcard
 	Response PlayerKleinerYes
 }
-Criterion	"IsZTest"		"IsZombieCostume"	"2" "required" weight 100
-Rule TestTestyTestofTests
+
+Rule KleinerNo
 {
 	criteria ConceptPlayerNo IsZTest IsWildcard
-	Response PlayerFairyNoiseHeavy
+	Response PlayerKleinerNo
+}
+
+Rule KleinerThanks
+{
+	criteria ConceptPlayerThanks IsZTest IsWildcard
+	Response PlayerKleinerThanks
 }

@@ -19596,8 +19596,6 @@
 			"image_inventory"	"backpack/playermodels/kleiner"
 			"image_inventory_size_w"		"16"
 			"image_inventory_size_h"		"16"
-			"response_criteria"			"IsZombieCostume"
-			"response_criteria_value"	"2"
 			"drop_type"	"drop"
 			"model_player"	"models/weapons/c_arms_citizen.mdl"
 			"model_world"	"models/player/kleiner.mdl"

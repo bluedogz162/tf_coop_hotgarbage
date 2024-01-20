@@ -164,8 +164,49 @@
 	"volume"		"1.0"
 	"rndwave"
 	{
-		"wave"			"sound/player/kleiner/kleiner_yes01.wav"
-		"wave"			"sound/player/kleiner/kleiner_yes02.wav"
-		"wave"			"sound/player/kleiner/kleiner_yes03.wav"
+		"wave"			"player/kleiner/kleiner_yes01.wav"
+		"wave"			"player/kleiner/kleiner_yes02.wav"
+		"wave"			"player/kleiner/kleiner_yes03.wav"
+	}
+}
+"Player_Kleiner.No"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/kleiner/kleiner_no01.mp3"
+		"wave"			"player/kleiner/kleiner_no02.mp3"
+		"wave"			"player/kleiner/kleiner_no03.mp3"
+	}
+}
+"Player_Kleiner.BattleCry"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/kleiner/kleiner_battlecry01.mp3"
+		"wave"			"player/kleiner/kleiner_battlecry02.mp3"
+	}
+}
+"Player_Kleiner.Thanks"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/kleiner/kleiner_thanks01.mp3"
+		"wave"			"player/kleiner/kleiner_thanks02.mp3"
+		"wave"			"player/kleiner/kleiner_thanks03.mp3"
+	}
+}
+"Player_Kleiner.Jeers"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/kleiner/kleiner_jeers01.mp3"
 	}
 }
