@@ -19517,7 +19517,7 @@
 				"9043"
 		{
 			"name"	"Wildcard Base Melee"
-			"item_class"	"tf_weapon_tfc_crowbar"
+			"item_class"	"tf_weapon_tfc_umbrella"
 			"baseitem" "1"
 			"tags"
 			{
@@ -19548,7 +19548,7 @@
 			}
 			"attributes"
 			{
-							"damage bonus"
+				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"3.5"
@@ -22279,7 +22279,7 @@
 					"attribute_class"	"mult_clipsize"
 					"value"	"0.6"
 				}
-				"maxammo secondary increased HIDDEN"
+				"maxammo secondary increased"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "128"
@@ -22347,7 +22347,7 @@
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"image_inventory"	"backpack/playermodels/"
+			"image_inventory"	"backpack/playermodels/remilia"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"drop_type"	"drop"
@@ -22368,6 +22368,126 @@
 				{
 					"attribute_class"	"damage_force_reduction"
 					"value" "6"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"				"0"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+				"6918"
+		{
+			"name"	"Wildcard HL1 Crowbar"
+			"item_class"	"tf_weapon_tfc_crowbar"
+			"baseitem" "0"
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+			}
+			"item_type_name"	"Crowbar"
+			"item_name"	"Polygonal Prybar"
+			"item_description"	"				It's retro....
+			Upon hitting an enemy, you can swing again
+			sooner than you normally can
+			-Dr. Seuss"
+			"item_slot"	"melee"
+			"show_in_armory"	"1"
+			"image_inventory"	"backpack/weapons/hl2_crowbar"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"	"models/weapons/w_crowbar.mdl"
+			"model_player"	"models/weapons/tfc/v_tfc_crowbar.mdl"
+			"attach_to_hands" "0"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"wildcard"			"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+			{
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
+					"ACT_MP_RUN_MELEE"	"ACT_HL2MP_RUN_MELEE"
+					"ACT_MP_AIRWALK_MELEE"	"ACT_HL2MP_AIRWALK_MELEE"
+					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_SWIM_MELEE"
+					"ACT_MP_JUMP_MELEE"	"ACT_HL2MP_JUMP_MELEE"
+					"ACT_MP_CROUCH_MELEE"	"ACT_HL2MP_IDLE_CROUCH_MELEE"
+					"ACT_MP_CROUCHWALK_MELEE"	"ACT_HL2MP_WALK_CROUCH_MELEE"
+				}
+			}
+		}
+				"6919"
+		{
+			"name"	"Flandre Scarlet Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" ""
+			"baseitem"	"0"
+			"item_name"	"Flandre Scarlet"
+			"item_description"	"Model ported by JuegosPablo
+			Wings of Crystal: You can double jump"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/flandre"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+			"model_world"	"models/freak_fortress_2/newflandre/newflandre.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"attributes"
+			{
+				"air dash count"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"1"
+				}
+				"damage force reduction"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" "0.3"
 				}
 				"voice pitch scale"
 				{
