@@ -22321,6 +22321,67 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
+				"6917"
+		{
+			"name"	"Remilia Scarlet Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" ""
+			"baseitem"	"0"
+			"item_name"	"Remilia Scarlet"
+			"item_description"	"Model ported by JuegosPablo
+			Wings of the Bats: You can triple jump"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+			"model_world"	"models/freak_fortress_2/newremilia/newremilia.mdl"
+			"used_by_classes"
+			{
+				"spy"	"1"
+			}
+			"attributes"
+			{
+				"air dash count"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"2"
+				}
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" "6"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"				"0"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"

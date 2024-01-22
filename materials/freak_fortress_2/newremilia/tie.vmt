@@ -1,0 +1,22 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "freak_fortress_2/newremilia/clothes_2"
+	
+	"$phong" "1"
+	"$phongboost"	"2"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "freak_fortress_2/newremilia/phong_exp"
+	"$phongfresnelranges"	"[.1 .1 5]"
+
+	"$lightwarptexture" "freak_fortress_2/newremilia/cartoon_shader"
+
+	"$halflambert" "1"	
+	"$AmbientOcclusion" "1"	
+	"$nocull" "1"
+	"$nodecal" "1"
+//	"$alphatest" "1"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "3"
+	"$rimlightboost" "4"
+}

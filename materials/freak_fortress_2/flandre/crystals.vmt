@@ -1,0 +1,28 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "freak_fortress_2\flandre\crystals"
+
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongalbedotint" "1"
+	"$phongexponenttexture" "freak_fortress_2\flandre\phong_exp"
+	"$phongfresnelranges"	"[.2 .2 5]"
+
+	"$lightwarptexture" "freak_fortress_2\flandre\cartoon_shader"
+
+	"$halflambert" "1"	
+	"$AmbientOcclusion" "0"	
+	"$nocull" "1"
+	"$nodecal" "1"
+	// "$model" "1"
+	// "$selfillum" "1"
+	"$additive" "1"
+	
+	"$emissiveBlendEnabled" 1
+	"$emissiveBlendTexture"     "freak_fortress_2\flandre\null"
+	"$emissiveBlendBaseTexture"	"freak_fortress_2\flandre\crystals"
+	"$emissiveBlendFlowTexture"  "freak_fortress_2\flandre\null"
+	"$emissiveBlendTint" "[1.0 1.0 1.0]"
+	"$emissiveBlendStrength" 0.75
+	"$emissiveBlendScrollVector" "[0 0]"
+}

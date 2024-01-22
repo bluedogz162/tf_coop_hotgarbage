@@ -1,0 +1,19 @@
+"UnlitGeneric"
+{
+	"$basetexture" "Touhou/remilia/aura"
+
+	"$model" 1
+	"$nocull" 1
+	"$additive" 1
+
+    "$lightwarptexture" "Touhou/remilia/aura"
+	"$phongfresnelranges"	"[0.05 0.5 1]"
+	
+	"$emissiveBlendEnabled" 1
+	"$emissiveBlendTexture"     "Touhou/remilia/blank"
+	"$emissiveBlendBaseTexture"	"Touhou/remilia/aura"
+	"$emissiveBlendFlowTexture"  "Touhou/remilia/blank"
+	"$emissiveBlendTint" "[1.0 1.0 1.0]"
+	"$emissiveBlendStrength" 1
+	"$emissiveBlendScrollVector" "[0 0]"
+}
