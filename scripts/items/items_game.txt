@@ -21285,7 +21285,7 @@
 				"override footstep sound set"
 				{
 					"attribute_class"		"override_footstep_sound_set"
-					"value"		"1"
+					"value"		"11"
 				}
 			}
 			"visuals"
@@ -22003,7 +22003,7 @@
 			"anim_slot"		"secondary"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"2"
 			"image_inventory"	"backpack/weapons/l4d_pistol"
 			"image_inventory_size_w"		"128"
@@ -22110,7 +22110,7 @@
 			"anim_slot"		"secondary"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"show_in_armory"	"1"
+			"show_in_armory"	"0"
 			"attach_to_hands"	"2"
 			"image_inventory"	"backpack/weapons/l4d_pistol"
 			"image_inventory_size_w"		"128"
@@ -22152,6 +22152,11 @@
 					"attribute_class"	"mult_maxammo_primary"
 					"value" "6060"
 				}
+				"maxammo lfegrenades2 increased"
+				{
+					"attribute_class"	"mult_maxammo_lfegrenades2"
+					"value" "60"
+				}
 				"cw add dmgtype"
 				{
 					"attribute_class"	"cw_add_dmgtype"
@@ -22162,10 +22167,20 @@
 					"attribute_class"	"cw_reload_singly"
 					"value"	"1"
 				}
+				"cw secondary attack mode"
+				{
+					"attribute_class"	"cw_secondary_attack_mode"
+					"value"	"1"
+				}
 				"reload time increased hidden"
 				{
 					"attribute_class"	"mult_reload_time_hidden"
 					"value"	"0.4"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "9.0"
 				}
 			}
 			"visuals"
@@ -22173,6 +22188,7 @@
 				"sound_single_shot"		"Pistol.Fire"
 				"sound_burst"			"Pistol.DualFire"
 				"sound_reload"			"Pistol_L4D.ClipLocked"
+				"tracer_effect"	"bullet_incendiary_tracer01"
 				"animation_replacement"
 				{
 					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
@@ -22191,6 +22207,115 @@
 					"skin_red" "1"
 				}
 				
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"6916"
+		{
+			"name" "Wildcard CW Dragon's Colt"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_custom"
+			"craft_class"	"weapon"
+			"baseitem"		"0"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"Pistol"
+			"item_name"	"Dragon's Colt"
+			"item_description"	"'New model pending'"
+			"item_logname"	"pep_pistol"
+			"item_iconname"	"pep_pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"anim_slot"		"secondary"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/weapons/l4d_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/l4d/v_models/v_pistol.mdl"
+			"model_world"	"models/l4d/w_models/w_pistol_1911.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" "2.0"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "2.4"
+				}				
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.6"
+				}
+				"maxammo secondary increased HIDDEN"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "128"
+				}
+				"cw add dmgtype"
+				{
+					"attribute_class"	"cw_add_dmgtype"
+					"value"	"16777226"
+				}
+				"mod weapon tracer frequency"
+				{
+					"attribute_class"	"mod_weapon_tracer_frequency"
+					"value"	"1"
+				}
+				"reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"	"1.2"
+				}
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_incendiary_tracer01"
+				"sound_single_shot"		"Pistol.Fire"
+				"sound_burst"			"Pistol.DualFire"
+				"sound_reload"			"Pistol_L4D.ClipLocked"
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
+					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
 				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
@@ -31617,6 +31742,49 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"neutral"
+			"stored_as_integer"	"0"
+		}
+		"42004"
+		{
+			"name"	"cw secondary attack mode"
+			"attribute_class"	"cw_secondary_attack_mode"
+			"description_string"	"#Attrib_LunchboxAddsMinicrits"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+			"stored_as_integer"	"0"
+		}
+		"42005"
+		{
+			"name"	"maxammo lfegrenades1 increased"
+			"attribute_class"	"mult_maxammo_lfegrenades1"
+			"description_string"	"#Attrib_MaxammoPrimary_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}
+		"42006" 
+		{
+			"name"	"maxammo lfegrenades2 increased"
+			"attribute_class"	"mult_maxammo_lfegrenades2"
+			"description_string"	"#Attrib_MaxammoPrimary_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}
+		"42007"
+		{
+			"name"	"mod weapon tracer frequency"
+			"attribute_class"	"mod_weapon_tracer_frequency"
+			"description_string"	"#Attrib_MaxammoPrimary_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
 			"stored_as_integer"	"0"
 		}
 	}

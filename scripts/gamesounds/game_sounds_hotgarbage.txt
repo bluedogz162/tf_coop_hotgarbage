@@ -210,3 +210,29 @@
 		"wave"			"player/kleiner/kleiner_jeers01.mp3"
 	}
 }
+"Player_Footstep_Heels.Concrete"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/footsteps/heels/concrete_walk1.wav"
+		"wave"			"player/footsteps/heels/concrete_walk2.wav"
+		"wave"			"player/footsteps/heels/concrete_walk3.wav"
+		"wave"			"player/footsteps/heels/concrete_walk4.wav"
+		"wave"			"player/footsteps/heels/concrete_walk5.wav"
+	}
+}
+
+"Player_Footstep_Heels.Wood"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"			"player/footsteps/heels/deckwood_run4.wav"
+		"wave"			"player/footsteps/heels/deckwood_run8.wav"
+		"wave"			"player/footsteps/heels/deckwood_run9.wav"
+		"wave"			"player/footsteps/heels/deckwood_run10.wav"
+	}
+}
