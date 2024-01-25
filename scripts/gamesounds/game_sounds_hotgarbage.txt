@@ -212,7 +212,6 @@
 }
 "Player_Footstep_Heels.Concrete"
 {
-	"channel"		"CHAN_VOICE"
 	"volume"		"1.0"
 	"rndwave"
 	{
@@ -224,9 +223,17 @@
 	}
 }
 
+"Player.WingFlap"
+{
+	"volume"		"10.0"
+	"rndwave"
+	{
+		"wave"			"player/bird_flap_09_louder.mp3"
+	}
+}
+
 "Player_Footstep_Heels.Wood"
 {
-	"channel"		"CHAN_VOICE"
 	"volume"		"1.0"
 	"rndwave"
 	{

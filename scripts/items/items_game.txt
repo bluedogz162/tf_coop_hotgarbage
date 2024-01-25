@@ -11591,6 +11591,11 @@
 					"attribute_class"	"special_taunt"
 					"value" "1"
 				}
+				"air dash sound override"
+				{
+					"attribute_class"		"custom_air_dash_sound"
+					"value"		"General.banana_slip"
+				}
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -22374,6 +22379,17 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"				"0"
 				}
+				"air dash sound override"
+				{
+					"attribute_class"		"custom_air_dash_sound"
+					"value"		"player.wingflap"
+				}
+				"air dash sound override"
+				{
+					"attribute_class"		"custom_air_dash_sound"
+					"value"		"player.wingflap"
+				}					
+
 			}
 			"visuals"
 			{
@@ -22494,6 +22510,11 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"				"0"
 				}
+				"air dash sound volume"
+				{
+					"attribute_class"		"custom_air_dash_sound_volume"
+					"value"		"1"
+				}		
 			}
 			"visuals"
 			{
@@ -22502,6 +22523,7 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -31968,6 +31990,27 @@
 			"armory_desc"	"on_wearer"
 			"stored_as_integer"	"0"
 		}
+		"42008"
+		{
+			"name"	"air dash sound override"
+			"attribute_class"	"custom_air_dash_sound"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"42009"
+		{
+			"name"	"air dash sound volume"
+			"attribute_class"	"custom_air_dash_sound_volume"
+			"attribute_type"	"float"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+
 	}
 	"attribute_controlled_attached_particles"
 	{
