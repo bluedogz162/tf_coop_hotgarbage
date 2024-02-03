@@ -29,7 +29,46 @@ Criterion "IsNotDaring" "IsDaring" "!=1" "required" weight 0
 Criterion "HeavyNotKillSpeechObject" "HeavyKillSpeechObject" "!=1" "required" weight 0
 Criterion "HeavyNotShinySpeech" "HeavyShinySpeech" "!=1" "required" weight 0
 Criterion "HeavyNotFairyNoises" "HeavyFairyNoises" "!=1" "required" weight 0
+Criterion "HeavyNotCustomPlayermodel" "playermodel" "models/player/heavy.mdl" "required" weight 0
 
+
+Response PlayerHeavyDeath
+{
+	speak "Heavy.Death" weight 2
+}
+Rule PlayerHeavyDeath
+{
+	criteria ConceptPlayerDeath IsHeavy HeavyNotCustomPlayermodel
+	Response PlayerHeavyDeath
+}
+
+Response PlayerHeavyDeathCrit
+{
+	speak "Heavy.CritDeath" weight 2
+}
+Response PlayerHeavyDeathMelee
+{
+	speak "Heavy.MeleeDeath" weight 2
+}
+Response PlayerHeavyDeathExplosion
+{
+	speak "Heavy.ExplosionDeath" weight 2
+}
+Rule PlayerHeavyDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsHeavy HeavyNotCustomPlayermodel
+	Response PlayerHeavyDeathCrit
+}
+Rule PlayerHeavyDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsHeavy HeavyNotCustomPlayermodel
+	Response PlayerHeavyDeathExplosion
+}
+Rule PlayerHeavyDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsHeavy HeavyNotCustomPlayermodel
+	Response PlayerHeavyDeathMelee
+}
 
 Response PlayerCloakedSpyDemomanHeavy
 {
@@ -37,7 +76,7 @@ Response PlayerCloakedSpyDemomanHeavy
 }
 Rule PlayerCloakedSpyDemomanHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnDemoman
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnDemoman
 	Response PlayerCloakedSpyDemomanHeavy
 }
 
@@ -47,7 +86,7 @@ Response PlayerCloakedSpyEngineerHeavy
 }
 Rule PlayerCloakedSpyEngineerHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnEngineer
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnEngineer
 	Response PlayerCloakedSpyEngineerHeavy
 }
 
@@ -57,7 +96,7 @@ Response PlayerCloakedSpyHeavyHeavy
 }
 Rule PlayerCloakedSpyHeavyHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnHeavy
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnHeavy
 	Response PlayerCloakedSpyHeavyHeavy
 }
 
@@ -67,7 +106,7 @@ Response PlayerCloakedSpyMedicHeavy
 }
 Rule PlayerCloakedSpyMedicHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnMedic
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnMedic
 	Response PlayerCloakedSpyMedicHeavy
 }
 
@@ -77,7 +116,7 @@ Response PlayerCloakedSpyPyroHeavy
 }
 Rule PlayerCloakedSpyPyroHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnPyro
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnPyro
 	Response PlayerCloakedSpyPyroHeavy
 }
 
@@ -87,7 +126,7 @@ Response PlayerCloakedSpyScoutHeavy
 }
 Rule PlayerCloakedSpyScoutHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnScout
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnScout
 	Response PlayerCloakedSpyScoutHeavy
 }
 
@@ -97,7 +136,7 @@ Response PlayerCloakedSpySniperHeavy
 }
 Rule PlayerCloakedSpySniperHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnSniper
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnSniper
 	Response PlayerCloakedSpySniperHeavy
 }
 
@@ -107,7 +146,7 @@ Response PlayerCloakedSpySoldierHeavy
 }
 Rule PlayerCloakedSpySoldierHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnSoldier
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnSoldier
 	Response PlayerCloakedSpySoldierHeavy
 }
 
@@ -117,7 +156,7 @@ Response PlayerCloakedSpySpyHeavy
 }
 Rule PlayerCloakedSpySpyHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy IsOnSpy
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel IsOnSpy
 	Response PlayerCloakedSpySpyHeavy
 }
 
@@ -148,7 +187,7 @@ Response AwardHeavy
 }
 Rule AwardHeavy
 {
-	criteria ConceptAchievementAward IsHeavy HeavyNotAwardSpeech
+	criteria ConceptAchievementAward IsHeavy HeavyNotCustomPlayermodel HeavyNotAwardSpeech
 	ApplyContext "HeavyAwardSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response AwardHeavy
@@ -163,7 +202,7 @@ Response HealThanksHeavy
 }
 Rule HealThanksHeavy
 {
-	criteria ConceptMedicChargeStopped IsHeavy SuperHighHealthContext HeavyNotSaidHealThanks 50PercentChance
+	criteria ConceptMedicChargeStopped IsHeavy HeavyNotCustomPlayermodel SuperHighHealthContext HeavyNotSaidHealThanks 50PercentChance
 	ApplyContext "HeavySaidHealThanks:1:20"
 	Response HealThanksHeavy
 }
@@ -179,7 +218,7 @@ Response PlayerRoundStartHeavy
 }
 Rule PlayerRoundStartHeavy
 {
-	criteria ConceptPlayerRoundStart IsHeavy
+	criteria ConceptPlayerRoundStart IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerRoundStartHeavy
 }
 
@@ -191,7 +230,7 @@ Response PlayerCappedIntelligenceHeavy
 }
 Rule PlayerCappedIntelligenceHeavy
 {
-	criteria ConceptPlayerCapturedIntelligence IsHeavy
+	criteria ConceptPlayerCapturedIntelligence IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerCappedIntelligenceHeavy
 }
 
@@ -203,7 +242,7 @@ Response PlayerCapturedPointHeavy
 }
 Rule PlayerCapturedPointHeavy
 {
-	criteria ConceptPlayerCapturedPoint IsHeavy
+	criteria ConceptPlayerCapturedPoint IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerCapturedPointHeavy
 }
 
@@ -221,7 +260,7 @@ Response PlayerSuddenDeathHeavy
 }
 Rule PlayerSuddenDeathHeavy
 {
-	criteria ConceptPlayerSuddenDeathStart IsHeavy
+	criteria ConceptPlayerSuddenDeathStart IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerSuddenDeathHeavy
 }
 
@@ -233,7 +272,7 @@ Response PlayerStalemateHeavy
 }
 Rule PlayerStalemateHeavy
 {
-	criteria ConceptPlayerStalemate IsHeavy
+	criteria ConceptPlayerStalemate IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerStalemateHeavy
 }
 
@@ -245,7 +284,7 @@ Response PlayerTeleporterThanksHeavy
 }
 Rule PlayerTeleporterThanksHeavy
 {
-	criteria ConceptTeleported IsNotEngineer IsHeavy 30PercentChance
+	criteria ConceptTeleported IsNotEngineer IsHeavy HeavyNotCustomPlayermodel 30PercentChance
 	Response PlayerTeleporterThanksHeavy
 }
 
@@ -266,7 +305,7 @@ Response CartMovingBackwardsDefenseHeavy
 }
 Rule CartMovingBackwardsDefenseHeavy
 {
-	criteria ConceptCartMovingBackward IsOnDefense IsHeavy HeavyNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingBackward IsOnDefense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingBackwardD:1:20"
 	Response CartMovingBackwardsDefenseHeavy
 }
@@ -283,7 +322,7 @@ Response CartMovingBackwardsOffenseHeavy
 }
 Rule CartMovingBackwardsOffenseHeavy
 {
-	criteria ConceptCartMovingBackward IsOnOffense IsHeavy HeavyNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingBackward IsOnOffense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingBackwardO:1:20"
 	Response CartMovingBackwardsOffenseHeavy
 }
@@ -300,7 +339,7 @@ Response CartMovingForwardDefenseHeavy
 }
 Rule CartMovingForwardDefenseHeavy
 {
-	criteria ConceptCartMovingForward IsOnDefense IsHeavy HeavyNotSaidCartMovingForwardD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingForward IsOnDefense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingForwardD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingForwardD:1:20"
 	Response CartMovingForwardDefenseHeavy
 }
@@ -337,7 +376,7 @@ Response CartMovingForwardOffenseHeavy
 }
 Rule CartMovingForwardOffenseHeavy
 {
-	criteria ConceptCartMovingForward IsOnOffense IsHeavy HeavyNotSaidCartMovingForwardO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingForward IsOnOffense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingForwardO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingForwardO:1:20"
 	Response CartMovingForwardOffenseHeavy
 }
@@ -351,7 +390,7 @@ Response CartMovingStoppedDefenseHeavy
 }
 Rule CartMovingStoppedDefenseHeavy
 {
-	criteria ConceptCartMovingStopped IsOnDefense IsHeavy HeavyNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingStopped IsOnDefense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingStoppedD:1:20"
 	Response CartMovingStoppedDefenseHeavy
 }
@@ -365,7 +404,7 @@ Response CartMovingStoppedOffenseHeavy
 }
 Rule CartMovingStoppedOffenseHeavy
 {
-	criteria ConceptCartMovingStopped IsOnOffense IsHeavy HeavyNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingStopped IsOnOffense IsHeavy HeavyNotCustomPlayermodel HeavyNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingStoppedO:1:20"
 	Response CartMovingStoppedOffenseHeavy
 }
@@ -384,7 +423,7 @@ Response HeavyTimeFiringMinigunShort
 }
 Rule HeavyTimeFiringMinigunShort
 {
-	criteria ConceptFireMinigunTalk IsHeavy WeaponIsMinigun TimeFiringMinigunShort 30PercentChance
+	criteria ConceptFireMinigunTalk IsHeavy HeavyNotCustomPlayermodel WeaponIsMinigun TimeFiringMinigunShort 30PercentChance
 	Response HeavyTimeFiringMinigunShort
 }
 
@@ -397,7 +436,7 @@ Response HeavyTimeFiringMinigunLong
 }
 Rule HeavyTimeFiringMinigunLong
 {
-	criteria ConceptFireMinigunTalk IsHeavy WeaponIsMinigun TimeFiringMinigunLong 50PercentChance
+	criteria ConceptFireMinigunTalk IsHeavy HeavyNotCustomPlayermodel WeaponIsMinigun TimeFiringMinigunLong 50PercentChance
 	Response HeavyTimeFiringMinigunLong
 }
 
@@ -410,7 +449,7 @@ Response HeavyTimeFiringMinigunReallyLong
 }
 Rule HeavyTimeFiringMinigunReallyLong
 {
-	criteria ConceptFireMinigunTalk IsHeavy WeaponIsMinigun TimeFiringMinigunReallyLong 50PercentChance
+	criteria ConceptFireMinigunTalk IsHeavy HeavyNotCustomPlayermodel WeaponIsMinigun TimeFiringMinigunReallyLong 50PercentChance
 	Response HeavyTimeFiringMinigunReallyLong
 }
 
@@ -423,7 +462,7 @@ Response DefendOnThePointHeavy
 }
 Rule DefendOnThePointHeavy
 {
-	criteria ConceptFireWeapon IsHeavy IsOnFriendlyControlPoint NotDefendOnThePointSpeech
+	criteria ConceptFireWeapon IsHeavy HeavyNotCustomPlayermodel IsOnFriendlyControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:30"
 	applycontexttoworld
 	Response DefendOnThePointHeavy
@@ -439,7 +478,7 @@ Response InvulnerableSpeechHeavy
 }
 Rule InvulnerableSpeechHeavy
 {
-	criteria ConceptFireMinigun IsHeavy WeaponIsMinigun IsInvulnerable HeavyNotInvulnerableSpeech
+	criteria ConceptFireMinigun IsHeavy HeavyNotCustomPlayermodel WeaponIsMinigun IsInvulnerable HeavyNotInvulnerableSpeech
 	ApplyContext "HeavyInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechHeavy
 }
@@ -454,7 +493,7 @@ Response KilledMedicHeavy
 }
 Rule KilledMedicHeavy
 {
-	criteria ConceptKilledPlayer IsVictimMedic IsHeavy IsBeingHealed 50PercentChance KilledPlayerDelay HeavyNotMedicSpeech
+	criteria ConceptKilledPlayer IsVictimMedic IsHeavy HeavyNotCustomPlayermodel IsBeingHealed 50PercentChance KilledPlayerDelay HeavyNotMedicSpeech
 	ApplyContext "HeavyMedicSpeech:1:20"
 	ApplyContext "IsDominating:1:5" // Added the IsDominating context so this isn't interrupted. Heavy is going to be under fire a lot in this kind of situation.
 	Response KilledMedicHeavy
@@ -466,7 +505,7 @@ Response KilledPlayerAssistAutoHeavy
 }
 Rule KilledPlayerAssistAutoHeavy
 {
-	criteria ConceptKilledPlayer IsHeavy IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance HeavyNotAssistSpeech
+	criteria ConceptKilledPlayer IsHeavy HeavyNotCustomPlayermodel IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance HeavyNotAssistSpeech
 	ApplyContext "HeavyAssistSpeech:1:20"
 	Response KilledPlayerAssistAutoHeavy
 }
@@ -485,7 +524,7 @@ Response KilledPlayerManyHeavy
 }
 Rule KilledPlayerManyHeavy
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay HeavyNotKillSpeech IsHeavy
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay HeavyNotKillSpeech IsHeavy HeavyNotCustomPlayermodel
 	ApplyContext "HeavyKillSpeech:1:10"
 	Response KilledPlayerManyHeavy
 }
@@ -497,7 +536,7 @@ Response KilledPlayerMeleeHeavy
 }
 Rule KilledPlayerMeleeHeavy
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee HeavyNotKillSpeechMelee IsHeavy
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee HeavyNotKillSpeechMelee IsHeavy HeavyNotCustomPlayermodel
 	ApplyContext "HeavyKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeHeavy
 }
@@ -510,7 +549,7 @@ Response KilledPlayerMeleeMetalHeavy
 }
 Rule KilledPlayerMeleeMetalHeavy
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  WeaponIsMetalFists HeavyNotKillSpeechMelee IsHeavy
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  WeaponIsMetalFists HeavyNotKillSpeechMelee IsHeavy HeavyNotCustomPlayermodel
 	ApplyContext "HeavyKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeMetalHeavy
 	Response KilledPlayerMeleeHeavy
@@ -526,7 +565,7 @@ Response KilledPlayerShinyHeavy
 }
 Rule KilledPlayerShinyHeavy
 {
-	criterion ConceptKilledPlayer KilledPlayerDelay 20PercentChance IsManyRecentKills IsWeaponPrimary WeaponIsNotVanillaPrimary HeavyNotKillSpeech IsHeavy WeaponIsNotTaggedMinigun
+	criterion ConceptKilledPlayer KilledPlayerDelay 20PercentChance IsManyRecentKills IsWeaponPrimary WeaponIsNotVanillaPrimary HeavyNotKillSpeech IsHeavy HeavyNotCustomPlayermodel WeaponIsNotTaggedMinigun
 	ApplyContext "HeavyKillSpeech:1:90"
 	Response KilledPlayerShinyHeavy
 }
@@ -539,7 +578,7 @@ Response KilledPlayerTauntHeavy
 }
 Rule KilledPlayerTauntHeavy
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsHeavy IsVictimEngineer IsCrosshairEnemy HeavyNotKillSpeech
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsHeavy HeavyNotCustomPlayermodel IsVictimEngineer IsCrosshairEnemy HeavyNotKillSpeech
 	ApplyContext "HeavyKillSpeech:1:10"
 	Response KilledPlayerTauntHeavy
 }
@@ -551,7 +590,7 @@ Response HeavySwingFistsStart
 }
 Rule HeavySwingFistsStart
 {
-	criteria ConceptFireWeapon IsWeaponMelee 50PercentChance IsHeavy IsNotDaring HeavyNotKillSpeechMelee IsNotDominating IsNotHeavyFistsSwung WeaponIsNotSaxxy
+	criteria ConceptFireWeapon IsWeaponMelee 50PercentChance IsHeavy HeavyNotCustomPlayermodel IsNotDaring HeavyNotKillSpeechMelee IsNotDominating IsNotHeavyFistsSwung WeaponIsNotSaxxy
 	ApplyContext "HeavyFistsSwung:1:10"
 	Response HeavySwingFistsStart
 }
@@ -566,7 +605,7 @@ Response HeavySwingFists
 }
 Rule HeavySwingFists
 {
-	criteria ConceptFireWeapon IsWeaponMelee 50PercentChance IsHeavyFistsSwung IsNotDaring HeavyNotKillSpeechMelee IsNotDominating IsHeavy IsNotHeavyFistsSwinging
+	criteria ConceptFireWeapon IsWeaponMelee 50PercentChance IsHeavy HeavyNotCustomPlayermodelFistsSwung IsNotDaring HeavyNotKillSpeechMelee IsNotDominating IsHeavy HeavyNotCustomPlayermodel IsNotHeavyFistsSwinging
 	ApplyContext "HeavyFistsSwinging:2:3"
 	Response HeavySwingFists
 }
@@ -585,7 +624,7 @@ Response KilledPlayerVeryManyHeavy
 }
 Rule KilledPlayerVeryManyHeavy
 {
-	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance IsWeaponPrimary KilledPlayerDelay HeavyNotKillSpeech IsHeavy
+	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance IsWeaponPrimary KilledPlayerDelay HeavyNotKillSpeech IsHeavy HeavyNotCustomPlayermodel
 	ApplyContext "HeavyKillSpeech:1:10"
 	Response KilledPlayerVeryManyHeavy
 }
@@ -602,7 +641,7 @@ Response MedicFollowHeavy
 }
 Rule MedicFollowHeavy
 {
-	criteria ConceptPlayerMedic IsOnMedic IsHeavy IsNotCrossHairEnemy NotLowHealth HeavyIsNotStillonFire
+	criteria ConceptPlayerMedic IsOnMedic IsHeavy HeavyNotCustomPlayermodel IsNotCrossHairEnemy NotLowHealth HeavyIsNotStillonFire
 	ApplyContext "HeavyKillSpeech:1:10"
 	Response MedicFollowHeavy
 }
@@ -615,7 +654,7 @@ Response HeavyJarateHit
 }
 Rule HeavyJarateHit
 {
-	criteria ConceptJarateHit IsHeavy 50PercentChance
+	criteria ConceptJarateHit IsHeavy HeavyNotCustomPlayermodel 50PercentChance
 	Response HeavyJarateHit
 }
 
@@ -631,7 +670,7 @@ Response PlayerKilledCapperHeavy
 }
 Rule PlayerKilledCapperHeavy
 {
-	criteria ConceptCapBlocked IsHeavy
+	criteria ConceptCapBlocked IsHeavy HeavyNotCustomPlayermodel
 	ApplyContext "HeavyKillSpeech:1:10"
 	Response PlayerKilledCapperHeavy
 }
@@ -673,7 +712,7 @@ Response PlayerKilledDominatingHeavy
 }
 Rule PlayerKilledDominatingHeavy
 {
-	criteria ConceptKilledPlayer IsHeavy IsDominated
+	criteria ConceptKilledPlayer IsHeavy HeavyNotCustomPlayermodel IsDominated
 	ApplyContext "HeavyKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingHeavy
@@ -702,7 +741,7 @@ Response PlayerKilledForRevengeHeavy
 }
 Rule PlayerKilledForRevengeHeavy
 {
-	criteria ConceptKilledPlayer IsHeavy IsRevenge
+	criteria ConceptKilledPlayer IsHeavy HeavyNotCustomPlayermodel IsRevenge
 	ApplyContext "HeavyKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengeHeavy
@@ -717,7 +756,7 @@ Response PlayerKilledObjectHeavy
 }
 Rule PlayerKilledObjectHeavy
 {
-	criteria ConceptKilledObject IsHeavy 30PercentChance IsARecentKill HeavyNotKillSpeechObject
+	criteria ConceptKilledObject IsHeavy HeavyNotCustomPlayermodel 30PercentChance IsARecentKill HeavyNotKillSpeechObject
 	ApplyContext "HeavyKillSpeechObject:1:30"
 	Response PlayerKilledObjectHeavy
 }
@@ -729,7 +768,7 @@ Response PlayerKilledSentryHeavy
 }
 Rule PlayerKilledSentryHeavy
 {
-	criteria ConceptKilledObject IsHeavy IsSentryGun 10PercentChance HeavyNotKillSpeechObject
+	criteria ConceptKilledObject IsHeavy HeavyNotCustomPlayermodel IsSentryGun 10PercentChance HeavyNotKillSpeechObject
 	ApplyContext "HeavyKillSpeechObject:1:30"
 	Response PlayerKilledSentryHeavy
 }
@@ -740,7 +779,7 @@ Response PlayerKilledDispenserHeavy
 }
 Rule PlayerKilledDispenserHeavy
 {
-	criteria ConceptKilledObject IsHeavy IsDispenser 10PercentChance HeavyNotKillSpeechObject
+	criteria ConceptKilledObject IsHeavy HeavyNotCustomPlayermodel IsDispenser 10PercentChance HeavyNotKillSpeechObject
 	ApplyContext "HeavyKillSpeechObject:1:30"
 	Response PlayerKilledDispenserHeavy
 }
@@ -757,7 +796,7 @@ Response PlayerAttackerPainHeavy
 }
 Rule PlayerAttackerPainHeavy
 {
-	criteria ConceptAttackerPain IsHeavy IsNotDominating
+	criteria ConceptAttackerPain IsHeavy HeavyNotCustomPlayermodel IsNotDominating
 	Response PlayerAttackerPainHeavy
 }
 
@@ -769,7 +808,7 @@ Response PlayerOnFireHeavy
 }
 Rule PlayerOnFireHeavy
 {
-	criteria ConceptFire IsHeavy HeavyIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsHeavy HeavyNotCustomPlayermodel HeavyIsNotStillonFire IsNotDominating
 	ApplyContext "HeavyOnFire:1:7"
 	Response PlayerOnFireHeavy
 }
@@ -781,7 +820,7 @@ Response PlayerOnFireRareHeavy
 }
 Rule PlayerOnFireRareHeavy
 {
-	criteria ConceptFire IsHeavy 10PercentChance HeavyIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsHeavy HeavyNotCustomPlayermodel 10PercentChance HeavyIsNotStillonFire IsNotDominating
 	ApplyContext "HeavyOnFire:1:7"
 	Response PlayerOnFireRareHeavy
 }
@@ -796,7 +835,7 @@ Response PlayerPainHeavy
 }
 Rule PlayerPainHeavy
 {
-	criteria ConceptPain IsHeavy IsNotDominating
+	criteria ConceptPain IsHeavy HeavyNotCustomPlayermodel IsNotDominating
 	Response PlayerPainHeavy
 }
 
@@ -806,7 +845,7 @@ Response PlayerStillOnFireHeavy
 }
 Rule PlayerStillOnFireHeavy
 {
-	criteria ConceptFire IsHeavy  HeavyIsStillonFire IsNotDominating
+	criteria ConceptFire IsHeavy HeavyNotCustomPlayermodel  HeavyIsStillonFire IsNotDominating
 	ApplyContext "HeavyOnFire:1:7"
 	Response PlayerStillOnFireHeavy
 }
@@ -830,7 +869,7 @@ Response AcceptedDuelHeavy
 }
 Rule AcceptedDuelHeavy
 {
-	criteria ConceptIAcceptDuel IsHeavy
+	criteria ConceptIAcceptDuel IsHeavy HeavyNotCustomPlayermodel
 	Response AcceptedDuelHeavy
 }
 
@@ -846,7 +885,7 @@ Response MeleeDareHeavy
 }
 Rule MeleeDareHeavy
 {
-	criteria ConceptRequestDuel IsHeavy
+	criteria ConceptRequestDuel IsHeavy HeavyNotCustomPlayermodel
 	Response MeleeDareHeavy
 }
 
@@ -865,7 +904,7 @@ Response RejectedDuelHeavy
 }
 Rule RejectedDuelHeavy
 {
-	criteria ConceptDuelRejected IsHeavy
+	criteria ConceptDuelRejected IsHeavy HeavyNotCustomPlayermodel
 	Response RejectedDuelHeavy
 }
 
@@ -881,7 +920,7 @@ Response PlayerGoHeavy
 }
 Rule PlayerGoHeavy
 {
-	criteria ConceptPlayerGo IsHeavy
+	criteria ConceptPlayerGo IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerGoHeavy
 }
 
@@ -894,7 +933,7 @@ Response PlayerHeadLeftHeavy
 }
 Rule PlayerHeadLeftHeavy
 {
-	criteria ConceptPlayerLeft  IsHeavy
+	criteria ConceptPlayerLeft  IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerHeadLeftHeavy
 }
 
@@ -907,7 +946,7 @@ Response PlayerHeadRightHeavy
 }
 Rule PlayerHeadRightHeavy
 {
-	criteria ConceptPlayerRight  IsHeavy
+	criteria ConceptPlayerRight  IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerHeadRightHeavy
 }
 
@@ -919,7 +958,7 @@ Response PlayerHelpHeavy
 }
 Rule PlayerHelpHeavy
 {
-	criteria ConceptPlayerHelp IsHeavy
+	criteria ConceptPlayerHelp IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerHelpHeavy
 }
 
@@ -931,7 +970,7 @@ Response PlayerHelpCaptureHeavy
 }
 Rule PlayerHelpCaptureHeavy
 {
-	criteria ConceptPlayerHelp IsHeavy IsOnCappableControlPoint
+	criteria ConceptPlayerHelp IsHeavy HeavyNotCustomPlayermodel IsOnCappableControlPoint
 	ApplyContext "HeavyHelpCap:1:10"
 	Response PlayerHelpCaptureHeavy
 }
@@ -945,7 +984,7 @@ Response PlayerHelpCapture2Heavy
 }
 Rule PlayerHelpCapture2Heavy
 {
-	criteria ConceptPlayerHelp IsHeavy IsOnCappableControlPoint IsHelpCapHeavy
+	criteria ConceptPlayerHelp IsHeavy HeavyNotCustomPlayermodel IsOnCappableControlPoint IsHelpCapHeavy
 	Response PlayerHelpCapture2Heavy
 }
 
@@ -961,7 +1000,7 @@ Response PlayerGetOnPointHeavy
 
 Rule PlayerGetOnPointHeavy
 {
-	criterion ConceptFireWeapon IsHeavy IsOnCappableControlPoint NotDefendOnThePointSpeech
+	criterion ConceptFireWeapon IsHeavy HeavyNotCustomPlayermodel IsOnCappableControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:15"
 	applycontexttoworld
 	Response PlayerGetOnPointHeavy
@@ -976,7 +1015,7 @@ Response PlayerHelpDefendHeavy
 }
 Rule PlayerHelpDefendHeavy
 {
-	criteria ConceptPlayerHelp IsHeavy IsOnFriendlyControlPoint
+	criteria ConceptPlayerHelp IsHeavy HeavyNotCustomPlayermodel IsOnFriendlyControlPoint
 	Response PlayerHelpDefendHeavy
 }
 
@@ -988,7 +1027,7 @@ Response PlayerMedicHeavy
 }
 Rule PlayerMedicHeavy
 {
-	criteria ConceptPlayerMedic IsHeavy
+	criteria ConceptPlayerMedic IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerMedicHeavy
 }
 
@@ -997,7 +1036,7 @@ Response PlayerAskForBallHeavy
 }
 Rule PlayerAskForBallHeavy
 {
-	criteria ConceptPlayerAskForBall IsHeavy
+	criteria ConceptPlayerAskForBall IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerAskForBallHeavy
 }
 
@@ -1009,7 +1048,7 @@ Response PlayerMoveUpHeavy
 }
 Rule PlayerMoveUpHeavy
 {
-	criteria ConceptPlayerMoveUp  IsHeavy
+	criteria ConceptPlayerMoveUp  IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerMoveUpHeavy
 }
 
@@ -1021,7 +1060,7 @@ Response PlayerNoHeavy
 }
 Rule PlayerNoHeavy
 {
-	criteria ConceptPlayerNo  IsHeavy
+	criteria ConceptPlayerNo  IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerNoHeavy
 }
 
@@ -1033,7 +1072,7 @@ Response PlayerThanksHeavy
 }
 Rule PlayerThanksHeavy
 {
-	criteria ConceptPlayerThanks IsHeavy
+	criteria ConceptPlayerThanks IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerThanksHeavy
 }
 
@@ -1047,7 +1086,7 @@ Response KilledPlayerAssistHeavy
 }
 Rule KilledPlayerAssistHeavy
 {
-	criteria ConceptPlayerThanks IsHeavy IsARecentKill KilledPlayerDelay HeavyNotAssistSpeech
+	criteria ConceptPlayerThanks IsHeavy HeavyNotCustomPlayermodel IsARecentKill KilledPlayerDelay HeavyNotAssistSpeech
 	ApplyContext "HeavyAssistSpeech:1:20"
 	Response KilledPlayerAssistHeavy
 }
@@ -1061,7 +1100,7 @@ Response PlayerYesHeavy
 }
 Rule PlayerYesHeavy
 {
-	criteria ConceptPlayerYes  IsHeavy
+	criteria ConceptPlayerYes  IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerYesHeavy
 }
 
@@ -1078,7 +1117,7 @@ Response PlayerActivateChargeHeavy
 }
 Rule PlayerActivateChargeHeavy
 {
-	criteria ConceptPlayerActivateCharge IsHeavy
+	criteria ConceptPlayerActivateCharge IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerActivateChargeHeavy
 }
 
@@ -1091,7 +1130,7 @@ Response PlayerCloakedSpyHeavy
 }
 Rule PlayerCloakedSpyHeavy
 {
-	criteria ConceptPlayerCloakedSpy IsHeavy
+	criteria ConceptPlayerCloakedSpy IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerCloakedSpyHeavy
 }
 
@@ -1101,7 +1140,7 @@ Response PlayerDispenserHereHeavy
 }
 Rule PlayerDispenserHereHeavy
 {
-	criteria ConceptPlayerDispenserHere IsHeavy
+	criteria ConceptPlayerDispenserHere IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerDispenserHereHeavy
 }
 
@@ -1113,7 +1152,7 @@ Response PlayerIncomingHeavy
 }
 Rule PlayerIncomingHeavy
 {
-	criteria ConceptPlayerIncoming IsHeavy
+	criteria ConceptPlayerIncoming IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerIncomingHeavy
 }
 
@@ -1124,7 +1163,7 @@ Response PlayerSentryAheadHeavy
 }
 Rule PlayerSentryAheadHeavy
 {
-	criteria ConceptPlayerSentryAhead IsHeavy
+	criteria ConceptPlayerSentryAhead IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerSentryAheadHeavy
 }
 
@@ -1134,7 +1173,7 @@ Response PlayerSentryHereHeavy
 }
 Rule PlayerSentryHereHeavy
 {
-	criteria ConceptPlayerSentryHere IsHeavy
+	criteria ConceptPlayerSentryHere IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerSentryHereHeavy
 }
 
@@ -1144,7 +1183,7 @@ Response PlayerTeleporterHereHeavy
 }
 Rule PlayerTeleporterHereHeavy
 {
-	criteria ConceptPlayerTeleporterHere IsHeavy
+	criteria ConceptPlayerTeleporterHere IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerTeleporterHereHeavy
 }
 
@@ -1163,7 +1202,7 @@ Response PlayerBattleCryHeavy
 }
 Rule PlayerBattleCryHeavy
 {
-	criteria ConceptPlayerBattleCry IsHeavy
+	criteria ConceptPlayerBattleCry IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerBattleCryHeavy
 }
 
@@ -1187,7 +1226,7 @@ Response MeleeDareCombatHeavy
 }
 Rule MeleeDareCombatHeavy
 {
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsHeavy IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsHeavy HeavyNotCustomPlayermodel IsCrosshairEnemy
 	ApplyContext "IsDaring:1:5"
 	Response MeleeDareCombatHeavy
 }
@@ -1202,13 +1241,13 @@ Response PlayerShinyCryHeavy
 }
 Rule PlayerShinyCryHeavy
 {
-	criteria ConceptPlayerBattleCry 30PercentChance IsWeaponPrimary IsHeavy WeaponIsNotVanillaPrimary WeaponIsNotTaggedMinigun
+	criteria ConceptPlayerBattleCry 30PercentChance IsWeaponPrimary IsHeavy HeavyNotCustomPlayermodel WeaponIsNotVanillaPrimary WeaponIsNotTaggedMinigun
 	Response PlayerShinyCryHeavy
 }
 
 Rule PlayerShinyWindupHeavy
 {
-	criteria ConceptWindMinigun IsWeaponPrimary IsHeavy WeaponIsNotVanillaPrimary WeaponIsNotTaggedMinigun WeaponIsNotTomislav 5PercentChance HeavyNotShinySpeech HeavyNotKillSpeech
+	criteria ConceptWindMinigun IsWeaponPrimary IsHeavy HeavyNotCustomPlayermodel WeaponIsNotVanillaPrimary WeaponIsNotTaggedMinigun WeaponIsNotTomislav 5PercentChance HeavyNotShinySpeech HeavyNotKillSpeech
 	ApplyContext "HeavyShinySpeech:1:300"
 	Response PlayerShinyCryHeavy
 }
@@ -1221,7 +1260,7 @@ Response PlayerTauntCryHeavy
 }
 Rule PlayerTauntCryHeavy
 {
-	criteria ConceptPlayerBattleCry 75PercentChance IsHeavy IsOnEngineer IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry 75PercentChance IsHeavy HeavyNotCustomPlayermodel IsOnEngineer IsCrosshairEnemy
 	Response PlayerTauntCryHeavy
 }
 
@@ -1234,7 +1273,7 @@ Response PlayerTauntGunHeavy
 }
 Rule PlayerTauntGunHeavy
 {
-	criterion ConceptPlayerBattleCry 75PercentChance IsHeavy IsNotOnHeavy IsCrosshairEnemy NotGunTauntHeavy IsNotWeaponMelee
+	criterion ConceptPlayerBattleCry 75PercentChance IsHeavy HeavyNotCustomPlayermodel IsNotOnHeavy IsCrosshairEnemy NotGunTauntHeavy IsNotWeaponMelee
 	ApplyContext "GunTauntHeavy:1:10"
 	Response PlayerTauntGunHeavy
 }
@@ -1253,7 +1292,7 @@ Response PlayerCheersHeavy
 }
 Rule PlayerCheersHeavy
 {
-	criteria ConceptPlayerCheers IsHeavy
+	criteria ConceptPlayerCheers IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerCheersHeavy
 }
 
@@ -1266,7 +1305,7 @@ Response PlayerGoodJobHeavy
 }
 Rule PlayerGoodJobHeavy
 {
-	criteria ConceptPlayerGoodJob IsHeavy
+	criteria ConceptPlayerGoodJob IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerGoodJobHeavy
 }
 
@@ -1284,7 +1323,7 @@ Response PlayerJeersHeavy
 }
 Rule PlayerJeersHeavy
 {
-	criteria ConceptPlayerJeers IsHeavy
+	criteria ConceptPlayerJeers IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerJeersHeavy
 }
 
@@ -1299,7 +1338,7 @@ Response PlayerLostPointHeavy
 }
 Rule PlayerLostPointHeavy
 {
-	criteria ConceptPlayerLostPoint IsHeavy
+	criteria ConceptPlayerLostPoint IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerLostPointHeavy
 }
 
@@ -1314,7 +1353,7 @@ Response PlayerNegativeHeavy
 }
 Rule PlayerNegativeHeavy
 {
-	criteria ConceptPlayerNegative IsHeavy
+	criteria ConceptPlayerNegative IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerNegativeHeavy
 }
 
@@ -1326,7 +1365,7 @@ Response PlayerNiceShotHeavy
 }
 Rule PlayerNiceShotHeavy
 {
-	criteria ConceptPlayerNiceShot IsHeavy
+	criteria ConceptPlayerNiceShot IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerNiceShotHeavy
 }
 
@@ -1348,7 +1387,7 @@ Response PlayerTauntsHeavy
 }
 Rule PlayerPositiveHeavy
 {
-	criteria ConceptPlayerPositive IsHeavy
+	criteria ConceptPlayerPositive IsHeavy HeavyNotCustomPlayermodel
 	Response PlayerPositiveHeavy
 	Response PlayerTauntsHeavy
 }
@@ -1363,7 +1402,7 @@ Response MvMBombDroppedHeavy
 }
 Rule MvMBombDroppedHeavy
 {
-	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsHeavy 
+	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMBombDroppedHeavy
 }
 
@@ -1373,7 +1412,7 @@ Response MvMBombCarrierUpgrade1Heavy
 }
 Rule MvMBombCarrierUpgrade1Heavy
 {
-	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsHeavy 
+	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade1Heavy
 }
 
@@ -1383,7 +1422,7 @@ Response MvMBombCarrierUpgrade2Heavy
 }
 Rule MvMBombCarrierUpgrade2Heavy
 {
-	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsHeavy 
+	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade2Heavy
 }
 
@@ -1393,7 +1432,7 @@ Response MvMDefenderDiedEngineerHeavy
 }
 Rule MvMDefenderDiedEngineerHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedEngineerHeavy
 }
 
@@ -1403,7 +1442,7 @@ Response MvMDefenderDiedSpyHeavy
 }
 Rule MvMDefenderDiedSpyHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedSpyHeavy
 }
 
@@ -1413,7 +1452,7 @@ Response MvMDefenderDiedScoutHeavy
 }
 Rule MvMDefenderDiedScoutHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedScoutHeavy
 }
 
@@ -1423,7 +1462,7 @@ Response MvMDefenderDiedHeavyHeavy
 }
 Rule MvMDefenderDiedHeavyHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedHeavyHeavy
 }
 
@@ -1433,7 +1472,7 @@ Response MvMDefenderDiedDemomanHeavy
 }
 Rule MvMDefenderDiedDemomanHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedDemomanHeavy
 }
 
@@ -1443,7 +1482,7 @@ Response MvMDefenderDiedSniperHeavy
 }
 Rule MvMDefenderDiedSniperHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedSniperHeavy
 }
 
@@ -1453,7 +1492,7 @@ Response MvMDefenderDiedPyroHeavy
 }
 Rule MvMDefenderDiedPyroHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedPyroHeavy
 }
 
@@ -1463,7 +1502,7 @@ Response MvMDefenderDiedMedicHeavy
 }
 Rule MvMDefenderDiedMedicHeavy
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsHeavy 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsHeavy HeavyNotCustomPlayermodel 
 	Response MvMDefenderDiedMedicHeavy
 }
 
@@ -1473,7 +1512,7 @@ Response MvMFirstBombPickupHeavy
 }
 Rule MvMFirstBombPickupHeavy
 {
-	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMFirstBombPickupHeavy
 }
 
@@ -1484,7 +1523,7 @@ Response MvMBombPickupHeavy
 }
 Rule MvMBombPickupHeavy
 {
-	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMBombPickupHeavy
 }
 
@@ -1494,7 +1533,7 @@ Response MvMSniperCalloutHeavy
 }
 Rule MvMSniperCalloutHeavy
 {
-	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMSniperCalloutHeavy
 }
 
@@ -1504,7 +1543,7 @@ Response MvMSentryBusterHeavy
 }
 Rule MvMSentryBusterHeavy
 {
-	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMSentryBusterHeavy
 }
 
@@ -1514,7 +1553,7 @@ Response MvMSentryBusterDownHeavy
 }
 Rule MvMSentryBusterDownHeavy
 {
-	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMSentryBusterDownHeavy
 }
 
@@ -1525,7 +1564,7 @@ Response MvMLastManStandingHeavy
 }
 Rule MvMLastManStandingHeavy
 {
-	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMLastManStandingHeavy
 }
 
@@ -1538,7 +1577,7 @@ Response MvMEncourageMoneyHeavy
 }
 Rule MvMEncourageMoneyHeavy
 {
-	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMEncourageMoneyHeavy
 }
 
@@ -1550,7 +1589,7 @@ Response MvMEncourageUpgradeHeavy
 }
 Rule MvMEncourageUpgradeHeavy
 {
-	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMEncourageUpgradeHeavy
 }
 
@@ -1566,7 +1605,7 @@ Response MvMUpgradeCompleteHeavy
 }
 Rule MvMUpgradeCompleteHeavy
 {
-	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMUpgradeCompleteHeavy
 }
 
@@ -1576,7 +1615,7 @@ Response MvMGiantCalloutHeavy
 }
 Rule MvMGiantCalloutHeavy
 {
-	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMGiantCalloutHeavy
 }
 
@@ -1586,7 +1625,7 @@ Response MvMGiantHasBombHeavy
 }
 Rule MvMGiantHasBombHeavy
 {
-	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMGiantHasBombHeavy
 }
 
@@ -1597,7 +1636,7 @@ Response MvMSappedRobotHeavy
 }
 Rule MvMSappedRobotHeavy
 {
-	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMSappedRobotHeavy
 }
 
@@ -1608,7 +1647,7 @@ Response MvMCloseCallHeavy
 }
 Rule MvMCloseCallHeavy
 {
-	criteria ConceptMvMCloseCall 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMCloseCall 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMCloseCallHeavy
 }
 
@@ -1618,7 +1657,7 @@ Response MvMTankCalloutHeavy
 }
 Rule MvMTankCalloutHeavy
 {
-	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMTankCalloutHeavy
 }
 
@@ -1628,7 +1667,7 @@ Response MvMTankDeadHeavy
 }
 Rule MvMTankDeadHeavy
 {
-	criteria ConceptMvMTankDead 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMTankDead 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMTankDeadHeavy
 }
 
@@ -1638,7 +1677,7 @@ Response MvMTankDeployingHeavy
 }
 Rule MvMTankDeployingHeavy
 {
-	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMTankDeployingHeavy
 }
 
@@ -1649,7 +1688,7 @@ Response MvMAttackTheTankHeavy
 }
 Rule MvMAttackTheTankHeavy
 {
-	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMAttackTheTankHeavy
 }
 
@@ -1660,7 +1699,7 @@ Response MvMTauntHeavy
 }
 Rule MvMTauntHeavy
 {
-	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMTauntHeavy
 }
 
@@ -1674,7 +1713,7 @@ Response MvMWaveWinHeavy
 }
 Rule MvMWaveWinHeavy
 {
-	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMWaveWinHeavy
 }
 
@@ -1684,7 +1723,7 @@ Response MvMGiantKilledHeavy
 }
 Rule MvMGiantKilledHeavy
 {
-	criteria ConceptMvMGiantKilled 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMGiantKilled 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMGiantKilledHeavy
 }
 
@@ -1694,7 +1733,7 @@ Response MvMGiantKilledTeammateHeavy
 }
 Rule MvMGiantKilledTeammateHeavy
 {
-	criteria ConceptMvMGiantKilledTeammate 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMGiantKilledTeammate 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMGiantKilledTeammateHeavy
 }
 
@@ -1707,7 +1746,7 @@ Response MvMDeployRageHeavy
 }
 Rule MvMDeployRageHeavy
 {
-	criteria ConceptMvMDeployRage 50PercentChance IsMvMDefender IsHeavy
+	criteria ConceptMvMDeployRage 50PercentChance IsMvMDefender IsHeavy HeavyNotCustomPlayermodel
 	Response MvMDeployRageHeavy
 }
 
@@ -1719,7 +1758,7 @@ Response RocketDestroyedHeavy
 }
 Rule RocketDestroyedHeavy
 {
-	criteria ConceptRocketDestroyed 50PercentChance IsHeavy
+	criteria ConceptRocketDestroyed 50PercentChance IsHeavy HeavyNotCustomPlayermodel
 	Response RocketDestroyedHeavy
 }
 
@@ -1743,7 +1782,7 @@ Response PlayerFirstRoundStartCompHeavy
 }
 Rule PlayerFirstRoundStartCompHeavy
 {
-	criteria ConceptPlayerRoundStartComp IsHeavy IsFirstRound IsNotComp6v6 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsHeavy HeavyNotCustomPlayermodel IsFirstRound IsNotComp6v6 40PercentChance
 	Response PlayerFirstRoundStartCompHeavy
 }
 
@@ -1767,7 +1806,7 @@ Response PlayerFirstRoundStartComp6sHeavy
 }
 Rule PlayerFirstRoundStartComp6sHeavy
 {
-	criteria ConceptPlayerRoundStartComp IsHeavy IsFirstRound IsComp6v6 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsHeavy HeavyNotCustomPlayermodel IsFirstRound IsComp6v6 40PercentChance
 	Response PlayerFirstRoundStartComp6sHeavy
 }
 
@@ -1782,7 +1821,7 @@ Response PlayerWonPrevRoundCompHeavy
 }
 Rule PlayerWonPrevRoundCompHeavy
 {
-	criteria ConceptPlayerRoundStartComp IsHeavy IsNotFirstRound PlayerWonPreviousRound 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsHeavy HeavyNotCustomPlayermodel IsNotFirstRound PlayerWonPreviousRound 40PercentChance
 	Response PlayerWonPrevRoundCompHeavy
 }
 
@@ -1801,7 +1840,7 @@ Response PlayerLostPrevRoundCompHeavy
 }
 Rule PlayerLostPrevRoundCompHeavy
 {
-	criteria ConceptPlayerRoundStartComp IsHeavy IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsHeavy HeavyNotCustomPlayermodel IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
 	Response PlayerLostPrevRoundCompHeavy
 }
 
@@ -1814,7 +1853,7 @@ Response PlayerTiedPrevRoundCompHeavy
 }
 Rule PlayerTiedPrevRoundCompHeavy
 {
-	criteria ConceptPlayerRoundStartComp IsHeavy IsNotFirstRound PreviousRoundWasTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsHeavy HeavyNotCustomPlayermodel IsNotFirstRound PreviousRoundWasTie 40PercentChance
 	Response PlayerTiedPrevRoundCompHeavy
 }
 
@@ -1834,7 +1873,7 @@ Response PlayerGameWinCompHeavy
 }
 Rule PlayerGameWinCompHeavy
 {
-	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsNotComp6v6 IsHeavy 40PercentChance
+	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsNotComp6v6 IsHeavy HeavyNotCustomPlayermodel 40PercentChance
 	Response PlayerGameWinCompHeavy
 }
 
@@ -1855,7 +1894,7 @@ Response PlayerGameWinComp6sHeavy
 }
 Rule PlayerGameWinComp6sHeavy
 {
-	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsComp6v6 IsHeavy 40PercentChance
+	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsComp6v6 IsHeavy HeavyNotCustomPlayermodel 40PercentChance
 	Response PlayerGameWinComp6sHeavy
 }
 
@@ -1874,7 +1913,7 @@ Response PlayerMatchWinCompHeavy
 }
 Rule PlayerMatchWinCompHeavy
 {
-	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsHeavy 40PercentChance
+	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsHeavy HeavyNotCustomPlayermodel 40PercentChance
 	Response PlayerMatchWinCompHeavy
 }
 //--------------------------------------------------------------------------------------------------------------

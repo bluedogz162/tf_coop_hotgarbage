@@ -24,7 +24,7 @@ WeaponData
 
 	// Ammo & Clip.
 	"primary_ammo"		"TF_AMMO_SECONDARY"
-	"secondary_ammo"	"None"
+	"secondary_ammo"	"LFE_AMMO_GRENADES2"
 	clip_size		12
 	default_clip		12
 

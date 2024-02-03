@@ -181,6 +181,12 @@ criterion "ConceptCapBlocked" "Concept" "TLK_CAPTURE_BLOCKED" required
 criterion "ConceptMedicChargeDeployed" "Concept" "TLK_MEDIC_CHARGEDEPLOYED" required
 criterion "ConceptMedicChargeStopped" "Concept" "TLK_HEALTARGET_STOPPEDHEALING" required 
 
+criterion "ConceptPlayerDeath" "Concept" "TLK_PLRDEATH" required 
+criterion "ConceptPlayerDeathCrit" "Concept" "TLK_PLRDEATHCRIT" required 
+criterion "ConceptPlayerDeathMelee" "Concept" "TLK_PLRDEATHMELEE" required 
+criterion "ConceptPlayerDeathExplosion" "Concept" "TLK_PLRDEATHEXPLOSION" required 
+
+
 criterion "ConceptEngineerPickupBuilding" "Concept" "TLK_PICKUP_BUILDING" required 
 criterion "ConceptEngineerDeployBuilding" "Concept" "TLK_REDEPLOY_BUILDING" required 
 criterion "ConceptEngineerCarryingBuilding" "Concept" "TLK_CARRYING_BUILDING" required 

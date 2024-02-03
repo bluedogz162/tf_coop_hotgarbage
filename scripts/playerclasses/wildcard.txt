@@ -33,6 +33,9 @@ PlayerClass
 		"tf_ammo_metal"		"1"
 		"tf_ammo_grenades1"	"1"
 		"tf_ammo_grenades2"	"1"
+		"LFE_AMMO_GRENADES2"	"1"
+		"LFE_AMMO_GRENADES1"	"1"
+		
 	}	
 
 	// Death Sounds

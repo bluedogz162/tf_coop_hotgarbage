@@ -20,9 +20,4 @@
 	"$RaytraceSphere"		"0"
 	"$SphereTexkillCombo"	"0"
 
-	"Eyes_dx8"
-		{
-		"$basetexture"	"models/player/shared/dxlevel80/eyeball_l"
-		"$iris"         "models/player/shared/dxlevel80/iris_blue_l"
-		}
 }

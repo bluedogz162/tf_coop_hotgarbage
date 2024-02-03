@@ -1,8 +1,0 @@
-patch
-{
-	include "materials\ia-nananana\Kurokami_Fubuki\shader.vmt"
-	insert
-	{
-		"$basetexture" "ia-nananana\Kurokami_Fubuki\hbk"
-	}
-}

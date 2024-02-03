@@ -19602,7 +19602,6 @@
 			"image_inventory_size_w"		"16"
 			"image_inventory_size_h"		"16"
 			"drop_type"	"drop"
-			"model_player"	"models/weapons/c_arms_citizen.mdl"
 			"model_world"	"models/player/kleiner.mdl"
 			"used_by_classes"
 			{
@@ -19617,6 +19616,11 @@
 				{
 					"attribute_class"	"chance_of_bitches_increase"
 					"value"	"5"
+				}
+				"custom hand model"
+				{
+					"attribute_class"	"custom_hand_model"
+					"value"	"models/weapons/c_arms_citizen.mdl"
 				}
 			}
 			"visuals"
@@ -19764,52 +19768,7 @@
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
 		}
-		"10101"
-		{
-			"name"	"Mori Calliope"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Reaper"
-			"item_name"	"Mori Calliope"
-			"item_description"	"Model by chained_tan"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/player/bozoxx/hololive/mori_calliope.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
+
 		"10102"
 		{
 			"name"	"Scythe"
@@ -19888,788 +19847,7 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		"10103"
-		{
-			"name"	"Shirogane Noel"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Knight"
-			"item_name"	"Shirogane Noel"
-			"item_description"	"Model by TwentyDoge"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/hololive/shirogane noel.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10104"
-		{
-			"name"	"Tokoyami Towa"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 MajiTenshi"
-			"item_name"	"Tokoyami Towa"
-			"item_description"	"Model by twentydoge"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/hololive/tokoyami towa.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10105"
-		{
-			"name"	"Ouro Kronii"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Clock"
-			"item_name"	"Ouro Kronii"
-			"item_description"	"Model by Cover/kaguranana"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/pm/kronii.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10106"
-		{
-			"name"	"Raphtalia"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Raccoon"
-			"item_name"	"Raphtalia"
-			"item_description"	"Model by Skugly"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/player/dewobedil/the_rising_of_the_shield_hero/raphtalia/default_p.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10107"
-		{
-			"name"	"Pikachu"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Rat"
-			"item_name"	"Pikachu"
-			"item_description"	"Model by Nintendo/HorsePlants"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/pokemon/pikachu.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10108"
-		{
-			"name"	"PATIENT ZERO - Shotgunner"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 99 Combine"
-			"item_name"	"PATIENT ZERO - Shotgunner"
-			"item_description"	"Model by parrygod/breen"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/theparrygod/transition_shotgunner.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10109"
-		{
-			"name"	"Makima"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 666 Devil"
-			"item_name"	"Makima"
-			"item_description"	"Model by Shtora"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/dih/makima.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10110"
-		{
-			"name"	"Power"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 10 Waifu"
-			"item_name"	"Power"
-			"item_description"	"Model by Kitzoomer/Shtora"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/dih/power.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10113"
-		{
-			"name"	"Ribbon Girl Miku"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 2 Miku"
-			"item_name"	"Ribbon Girl Miku"
-			"item_description"	"Model by TDA/dewobedil"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/player/dewobedil/vocaloid/ribbon_girl_miku/default_p.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10114"
-		{
-			"name"	"HL:Alyx Combine Captain"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Captain"
-			"item_name"	"HL:Alyx Combine Captain"
-			"item_description"	"Model by jQueary"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/hlvr/characters/combine_captain/combine_captain_hlvr_player.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10115"
-		{
-			"name"	"Goblin Slayer"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 99 Badass"
-			"item_name"	"Goblin Slayer"
-			"item_description"	"Model by 300 Heroes/BLAZE"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/blaze/goblin_slayer/goblin_slayer/goblin_slayer_pm.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10116"
-		{
-			"name"	"High Elf Archer"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Anvil"
-			"item_name"	"High Elf Archer"
-			"item_description"	"Model by 300 Heroes/BLAZE"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/blaze/goblin_slayer/high_elf_archer/high_elf_archer_pm.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10117"
-		{
-			"name"	"Priestess"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Cutie"
-			"item_name"	"Priestess"
-			"item_description"	"Model by 300 Heroes/BLAZE"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/blaze/goblin_slayer/priestess/priestess_pm.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10118"
-		{
-			"name"	"Senator Steven Armstrong"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 100 Nanomachines"
-			"item_name"	"Senator Steven Armstrong"
-			"item_description"	"Model by JazzSica/Ghostly"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/armstrong.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10120"
-		{
-			"name"	"Tatsumaki"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 99 Esper"
-			"item_name"	"Tatsumaki"
-			"item_description"	"Model by Superdimensional"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/cyanblue/opm/tatsumaki/tatsumaki.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10123"
-		{
-			"name"	"ADIDAS Astolfo"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 99 BestBoi"
-			"item_name"	"ADIDAS Astolfo"
-			"item_description"	"Model by ScopE"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/cyanblue/fate_extella_link/adidasastolfo/adidasastolfo.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
-		"10124"
-		{
-			"name"	"Lethal Company Employee"
-			"first_sale_date"	"1969/04/20"
-			"prefab"	"valve base_misc"
-			"hidden"	"0"
-			"item_class"	"tf_wearable"
-			"craft_class"	"hat"
-			"craft_material_type"	"hat"
-			"capabilities"
-			{
-				"nameable"		"1"
-				"can_craft_count"	"1"
-				"can_craft_if_purchased"	"1"
-			}
-			"loadondemand" "1"
-			"propername" "1"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"128"
-			"show_in_armory"	"1"
-			"item_type_name"	"Level 9 Great Great Asset"
-			"item_name"	"Lethal Company Employee"
-			"item_description"	"Model by Bini/archom"
-			"item_slot"	"misc2"
-			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"unique"
-			"min_ilevel"	"20"
-			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_world"	"models/arty/bini/lethal company/employee/employee - arc9_pm.mdl"
-			"model_player"	"models/empty.mdl"
-			"used_by_classes"
-			{
-				"wildcard" "1"
-			}
-			"attributes"
-			{
-				"voice pitch scale"
-				{
-					"attribute_class"	"voice_pitch_scale"
-					"value"		"0"
-				}
-			}
-		}
+
 		"20071"
 		{
 			"name"	"Scout Playermodel"
@@ -21473,7 +20651,7 @@
 			"item_slot"	"primary"
 			"anim_slot"	"MELEE_ALLCLASS"
 			"equip_region"	"hat"
-			"attach_to_hands"	"0"
+			"attach_to_hands"	"1"
 			"attach_to_hands_vm_only"	"1"
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
@@ -21734,7 +20912,7 @@
 			"name"	"SPAS-12"
 			"prefab"		"base_hat"
 			"hidden"	"0"
-			"item_class"	"tf_weapon_shotgun"
+			"item_class"	"tf_weapon_custom_primary"
 			"capabilities"
 			{
 				"paintable"		"1"
@@ -21773,7 +20951,7 @@
 				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"1.7"
+					"value"	"0.533"
 				}
 				"hidden primary max ammo bonus"
 				{
@@ -21783,19 +20961,138 @@
 				"fire rate penalty HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.4"
+					"value"	"5.866"
 				}
-				"lunchbox adds minicrits"
+				"cw set reload singly"
 				{
-					"attribute_class"	"viewpunch_mult"
-					"value"	"9"
+					"attribute_class"	"cw_reload_singly"
+					"value"	"1"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "7"
+				}
+				"cw secondary attack mode"
+				{
+					"attribute_class"	"cw_secondary_attack_mode"
+					"value"	"2"
+				}
+				"secondary atk fire rate"
+				{
+					"attribute_class"	"secondary_atk_fire_rate"
+					"value"	"1"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.5"
 				}
 			}
 			"visuals"
 			{
 				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
 				"sound_burst"		"HL2_Weapon_Shotgun.Double"
+				"sound_double_shot"		"HL2_Weapon_Shotgun.Double"
 				"sound_reload"		""
+				"sound_empty"		"HL2_Weapon_Shotgun.Empty"
+				"animation_replacement"
+				{
+
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+				"3232"
+		{
+			"name"	"SPAS-12"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_custom"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"0"
+			"item_type_name" "SPAS-12 test ver"
+			"baseitem"	"0"
+			"item_name"	"Shotgun (HL2)"
+			"item_description"	""
+			"item_slot"	"secondary"
+			"equip_region"	"hat"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"item_iconname"		"shotgun"
+			"item_logname"		"HL2_Shotgun"
+			"image_inventory"	"backpack/weapons/spas"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_shotgun.mdl"
+			"model_world"	"models/weapons/w_shotgun.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+
+			}
+			"attributes"
+			{
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.533"
+				}
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"32"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"32"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"5.866"
+				}
+				"cw set reload singly"
+				{
+					"attribute_class"	"cw_reload_singly"
+					"value"	"1"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "7"
+				}
+				"cw secondary attack mode"
+				{
+					"attribute_class"	"cw_secondary_attack_mode"
+					"value"	"1"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.5"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"HL2_Weapon_Shotgun.Single"
+				"sound_burst"		"HL2_Weapon_Shotgun.Double"
+				"sound_double_shot"		"HL2_Weapon_Shotgun.Double"
+				"sound_reload"		""
+				"sound_empty"		"HL2_Weapon_Shotgun.Empty"
 				"animation_replacement"
 				{
 
@@ -22253,8 +21550,8 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"
-			"model_player"	"models/l4d/v_models/v_pistol.mdl"
-			"model_world"	"models/l4d/w_models/w_pistol_1911.mdl"
+			"model_player"	"models/l4d/v_models/v_pistol_dragon.mdl"
+			"model_world"	"models/l4d/w_models/w_pistol_1911_dragon.mdl"
 			"capabilities"
 			{
 				"can_collect" "1"
@@ -22356,7 +21653,8 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"drop_type"	"drop"
-			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+//			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+//			"model_player"	"models/custom/player/a_arms/a_arms1.mdl"
 			"model_world"	"models/freak_fortress_2/newremilia/newremilia.mdl"
 			"used_by_classes"
 			{
@@ -22388,7 +21686,12 @@
 				{
 					"attribute_class"		"custom_air_dash_sound"
 					"value"		"player.wingflap"
-				}					
+				}	
+				"custom hand model"
+				{
+					"attribute_class"		"custom_hand_model"
+					"value"		"models/kleiner.mdl"
+				}						
 
 			}
 			"visuals"
@@ -22487,7 +21790,8 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"drop_type"	"drop"
-			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+//			"model_player"	"models/weapons/c_models/c_spy_arms.mdl"
+			"model_player"	"models/custom/player/a_arms/a_arms1.mdl"
 			"model_world"	"models/freak_fortress_2/newflandre/newflandre.mdl"
 			"used_by_classes"
 			{
@@ -22503,7 +21807,7 @@
 				"damage force reduction"
 				{
 					"attribute_class"	"damage_force_reduction"
-					"value" "0.3"
+					"value" "0.8"
 				}
 				"voice pitch scale"
 				{
@@ -22514,7 +21818,12 @@
 				{
 					"attribute_class"		"custom_air_dash_sound_volume"
 					"value"		"1"
-				}		
+				}
+				"maxammo secondary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value" "0.5"
+				}
 			}
 			"visuals"
 			{
@@ -32010,7 +31319,36 @@
 			"hidden"	"1"
 			"effect_type"	"positive"
 		}
-
+		"42010"
+		{
+			"name"	"secondary atk fire rate"
+			"attribute_class"	"secondary_atk_fire_rate"
+			"attribute_type"	"float"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"42011"
+		{
+			"name"	"custom hand model"
+			"attribute_class"	"custom_hand_model"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"42011"
+		{
+			"name"	"custom hand model gunslinger"
+			"attribute_class"	"custom_hand_model_gunslinger"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
 	}
 	"attribute_controlled_attached_particles"
 	{

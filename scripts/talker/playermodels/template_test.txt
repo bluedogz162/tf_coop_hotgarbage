@@ -1,0 +1,192 @@
+// HGF - Playermodel response/voice template
+Criterion "IsPM1" "playermodel" "models/empty.mdl" "required" weight 0
+
+Response PlayerCloakedSpyDemomanPM1
+{
+	
+}
+Rule PlayerCloakedSpyDemomanPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnDemoman
+	Response PlayerCloakedSpyDemomanPM1
+}
+
+Response PlayerCloakedSpyEngineerPM1
+{
+	
+}
+Rule PlayerCloakedSpyEngineerPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnEngineer
+	Response PlayerCloakedSpyEngineerPM1
+}
+
+Response PlayerCloakedSpyHeavyPM1
+{
+	
+}
+Rule PlayerCloakedSpyHeavyPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnHeavy
+	Response PlayerCloakedSpyHeavyPM1
+}
+
+Response PlayerCloakedSpyMedicPM1
+{
+	
+}
+Rule PlayerCloakedSpyMedicPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnMedic
+	Response PlayerCloakedSpyMedicPM1
+}
+
+Response PlayerCloakedSpyPyroPM1
+{
+	
+}
+Rule PlayerCloakedSpyPyroPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnPyro
+	Response PlayerCloakedSpyPyroPM1
+}
+
+Response PlayerCloakedSpyScoutPM1
+{
+	
+}
+Rule PlayerCloakedSpyScoutPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnScout
+	Response PlayerCloakedSpyScoutPM1
+}
+
+Response PlayerCloakedSpySniperPM1
+{
+	
+}
+Rule PlayerCloakedSpySniperPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnSniper
+	Response PlayerCloakedSpySniperPM1
+}
+
+Response PlayerCloakedSpySoldierPM1
+{
+	
+}
+Rule PlayerCloakedSpySoldierPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnSoldier
+	Response PlayerCloakedSpySoldierPM1
+}
+
+Response PlayerCloakedSpySpyPM1
+{
+	
+}
+Rule PlayerCloakedSpySpyPM1
+{
+	criteria ConceptPlayerCloakedSpy IsPM1 IsOnSpy
+	Response PlayerCloakedSpySpyPM1
+}
+
+Response PlayerTeleporterThanksPM1
+{
+
+}
+Rule PlayerTeleporterThanksPM1
+{
+	criteria ConceptTeleported IsNotEngineer IsPM1 30PercentChance
+	Response PlayerTeleporterThanksPM1
+}
+
+Response PM1JarateHit
+{
+
+}
+Rule PM1JarateHit
+{
+	criteria ConceptJarateHit IsPM1 50PercentChance
+	Response PM1JarateHit
+}
+
+Response PlayerPainPM1
+{
+
+}
+Rule PlayerPainPM1
+{
+	criteria ConceptPain IsPM1 IsNotDominating
+	Response PlayerPainPM1
+}
+
+Response PlayerAttackerPainPM1
+{
+
+}
+Rule PlayerAttackerPainPM1
+{
+	criteria ConceptAttackerPain IsPM1 IsNotDominating
+	Response PlayerAttackerPainPM1
+}
+
+Response PlayerMedicPM1
+{
+
+}
+Rule PlayerMedicPM1
+{
+	criteria ConceptPlayerMedic IsPM1
+	Response PlayerMedicPM1
+}
+
+Response PlayerAskForBallPM1
+{
+}
+Rule PlayerAskForBallPM1
+{
+	criteria ConceptPlayerAskForBall IsPM1
+	Response PlayerAskForBallPM1
+}
+
+Response PlayerMoveUpPM1
+{
+
+}
+Rule PlayerMoveUpPM1
+{
+	criteria ConceptPlayerMoveUp  IsPM1
+	Response PlayerMoveUpPM1
+}
+
+Response PlayerNoPM1
+{
+
+}
+Rule PlayerNoPM1
+{
+	criteria ConceptPlayerNo  IsPM1
+	Response PlayerNoPM1
+}
+
+Response PlayerThanksPM1
+{
+
+}
+Rule PlayerThanksPM1
+{
+	criteria ConceptPlayerThanks IsPM1
+	Response PlayerThanksPM1
+}
+
+
+Response PlayerYesPM1
+{
+
+}
+Rule PlayerYesPM1
+{
+	criteria ConceptPlayerYes  IsPM1
+	Response PlayerYesPM1
+}
