@@ -28,13 +28,55 @@ Criterion "ScoutNotDrinkReadySpeech" "ScoutDrinkReadySpeech" "!=1" "required" we
 Criterion "ScoutIsNotCrit" "ScoutIsCrit" "1" "required" weight 0
 Criterion "ScoutHasFired" "ScoutFired" "1" "required" weight 0
 
+Criterion "ScoutNotCustomPlayermodel" "playermodel" "models/player/Scout.mdl" "required" weight 0
+
+
+Response PlayerScoutDeath
+{
+	speak "Scout.Death" weight 2
+}
+Rule PlayerScoutDeath
+{
+	criteria ConceptPlayerDeath IsScout ScoutNotCustomPlayermodel
+	Response PlayerScoutDeath
+}
+
+Response PlayerScoutDeathCrit
+{
+	speak "Scout.CritDeath" weight 2
+}
+Response PlayerScoutDeathMelee
+{
+	speak "Scout.MeleeDeath" weight 2
+}
+Response PlayerScoutDeathExplosion
+{
+	speak "Scout.ExplosionDeath" weight 2
+}
+Rule PlayerScoutDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsScout ScoutNotCustomPlayermodel
+	Response PlayerScoutDeathCrit
+}
+Rule PlayerScoutDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsScout ScoutNotCustomPlayermodel
+	Response PlayerScoutDeathExplosion
+}
+Rule PlayerScoutDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsScout ScoutNotCustomPlayermodel
+	Response PlayerScoutDeathMelee
+}
+
+
 Response PlayerCloakedSpyDemomanScout
 {
 	scene "scenes/Player/Scout/low/386.vcd" 
 }
 Rule PlayerCloakedSpyDemomanScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnDemoman
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnDemoman
 	Response PlayerCloakedSpyDemomanScout
 }
 
@@ -44,7 +86,7 @@ Response PlayerCloakedSpyEngineerScout
 }
 Rule PlayerCloakedSpyEngineerScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnEngineer
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnEngineer
 	Response PlayerCloakedSpyEngineerScout
 }
 
@@ -54,7 +96,7 @@ Response PlayerCloakedSpyHeavyScout
 }
 Rule PlayerCloakedSpyHeavyScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnHeavy
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnHeavy
 	Response PlayerCloakedSpyHeavyScout
 }
 
@@ -64,7 +106,7 @@ Response PlayerCloakedSpyMedicScout
 }
 Rule PlayerCloakedSpyMedicScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnMedic
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnMedic
 	Response PlayerCloakedSpyMedicScout
 }
 
@@ -74,7 +116,7 @@ Response PlayerCloakedSpyPyroScout
 }
 Rule PlayerCloakedSpyPyroScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnPyro
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnPyro
 	Response PlayerCloakedSpyPyroScout
 }
 
@@ -84,7 +126,7 @@ Response PlayerCloakedSpyScoutScout
 }
 Rule PlayerCloakedSpyScoutScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnScout
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnScout
 	Response PlayerCloakedSpyScoutScout
 }
 
@@ -94,7 +136,7 @@ Response PlayerCloakedSpySniperScout
 }
 Rule PlayerCloakedSpySniperScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnSniper
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnSniper
 	Response PlayerCloakedSpySniperScout
 }
 
@@ -104,7 +146,7 @@ Response PlayerCloakedSpySoldierScout
 }
 Rule PlayerCloakedSpySoldierScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnSoldier
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnSoldier
 	Response PlayerCloakedSpySoldierScout
 }
 
@@ -114,7 +156,7 @@ Response PlayerCloakedSpySpyScout
 }
 Rule PlayerCloakedSpySpyScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout IsOnSpy
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel IsOnSpy
 	Response PlayerCloakedSpySpyScout
 }
 
@@ -140,7 +182,7 @@ Response AwardScout
 }
 Rule AwardScout
 {
-	criteria ConceptAchievementAward IsScout ScoutNotAwardSpeech
+	criteria ConceptAchievementAward IsScout ScoutNotCustomPlayermodel ScoutNotAwardSpeech
 	ApplyContext "ScoutAwardSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response AwardScout
@@ -155,7 +197,7 @@ Response HealThanksScout
 }
 Rule HealThanksScout
 {
-	criteria ConceptMedicChargeStopped IsScout SuperHighHealthContext ScoutNotSaidHealThanks 50PercentChance
+	criteria ConceptMedicChargeStopped IsScout ScoutNotCustomPlayermodel SuperHighHealthContext ScoutNotSaidHealThanks 50PercentChance
 	ApplyContext "ScoutSaidHealThanks:1:20"
 	Response HealThanksScout
 }
@@ -170,7 +212,7 @@ Response PlayerRoundStartScout
 }
 Rule PlayerRoundStartScout
 {
-	criteria ConceptPlayerRoundStart IsScout
+	criteria ConceptPlayerRoundStart IsScout ScoutNotCustomPlayermodel
 	Response PlayerRoundStartScout
 }
 
@@ -183,7 +225,7 @@ Response PlayerCappedIntelligenceScout
 }
 Rule PlayerCappedIntelligenceScout
 {
-	criteria ConceptPlayerCapturedIntelligence IsScout
+	criteria ConceptPlayerCapturedIntelligence IsScout ScoutNotCustomPlayermodel
 	Response PlayerCappedIntelligenceScout
 }
 
@@ -196,7 +238,7 @@ Response PlayerCapturedPointScout
 }
 Rule PlayerCapturedPointScout
 {
-	criteria ConceptPlayerCapturedPoint IsScout
+	criteria ConceptPlayerCapturedPoint IsScout ScoutNotCustomPlayermodel
 	Response PlayerCapturedPointScout
 }
 
@@ -206,7 +248,7 @@ Response PlayerGrabbedIntelligenceScout
 }
 Rule PlayerGrabbedIntelligenceScout
 {
-	criteria ConceptPlayerGrabbedIntelligence IsScout NotScoutGrabbedIntelligence 10PercentChance
+	criteria ConceptPlayerGrabbedIntelligence IsScout ScoutNotCustomPlayermodel NotScoutGrabbedIntelligence 10PercentChance
 	ApplyContext "ScoutGrabbedIntelligence:1:30"
 	Response PlayerGrabbedIntelligenceScout
 }
@@ -227,7 +269,7 @@ Response PlayerSuddenDeathScout
 }
 Rule PlayerSuddenDeathScout
 {
-	criteria ConceptPlayerSuddenDeathStart IsScout
+	criteria ConceptPlayerSuddenDeathStart IsScout ScoutNotCustomPlayermodel
 	Response PlayerSuddenDeathScout
 }
 
@@ -240,7 +282,7 @@ Response PlayerStalemateScout
 }
 Rule PlayerStalemateScout
 {
-	criteria ConceptPlayerStalemate IsScout
+	criteria ConceptPlayerStalemate IsScout ScoutNotCustomPlayermodel
 	Response PlayerStalemateScout
 }
 
@@ -252,7 +294,7 @@ Response PlayerTeleporterThanksScout
 }
 Rule PlayerTeleporterThanksScout
 {
-	criteria ConceptTeleported IsNotEngineer IsScout 30PercentChance
+	criteria ConceptTeleported IsNotEngineer IsScout ScoutNotCustomPlayermodel 30PercentChance
 	Response PlayerTeleporterThanksScout
 }
 
@@ -271,7 +313,7 @@ Response CartMovingBackwardsDefenseScout
 }
 Rule CartMovingBackwardsDefenseScout
 {
-	criteria ConceptCartMovingBackward IsOnDefense IsScout ScoutNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingBackward IsOnDefense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingBackwardD:1:20"
 	Response CartMovingBackwardsDefenseScout
 }
@@ -289,7 +331,7 @@ Response CartMovingBackwardsOffenseScout
 }
 Rule CartMovingBackwardsOffenseScout
 {
-	criteria ConceptCartMovingBackward IsOnOffense IsScout ScoutNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingBackward IsOnOffense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingBackwardO:1:20"
 	Response CartMovingBackwardsOffenseScout
 }
@@ -305,7 +347,7 @@ Response CartMovingForwardDefenseScout
 }
 Rule CartMovingForwardDefenseScout
 {
-	criteria ConceptCartMovingForward IsOnDefense IsScout ScoutNotSaidCartMovingForwardD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingForward IsOnDefense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingForwardD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingForwardD:1:20"
 	Response CartMovingForwardDefenseScout
 }
@@ -327,7 +369,7 @@ Response CartMovingForwardOffenseScout
 }
 Rule CartMovingForwardOffenseScout
 {
-	criteria ConceptCartMovingForward IsOnOffense IsScout ScoutNotSaidCartMovingForwardO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingForward IsOnOffense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingForwardO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingForwardO:1:20"
 	Response CartMovingForwardOffenseScout
 }
@@ -340,7 +382,7 @@ Response CartMovingStoppedDefenseScout
 }
 Rule CartMovingStoppedDefenseScout
 {
-	criteria ConceptCartMovingStopped IsOnDefense IsScout ScoutNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingStopped IsOnDefense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingStoppedD:1:20"
 	Response CartMovingStoppedDefenseScout
 }
@@ -353,7 +395,7 @@ Response CartMovingStoppedOffenseScout
 }
 Rule CartMovingStoppedOffenseScout
 {
-	criteria ConceptCartMovingStopped IsOnOffense IsScout ScoutNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance
+	criteria ConceptCartMovingStopped IsOnOffense IsScout ScoutNotCustomPlayermodel ScoutNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance
 	ApplyContext "SaidCartMovingStoppedO:1:20"
 	Response CartMovingStoppedOffenseScout
 }
@@ -369,7 +411,7 @@ Response DefendOnThePointScout
 }
 Rule DefendOnThePointScout
 {
-	criteria ConceptFireWeapon IsScout IsOnFriendlyControlPoint NotDefendOnThePointSpeech
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel IsOnFriendlyControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:30"
 	applycontexttoworld
 	Response DefendOnThePointScout
@@ -385,7 +427,7 @@ Response InvulnerableSpeechScout
 }
 Rule InvulnerableSpeechScout
 {
-	criteria ConceptFireWeapon IsScout IsInvulnerable ScoutNotInvulnerableSpeech
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel IsInvulnerable ScoutNotInvulnerableSpeech
 	ApplyContext "ScoutInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechScout
 }
@@ -397,7 +439,7 @@ Response KilledPlayerAssistAutoScout
 }
 Rule KilledPlayerAssistAutoScout
 {
-	criteria ConceptKilledPlayer IsScout IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance ScoutNotAssistSpeech
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance ScoutNotAssistSpeech
 	ApplyContext "ScoutAssistSpeech:1:20"
 	Response KilledPlayerAssistAutoScout
 }
@@ -419,7 +461,7 @@ Response KilledPlayerManyScout
 }
 Rule KilledPlayerManyScout
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay ScoutNotKillSpeech IsScout
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay ScoutNotKillSpeech IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeech:1:5"
 	Response KilledPlayerManyScout
 }
@@ -450,7 +492,7 @@ Response KilledPlayerMeleeGenericScout
 
 Rule KilledPlayerMeleeBatScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsNotCandy WeaponIsNotBasher WeaponIsNotGunbai WeaponIsNotMace WeaponIsNotFish WeaponIsNotTRBlade WeaponIsNotSaxxy ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsNotCandy WeaponIsNotBasher WeaponIsNotGunbai WeaponIsNotMace WeaponIsNotFish WeaponIsNotTRBlade WeaponIsNotSaxxy ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeBatScout
 	Response KilledPlayerMeleeGenericScout
@@ -464,7 +506,7 @@ Response KilledPlayerMeleeBasherScout
 
 Rule KilledPlayerMeleeBasherScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsWeaponMelee WeaponIsBasher ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsWeaponMelee WeaponIsBasher ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeBasherScout
 	Response KilledPlayerMeleeGenericScout
@@ -479,7 +521,7 @@ Response KilledPlayerMeleeCandyScout
 
 Rule KilledPlayerMeleeCandyScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsWeaponMelee WeaponIsCandy ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance IsWeaponMelee WeaponIsCandy ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeCandyScout
 	Response KilledPlayerMeleeGenericScout
@@ -494,7 +536,7 @@ Response KilledPlayerMeleeMaceScout
 
 Rule KilledPlayerMeleeMaceScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsMace ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsMace ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeMaceScout
 	Response KilledPlayerMeleeGenericScout
@@ -510,7 +552,7 @@ Response KilledPlayerMeleeFishScout
 
 Rule KilledPlayerMeleeFishScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsHolyMackerel ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsHolyMackerel ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeFishScout
 	Response KilledPlayerMeleeGenericScout
@@ -518,7 +560,7 @@ Rule KilledPlayerMeleeFishScout
 
 Rule KilledPlayerMeleeFestiveFishScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsFestiveHolyMackerel ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsFestiveHolyMackerel ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeFishScout
 	Response KilledPlayerMeleeGenericScout
@@ -529,7 +571,7 @@ Rule KilledPlayerMeleeFestiveFishScout
 // even moreso than the Fish
 Rule KilledPlayerMeleeGunbaiScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsGunbai ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsGunbai ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeFishScout
 	Response KilledPlayerMeleeGenericScout
@@ -537,7 +579,7 @@ Rule KilledPlayerMeleeGunbaiScout
 
 Rule KilledPlayerMeleeSwordScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsTRBlade ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsTRBlade ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeMaceScout
 	Response KilledPlayerMeleeGenericScout
@@ -546,7 +588,7 @@ Rule KilledPlayerMeleeSwordScout
 
 Rule KilledPlayerMeleeSaxxyScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsSaxxy ScoutNotKillSpeechMelee IsScout
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee WeaponIsSaxxy ScoutNotKillSpeechMelee IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeFishScout
 	Response KilledPlayerMeleeGenericScout
@@ -558,7 +600,7 @@ Response KilledPlayerMeleeScoutFatScout
 }
 Rule KilledPlayerMeleeScoutFatScout
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 75PercentChance  IsWeaponMelee ScoutNotKillSpeechMeleeFat IsScout IsVictimHeavy
+	criteria ConceptKilledPlayer KilledPlayerDelay 75PercentChance  IsWeaponMelee ScoutNotKillSpeechMeleeFat IsScout ScoutNotCustomPlayermodel IsVictimHeavy
 	ApplyContext "ScoutKillSpeechMeleeFat:1:10"
 	Response KilledPlayerMeleeScoutFatScout
 }
@@ -572,7 +614,7 @@ Response MedicFollowScout
 }
 Rule MedicFollowScout
 {
-	criteria ConceptPlayerMedic IsOnMedic IsScout IsNotCrossHairEnemy NotLowHealth ScoutIsNotStillonFire
+	criteria ConceptPlayerMedic IsOnMedic IsScout ScoutNotCustomPlayermodel IsNotCrossHairEnemy NotLowHealth ScoutIsNotStillonFire
 	ApplyContext "ScoutKillSpeech:1:10"
 	Response MedicFollowScout
 }
@@ -586,7 +628,7 @@ Response ScoutJarateHit
 }
 Rule ScoutJarateHit
 {
-	criteria ConceptJarateHit IsScout 50PercentChance
+	criteria ConceptJarateHit IsScout ScoutNotCustomPlayermodel 50PercentChance
 	Response ScoutJarateHit
 }
 
@@ -635,7 +677,7 @@ Response PlayerBeingShotInvincibleScout
 }
 Rule PlayerBeingShotInvincibleScout
 {
-	criteria ConceptDodgeShot IsScout LoadoutIsDrink // Exclude Crit-a-Cola
+	criteria ConceptDodgeShot IsScout ScoutNotCustomPlayermodel LoadoutIsDrink // Exclude Crit-a-Cola
 	Response PlayerBeingShotInvincibleScout
 }
 
@@ -649,7 +691,7 @@ Response PlayerDodgingScout
 }
 Rule PlayerDodgingScout
 {
-	criteria ConceptDodging IsScout ScoutIsNotInvuln LoadoutIsDrink // Exclude Crit-a-Cola
+	criteria ConceptDodging IsScout ScoutNotCustomPlayermodel ScoutIsNotInvuln LoadoutIsDrink // Exclude Crit-a-Cola
 	ApplyContext "ScoutInvuln:1:20"
 	Response PlayerDodgingScout
 }
@@ -664,12 +706,12 @@ Response PlayerDoubleJumpScout
 }
 Rule PlayerDoubleJumpScout
 {
-	criteria ConceptFireWeapon IsScout IsDoubleJumping WeaponIsScattergunDouble 20PercentChance
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel IsDoubleJumping WeaponIsScattergunDouble 20PercentChance
 	Response PlayerDoubleJumpScout
 }
 Rule PlayerDoubleJumpScoutFestive
 {
-	criteria ConceptFireWeapon IsScout IsDoubleJumping WeaponIsScattergunDoubleFestive 20PercentChance
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel IsDoubleJumping WeaponIsScattergunDoubleFestive 20PercentChance
 	Response PlayerDoubleJumpScout
 }
 
@@ -684,7 +726,7 @@ Response DoubleJumpScout
 }
 Rule DoubleJumpScout
 {
-	criteria ConceptDoubleJump IsScout IsARecentKill IsNotDoubleJumping WeaponIsNotScattergunDouble ScoutHasFired ScoutNotDoubleJumpSpeech 2PercentChance
+	criteria ConceptDoubleJump IsScout ScoutNotCustomPlayermodel IsARecentKill IsNotDoubleJumping WeaponIsNotScattergunDouble ScoutHasFired ScoutNotDoubleJumpSpeech 2PercentChance
 	ApplyContext "ScoutDoubleJumpSpeech:1:90"
 	Response DoubleJumpScout
 }
@@ -701,7 +743,7 @@ Response DrinkNotReady
 }
 Rule DrinkNotReady
 {
-	criteria ConceptPain IsScout WeaponIsLunchboxDrink BonkHealthContext ScoutNotDrinkReadySpeech LoadoutIsDrink // Exclude Crit-a-Cola
+	criteria ConceptPain IsScout ScoutNotCustomPlayermodel WeaponIsLunchboxDrink BonkHealthContext ScoutNotDrinkReadySpeech LoadoutIsDrink // Exclude Crit-a-Cola
 	ApplyContext "ScoutDrinkReadySpeech:1:5"
 	Response DrinkNotReady
 }
@@ -728,7 +770,7 @@ Response PlayerCritColaVocalScout
 }
 Rule PlayerCritColaVocalScout
 {
-	criteria ConceptFireWeapon IsScout LoadoutIsCritDrink ScoutIsNotCrit // The crit context is read in here via this criterion, which is set at the top of the file
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel LoadoutIsCritDrink ScoutIsNotCrit // The crit context is read in here via this criterion, which is set at the top of the file
 	Response PlayerCritColaVocalScout
 }
 
@@ -744,7 +786,7 @@ Response PostCritScout
 
 Rule PostCritScout
 {
-	criteria ConceptTired IsScout 50PercentChance LoadoutIsCritDrink
+	criteria ConceptTired IsScout ScoutNotCustomPlayermodel 50PercentChance LoadoutIsCritDrink
 	Response PostCritScout
 }
 
@@ -757,7 +799,7 @@ Response MilkLaunchScout
 }
 Rule MilkLaunchScout
 {
-	criteria ConceptJarateLaunch IsScout 50PercentChance
+	criteria ConceptJarateLaunch IsScout ScoutNotCustomPlayermodel 50PercentChance
 	Response MilkLaunchScout
 }
 
@@ -776,7 +818,7 @@ Response PlayerKilledCapperScout
 }
 Rule PlayerKilledCapperScout
 {
-	criteria ConceptCapBlocked IsScout
+	criteria ConceptCapBlocked IsScout ScoutNotCustomPlayermodel
 	ApplyContext "ScoutKillSpeech:1:10"
 	Response PlayerKilledCapperScout
 }
@@ -793,7 +835,7 @@ Response PlayerKilledDominatingScout
 }
 Rule PlayerKilledDominatingScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated 30PercentChance
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated 30PercentChance
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingScout
@@ -806,7 +848,7 @@ Response PlayerKilledDominatingBatScout
 }
 Rule PlayerKilledDominatingBatScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated IsWeaponMelee
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated IsWeaponMelee
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingBatScout
@@ -825,7 +867,7 @@ Response PlayerKilledDominatingDemomanScout
 }
 Rule PlayerKilledDominatingDemomanScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimDemoman
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimDemoman
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingDemomanScout
@@ -843,7 +885,7 @@ Response PlayerKilledDominatingEngineerScout
 }
 Rule PlayerKilledDominatingEngineerScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimEngineer
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimEngineer
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingEngineerScout
@@ -868,7 +910,7 @@ Response PlayerKilledDominatingHeavyScout
 }
 Rule PlayerKilledDominatingHeavyScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimHeavy
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimHeavy
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingHeavyScout
@@ -886,7 +928,7 @@ Response PlayerKilledDominatingMedicScout
 }
 Rule PlayerKilledDominatingMedicScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimMedic
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimMedic
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingMedicScout
@@ -905,7 +947,7 @@ Response PlayerKilledDominatingPyroScout
 }
 Rule PlayerKilledDominatingPyroScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimPyro
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimPyro
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingPyroScout
@@ -926,7 +968,7 @@ Response PlayerKilledDominatingScoutScout
 }
 Rule PlayerKilledDominatingScoutScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimScout
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimScout
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingScoutScout
@@ -943,7 +985,7 @@ Response PlayerKilledDominatingSniperScout
 }
 Rule PlayerKilledDominatingSniperScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimSniper
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimSniper
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSniperScout
@@ -960,7 +1002,7 @@ Response PlayerKilledDominatingSoldierScout
 }
 Rule PlayerKilledDominatingSoldierScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimSoldier
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimSoldier
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSoldierScout
@@ -977,7 +1019,7 @@ Response PlayerKilledDominatingSpyScout
 }
 Rule PlayerKilledDominatingSpyScout
 {
-	criteria ConceptKilledPlayer IsScout IsDominated  IsVictimSpy
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsDominated  IsVictimSpy
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSpyScout
@@ -1003,7 +1045,7 @@ Response PlayerKilledForRevengeScout
 }
 Rule PlayerKilledForRevengeScout
 {
-	criteria ConceptKilledPlayer IsScout IsRevenge
+	criteria ConceptKilledPlayer IsScout ScoutNotCustomPlayermodel IsRevenge
 	ApplyContext "ScoutKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengeScout
@@ -1015,7 +1057,7 @@ Response PlayerKilledObjectScout
 }
 Rule PlayerKilledObjectScout
 {
-	criteria ConceptKilledObject IsScout 30PercentChance IsARecentKill
+	criteria ConceptKilledObject IsScout ScoutNotCustomPlayermodel 30PercentChance IsARecentKill
 	ApplyContext "ScoutKillSpeechObject:1:30"
 	Response PlayerKilledObjectScout
 }
@@ -1041,7 +1083,7 @@ Response PlayerStunBallHitScout
 }
 Rule PlayerStunBallHitScout
 {
-	criteria ConceptStunnedTarget IsScout NotSaidScoutHitBallSpeech 50PercentChance
+	criteria ConceptStunnedTarget IsScout ScoutNotCustomPlayermodel NotSaidScoutHitBallSpeech 50PercentChance
 	Response PlayerStunBallHitScout
 }
 
@@ -1054,7 +1096,7 @@ Response PlayerStunBallHittingItScout
 }
 Rule PlayerStunBallHittingItScout
 {
-	criteria ConceptFireWeapon IsScout WeaponIsWoodBat 10PercentChance
+	criteria ConceptFireWeapon IsScout ScoutNotCustomPlayermodel WeaponIsWoodBat 10PercentChance
 	ApplyContext "ScoutHitBallSpeech:1:10"
 	Response PlayerStunBallHittingItScout
 }
@@ -1069,7 +1111,7 @@ Response PlayerStunBallPickUpScout
 }
 Rule PlayerStunBallPickUpScout
 {
-	criteria ConceptScoutBallGrab IsScout 50PercentChance
+	criteria ConceptScoutBallGrab IsScout ScoutNotCustomPlayermodel 50PercentChance
 	Response PlayerStunBallPickUpScout
 }
 
@@ -1088,7 +1130,7 @@ Response PlayerAttackerPainScout
 }
 Rule PlayerAttackerPainScout
 {
-	criteria ConceptAttackerPain IsScout IsNotDominating
+	criteria ConceptAttackerPain IsScout ScoutNotCustomPlayermodel IsNotDominating
 	Response PlayerAttackerPainScout
 }
 
@@ -1098,7 +1140,7 @@ Response PlayerOnFireScout
 }
 Rule PlayerOnFireScout
 {
-	criteria ConceptFire IsScout ScoutIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsScout ScoutNotCustomPlayermodel ScoutIsNotStillonFire IsNotDominating
 	ApplyContext "ScoutOnFire:1:7"
 	Response PlayerOnFireScout
 }
@@ -1109,7 +1151,7 @@ Response PlayerOnFireRareScout
 }
 Rule PlayerOnFireRareScout
 {
-	criteria ConceptFire IsScout 10PercentChance ScoutIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsScout ScoutNotCustomPlayermodel 10PercentChance ScoutIsNotStillonFire IsNotDominating
 	ApplyContext "ScoutOnFire:1:7"
 	Response PlayerOnFireRareScout
 }
@@ -1127,7 +1169,7 @@ Response PlayerPainScout
 }
 Rule PlayerPainScout
 {
-	criteria ConceptPain IsScout IsNotDominating
+	criteria ConceptPain IsScout ScoutNotCustomPlayermodel IsNotDominating
 	Response PlayerPainScout
 }
 
@@ -1137,7 +1179,7 @@ Response PlayerStillOnFireScout
 }
 Rule PlayerStillOnFireScout
 {
-	criteria ConceptFire IsScout  ScoutIsStillonFire IsNotDominating
+	criteria ConceptFire IsScout ScoutNotCustomPlayermodel  ScoutIsStillonFire IsNotDominating
 	ApplyContext "ScoutOnFire:1:7"
 	Response PlayerStillOnFireScout
 }
@@ -1156,7 +1198,7 @@ Response AcceptedDuelScout
 }
 Rule AcceptedDuelScout
 {
-	criteria ConceptIAcceptDuel IsScout
+	criteria ConceptIAcceptDuel IsScout ScoutNotCustomPlayermodel
 	Response AcceptedDuelScout
 }
 
@@ -1170,7 +1212,7 @@ Response MeleeDareScout
 }
 Rule MeleeDareScout
 {
-	criteria ConceptRequestDuel IsScout
+	criteria ConceptRequestDuel IsScout ScoutNotCustomPlayermodel
 	Response MeleeDareScout
 }
 
@@ -1188,7 +1230,7 @@ Response RejectedDuelScout
 }
 Rule RejectedDuelScout
 {
-	criteria ConceptDuelRejected IsScout
+	criteria ConceptDuelRejected IsScout ScoutNotCustomPlayermodel
 	Response RejectedDuelScout
 }
 
@@ -1205,7 +1247,7 @@ Response PlayerGoScout
 }
 Rule PlayerGoScout
 {
-	criteria ConceptPlayerGo IsScout
+	criteria ConceptPlayerGo IsScout ScoutNotCustomPlayermodel
 	Response PlayerGoScout
 }
 
@@ -1217,7 +1259,7 @@ Response PlayerHeadLeftScout
 }
 Rule PlayerHeadLeftScout
 {
-	criteria ConceptPlayerLeft  IsScout
+	criteria ConceptPlayerLeft  IsScout ScoutNotCustomPlayermodel
 	Response PlayerHeadLeftScout
 }
 
@@ -1229,7 +1271,7 @@ Response PlayerHeadRightScout
 }
 Rule PlayerHeadRightScout
 {
-	criteria ConceptPlayerRight  IsScout
+	criteria ConceptPlayerRight  IsScout ScoutNotCustomPlayermodel
 	Response PlayerHeadRightScout
 }
 
@@ -1242,7 +1284,7 @@ Response PlayerHelpScout
 }
 Rule PlayerHelpScout
 {
-	criteria ConceptPlayerHelp IsScout IsADefaultPlayermodel
+	criteria ConceptPlayerHelp IsScout ScoutNotCustomPlayermodel IsADefaultPlayermodel
 	Response PlayerHelpScout
 }
 
@@ -1254,7 +1296,7 @@ Response PlayerHelpCaptureScout
 }
 Rule PlayerHelpCaptureScout
 {
-	criteria ConceptPlayerHelp IsScout IsOnCappableControlPoint
+	criteria ConceptPlayerHelp IsScout ScoutNotCustomPlayermodel IsOnCappableControlPoint
 	ApplyContext "ScoutHelpCap:1:10"
 	Response PlayerHelpCaptureScout
 }
@@ -1269,7 +1311,7 @@ Response PlayerHelpCapture2Scout
 }
 Rule PlayerHelpCapture2Scout
 {
-	criteria ConceptPlayerHelp IsScout IsOnCappableControlPoint IsHelpCapScout
+	criteria ConceptPlayerHelp IsScout ScoutNotCustomPlayermodel IsOnCappableControlPoint IsHelpCapScout
 	Response PlayerHelpCapture2Scout
 }
 
@@ -1285,7 +1327,7 @@ Response PlayerGetOnPointScout
 
 Rule PlayerGetOnPointScout
 {
-	criterion ConceptFireWeapon IsScout IsOnCappableControlPoint NotDefendOnThePointSpeech
+	criterion ConceptFireWeapon IsScout ScoutNotCustomPlayermodel IsOnCappableControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:15"
 	applycontexttoworld
 	Response PlayerGetOnPointScout
@@ -1300,7 +1342,7 @@ Response PlayerHelpDefendScout
 }
 Rule PlayerHelpDefendScout
 {
-	criteria ConceptPlayerHelp IsScout IsOnFriendlyControlPoint
+	criteria ConceptPlayerHelp IsScout ScoutNotCustomPlayermodel IsOnFriendlyControlPoint
 	Response PlayerHelpDefendScout
 }
 
@@ -1312,7 +1354,7 @@ Response PlayerMedicScout
 }
 Rule PlayerMedicScout
 {
-	criteria ConceptPlayerMedic IsScout
+	criteria ConceptPlayerMedic IsScout ScoutNotCustomPlayermodel
 	Response PlayerMedicScout
 }
 
@@ -1321,7 +1363,7 @@ Response PlayerAskForBallScout
 }
 Rule PlayerAskForBallScout
 {
-	criteria ConceptPlayerAskForBall IsScout
+	criteria ConceptPlayerAskForBall IsScout ScoutNotCustomPlayermodel
 	Response PlayerAskForBallScout
 }
 
@@ -1333,7 +1375,7 @@ Response PlayerMoveUpScout
 }
 Rule PlayerMoveUpScout
 {
-	criteria ConceptPlayerMoveUp  IsScout
+	criteria ConceptPlayerMoveUp  IsScout ScoutNotCustomPlayermodel
 	Response PlayerMoveUpScout
 }
 
@@ -1345,7 +1387,7 @@ Response PlayerNoScout
 }
 Rule PlayerNoScout
 {
-	criteria ConceptPlayerNo  IsScout
+	criteria ConceptPlayerNo  IsScout ScoutNotCustomPlayermodel
 	Response PlayerNoScout
 }
 
@@ -1356,7 +1398,7 @@ Response PlayerThanksScout
 }
 Rule PlayerThanksScout
 {
-	criteria ConceptPlayerThanks IsScout
+	criteria ConceptPlayerThanks IsScout ScoutNotCustomPlayermodel
 	Response PlayerThanksScout
 }
 
@@ -1371,7 +1413,7 @@ Response KilledPlayerAssistScout
 }
 Rule KilledPlayerAssistScout
 {
-	criteria ConceptPlayerThanks IsScout IsARecentKill KilledPlayerDelay ScoutNotAssistSpeech
+	criteria ConceptPlayerThanks IsScout ScoutNotCustomPlayermodel IsARecentKill KilledPlayerDelay ScoutNotAssistSpeech
 	ApplyContext "ScoutAssistSpeech:1:20"
 	Response KilledPlayerAssistScout
 }
@@ -1385,7 +1427,7 @@ Response PlayerYesScout
 }
 Rule PlayerYesScout
 {
-	criteria ConceptPlayerYes  IsScout
+	criteria ConceptPlayerYes  IsScout ScoutNotCustomPlayermodel
 	Response PlayerYesScout
 }
 
@@ -1401,7 +1443,7 @@ Response PlayerActivateChargeScout
 }
 Rule PlayerActivateChargeScout
 {
-	criteria ConceptPlayerActivateCharge IsScout
+	criteria ConceptPlayerActivateCharge IsScout ScoutNotCustomPlayermodel
 	Response PlayerActivateChargeScout
 }
 
@@ -1414,7 +1456,7 @@ Response PlayerCloakedSpyScout
 }
 Rule PlayerCloakedSpyScout
 {
-	criteria ConceptPlayerCloakedSpy IsScout
+	criteria ConceptPlayerCloakedSpy IsScout ScoutNotCustomPlayermodel
 	Response PlayerCloakedSpyScout
 }
 
@@ -1424,7 +1466,7 @@ Response PlayerDispenserHereScout
 }
 Rule PlayerDispenserHereScout
 {
-	criteria ConceptPlayerDispenserHere IsScout
+	criteria ConceptPlayerDispenserHere IsScout ScoutNotCustomPlayermodel
 	Response PlayerDispenserHereScout
 }
 
@@ -1436,7 +1478,7 @@ Response PlayerIncomingScout
 }
 Rule PlayerIncomingScout
 {
-	criteria ConceptPlayerIncoming IsScout
+	criteria ConceptPlayerIncoming IsScout ScoutNotCustomPlayermodel
 	Response PlayerIncomingScout
 }
 
@@ -1448,7 +1490,7 @@ Response PlayerSentryAheadScout
 }
 Rule PlayerSentryAheadScout
 {
-	criteria ConceptPlayerSentryAhead IsScout
+	criteria ConceptPlayerSentryAhead IsScout ScoutNotCustomPlayermodel
 	Response PlayerSentryAheadScout
 }
 
@@ -1458,7 +1500,7 @@ Response PlayerSentryHereScout
 }
 Rule PlayerSentryHereScout
 {
-	criteria ConceptPlayerSentryHere IsScout
+	criteria ConceptPlayerSentryHere IsScout ScoutNotCustomPlayermodel
 	Response PlayerSentryHereScout
 }
 
@@ -1468,7 +1510,7 @@ Response PlayerTeleporterHereScout
 }
 Rule PlayerTeleporterHereScout
 {
-	criteria ConceptPlayerTeleporterHere IsScout
+	criteria ConceptPlayerTeleporterHere IsScout ScoutNotCustomPlayermodel
 	Response PlayerTeleporterHereScout
 }
 
@@ -1486,7 +1528,7 @@ Response PlayerBattleCryScout
 }
 Rule PlayerBattleCryScout
 {
-	criteria ConceptPlayerBattleCry IsScout
+	criteria ConceptPlayerBattleCry IsScout ScoutNotCustomPlayermodel
 	Response PlayerBattleCryScout
 }
 
@@ -1507,7 +1549,7 @@ Response MeleeDareCombatScout
 }
 Rule MeleeDareCombatScout
 {
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsScout IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsScout ScoutNotCustomPlayermodel IsCrosshairEnemy
 	Response MeleeDareCombatScout
 }
 //End custom
@@ -1523,7 +1565,7 @@ Response PlayerCheersScout
 }
 Rule PlayerCheersScout
 {
-	criteria ConceptPlayerCheers IsScout
+	criteria ConceptPlayerCheers IsScout ScoutNotCustomPlayermodel
 	Response PlayerCheersScout
 }
 
@@ -1536,7 +1578,7 @@ Response PlayerGoodJobScout
 }
 Rule PlayerGoodJobScout
 {
-	criteria ConceptPlayerGoodJob IsScout
+	criteria ConceptPlayerGoodJob IsScout ScoutNotCustomPlayermodel
 	Response PlayerGoodJobScout
 }
 
@@ -1556,7 +1598,7 @@ Response PlayerJeersScout
 }
 Rule PlayerJeersScout
 {
-	criteria ConceptPlayerJeers IsScout
+	criteria ConceptPlayerJeers IsScout ScoutNotCustomPlayermodel
 	Response PlayerJeersScout
 }
 
@@ -1570,7 +1612,7 @@ Response PlayerLostPointScout
 }
 Rule PlayerLostPointScout
 {
-	criteria ConceptPlayerLostPoint IsScout
+	criteria ConceptPlayerLostPoint IsScout ScoutNotCustomPlayermodel
 	Response PlayerLostPointScout
 }
 
@@ -1584,7 +1626,7 @@ Response PlayerNegativeScout
 }
 Rule PlayerNegativeScout
 {
-	criteria ConceptPlayerNegative IsScout
+	criteria ConceptPlayerNegative IsScout ScoutNotCustomPlayermodel
 	Response PlayerNegativeScout
 }
 
@@ -1596,7 +1638,7 @@ Response PlayerNiceShotScout
 }
 Rule PlayerNiceShotScout
 {
-	criteria ConceptPlayerNiceShot IsScout
+	criteria ConceptPlayerNiceShot IsScout ScoutNotCustomPlayermodel
 	Response PlayerNiceShotScout
 }
 
@@ -1620,7 +1662,7 @@ Response PlayerTauntsScout
 }
 Rule PlayerPositiveScout
 {
-	criteria ConceptPlayerPositive IsScout
+	criteria ConceptPlayerPositive IsScout ScoutNotCustomPlayermodel
 	Response PlayerPositiveScout
 	Response PlayerTauntsScout
 }
@@ -1685,7 +1727,7 @@ Response PlayerFirstRoundStartCompScout
 }
 Rule PlayerFirstRoundStartCompScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsFirstRound IsNotComp6v6 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsFirstRound IsNotComp6v6 40PercentChance
 	Response PlayerFirstRoundStartCompScout
 }
 
@@ -1752,7 +1794,7 @@ Response PlayerFirstRoundStartComp6sScout
 }
 Rule PlayerFirstRoundStartComp6sScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsFirstRound IsComp6v6 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsFirstRound IsComp6v6 40PercentChance
 	Response PlayerFirstRoundStartComp6sScout
 }
 
@@ -1779,7 +1821,7 @@ Response PlayerWonPrevRoundCompScout
 }
 Rule PlayerWonPrevRoundCompScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsNotFirstRound IsNotComp6v6 PlayerWonPreviousRound 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsNotFirstRound IsNotComp6v6 PlayerWonPreviousRound 40PercentChance
 	Response PlayerWonPrevRoundCompScout
 }
 
@@ -1808,7 +1850,7 @@ Response PlayerWonPrevRoundComp6sScout
 }
 Rule PlayerWonPrevRoundComp6sScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsNotFirstRound IsComp6v6 PlayerWonPreviousRound 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsNotFirstRound IsComp6v6 PlayerWonPreviousRound 40PercentChance
 	Response PlayerWonPrevRoundComp6sScout
 }
 
@@ -1827,7 +1869,7 @@ Response PlayerLostPrevRoundCompScout
 }
 Rule PlayerLostPrevRoundCompScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
 	Response PlayerLostPrevRoundCompScout
 }
 
@@ -1843,7 +1885,7 @@ Response PlayerTiedPrevRoundCompScout
 }
 Rule PlayerTiedPrevRoundCompScout
 {
-	criteria ConceptPlayerRoundStartComp IsScout IsNotFirstRound PreviousRoundWasTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsScout ScoutNotCustomPlayermodel IsNotFirstRound PreviousRoundWasTie 40PercentChance
 	Response PlayerTiedPrevRoundCompScout
 }
 
@@ -1869,7 +1911,7 @@ Response PlayerGameWinCompScout
 }
 Rule PlayerGameWinCompScout
 {
-	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsScout 40PercentChance
+	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsScout ScoutNotCustomPlayermodel 40PercentChance
 	Response PlayerGameWinCompScout
 }
 
@@ -1888,7 +1930,7 @@ Response PlayerMatchWinCompScout
 }
 Rule PlayerMatchWinCompScout
 {
-	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsScout 40PercentChance
+	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsScout ScoutNotCustomPlayermodel 40PercentChance
 	Response PlayerMatchWinCompScout
 }
 //--------------------------------------------------------------------------------------------------------------

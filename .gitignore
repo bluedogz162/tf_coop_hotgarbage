@@ -26,3 +26,11 @@ cfg/commedit.txt
 cfg/pet.txt
 demoheader.tmp
 demoheader.tmp
+bin/server.pdb
+bin/client.pdb
+bin/game_shader_dx9.pdb
+cfg/user.scr
+cfg/vmt.txt
+desktop.ini
+media/viewed.res
+media/viewed.res

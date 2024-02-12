@@ -14,6 +14,49 @@ Criterion "IsHelpCapSoldier" "SoldierHelpCap" "1" "required" weight 0
 Criterion "SoldierNotAssistSpeech" "SoldierAssistSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotInvulnerableSpeech" "SoldierInvulnerableSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotAwardSpeech" "SoldierAwardSpeech" "!=1" "required" weight 0
+Criterion "SoldierNotCustomPlayermodel" "playermodel" "models/player/Soldier.mdl" "required" weight 0
+
+
+Response PlayerSoldierDeath
+{
+	speak "Soldier.Death" weight 2
+}
+Rule PlayerSoldierDeath
+{
+	criteria ConceptPlayerDeath IsSoldier SoldierNotCustomPlayermodel
+	Response PlayerSoldierDeath
+}
+
+Response PlayerSoldierDeathCrit
+{
+	speak "Soldier.CritDeath" weight 2
+}
+Response PlayerSoldierDeathMelee
+{
+	speak "Soldier.MeleeDeath" weight 2
+}
+Response PlayerSoldierDeathExplosion
+{
+	speak "Soldier.ExplosionDeath" weight 2
+}
+Rule PlayerSoldierDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsSoldier SoldierNotCustomPlayermodel
+	Response PlayerSoldierDeathCrit
+}
+Rule PlayerSoldierDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsSoldier SoldierNotCustomPlayermodel
+	Response PlayerSoldierDeathExplosion
+}
+Rule PlayerSoldierDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsSoldier SoldierNotCustomPlayermodel
+	Response PlayerSoldierDeathMelee
+}
+
+
+
 
 Response PlayerCloakedSpyDemomanSoldier
 {
@@ -21,7 +64,7 @@ Response PlayerCloakedSpyDemomanSoldier
 }
 Rule PlayerCloakedSpyDemomanSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnDemoman
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnDemoman
 	Response PlayerCloakedSpyDemomanSoldier
 }
 
@@ -31,7 +74,7 @@ Response PlayerCloakedSpyEngineerSoldier
 }
 Rule PlayerCloakedSpyEngineerSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnEngineer
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnEngineer
 	Response PlayerCloakedSpyEngineerSoldier
 }
 
@@ -41,7 +84,7 @@ Response PlayerCloakedSpyHeavySoldier
 }
 Rule PlayerCloakedSpyHeavySoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnHeavy
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnHeavy
 	Response PlayerCloakedSpyHeavySoldier
 }
 
@@ -51,7 +94,7 @@ Response PlayerCloakedSpyMedicSoldier
 }
 Rule PlayerCloakedSpyMedicSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnMedic
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnMedic
 	Response PlayerCloakedSpyMedicSoldier
 }
 
@@ -61,7 +104,7 @@ Response PlayerCloakedSpyPyroSoldier
 }
 Rule PlayerCloakedSpyPyroSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnPyro
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnPyro
 	Response PlayerCloakedSpyPyroSoldier
 }
 
@@ -71,7 +114,7 @@ Response PlayerCloakedSpyScoutSoldier
 }
 Rule PlayerCloakedSpyScoutSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnScout
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnScout
 	Response PlayerCloakedSpyScoutSoldier
 }
 
@@ -81,7 +124,7 @@ Response PlayerCloakedSpySniperSoldier
 }
 Rule PlayerCloakedSpySniperSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSniper
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnSniper
 	Response PlayerCloakedSpySniperSoldier
 }
 
@@ -91,7 +134,7 @@ Response PlayerCloakedSpySoldierSoldier
 }
 Rule PlayerCloakedSpySoldierSoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSoldier
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnSoldier
 	Response PlayerCloakedSpySoldierSoldier
 }
 
@@ -101,7 +144,7 @@ Response PlayerCloakedSpySpySoldier
 }
 Rule PlayerCloakedSpySpySoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSpy
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel IsOnSpy
 	Response PlayerCloakedSpySpySoldier
 }
 
@@ -117,7 +160,7 @@ Response HealThanksSoldier
 }
 Rule HealThanksSoldier
 {
-	criteria ConceptMedicChargeStopped IsSoldier SuperHighHealthContext SoldierNotSaidHealThanks 50PercentChance
+	criteria ConceptMedicChargeStopped IsSoldier SoldierNotCustomPlayermodel SuperHighHealthContext SoldierNotSaidHealThanks 50PercentChance
 	ApplyContext "SoldierSaidHealThanks:1:20"
 	Response HealThanksSoldier
 }
@@ -133,7 +176,7 @@ Response AwardSoldier
 }
 Rule AwardSoldier
 {
-	criteria ConceptAchievementAward IsSoldier SoldierNotAwardSpeech
+	criteria ConceptAchievementAward IsSoldier SoldierNotCustomPlayermodel SoldierNotAwardSpeech
 	ApplyContext "SoldierAwardSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response AwardSoldier
@@ -151,7 +194,7 @@ Response PlayerRoundStartSoldier
 }
 Rule PlayerRoundStartSoldier
 {
-	criteria ConceptPlayerRoundStart IsSoldier
+	criteria ConceptPlayerRoundStart IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerRoundStartSoldier
 }
 
@@ -163,7 +206,7 @@ Response PlayerCappedIntelligenceSoldier
 }
 Rule PlayerCappedIntelligenceSoldier
 {
-	criteria ConceptPlayerCapturedIntelligence IsSoldier
+	criteria ConceptPlayerCapturedIntelligence IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerCappedIntelligenceSoldier
 }
 
@@ -175,7 +218,7 @@ Response PlayerCapturedPointSoldier
 }
 Rule PlayerCapturedPointSoldier
 {
-	criteria ConceptPlayerCapturedPoint IsSoldier
+	criteria ConceptPlayerCapturedPoint IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerCapturedPointSoldier
 }
 
@@ -196,7 +239,7 @@ Response PlayerSuddenDeathSoldier
 }
 Rule PlayerSuddenDeathSoldier
 {
-	criteria ConceptPlayerSuddenDeathStart IsSoldier
+	criteria ConceptPlayerSuddenDeathStart IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerSuddenDeathSoldier
 }
 
@@ -208,7 +251,7 @@ Response PlayerStalemateSoldier
 }
 Rule PlayerStalemateSoldier
 {
-	criteria ConceptPlayerStalemate IsSoldier
+	criteria ConceptPlayerStalemate IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerStalemateSoldier
 }
 
@@ -220,7 +263,7 @@ Response PlayerTeleporterThanksSoldier
 }
 Rule PlayerTeleporterThanksSoldier
 {
-	criteria ConceptTeleported IsNotEngineer IsSoldier 30PercentChance
+	criteria ConceptTeleported IsNotEngineer IsSoldier SoldierNotCustomPlayermodel 30PercentChance
 	Response PlayerTeleporterThanksSoldier
 }
 
@@ -236,7 +279,7 @@ Response DefendOnThePointSoldier
 }
 Rule DefendOnThePointSoldier
 {
-	criteria ConceptFireWeapon IsSoldier IsOnFriendlyControlPoint NotDefendOnThePointSpeech
+	criteria ConceptFireWeapon IsSoldier SoldierNotCustomPlayermodel IsOnFriendlyControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:30"
 	applycontexttoworld
 	Response DefendOnThePointSoldier
@@ -251,7 +294,7 @@ Response KilledPlayerManySoldier
 }
 Rule KilledPlayerManySoldier
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier SoldierNotCustomPlayermodel
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response KilledPlayerManySoldier
 }
@@ -267,7 +310,7 @@ Response KilledDemomanSoldier
 }
 Rule KilledDemomanSoldier
 {
-	criterion ConceptKilledPlayer KilledPlayerDelay IsVictimDemoman 10PercentChance SoldierNotKillSpeech IsSoldier
+	criterion ConceptKilledPlayer KilledPlayerDelay IsVictimDemoman 10PercentChance SoldierNotKillSpeech IsSoldier SoldierNotCustomPlayermodel
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response KilledDemomanSoldier
 }
@@ -278,7 +321,7 @@ Response KilledPlayerAssistAutoSoldier
 }
 Rule KilledPlayerAssistAutoSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance SoldierNotAssistSpeech
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance SoldierNotAssistSpeech
 	ApplyContext "SoldierAssistSpeech:1:20"
 	Response KilledPlayerAssistAutoSoldier
 }
@@ -292,7 +335,7 @@ Response SpreeMedicSoldier
 }
 Rule SpreeMedicSoldier
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay IsSoldier IsBeingHealed SoldierNotKillSpeech IsVeryManyRecentKills IsWeaponPrimary
+	criteria ConceptKilledPlayer KilledPlayerDelay IsSoldier SoldierNotCustomPlayermodel IsBeingHealed SoldierNotKillSpeech IsVeryManyRecentKills IsWeaponPrimary
 	ApplyContext "SoldierKillSpeech:1:20"
 	Response SpreeMedicSoldier
 }
@@ -307,7 +350,7 @@ Response MedicFollowSoldier
 }
 Rule MedicFollowSoldier
 {
-	criteria ConceptPlayerMedic IsOnMedic IsSoldier IsNotCrossHairEnemy NotLowHealth SoldierIsNotStillonFire
+	criteria ConceptPlayerMedic IsOnMedic IsSoldier SoldierNotCustomPlayermodel IsNotCrossHairEnemy NotLowHealth SoldierIsNotStillonFire
 	ApplyContext "ScoutKillSpeech:1:10"
 	Response MedicFollowSoldier
 }
@@ -321,7 +364,7 @@ Response SoldierJarateHit
 }
 Rule SoldierJarateHit
 {
-	criteria ConceptJarateHit IsSoldier 50PercentChance
+	criteria ConceptJarateHit IsSoldier SoldierNotCustomPlayermodel 50PercentChance
 	Response SoldierJarateHit
 }
 
@@ -338,7 +381,7 @@ Response InvulnerableSpeechSoldier
 }
 Rule InvulnerableSpeechSoldier
 {
-	criterion ConceptFireWeapon IsSoldier IsInvulnerable SoldierNotInvulnerableSpeech
+	criterion ConceptFireWeapon IsSoldier SoldierNotCustomPlayermodel IsInvulnerable SoldierNotInvulnerableSpeech
 	ApplyContext "SoldierInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechSoldier
 }
@@ -355,7 +398,7 @@ Response KilledPlayerMeleeSoldier
 }
 Rule KilledPlayerMeleeSoldier
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee SoldierNotKillSpeechMelee IsSoldier
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee SoldierNotKillSpeechMelee IsSoldier SoldierNotCustomPlayermodel
 	ApplyContext "SoldierKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeSoldier
 }
@@ -367,7 +410,7 @@ Response KilledPlayerVeryManySoldier
 }
 Rule KilledPlayerVeryManySoldier
 {
-	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier
+	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier SoldierNotCustomPlayermodel
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response KilledPlayerVeryManySoldier
 }
@@ -380,7 +423,7 @@ Response PlayerKilledCapperSoldier
 }
 Rule PlayerKilledCapperSoldier
 {
-	criteria ConceptCapBlocked IsSoldier
+	criteria ConceptCapBlocked IsSoldier SoldierNotCustomPlayermodel
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response PlayerKilledCapperSoldier
 }
@@ -400,7 +443,7 @@ Response PlayerKilledDominatingSoldier
 }
 Rule PlayerKilledDominatingSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSoldier
@@ -417,7 +460,7 @@ Response PlayerKilledDominatingDemomanSoldier
 }
 Rule PlayerKilledDominatingDemomanSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimDemoman
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimDemoman
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingDemomanSoldier
@@ -434,7 +477,7 @@ Response PlayerKilledDominatingEngineerSoldier
 }
 Rule PlayerKilledDominatingEngineerSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimEngineer
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimEngineer
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingEngineerSoldier
@@ -452,7 +495,7 @@ Response PlayerKilledDominatingHeavySoldier
 }
 Rule PlayerKilledDominatingHeavySoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimHeavy
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimHeavy
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingHeavySoldier
@@ -470,7 +513,7 @@ Response PlayerKilledDominatingMedicSoldier
 }
 Rule PlayerKilledDominatingMedicSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimMedic
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimMedic
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingMedicSoldier
@@ -490,7 +533,7 @@ Response PlayerKilledDominatingPyroSoldier
 }
 Rule PlayerKilledDominatingPyroSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimPyro
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimPyro
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingPyroSoldier
@@ -512,7 +555,7 @@ Response PlayerKilledDominatingScoutSoldier
 }
 Rule PlayerKilledDominatingScoutSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimScout
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimScout
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingScoutSoldier
@@ -537,7 +580,7 @@ Response PlayerKilledDominatingSniperSoldier
 }
 Rule PlayerKilledDominatingSniperSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSniper
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimSniper
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSniperSoldier
@@ -554,7 +597,7 @@ Response PlayerKilledDominatingSoldierSoldier
 }
 Rule PlayerKilledDominatingSoldierSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSoldier
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimSoldier
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSoldierSoldier
@@ -573,7 +616,7 @@ Response PlayerKilledDominatingSpySoldier
 }
 Rule PlayerKilledDominatingSpySoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSpy
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated  IsVictimSpy
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingSpySoldier
@@ -587,7 +630,7 @@ Response PlayerKilledForRevengeSoldier
 }
 Rule PlayerKilledForRevengeSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsRevenge
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsRevenge
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengeSoldier
@@ -603,7 +646,7 @@ Response PlayerKilledObjectSoldier
 }
 Rule PlayerKilledObjectSoldier
 {
-	criteria ConceptKilledObject IsSoldier 30PercentChance IsARecentKill
+	criteria ConceptKilledObject IsSoldier SoldierNotCustomPlayermodel 30PercentChance IsARecentKill
 	ApplyContext "SoldierKillSpeechObject:1:30"
 	Response PlayerKilledObjectSoldier
 }
@@ -623,7 +666,7 @@ Response PlayerAttackerPainSoldier
 }
 Rule PlayerAttackerPainSoldier
 {
-	criteria ConceptAttackerPain IsSoldier IsNotDominating
+	criteria ConceptAttackerPain IsSoldier SoldierNotCustomPlayermodel IsNotDominating
 	Response PlayerAttackerPainSoldier
 }
 
@@ -633,7 +676,7 @@ Response PlayerOnFireSoldier
 }
 Rule PlayerOnFireSoldier
 {
-	criteria ConceptFire IsSoldier SoldierIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsSoldier SoldierNotCustomPlayermodel SoldierIsNotStillonFire IsNotDominating
 	ApplyContext "SoldierOnFire:1:7"
 	Response PlayerOnFireSoldier
 }
@@ -645,7 +688,7 @@ Response PlayerOnFireRareSoldier
 }
 Rule PlayerOnFireRareSoldier
 {
-	criteria ConceptFire IsSoldier 10PercentChance SoldierIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsSoldier SoldierNotCustomPlayermodel 10PercentChance SoldierIsNotStillonFire IsNotDominating
 	ApplyContext "SoldierOnFire:1:7"
 	Response PlayerOnFireRareSoldier
 }
@@ -663,7 +706,7 @@ Response PlayerPainSoldier
 }
 Rule PlayerPainSoldier
 {
-	criteria ConceptPain IsSoldier IsNotDominating
+	criteria ConceptPain IsSoldier SoldierNotCustomPlayermodel IsNotDominating
 	Response PlayerPainSoldier
 }
 
@@ -673,7 +716,7 @@ Response PlayerStillOnFireSoldier
 }
 Rule PlayerStillOnFireSoldier
 {
-	criteria ConceptFire IsSoldier  SoldierIsStillonFire IsNotDominating
+	criteria ConceptFire IsSoldier SoldierNotCustomPlayermodel  SoldierIsStillonFire IsNotDominating
 	ApplyContext "SoldierOnFire:1:7"
 	Response PlayerStillOnFireSoldier
 }
@@ -693,7 +736,7 @@ Response AcceptedDuelSoldier
 }
 Rule AcceptedDuelSoldier
 {
-	criteria ConceptIAcceptDuel IsSoldier
+	criteria ConceptIAcceptDuel IsSoldier SoldierNotCustomPlayermodel
 	Response AcceptedDuelSoldier
 }
 
@@ -708,7 +751,7 @@ Response MeleeDareSoldier
 }
 Rule MeleeDareSoldier
 {
-	criteria ConceptRequestDuel IsSoldier
+	criteria ConceptRequestDuel IsSoldier SoldierNotCustomPlayermodel
 	Response MeleeDareSoldier
 }
 
@@ -720,7 +763,7 @@ Response RejectedDuelSoldier
 }
 Rule RejectedDuelSoldier
 {
-	criteria ConceptDuelRejected IsSoldier
+	criteria ConceptDuelRejected IsSoldier SoldierNotCustomPlayermodel
 	Response RejectedDuelSoldier
 }
 
@@ -736,7 +779,7 @@ Response PlayerGoSoldier
 }
 Rule PlayerGoSoldier
 {
-	criteria ConceptPlayerGo IsSoldier
+	criteria ConceptPlayerGo IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerGoSoldier
 }
 
@@ -748,7 +791,7 @@ Response PlayerHeadLeftSoldier
 }
 Rule PlayerHeadLeftSoldier
 {
-	criteria ConceptPlayerLeft  IsSoldier
+	criteria ConceptPlayerLeft  IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerHeadLeftSoldier
 }
 
@@ -760,7 +803,7 @@ Response PlayerHeadRightSoldier
 }
 Rule PlayerHeadRightSoldier
 {
-	criteria ConceptPlayerRight  IsSoldier
+	criteria ConceptPlayerRight  IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerHeadRightSoldier
 }
 
@@ -772,7 +815,7 @@ Response PlayerHelpSoldier
 }
 Rule PlayerHelpSoldier
 {
-	criteria ConceptPlayerHelp IsSoldier
+	criteria ConceptPlayerHelp IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerHelpSoldier
 }
 
@@ -784,7 +827,7 @@ Response PlayerHelpCaptureSoldier
 }
 Rule PlayerHelpCaptureSoldier
 {
-	criteria ConceptPlayerHelp IsSoldier IsOnCappableControlPoint
+	criteria ConceptPlayerHelp IsSoldier SoldierNotCustomPlayermodel IsOnCappableControlPoint
 	ApplyContext "SoldierHelpCap:1:10"
 	Response PlayerHelpCaptureSoldier
 }
@@ -797,7 +840,7 @@ Response PlayerHelpCapture2Soldier
 }
 Rule PlayerHelpCapture2Soldier
 {
-	criteria ConceptPlayerHelp IsSoldier IsOnCappableControlPoint IsHelpCapSoldier
+	criteria ConceptPlayerHelp IsSoldier SoldierNotCustomPlayermodel IsOnCappableControlPoint IsHelpCapSoldier
 	Response PlayerHelpCapture2Soldier
 }
 
@@ -810,7 +853,7 @@ Response PlayerHelpDefendSoldier
 }
 Rule PlayerHelpDefendSoldier
 {
-	criteria ConceptPlayerHelp IsSoldier IsOnFriendlyControlPoint
+	criteria ConceptPlayerHelp IsSoldier SoldierNotCustomPlayermodel IsOnFriendlyControlPoint
 	Response PlayerHelpDefendSoldier
 }
 
@@ -822,7 +865,7 @@ Response PlayerMedicSoldier
 }
 Rule PlayerMedicSoldier
 {
-	criteria ConceptPlayerMedic IsSoldier
+	criteria ConceptPlayerMedic IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerMedicSoldier
 }
 
@@ -831,7 +874,7 @@ Response PlayerAskForBallSoldier
 }
 Rule PlayerAskForBallSoldier
 {
-	criteria ConceptPlayerAskForBall IsSoldier
+	criteria ConceptPlayerAskForBall IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerAskForBallSoldier
 }
 
@@ -843,7 +886,7 @@ Response PlayerMoveUpSoldier
 }
 Rule PlayerMoveUpSoldier
 {
-	criteria ConceptPlayerMoveUp  IsSoldier
+	criteria ConceptPlayerMoveUp  IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerMoveUpSoldier
 }
 
@@ -855,7 +898,7 @@ Response PlayerNoSoldier
 }
 Rule PlayerNoSoldier
 {
-	criteria ConceptPlayerNo  IsSoldier
+	criteria ConceptPlayerNo  IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerNoSoldier
 }
 
@@ -866,7 +909,7 @@ Response PlayerThanksSoldier
 }
 Rule PlayerThanksSoldier
 {
-	criteria ConceptPlayerThanks IsSoldier
+	criteria ConceptPlayerThanks IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerThanksSoldier
 }
 
@@ -880,7 +923,7 @@ Response KilledPlayerAssistSoldier
 }
 Rule KilledPlayerAssistSoldier
 {
-	criteria ConceptPlayerThanks IsSoldier IsARecentKill KilledPlayerDelay SoldierNotAssistSpeech
+	criteria ConceptPlayerThanks IsSoldier SoldierNotCustomPlayermodel IsARecentKill KilledPlayerDelay SoldierNotAssistSpeech
 	ApplyContext "SoldierAssistSpeech:1:20"
 	Response KilledPlayerAssistSoldier
 }
@@ -895,7 +938,7 @@ Response PlayerYesSoldier
 }
 Rule PlayerYesSoldier
 {
-	criteria ConceptPlayerYes  IsSoldier
+	criteria ConceptPlayerYes  IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerYesSoldier
 }
 
@@ -911,7 +954,7 @@ Response PlayerActivateChargeSoldier
 }
 Rule PlayerActivateChargeSoldier
 {
-	criteria ConceptPlayerActivateCharge IsSoldier
+	criteria ConceptPlayerActivateCharge IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerActivateChargeSoldier
 }
 
@@ -923,7 +966,7 @@ Response PlayerCloakedSpySoldier
 }
 Rule PlayerCloakedSpySoldier
 {
-	criteria ConceptPlayerCloakedSpy IsSoldier
+	criteria ConceptPlayerCloakedSpy IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerCloakedSpySoldier
 }
 
@@ -933,7 +976,7 @@ Response PlayerDispenserHereSoldier
 }
 Rule PlayerDispenserHereSoldier
 {
-	criteria ConceptPlayerDispenserHere IsSoldier
+	criteria ConceptPlayerDispenserHere IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerDispenserHereSoldier
 }
 
@@ -943,7 +986,7 @@ Response PlayerIncomingSoldier
 }
 Rule PlayerIncomingSoldier
 {
-	criteria ConceptPlayerIncoming IsSoldier
+	criteria ConceptPlayerIncoming IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerIncomingSoldier
 }
 
@@ -955,7 +998,7 @@ Response PlayerSentryAheadSoldier
 }
 Rule PlayerSentryAheadSoldier
 {
-	criteria ConceptPlayerSentryAhead IsSoldier
+	criteria ConceptPlayerSentryAhead IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerSentryAheadSoldier
 }
 
@@ -965,7 +1008,7 @@ Response PlayerSentryHereSoldier
 }
 Rule PlayerSentryHereSoldier
 {
-	criteria ConceptPlayerSentryHere IsSoldier
+	criteria ConceptPlayerSentryHere IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerSentryHereSoldier
 }
 
@@ -975,7 +1018,7 @@ Response PlayerTeleporterHereSoldier
 }
 Rule PlayerTeleporterHereSoldier
 {
-	criteria ConceptPlayerTeleporterHere IsSoldier
+	criteria ConceptPlayerTeleporterHere IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerTeleporterHereSoldier
 }
 
@@ -994,7 +1037,7 @@ Response PlayerBattleCrySoldier
 }
 Rule PlayerBattleCrySoldier
 {
-	criteria ConceptPlayerBattleCry IsSoldier
+	criteria ConceptPlayerBattleCry IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerBattleCrySoldier
 }
 
@@ -1011,7 +1054,7 @@ Response MeleeDareCombatSoldier
 }
 Rule MeleeDareCombatSoldier
 {
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsSoldier IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsSoldier SoldierNotCustomPlayermodel IsCrosshairEnemy
 	Response MeleeDareCombatSoldier
 }
 //End custom
@@ -1027,7 +1070,7 @@ Response PlayerCheersSoldier
 }
 Rule PlayerCheersSoldier
 {
-	criteria ConceptPlayerCheers IsSoldier
+	criteria ConceptPlayerCheers IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerCheersSoldier
 }
 
@@ -1039,7 +1082,7 @@ Response PlayerGoodJobSoldier
 }
 Rule PlayerGoodJobSoldier
 {
-	criteria ConceptPlayerGoodJob IsSoldier
+	criteria ConceptPlayerGoodJob IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerGoodJobSoldier
 }
 
@@ -1060,7 +1103,7 @@ Response PlayerJeersSoldier
 }
 Rule PlayerJeersSoldier
 {
-	criteria ConceptPlayerJeers IsSoldier
+	criteria ConceptPlayerJeers IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerJeersSoldier
 }
 
@@ -1075,7 +1118,7 @@ Response PlayerLostPointSoldier
 }
 Rule PlayerLostPointSoldier
 {
-	criteria ConceptPlayerLostPoint IsSoldier
+	criteria ConceptPlayerLostPoint IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerLostPointSoldier
 }
 
@@ -1090,7 +1133,7 @@ Response PlayerNegativeSoldier
 }
 Rule PlayerNegativeSoldier
 {
-	criteria ConceptPlayerNegative IsSoldier
+	criteria ConceptPlayerNegative IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerNegativeSoldier
 }
 
@@ -1102,7 +1145,7 @@ Response PlayerNiceShotSoldier
 }
 Rule PlayerNiceShotSoldier
 {
-	criteria ConceptPlayerNiceShot IsSoldier
+	criteria ConceptPlayerNiceShot IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerNiceShotSoldier
 }
 
@@ -1125,7 +1168,7 @@ Response PlayerTauntsSoldier
 }
 Rule PlayerPositiveSoldier
 {
-	criteria ConceptPlayerPositive IsSoldier
+	criteria ConceptPlayerPositive IsSoldier SoldierNotCustomPlayermodel
 	Response PlayerPositiveSoldier
 	Response PlayerTauntsSoldier
 }
@@ -1142,7 +1185,7 @@ Response PlayerRobotNoisesSoldier
 }
 Rule PlayerRobotNoisesSoldier
 {
-	criteria ConceptFireWeapon IsSoldier IsRobotCostume SoldierNotRobotNoises 50PercentChance
+	criteria ConceptFireWeapon IsSoldier SoldierNotCustomPlayermodel IsRobotCostume SoldierNotRobotNoises 50PercentChance
 	ApplyContext "SoldierRobotNoises:1:30"
 	Response PlayerRobotNoisesSoldier
 }
@@ -1154,7 +1197,7 @@ Response PlayerBattleCryRobotSoldier
 }
 Rule PlayerBattleCryRobotSoldier
 {
-	criteria ConceptPlayerBattleCry IsSoldier IsRobotCostume
+	criteria ConceptPlayerBattleCry IsSoldier SoldierNotCustomPlayermodel IsRobotCostume
 	Response PlayerBattleCryRobotSoldier
 }
 
@@ -1168,7 +1211,7 @@ Response KilledPlayerRobotSoldier
 }
 Rule KilledPlayerRobotSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsRobotCostume SoldierNotKillSpeech 50PercentChance
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsRobotCostume SoldierNotKillSpeech 50PercentChance
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response KilledPlayerRobotSoldier
 }
@@ -1183,7 +1226,7 @@ Response KilledPlayerManyRobotSoldier
 }
 Rule KilledPlayerManyRobotSoldier
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier IsRobotCostume
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay SoldierNotKillSpeech IsSoldier SoldierNotCustomPlayermodel IsRobotCostume
 	ApplyContext "SoldierKillSpeech:1:10"
 	Response KilledPlayerManyRobotSoldier
 }
@@ -1196,7 +1239,7 @@ Response PlayerKilledForRevengeRobotSoldier
 }
 Rule PlayerKilledForRevengeRobotSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsRevenge IsRobotCostume
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsRevenge IsRobotCostume
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengeRobotSoldier
@@ -1215,7 +1258,7 @@ Response PlayerKilledDominatingRobotSoldier
 }
 Rule PlayerKilledDominatingRobotSoldier
 {
-	criteria ConceptKilledPlayer IsSoldier IsDominated IsRobotCostume
+	criteria ConceptKilledPlayer IsSoldier SoldierNotCustomPlayermodel IsDominated IsRobotCostume
 	ApplyContext "SoldierKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingRobotSoldier
@@ -1231,7 +1274,7 @@ Response MvMBombDroppedSoldier
 }
 Rule MvMBombDroppedSoldier
 {
-	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsSoldier 
+	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMBombDroppedSoldier
 }
 
@@ -1241,7 +1284,7 @@ Response MvMBombCarrierUpgrade1Soldier
 }
 Rule MvMBombCarrierUpgrade1Soldier
 {
-	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsSoldier 
+	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade1Soldier
 }
 
@@ -1251,7 +1294,7 @@ Response MvMBombCarrierUpgrade2Soldier
 }
 Rule MvMBombCarrierUpgrade2Soldier
 {
-	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsSoldier 
+	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade2Soldier
 }
 
@@ -1261,7 +1304,7 @@ Response MvMBombCarrierUpgrade3Soldier
 }
 Rule MvMBombCarrierUpgrade3Soldier
 {
-	criteria ConceptMvMBombCarrierUpgrade3 5PercentChance IsMvMDefender IsSoldier 
+	criteria ConceptMvMBombCarrierUpgrade3 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade3Soldier
 }
 
@@ -1271,7 +1314,7 @@ Response MvMDefenderDiedScoutSoldier
 }
 Rule MvMDefenderDiedScoutSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedScoutSoldier
 }
 
@@ -1281,7 +1324,7 @@ Response MvMDefenderDiedSpySoldier
 }
 Rule MvMDefenderDiedSpySoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedSpySoldier
 }
 
@@ -1291,7 +1334,7 @@ Response MvMDefenderDiedHeavySoldier
 }
 Rule MvMDefenderDiedHeavySoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedHeavySoldier
 }
 
@@ -1301,7 +1344,7 @@ Response MvMDefenderDiedSoldierSoldier
 }
 Rule MvMDefenderDiedSoldierSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSoldier IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSoldier IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedSoldierSoldier
 }
 
@@ -1311,7 +1354,7 @@ Response MvMDefenderDiedMedicSoldier
 }
 Rule MvMDefenderDiedMedicSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedMedicSoldier
 }
 
@@ -1321,7 +1364,7 @@ Response MvMDefenderDiedDemomanSoldier
 }
 Rule MvMDefenderDiedDemomanSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedDemomanSoldier
 }
 
@@ -1331,7 +1374,7 @@ Response MvMDefenderDiedPyroSoldier
 }
 Rule MvMDefenderDiedPyroSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedPyroSoldier
 }
 
@@ -1341,7 +1384,7 @@ Response MvMDefenderDiedSniperSoldier
 }
 Rule MvMDefenderDiedSniperSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedSniperSoldier
 }
 
@@ -1351,7 +1394,7 @@ Response MvMDefenderDiedEngineerSoldier
 }
 Rule MvMDefenderDiedEngineerSoldier
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsSoldier 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsSoldier SoldierNotCustomPlayermodel 
 	Response MvMDefenderDiedEngineerSoldier
 }
 
@@ -1362,7 +1405,7 @@ Response MvMFirstBombPickupSoldier
 }
 Rule MvMFirstBombPickupSoldier
 {
-	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMFirstBombPickupSoldier
 }
 
@@ -1372,7 +1415,7 @@ Response MvMBombPickupSoldier
 }
 Rule MvMBombPickupSoldier
 {
-	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMBombPickupSoldier
 }
 
@@ -1382,7 +1425,7 @@ Response MvMSniperCalloutSoldier
 }
 Rule MvMSniperCalloutSoldier
 {
-	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMSniperCalloutSoldier
 }
 
@@ -1392,7 +1435,7 @@ Response MvMSentryBusterSoldier
 }
 Rule MvMSentryBusterSoldier
 {
-	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMSentryBusterSoldier
 }
 
@@ -1402,7 +1445,7 @@ Response MvMSentryBusterDownSoldier
 }
 Rule MvMSentryBusterDownSoldier
 {
-	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMSentryBusterDownSoldier
 }
 
@@ -1413,7 +1456,7 @@ Response MvMLastManStandingSoldier
 }
 Rule MvMLastManStandingSoldier
 {
-	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMLastManStandingSoldier
 }
 
@@ -1423,7 +1466,7 @@ Response MvMEncourageMoneySoldier
 }
 Rule MvMEncourageMoneySoldier
 {
-	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMEncourageMoneySoldier
 }
 
@@ -1433,7 +1476,7 @@ Response MvMEncourageUpgradeSoldier
 }
 Rule MvMEncourageUpgradeSoldier
 {
-	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMEncourageUpgradeSoldier
 }
 
@@ -1445,7 +1488,7 @@ Response MvMUpgradeCompleteSoldier
 }
 Rule MvMUpgradeCompleteSoldier
 {
-	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMUpgradeCompleteSoldier
 }
 
@@ -1456,7 +1499,7 @@ Response MvMGiantCalloutSoldier
 }
 Rule MvMGiantCalloutSoldier
 {
-	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMGiantCalloutSoldier
 }
 
@@ -1467,7 +1510,7 @@ Response MvMGiantHasBombSoldier
 }
 Rule MvMGiantHasBombSoldier
 {
-	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMGiantHasBombSoldier
 }
 
@@ -1478,7 +1521,7 @@ Response MvMSappedRobotSoldier
 }
 Rule MvMSappedRobotSoldier
 {
-	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMSappedRobotSoldier
 }
 
@@ -1488,7 +1531,7 @@ Response MvMCloseCallSoldier
 }
 Rule MvMCloseCallSoldier
 {
-	criteria ConceptMvMCloseCall 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMCloseCall 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMCloseCallSoldier
 }
 
@@ -1499,7 +1542,7 @@ Response MvMTankCalloutSoldier
 }
 Rule MvMTankCalloutSoldier
 {
-	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMTankCalloutSoldier
 }
 
@@ -1510,7 +1553,7 @@ Response MvMTankDeadSoldier
 }
 Rule MvMTankDeadSoldier
 {
-	criteria ConceptMvMTankDead 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMTankDead 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMTankDeadSoldier
 }
 
@@ -1520,7 +1563,7 @@ Response MvMTankDeployingSoldier
 }
 Rule MvMTankDeployingSoldier
 {
-	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMTankDeployingSoldier
 }
 
@@ -1532,7 +1575,7 @@ Response MvMAttackTheTankSoldier
 }
 Rule MvMAttackTheTankSoldier
 {
-	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMAttackTheTankSoldier
 }
 
@@ -1547,7 +1590,7 @@ Response MvMTauntSoldier
 }
 Rule MvMTauntSoldier
 {
-	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMTauntSoldier
 }
 
@@ -1561,7 +1604,7 @@ Response MvMWaveWinSoldier
 }
 Rule MvMWaveWinSoldier
 {
-	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMWaveWinSoldier
 }
 
@@ -1575,7 +1618,7 @@ Response MvMWaveLoseSoldier
 }
 Rule MvMWaveLoseSoldier
 {
-	criteria ConceptMvMWaveLose 50PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMWaveLose 50PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMWaveLoseSoldier
 }
 
@@ -1585,7 +1628,7 @@ Response MvMMoneyPickupSoldier
 }
 Rule MvMMoneyPickupSoldier
 {
-	criteria ConceptMvMMoneyPickup 5PercentChance IsMvMDefender IsSoldier
+	criteria ConceptMvMMoneyPickup 5PercentChance IsMvMDefender IsSoldier SoldierNotCustomPlayermodel
 	Response MvMMoneyPickupSoldier
 }
 
@@ -1606,7 +1649,7 @@ Response CartMovingBackwardsDefenseSoldier
 }
 Rule CartMovingBackwardsDefenseSoldier                                                     
 {
-	criteria ConceptCartMovingBackward IsOnDefense IsSoldier SoldierNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance                                                                                                                                                          
+	criteria ConceptCartMovingBackward IsOnDefense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance                                                                                                                                                          
 	ApplyContext "SaidCartMovingBackwardD:1:20"
 	Response CartMovingBackwardsDefenseSoldier                                                     
 }
@@ -1617,7 +1660,7 @@ Response CartMovingBackwardsOffenseSoldier
 }
 Rule CartMovingBackwardsOffenseSoldier                                                     
 {
-	criteria ConceptCartMovingBackward IsOnOffense IsSoldier SoldierNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance                                                                                                                                                          
+	criteria ConceptCartMovingBackward IsOnOffense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance                                                                                                                                                          
 	ApplyContext "SaidCartMovingBackwardO:1:20"
 	Response CartMovingBackwardsOffenseSoldier                                                     
 }
@@ -1629,7 +1672,7 @@ Response CartMovingForwardDefenseSoldier
 }
 Rule CartMovingForwardDefenseSoldier                                                       
 {
-	criteria ConceptCartMovingForward IsOnDefense IsSoldier SoldierNotSaidCartMovingForwardD IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingForward IsOnDefense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingForwardD IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingForwardD:1:20"
 	Response CartMovingForwardDefenseSoldier                                                       
 }
@@ -1659,7 +1702,7 @@ Response CartMovingForwardOffenseSoldier
 }
 Rule CartMovingForwardOffenseSoldier                                                       
 {
-	criteria ConceptCartMovingForward IsOnOffense IsSoldier SoldierNotSaidCartMovingForwardO IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingForward IsOnOffense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingForwardO IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingForwardO:1:20"
 	Response CartMovingForwardOffenseSoldier                                                       
 }
@@ -1671,7 +1714,7 @@ Response CartMovingStoppedDefenseSoldier
 }
 Rule CartMovingStoppedDefenseSoldier                                                       
 {
-	criteria ConceptCartMovingStopped IsOnDefense IsSoldier SoldierNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingStopped IsOnDefense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingStoppedD:1:20"
 	Response CartMovingStoppedDefenseSoldier                                                       
 }
@@ -1683,7 +1726,7 @@ Response CartMovingStoppedOffenseSoldier
 }
 Rule CartMovingStoppedOffenseSoldier                                                       
 {
-	criteria ConceptCartMovingStopped IsOnOffense IsSoldier SoldierNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingStopped IsOnOffense IsSoldier SoldierNotCustomPlayermodel SoldierNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingStoppedO:1:20"
 	Response CartMovingStoppedOffenseSoldier                                                       
 }
@@ -1723,7 +1766,7 @@ Response PlayerFirstRoundStartCompSoldier
 }
 Rule PlayerFirstRoundStartCompSoldier
 {
-	criteria ConceptPlayerRoundStartComp IsSoldier IsFirstRound 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsSoldier SoldierNotCustomPlayermodel IsFirstRound 40PercentChance
 	Response PlayerFirstRoundStartCompSoldier
 }
 
@@ -1746,7 +1789,7 @@ Response PlayerWonPrevRoundCompSoldier
 }
 Rule PlayerWonPrevRoundCompSoldier
 {
-	criteria ConceptPlayerRoundStartComp IsSoldier IsNotFirstRound PlayerWonPreviousRound 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsSoldier SoldierNotCustomPlayermodel IsNotFirstRound PlayerWonPreviousRound 40PercentChance
 	Response PlayerWonPrevRoundCompSoldier
 }
 
@@ -1772,7 +1815,7 @@ Response PlayerLostPrevRoundCompSoldier
 }
 Rule PlayerLostPrevRoundCompSoldier
 {
-	criteria ConceptPlayerRoundStartComp IsSoldier IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsSoldier SoldierNotCustomPlayermodel IsNotFirstRound PlayerLostPreviousRound PreviousRoundWasNotTie 40PercentChance
 	Response PlayerLostPrevRoundCompSoldier
 }
 
@@ -1787,7 +1830,7 @@ Response PlayerTiedPrevRoundCompSoldier
 }
 Rule PlayerTiedPrevRoundCompSoldier
 {
-	criteria ConceptPlayerRoundStartComp IsSoldier IsNotFirstRound PreviousRoundWasTie 40PercentChance
+	criteria ConceptPlayerRoundStartComp IsSoldier SoldierNotCustomPlayermodel IsNotFirstRound PreviousRoundWasTie 40PercentChance
 	Response PlayerTiedPrevRoundCompSoldier
 }
 
@@ -1819,7 +1862,7 @@ Response PlayerGameWinCompSoldier
 }
 Rule PlayerGameWinCompSoldier
 {
-	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsSoldier 40PercentChance
+	criteria ConceptPlayerGameOverComp PlayerOnWinningTeam IsSoldier SoldierNotCustomPlayermodel 40PercentChance
 	Response PlayerGameWinCompSoldier
 }
 
@@ -1837,7 +1880,7 @@ Response PlayerMatchWinCompSoldier
 }
 Rule PlayerMatchWinCompSoldier
 {
-	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsSoldier 40PercentChance
+	criteria ConceptPlayerMatchOverComp PlayerOnWinningTeam IsSoldier SoldierNotCustomPlayermodel 40PercentChance
 	Response PlayerMatchWinCompSoldier
 }
 //--------------------------------------------------------------------------------------------------------------

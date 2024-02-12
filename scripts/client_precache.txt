@@ -40,6 +40,11 @@ precache
 	"scriptsound"	"Halloween.Merasmus_TP_In"
 	"scriptsound"	"Halloween.MerasmusHalloweenModeRare"
 	"scriptsound"	"Halloween.MerasmusHalloweenModeCommon"
+	"scriptsound"	"Player.Chilled"
+	"scriptsound"	"Player.FreezeHit"
+	"scriptsound"	"Icicle.TurnToIce"
+	"scriptsound"	"Player_Footstep_Heels.Wood"
+	"scriptsound"	"Player_Footstep_Heels.Concrete"
 
 	"model"			"sprites/white.vmt"
 	"model"			"sprites/physbeam.vmt"

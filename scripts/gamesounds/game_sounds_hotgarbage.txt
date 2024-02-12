@@ -243,3 +243,22 @@
 		"wave"			"player/footsteps/heels/deckwood_run10.wav"
 	}
 }
+
+
+"Player.Chilled"
+{
+	"channel"	"CHAN_BODY"
+	"soundlevel"	"SNDLVL_GUNFIRE"
+	"pitch"		"PITCH_NORM"
+	"volume"	"1.0"
+	"wave"		"player/frozen.mp3"
+}
+
+"Player.FreezeHit"
+{
+	"channel"	"CHAN_WEAPON"
+	"soundlevel"	"SNDLVL_100dB"
+	"pitch"		"PITCH_NORM"
+	"volume"	"1.0"
+	"wave"		"player/sparkling.wav"
+}

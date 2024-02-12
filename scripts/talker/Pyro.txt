@@ -13,6 +13,46 @@ Criterion "PyroNotAssistSpeech" "PyroAssistSpeech" "!=1" "required" weight 0
 Criterion "PyroNotInvulnerableSpeech" "PyroInvulnerableSpeech" "!=1" "required" weight 0
 Criterion "PyroNotKillSpeechSapper" "PyroKillSpeechSapper" "!=1" "required" weight 0
 
+Criterion "PyroNotCustomPlayermodel" "playermodel" "models/player/Pyro.mdl"
+Criterion "PyroNotCustomPlayermodel" "playermodel" "models/player/fempyro_og/pyro.mdl"
+
+Response PlayerPyroDeath
+{
+	speak "Pyro.Death" weight 2
+}
+Rule PlayerPyroDeath
+{
+	criteria ConceptPlayerDeath IsPyro PyroNotCustomPlayermodel
+	Response PlayerPyroDeath
+}
+
+Response PlayerPyroDeathCrit
+{
+	speak "Pyro.CritDeath" weight 2
+}
+Response PlayerPyroDeathMelee
+{
+	speak "Pyro.MeleeDeath" weight 2
+}
+Response PlayerPyroDeathExplosion
+{
+	speak "Pyro.ExplosionDeath" weight 2
+}
+Rule PlayerPyroDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsPyro PyroNotCustomPlayermodel
+	Response PlayerPyroDeathCrit
+}
+Rule PlayerPyroDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsPyro PyroNotCustomPlayermodel
+	Response PlayerPyroDeathExplosion
+}
+Rule PlayerPyroDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsPyro PyroNotCustomPlayermodel
+	Response PlayerPyroDeathMelee
+}
 
 Response PlayerCloakedSpyDemomanPyro
 {
@@ -20,7 +60,7 @@ Response PlayerCloakedSpyDemomanPyro
 }
 Rule PlayerCloakedSpyDemomanPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnDemoman
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnDemoman
 	Response PlayerCloakedSpyDemomanPyro
 }
 
@@ -30,7 +70,7 @@ Response PlayerCloakedSpyEngineerPyro
 }
 Rule PlayerCloakedSpyEngineerPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnEngineer
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnEngineer
 	Response PlayerCloakedSpyEngineerPyro
 }
 
@@ -40,7 +80,7 @@ Response PlayerCloakedSpyHeavyPyro
 }
 Rule PlayerCloakedSpyHeavyPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnHeavy
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnHeavy
 	Response PlayerCloakedSpyHeavyPyro
 }
 
@@ -50,7 +90,7 @@ Response PlayerCloakedSpyMedicPyro
 }
 Rule PlayerCloakedSpyMedicPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnMedic
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnMedic
 	Response PlayerCloakedSpyMedicPyro
 }
 
@@ -60,7 +100,7 @@ Response PlayerCloakedSpyPyroPyro
 }
 Rule PlayerCloakedSpyPyroPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnPyro
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnPyro
 	Response PlayerCloakedSpyPyroPyro
 }
 
@@ -70,7 +110,7 @@ Response PlayerCloakedSpyScoutPyro
 }
 Rule PlayerCloakedSpyScoutPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnScout
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnScout
 	Response PlayerCloakedSpyScoutPyro
 }
 
@@ -80,7 +120,7 @@ Response PlayerCloakedSpySniperPyro
 }
 Rule PlayerCloakedSpySniperPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnSniper
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnSniper
 	Response PlayerCloakedSpySniperPyro
 }
 
@@ -90,7 +130,7 @@ Response PlayerCloakedSpySpyPyro
 }
 Rule PlayerCloakedSpySpyPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro IsOnSpy
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel IsOnSpy
 	Response PlayerCloakedSpySpyPyro
 }
 
@@ -104,7 +144,7 @@ Response HealThanksPyro
 }
 Rule HealThanksPyro
 {
-	criteria ConceptMedicChargeStopped IsPyro SuperHighHealthContext PyroNotSaidHealThanks 50PercentChance
+	criteria ConceptMedicChargeStopped IsPyro PyroNotCustomPlayermodel SuperHighHealthContext PyroNotSaidHealThanks 50PercentChance
 	ApplyContext "PyroSaidHealThanks:1:20"
 	Response HealThanksPyro
 }
@@ -116,7 +156,7 @@ Response PlayerRoundStartPyro
 }
 Rule PlayerRoundStartPyro
 {
-	criteria ConceptPlayerRoundStart IsPyro
+	criteria ConceptPlayerRoundStart IsPyro PyroNotCustomPlayermodel
 	Response PlayerRoundStartPyro
 }
 
@@ -126,7 +166,7 @@ Response PlayerCappedIntelligencePyro
 }
 Rule PlayerCappedIntelligencePyro
 {
-	criteria ConceptPlayerCapturedIntelligence IsPyro
+	criteria ConceptPlayerCapturedIntelligence IsPyro PyroNotCustomPlayermodel
 	Response PlayerCappedIntelligencePyro
 }
 
@@ -136,7 +176,7 @@ Response PlayerCapturedPointPyro
 }
 Rule PlayerCapturedPointPyro
 {
-	criteria ConceptPlayerCapturedPoint IsPyro
+	criteria ConceptPlayerCapturedPoint IsPyro PyroNotCustomPlayermodel
 	Response PlayerCapturedPointPyro
 }
 
@@ -147,7 +187,7 @@ Response PlayerSuddenDeathPyro
 }
 Rule PlayerSuddenDeathPyro
 {
-	criteria ConceptPlayerSuddenDeathStart IsPyro
+	criteria ConceptPlayerSuddenDeathStart IsPyro PyroNotCustomPlayermodel
 	Response PlayerSuddenDeathPyro
 }
 
@@ -157,7 +197,7 @@ Response PlayerStalematePyro
 }
 Rule PlayerStalematePyro
 {
-	criteria ConceptPlayerStalemate IsPyro
+	criteria ConceptPlayerStalemate IsPyro PyroNotCustomPlayermodel
 	Response PlayerStalematePyro
 }
 
@@ -167,7 +207,7 @@ Response PlayerTeleporterThanksPyro
 }
 Rule PlayerTeleporterThanksPyro
 {
-	criteria ConceptTeleported IsNotEngineer IsPyro 30PercentChance
+	criteria ConceptTeleported IsNotEngineer IsPyro PyroNotCustomPlayermodel 30PercentChance
 	Response PlayerTeleporterThanksPyro
 }
 
@@ -181,7 +221,7 @@ Response DefendOnThePointPyro
 }
 Rule DefendOnThePointPyro
 {
-	criteria ConceptFireWeapon IsPyro IsOnFriendlyControlPoint NotDefendOnThePointSpeech
+	criteria ConceptFireWeapon IsPyro PyroNotCustomPlayermodel IsOnFriendlyControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:30"
 	applycontexttoworld
 	Response DefendOnThePointPyro
@@ -193,7 +233,7 @@ Response KilledPlayerManyPyro
 }
 Rule KilledPlayerManyPyro
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay PyroNotKillSpeech IsPyro
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance IsWeaponPrimary KilledPlayerDelay PyroNotKillSpeech IsPyro PyroNotCustomPlayermodel
 	ApplyContext "PyroKillSpeech:1:10"
 	Response KilledPlayerManyPyro
 }
@@ -207,7 +247,7 @@ Response KilledPlayerMeleePyro
 }
 Rule KilledPlayerMeleePyro
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee PyroNotKillSpeechMelee IsPyro
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  IsWeaponMelee PyroNotKillSpeechMelee IsPyro PyroNotCustomPlayermodel
 	ApplyContext "PyroKillSpeechMelee:1:10"
 	Response KilledPlayerMeleePyro
 }
@@ -219,7 +259,7 @@ Response KilledPlayerAssistAutoPyro
 }
 Rule KilledPlayerAssistAutoPyro
 {
-	criteria ConceptKilledPlayer IsPyro IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance PyroNotAssistSpeech
+	criteria ConceptKilledPlayer IsPyro PyroNotCustomPlayermodel IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance PyroNotAssistSpeech
 	ApplyContext "PyroAssistSpeech:1:20"
 	Response KilledPlayerAssistAutoPyro
 }
@@ -231,7 +271,7 @@ Response PyroJarateHit
 }
 Rule PyroJarateHit
 {
-	criteria ConceptJarateHit IsPyro 50PercentChance
+	criteria ConceptJarateHit IsPyro PyroNotCustomPlayermodel 50PercentChance
 	Response PyroJarateHit
 }
 
@@ -242,7 +282,7 @@ Response InvulnerableSpeechPyro
 }
 Rule InvulnerableSpeechPyro
 {
-	criteria ConceptFireWeapon IsPyro IsInvulnerable PyroNotInvulnerableSpeech
+	criteria ConceptFireWeapon IsPyro PyroNotCustomPlayermodel IsInvulnerable PyroNotInvulnerableSpeech
 	ApplyContext "PyroInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechPyro
 }
@@ -254,7 +294,7 @@ Response PlayerKilledCapperPyro
 }
 Rule PlayerKilledCapperPyro
 {
-	criteria ConceptCapBlocked IsPyro
+	criteria ConceptCapBlocked IsPyro PyroNotCustomPlayermodel
 	ApplyContext "PyroKillSpeech:1:10"
 	Response PlayerKilledCapperPyro
 }
@@ -268,7 +308,7 @@ Response PlayerKilledDominatingPyro
 }
 Rule PlayerKilledDominatingPyro
 {
-	criteria ConceptKilledPlayer IsPyro IsDominated
+	criteria ConceptKilledPlayer IsPyro PyroNotCustomPlayermodel IsDominated
 	ApplyContext "PyroKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingPyro
@@ -281,7 +321,7 @@ Response PlayerKilledForRevengePyro
 }
 Rule PlayerKilledForRevengePyro
 {
-	criteria ConceptKilledPlayer IsPyro IsRevenge
+	criteria ConceptKilledPlayer IsPyro PyroNotCustomPlayermodel IsRevenge
 	ApplyContext "PyroKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengePyro
@@ -302,7 +342,7 @@ Response PlayerAttackerPainPyro
 }
 Rule PlayerAttackerPainPyro
 {
-	criteria ConceptAttackerPain IsPyro IsNotDominating
+	criteria ConceptAttackerPain IsPyro PyroNotCustomPlayermodel IsNotDominating
 	Response PlayerAttackerPainPyro
 }
 
@@ -313,7 +353,7 @@ Response PlayerOnFirePyro
 }
 Rule PlayerOnFirePyro
 {
-	criteria ConceptFire IsPyro PyroIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsPyro PyroNotCustomPlayermodel PyroIsNotStillonFire IsNotDominating
 	ApplyContext "PyroOnFire:1:7"
 	Response PlayerOnFirePyro
 }
@@ -330,7 +370,7 @@ Response PlayerPainPyro
 }
 Rule PlayerPainPyro
 {
-	criteria ConceptPain IsPyro IsNotDominating
+	criteria ConceptPain IsPyro PyroNotCustomPlayermodel IsNotDominating
 	Response PlayerPainPyro
 }
 
@@ -340,7 +380,7 @@ Response PlayerStillOnFirePyro
 }
 Rule PlayerStillOnFirePyro
 {
-	criteria ConceptFire IsPyro  PyroIsStillonFire IsNotDominating
+	criteria ConceptFire IsPyro PyroNotCustomPlayermodel  PyroIsStillonFire IsNotDominating
 	ApplyContext "PyroOnFire:1:7"
 	Response PlayerStillOnFirePyro
 }
@@ -357,7 +397,7 @@ Response AcceptedDuelPyro
 }
 Rule AcceptedDuelPyro
 {
-	criteria ConceptIAcceptDuel IsPyro
+	criteria ConceptIAcceptDuel IsPyro PyroNotCustomPlayermodel
 	Response AcceptedDuelPyro
 }
 
@@ -371,7 +411,7 @@ Response MeleeDarePyro
 }
 Rule MeleeDarePyro
 {
-	criteria ConceptRequestDuel IsPyro
+	criteria ConceptRequestDuel IsPyro PyroNotCustomPlayermodel
 	Response MeleeDarePyro
 }
 
@@ -385,7 +425,7 @@ Response RejectedDuelPyro
 }
 Rule RejectedDuelPyro
 {
-	criteria ConceptDuelRejected IsPyro
+	criteria ConceptDuelRejected IsPyro PyroNotCustomPlayermodel
 	Response RejectedDuelPyro
 }
 
@@ -399,7 +439,7 @@ Response PlayerGoPyro
 }
 Rule PlayerGoPyro
 {
-	criteria ConceptPlayerGo IsPyro
+	criteria ConceptPlayerGo IsPyro PyroNotCustomPlayermodel
 	Response PlayerGoPyro
 }
 
@@ -409,7 +449,7 @@ Response PlayerHeadLeftPyro
 }
 Rule PlayerHeadLeftPyro
 {
-	criteria ConceptPlayerLeft  IsPyro
+	criteria ConceptPlayerLeft  IsPyro PyroNotCustomPlayermodel
 	Response PlayerHeadLeftPyro
 }
 
@@ -419,7 +459,7 @@ Response PlayerHeadRightPyro
 }
 Rule PlayerHeadRightPyro
 {
-	criteria ConceptPlayerRight  IsPyro
+	criteria ConceptPlayerRight  IsPyro PyroNotCustomPlayermodel
 	Response PlayerHeadRightPyro
 }
 
@@ -429,7 +469,7 @@ Response PlayerHelpPyro
 }
 Rule PlayerHelpPyro
 {
-	criteria ConceptPlayerHelp IsPyro
+	criteria ConceptPlayerHelp IsPyro PyroNotCustomPlayermodel
 	Response PlayerHelpPyro
 }
 
@@ -439,7 +479,7 @@ Response PlayerHelpCapturePyro
 }
 Rule PlayerHelpCapturePyro
 {
-	criteria ConceptPlayerHelp IsPyro IsOnCappableControlPoint
+	criteria ConceptPlayerHelp IsPyro PyroNotCustomPlayermodel IsOnCappableControlPoint
 	ApplyContext "PyroHelpCap:1:10"
 	Response PlayerHelpCapturePyro
 }
@@ -450,7 +490,7 @@ Response PlayerHelpCapture2Pyro
 }
 Rule PlayerHelpCapture2Pyro
 {
-	criteria ConceptPlayerHelp IsPyro IsOnCappableControlPoint IsHelpCapPyro
+	criteria ConceptPlayerHelp IsPyro PyroNotCustomPlayermodel IsOnCappableControlPoint IsHelpCapPyro
 	Response PlayerHelpCapture2Pyro
 }
 
@@ -460,7 +500,7 @@ Response PlayerHelpDefendPyro
 }
 Rule PlayerHelpDefendPyro
 {
-	criteria ConceptPlayerHelp IsPyro IsOnFriendlyControlPoint
+	criteria ConceptPlayerHelp IsPyro PyroNotCustomPlayermodel IsOnFriendlyControlPoint
 	Response PlayerHelpDefendPyro
 }
 
@@ -470,7 +510,7 @@ Response PlayerMedicPyro
 }
 Rule PlayerMedicPyro
 {
-	criteria ConceptPlayerMedic IsPyro
+	criteria ConceptPlayerMedic IsPyro PyroNotCustomPlayermodel
 	Response PlayerMedicPyro
 }
 
@@ -479,7 +519,7 @@ Response PlayerAskForBallPyro
 }
 Rule PlayerAskForBallPyro
 {
-	criteria ConceptPlayerAskForBall IsPyro
+	criteria ConceptPlayerAskForBall IsPyro PyroNotCustomPlayermodel
 	Response PlayerAskForBallPyro
 }
 
@@ -489,7 +529,7 @@ Response PlayerMoveUpPyro
 }
 Rule PlayerMoveUpPyro
 {
-	criteria ConceptPlayerMoveUp  IsPyro
+	criteria ConceptPlayerMoveUp  IsPyro PyroNotCustomPlayermodel
 	Response PlayerMoveUpPyro
 }
 
@@ -499,7 +539,7 @@ Response PlayerNoPyro
 }
 Rule PlayerNoPyro
 {
-	criteria ConceptPlayerNo  IsPyro
+	criteria ConceptPlayerNo  IsPyro PyroNotCustomPlayermodel
 	Response PlayerNoPyro
 }
 
@@ -509,7 +549,7 @@ Response PlayerThanksPyro
 }
 Rule PlayerThanksPyro
 {
-	criteria ConceptPlayerThanks IsPyro
+	criteria ConceptPlayerThanks IsPyro PyroNotCustomPlayermodel
 	Response PlayerThanksPyro
 }
 
@@ -523,7 +563,7 @@ Response KilledPlayerAssistPyro
 }
 Rule KilledPlayerAssistPyro
 {
-	criteria ConceptPlayerThanks IsPyro IsARecentKill KilledPlayerDelay PyroNotAssistSpeech
+	criteria ConceptPlayerThanks IsPyro PyroNotCustomPlayermodel IsARecentKill KilledPlayerDelay PyroNotAssistSpeech
 	ApplyContext "PyroAssistSpeech:1:20"
 	Response KilledPlayerAssistPyro
 }
@@ -535,7 +575,7 @@ Response PlayerYesPyro
 }
 Rule PlayerYesPyro
 {
-	criteria ConceptPlayerYes  IsPyro
+	criteria ConceptPlayerYes  IsPyro PyroNotCustomPlayermodel
 	Response PlayerYesPyro
 }
 
@@ -549,7 +589,7 @@ Response PlayerActivateChargePyro
 }
 Rule PlayerActivateChargePyro
 {
-	criteria ConceptPlayerActivateCharge IsPyro
+	criteria ConceptPlayerActivateCharge IsPyro PyroNotCustomPlayermodel
 	Response PlayerActivateChargePyro
 }
 
@@ -559,7 +599,7 @@ Response PlayerCloakedSpyPyro
 }
 Rule PlayerCloakedSpyPyro
 {
-	criteria ConceptPlayerCloakedSpy IsPyro
+	criteria ConceptPlayerCloakedSpy IsPyro PyroNotCustomPlayermodel
 	Response PlayerCloakedSpyPyro
 }
 
@@ -569,7 +609,7 @@ Response PlayerDispenserHerePyro
 }
 Rule PlayerDispenserHerePyro
 {
-	criteria ConceptPlayerDispenserHere IsPyro
+	criteria ConceptPlayerDispenserHere IsPyro PyroNotCustomPlayermodel
 	Response PlayerDispenserHerePyro
 }
 
@@ -579,7 +619,7 @@ Response PlayerIncomingPyro
 }
 Rule PlayerIncomingPyro
 {
-	criteria ConceptPlayerIncoming IsPyro
+	criteria ConceptPlayerIncoming IsPyro PyroNotCustomPlayermodel
 	Response PlayerIncomingPyro
 }
 
@@ -589,7 +629,7 @@ Response PlayerSentryAheadPyro
 }
 Rule PlayerSentryAheadPyro
 {
-	criteria ConceptPlayerSentryAhead IsPyro
+	criteria ConceptPlayerSentryAhead IsPyro PyroNotCustomPlayermodel
 	Response PlayerSentryAheadPyro
 }
 
@@ -599,7 +639,7 @@ Response PlayerSentryHerePyro
 }
 Rule PlayerSentryHerePyro
 {
-	criteria ConceptPlayerSentryHere IsPyro
+	criteria ConceptPlayerSentryHere IsPyro PyroNotCustomPlayermodel
 	Response PlayerSentryHerePyro
 }
 
@@ -609,7 +649,7 @@ Response PlayerTeleporterHerePyro
 }
 Rule PlayerTeleporterHerePyro
 {
-	criteria ConceptPlayerTeleporterHere IsPyro
+	criteria ConceptPlayerTeleporterHere IsPyro PyroNotCustomPlayermodel
 	Response PlayerTeleporterHerePyro
 }
 
@@ -624,7 +664,7 @@ Response PlayerBattleCryPyro
 }
 Rule PlayerBattleCryPyro
 {
-	criteria ConceptPlayerBattleCry IsPyro
+	criteria ConceptPlayerBattleCry IsPyro PyroNotCustomPlayermodel
 	Response PlayerBattleCryPyro
 }
 
@@ -638,7 +678,7 @@ Response MeleeDareCombatPyro
 }
 Rule MeleeDareCombatPyro
 {
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsPyro IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsPyro PyroNotCustomPlayermodel IsCrosshairEnemy
 	Response MeleeDareCombatPyro
 }
 //End custom
@@ -649,7 +689,7 @@ Response PlayerCheersPyro
 }
 Rule PlayerCheersPyro
 {
-	criteria ConceptPlayerCheers IsPyro
+	criteria ConceptPlayerCheers IsPyro PyroNotCustomPlayermodel
 	Response PlayerCheersPyro
 }
 
@@ -659,7 +699,7 @@ Response PlayerGoodJobPyro
 }
 Rule PlayerGoodJobPyro
 {
-	criteria ConceptPlayerGoodJob IsPyro
+	criteria ConceptPlayerGoodJob IsPyro PyroNotCustomPlayermodel
 	Response PlayerGoodJobPyro
 }
 
@@ -670,7 +710,7 @@ Response PlayerJeersPyro
 }
 Rule PlayerJeersPyro
 {
-	criteria ConceptPlayerJeers IsPyro
+	criteria ConceptPlayerJeers IsPyro PyroNotCustomPlayermodel
 	Response PlayerJeersPyro
 }
 
@@ -680,7 +720,7 @@ Response PlayerLostPointPyro
 }
 Rule PlayerLostPointPyro
 {
-	criteria ConceptPlayerLostPoint IsPyro
+	criteria ConceptPlayerLostPoint IsPyro PyroNotCustomPlayermodel
 	Response PlayerLostPointPyro
 }
 
@@ -690,7 +730,7 @@ Response PlayerNegativePyro
 }
 Rule PlayerNegativePyro
 {
-	criteria ConceptPlayerNegative IsPyro
+	criteria ConceptPlayerNegative IsPyro PyroNotCustomPlayermodel
 	Response PlayerNegativePyro
 }
 
@@ -700,7 +740,7 @@ Response PlayerNiceShotPyro
 }
 Rule PlayerNiceShotPyro
 {
-	criteria ConceptPlayerNiceShot IsPyro
+	criteria ConceptPlayerNiceShot IsPyro PyroNotCustomPlayermodel
 	Response PlayerNiceShotPyro
 }
 
@@ -717,7 +757,7 @@ Response PlayerTauntsPyro
 }
 Rule PlayerPositivePyro
 {
-	criteria ConceptPlayerPositive IsPyro
+	criteria ConceptPlayerPositive IsPyro PyroNotCustomPlayermodel
 	Response PlayerPositivePyro
 	Response PlayerTauntsPyro
 }

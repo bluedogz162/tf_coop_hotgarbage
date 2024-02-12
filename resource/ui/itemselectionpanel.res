@@ -8,7 +8,7 @@
 		"ypos"			"0"
 		"zpos"			"500"
 		"wide"			"f0"
-		"tall"			"480"
+		"tall"			"1670"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -40,6 +40,7 @@
 			"deferred_description"	"1"
 			"deferred_icon"			"1"
 		}
+
 		"modelpanels_kv"
 		{
 			"ControlName"	"CItemModelPanel"
@@ -123,7 +124,7 @@
 		"visible"		"1"
 		"enabled"		"1"
 	}
-	
+
 	"TopLine"
 	{
 		"ControlName"	"ImagePanel"
@@ -191,31 +192,55 @@
 		"enabled"		"1"
 		"fgcolor_override" "200 80 60 255"
 	}
-	
-	"CancelButton"
+			"UpButton"
 	{
 		"ControlName"	"CExButton"
-		"fieldName"		"CancelButton"
-		"xpos"			"c-200"
-		"ypos"			"400"
+		"fieldName"		"UpButton"
+		"xpos"			"60"
+		"ypos"			"0"
 		"zpos"			"2"
-		"wide"			"200"
-		"tall"			"25"
+		"wide"			"7"
+		"tall"			"2500"
 		"autoResize"	"0"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
-		"labelText"		"#Cancel"
+		"labelText"		"↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓"
 		"font"			"HudFontSmallBold"
-		"textAlignment"	"center"
+		"textAlignment"	"north"
 		"dulltext"		"0"
 		"brighttext"	"0"
-		"Command"		"vguicancel"
+		"Command"		"loadout_scrolldown"
 		"sound_depressed"	"UI/buttonclick.wav"
 		"sound_released"	"UI/buttonclickrelease.wav"
+		"wrap"	"1"
 	}
-	
+		"DownButton"
+	{
+		"ControlName"	"CExButton"
+		"fieldName"		"DownButton"
+		"xpos"			"30"
+		"ypos"			"0"
+		"zpos"			"2"
+		"wide"			"7"
+		"tall"			"2500"
+		"autoResize"	"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑"
+		"font"			"HudFontSmallBold"
+		"textAlignment"	"north"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"Command"		"loadout_scrollup"
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"UI/buttonclickrelease.wav"
+		"wrap"	"1"
+	}
+
 	"mouseoveritempanel"
 	{
 		"ControlName"	"CItemModelPanel"

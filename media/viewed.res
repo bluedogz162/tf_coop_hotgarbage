@@ -2,6 +2,6 @@
 {
 	"lfce_devtest"
 	{
-		"viewed"		"5"
+		"viewed"		"6"
 	}
 }

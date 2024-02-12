@@ -43,6 +43,7 @@ WeaponData
 		"special2"		"Weapon_FlameThrower.PilotLoop"			// Looping pilot light sound, always on while weapon is deployed
 		"special3"		"Weapon_FlameThrower.WindDown"			// End of fire sound
 		"burst"			"Weapon_FlameThrower.FireLoopCrit"		// Looping crit fire sound
+		"melee_hit"		"Weapon_FlameThrower.FireHit"	//Crispy noise that plays when fire intersects an enemy. Damn boy, you frying chicken in there? Ha HA!
 	}
 
 	// Weapon Sprite data is loaded by the Client DLL.

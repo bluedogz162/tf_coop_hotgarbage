@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"models/weapons/c_frostbox/c_frostbox_hull"
+	"$detail"		"shadertest\detail"
+	"$detailscale"	"0.8"
+	"$detailblendfactor"	"0.45"
+	"$detailblendmode"		"2"
+}

@@ -72,8 +72,10 @@
 		"enabled"		"1"
 		"image"			"loadout_solid_line"
 		"scaleImage"	"1"
-	}				
+	}		
 	
+
+
 	"Sheet"
 	{
 		"ControlName"	"EditablePanel"

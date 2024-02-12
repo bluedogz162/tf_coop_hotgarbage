@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$basetexture"	"metal\metalwall020a"
+	"$detail"		"models/weapons/c_frostbox/noise"
+	"$detailblendmode"		"5"
+	"$phong"		"1"
+	"$phongboost"	"9"
+	"$phongexponent"	"1"
+		"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$detailtexturetransform"
+			"texturescrollrate" .1
+			"texturescrollangle" 0.00
+		}
+	}
+}
