@@ -925,7 +925,7 @@
 	"soundlevel"	"SNDLVL_GUNFIRE"
 	"pitch"			"98,105"
 
-	"wave"		"^weapons/smg1/smg1_fire1.wav"
+	"wave"		"^weapons/smg1/smg1_fire1crit.wav"
 
 }
 

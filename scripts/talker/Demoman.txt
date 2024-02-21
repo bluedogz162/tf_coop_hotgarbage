@@ -16,6 +16,49 @@ Criterion "IsDrunk" "NotSober" "1" "required" weight 0
 Criterion "DemomanNotAwardSpeech" "DemomanAwardSpeech" "!=1" "required" weight 0
 
 
+Response PlayerDemomanDeath
+{
+	speak "Demoman.Death" weight 2
+}
+Rule PlayerDemomanDeath
+{
+	criteria ConceptPlayerDeath IsDemoman DemomanNotCustomPlayermodel
+	Response PlayerDemomanDeath
+}
+
+Response PlayerDemomanDeathCrit
+{
+	speak "Demoman.CritDeath" weight 2
+}
+Response PlayerDemomanDeathMelee
+{
+	speak "Demoman.MeleeDeath" weight 2
+}
+Response PlayerDemomanDeathExplosion
+{
+	speak "Demoman.ExplosionDeath" weight 2
+}
+Rule PlayerDemomanDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsDemoman DemomanNotCustomPlayermodel
+	Response PlayerDemomanDeathCrit
+}
+Rule PlayerDemomanDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsDemoman DemomanNotCustomPlayermodel
+	Response PlayerDemomanDeathExplosion
+}
+Rule PlayerDemomanDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsDemoman DemomanNotCustomPlayermodel
+	Response PlayerDemomanDeathMelee
+}
+
+
+
+
+
+
 Response PlayerCloakedSpyDemomanDemoman
 {
 	scene "scenes/Player/Demoman/low/901.vcd" 

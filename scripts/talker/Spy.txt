@@ -16,7 +16,45 @@ Criterion "NotSapSpeech" "SapKillSpeech" "!=1" "required" weight 0
 Criterion "NotSapperLostSpeech" "SpySapperLostSpeech" "!=1" "required" weight 0
 Criterion "SpyNotAssistSpeech" "SpyAssistSpeech" "!=1" "required" weight 0
 Criterion "SpyNotInvulnerableSpeech" "SpyInvulnerableSpeech" "!=1" "required" weight 0
+Criterion "SpyNotCustomPlayermodel" "playermodel" "models/player/spy.mdl" "required" weight 0
 
+Response PlayerSpyDeath
+{
+	speak "Spy.Death" weight 2
+}
+Rule PlayerSpyDeath
+{
+	criteria ConceptPlayerDeath IsSpy SpyNotCustomPlayermodel
+	Response PlayerSpyDeath	
+}
+
+Response PlayerSpyDeathCrit
+{
+	speak "Spy.CritDeath" weight 2
+}
+Response PlayerSpyDeathMelee
+{
+	speak "Spy.MeleeDeath" weight 2
+}
+Response PlayerSpyDeathExplosion
+{
+	speak "Spy.ExplosionDeath" weight 2
+}
+Rule PlayerSpyDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsSpy SpyNotCustomPlayermodel
+	Response PlayerSpyDeathCrit
+}
+Rule PlayerSpyDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsSpy SpyNotCustomPlayermodel
+	Response PlayerSpyDeathExplosion
+}
+Rule PlayerSpyDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsSpy SpyNotCustomPlayermodel
+	Response PlayerSpyDeathMelee
+}
 
 Response PlayerCloakedSpyDemomanSpy
 {

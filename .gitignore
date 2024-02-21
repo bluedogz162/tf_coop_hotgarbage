@@ -34,3 +34,5 @@ cfg/vmt.txt
 desktop.ini
 media/viewed.res
 media/viewed.res
+*.bat
+*.lnk

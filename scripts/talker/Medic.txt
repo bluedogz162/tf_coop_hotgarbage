@@ -12,6 +12,50 @@ Criterion "MedicNotSaidHealThanks" "MedicSaidHealThanks" "!=1" "required"
 Criterion "IsHelpCapMedic" "MedicHelpCap" "1" "required" weight 0
 // Custom stuff
 Criterion "MedicNotAssistSpeech" "MedicAssistSpeech" "!=1" "required" weight 0
+Criterion "MedicNotCustomPlayermodel" "playermodel" "models/player/medic.mdl" "required" weight 0
+
+
+Response PlayerMedicDeath
+{
+	speak "Medic.Death" weight 2
+}
+Rule PlayerMedicDeath
+{
+	criteria ConceptPlayerDeath IsMedic MedicNotCustomPlayermodel
+	Response PlayerMedicDeath
+}
+
+Response PlayerMedicDeathCrit
+{
+	speak "Medic.CritDeath" weight 2
+}
+Response PlayerMedicDeathMelee
+{
+	speak "Medic.MeleeDeath" weight 2
+}
+Response PlayerMedicDeathExplosion
+{
+	speak "Medic.ExplosionDeath" weight 2
+}
+Rule PlayerMedicDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsMedic MedicNotCustomPlayermodel
+	Response PlayerMedicDeathCrit
+}
+Rule PlayerMedicDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsMedic MedicNotCustomPlayermodel
+	Response PlayerMedicDeathExplosion
+}
+Rule PlayerMedicDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsMedic MedicNotCustomPlayermodel
+	Response PlayerMedicDeathMelee
+}
+
+
+
+
 
 
 Response MedicChargeReady
@@ -22,7 +66,7 @@ Response MedicChargeReady
 }
 Rule MedicChargeReady
 {
-	criteria ConceptMedicChargeReady IsMedic
+	criteria ConceptMedicChargeReady IsMedic MedicNotCustomPlayermodel
 	Response MedicChargeReady
 }
 
@@ -32,7 +76,7 @@ Response PlayerCloakedSpyDemomanMedic
 }
 Rule PlayerCloakedSpyDemomanMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnDemoman
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnDemoman
 	Response PlayerCloakedSpyDemomanMedic
 }
 
@@ -42,7 +86,7 @@ Response PlayerCloakedSpyEngineerMedic
 }
 Rule PlayerCloakedSpyEngineerMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnEngineer
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnEngineer
 	Response PlayerCloakedSpyEngineerMedic
 }
 
@@ -52,7 +96,7 @@ Response PlayerCloakedSpyHeavyMedic
 }
 Rule PlayerCloakedSpyHeavyMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnHeavy
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnHeavy
 	Response PlayerCloakedSpyHeavyMedic
 }
 
@@ -62,7 +106,7 @@ Response PlayerCloakedSpyMedicMedic
 }
 Rule PlayerCloakedSpyMedicMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnMedic
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnMedic
 	Response PlayerCloakedSpyMedicMedic
 }
 
@@ -72,7 +116,7 @@ Response PlayerCloakedSpyPyroMedic
 }
 Rule PlayerCloakedSpyPyroMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnPyro
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnPyro
 	Response PlayerCloakedSpyPyroMedic
 }
 
@@ -82,7 +126,7 @@ Response PlayerCloakedSpyScoutMedic
 }
 Rule PlayerCloakedSpyScoutMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnScout
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnScout
 	Response PlayerCloakedSpyScoutMedic
 }
 
@@ -92,7 +136,7 @@ Response PlayerCloakedSpySniperMedic
 }
 Rule PlayerCloakedSpySniperMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnSniper
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnSniper
 	Response PlayerCloakedSpySniperMedic
 }
 
@@ -102,7 +146,7 @@ Response PlayerCloakedSpySoldierMedic
 }
 Rule PlayerCloakedSpySoldierMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnSoldier
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnSoldier
 	Response PlayerCloakedSpySoldierMedic
 }
 
@@ -112,7 +156,7 @@ Response PlayerCloakedSpySpyMedic
 }
 Rule PlayerCloakedSpySpyMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic IsOnSpy
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel IsOnSpy
 	Response PlayerCloakedSpySpyMedic
 }
 
@@ -127,7 +171,7 @@ Response HealThanksMedic
 }
 Rule HealThanksMedic
 {
-	criteria ConceptMedicChargeStopped IsMedic SuperHighHealthContext MedicNotSaidHealThanks 50PercentChance
+	criteria ConceptMedicChargeStopped IsMedic MedicNotCustomPlayermodel SuperHighHealthContext MedicNotSaidHealThanks 50PercentChance
 	ApplyContext "MedicSaidHealThanks:1:20"
 	Response HealThanksMedic
 }
@@ -143,7 +187,7 @@ Response PlayerRoundStartMedic
 }
 Rule PlayerRoundStartMedic
 {
-	criteria ConceptPlayerRoundStart IsMedic
+	criteria ConceptPlayerRoundStart IsMedic MedicNotCustomPlayermodel
 	Response PlayerRoundStartMedic
 }
 
@@ -155,7 +199,7 @@ Response PlayerCappedIntelligenceMedic
 }
 Rule PlayerCappedIntelligenceMedic
 {
-	criteria ConceptPlayerCapturedIntelligence IsMedic
+	criteria ConceptPlayerCapturedIntelligence IsMedic MedicNotCustomPlayermodel
 	Response PlayerCappedIntelligenceMedic
 }
 
@@ -167,7 +211,7 @@ Response PlayerCapturedPointMedic
 }
 Rule PlayerCapturedPointMedic
 {
-	criteria ConceptPlayerCapturedPoint IsMedic
+	criteria ConceptPlayerCapturedPoint IsMedic MedicNotCustomPlayermodel
 	Response PlayerCapturedPointMedic
 }
 
@@ -188,7 +232,7 @@ Response PlayerSuddenDeathMedic
 }
 Rule PlayerSuddenDeathMedic
 {
-	criteria ConceptPlayerSuddenDeathStart IsMedic
+	criteria ConceptPlayerSuddenDeathStart IsMedic MedicNotCustomPlayermodel
 	Response PlayerSuddenDeathMedic
 }
 
@@ -204,7 +248,7 @@ Response PlayerStalemateMedic
 }
 Rule PlayerStalemateMedic
 {
-	criteria ConceptPlayerStalemate IsMedic
+	criteria ConceptPlayerStalemate IsMedic MedicNotCustomPlayermodel
 	Response PlayerStalemateMedic
 }
 
@@ -216,7 +260,7 @@ Response PlayerTeleporterThanksMedic
 }
 Rule PlayerTeleporterThanksMedic
 {
-	criteria ConceptTeleported IsNotEngineer IsMedic 30PercentChance
+	criteria ConceptTeleported IsNotEngineer IsMedic MedicNotCustomPlayermodel 30PercentChance
 	Response PlayerTeleporterThanksMedic
 }
 
@@ -234,7 +278,7 @@ Response DefendOnThePointMedic
 }
 Rule DefendOnThePointMedic
 {
-	criteria ConceptFireWeapon IsMedic IsOnFriendlyControlPoint NotDefendOnThePointSpeech
+	criteria ConceptFireWeapon IsMedic MedicNotCustomPlayermodel IsOnFriendlyControlPoint NotDefendOnThePointSpeech
 	ApplyContext "DefendOnThePointSpeech:1:30"
 	applycontexttoworld
 	Response DefendOnThePointMedic
@@ -248,7 +292,7 @@ Response InvulnerableSpeechMedic
 }
 Rule InvulnerableSpeechMedic
 {
-	criteria ConceptMedicChargeDeployed IsMedic  IsInvulnerable MedicNotInvulnerableSpeech
+	criteria ConceptMedicChargeDeployed IsMedic MedicNotCustomPlayermodel  IsInvulnerable MedicNotInvulnerableSpeech
 	ApplyContext "MedicInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechMedic
 }
@@ -263,7 +307,7 @@ Response MedicJarateHit
 }
 Rule MedicJarateHit
 {
-	criteria ConceptJarateHit IsMedic 50PercentChance
+	criteria ConceptJarateHit IsMedic MedicNotCustomPlayermodel 50PercentChance
 	Response MedicJarateHit
 }
 
@@ -276,7 +320,7 @@ Response InvulnerableSpeechCombatMedic
 }
 Rule InvulnerableSpeechCombatMedic
 {
-	criteria ConceptFireWeapon IsMedic IsInvulnerable WeaponIsNotMediGun MedicNotInvulnerableSpeech
+	criteria ConceptFireWeapon IsMedic MedicNotCustomPlayermodel IsInvulnerable WeaponIsNotMediGun MedicNotInvulnerableSpeech
 	ApplyContext "MedicInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechCombatMedic
 }
@@ -288,7 +332,7 @@ Response KritzSpeechMedic
 }
 Rule KritzSpeechMedic
 {
-	criteria ConceptMedicChargeDeployed IsMedic WeaponIsNotVanillaSecondary WeaponIsNotTaggedMedigun MedicNotInvulnerableSpeech
+	criteria ConceptMedicChargeDeployed IsMedic MedicNotCustomPlayermodel WeaponIsNotVanillaSecondary WeaponIsNotTaggedMedigun MedicNotInvulnerableSpeech
 	ApplyContext "MedicInvulnerableSpeech:1:30"
 	Response InvulnerableSpeechMedic
 	Response KritzSpeechMedic
@@ -301,7 +345,7 @@ Response KilledPlayerAssistAutoMedic
 }
 Rule KilledPlayerAssistAutoMedic
 {
-	criteria ConceptKilledPlayer IsMedic IsBeingHealed IsARecentKill KilledPlayerDelay 20PercentChance MedicNotAssistSpeech
+	criteria ConceptKilledPlayer IsMedic MedicNotCustomPlayermodel IsBeingHealed IsARecentKill KilledPlayerDelay 20PercentChance MedicNotAssistSpeech
 	ApplyContext "MedicAssistSpeech:1:20"
 	Response KilledPlayerAssistAutoMedic
 }
@@ -318,7 +362,7 @@ Response KilledPlayerManyMedic
 }
 Rule KilledPlayerManyMedic
 {
-	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance KilledPlayerDelay MedicNotKillSpeech IsMedic
+	criteria ConceptKilledPlayer IsManyRecentKills 30PercentChance KilledPlayerDelay MedicNotKillSpeech IsMedic MedicNotCustomPlayermodel
 	ApplyContext "MedicKillSpeech:1:10"
 	Response KilledPlayerManyMedic
 }
@@ -331,7 +375,7 @@ Response KilledPlayerVeryManyMedic
 }
 Rule KilledPlayerVeryManyMedic
 {
-	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance KilledPlayerDelay MedicNotKillSpeech IsMedic
+	criteria ConceptKilledPlayer IsVeryManyRecentKills 50PercentChance KilledPlayerDelay MedicNotKillSpeech IsMedic MedicNotCustomPlayermodel
 	ApplyContext "MedicKillSpeech:1:10"
 	Response KilledPlayerVeryManyMedic
 }
@@ -351,7 +395,7 @@ Response PlayerKilledDominatingMedic
 }
 Rule PlayerKilledDominatingMedic
 {
-	criteria ConceptKilledPlayer IsMedic IsDominated
+	criteria ConceptKilledPlayer IsMedic MedicNotCustomPlayermodel IsDominated
 	ApplyContext "MedicKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledDominatingMedic
@@ -364,7 +408,7 @@ Response KilledPlayerMedic
 }
 Rule KilledPlayerMedic
 {
-	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance MedicNotKillSpeech MedicNotKillSpeechMelee IsMedic
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance MedicNotKillSpeech MedicNotKillSpeechMelee IsMedic MedicNotCustomPlayermodel
 	ApplyContext "MedicKillSpeechMelee:1:10"
 	Response InvulnerableSpeechCombatMedic
 	Response KilledPlayerMedic
@@ -386,7 +430,7 @@ Response PlayerKilledCapperMedic
 }
 Rule PlayerKilledCapperMedic
 {
-	criteria ConceptCapBlocked IsMedic
+	criteria ConceptCapBlocked IsMedic MedicNotCustomPlayermodel
 	ApplyContext "MedicKillSpeech:1:10"
 	Response PlayerKilledCapperMedic
 }
@@ -400,7 +444,7 @@ Response PlayerKilledForRevengeMedic
 }
 Rule PlayerKilledForRevengeMedic
 {
-	criteria ConceptKilledPlayer IsMedic IsRevenge
+	criteria ConceptKilledPlayer IsMedic MedicNotCustomPlayermodel IsRevenge
 	ApplyContext "MedicKillSpeech:1:10"
 	ApplyContext "IsDominating:1:10"
 	Response PlayerKilledForRevengeMedic
@@ -413,7 +457,7 @@ Response PlayerKilledObjectMedic
 }
 Rule PlayerKilledObjectMedic
 {
-	criteria ConceptKilledObject IsMedic 30PercentChance IsARecentKill
+	criteria ConceptKilledObject IsMedic MedicNotCustomPlayermodel 30PercentChance IsARecentKill
 	ApplyContext "MedicKillSpeechObject:1:30"
 	Response PlayerKilledObjectMedic
 }
@@ -431,7 +475,7 @@ Response PlayerAttackerPainMedic
 }
 Rule PlayerAttackerPainMedic
 {
-	criteria ConceptAttackerPain IsMedic IsNotDominating
+	criteria ConceptAttackerPain IsMedic MedicNotCustomPlayermodel IsNotDominating
 	Response PlayerAttackerPainMedic
 }
 
@@ -443,7 +487,7 @@ Response PlayerOnFireMedic
 }
 Rule PlayerOnFireMedic
 {
-	criteria ConceptFire IsMedic MedicIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsMedic MedicNotCustomPlayermodel MedicIsNotStillonFire IsNotDominating
 	ApplyContext "MedicOnFire:1:7"
 	Response PlayerOnFireMedic
 }
@@ -455,7 +499,7 @@ Response PlayerOnFireRareMedic
 }
 Rule PlayerOnFireRareMedic
 {
-	criteria ConceptFire IsMedic 10PercentChance MedicIsNotStillonFire IsNotDominating
+	criteria ConceptFire IsMedic MedicNotCustomPlayermodel 10PercentChance MedicIsNotStillonFire IsNotDominating
 	ApplyContext "MedicOnFire:1:7"
 	Response PlayerOnFireRareMedic
 }
@@ -473,7 +517,7 @@ Response PlayerPainMedic
 }
 Rule PlayerPainMedic
 {
-	criteria ConceptPain IsMedic IsNotDominating
+	criteria ConceptPain IsMedic MedicNotCustomPlayermodel IsNotDominating
 	Response PlayerPainMedic
 }
 
@@ -483,7 +527,7 @@ Response PlayerStillOnFireMedic
 }
 Rule PlayerStillOnFireMedic
 {
-	criteria ConceptFire IsMedic  MedicIsStillonFire IsNotDominating
+	criteria ConceptFire IsMedic MedicNotCustomPlayermodel  MedicIsStillonFire IsNotDominating
 	ApplyContext "MedicOnFire:1:7"
 	Response PlayerStillOnFireMedic
 }
@@ -501,7 +545,7 @@ Response AcceptedDuelMedic
 }
 Rule AcceptedDuelMedic
 {
-	criteria ConceptIAcceptDuel IsMedic
+	criteria ConceptIAcceptDuel IsMedic MedicNotCustomPlayermodel
 	Response AcceptedDuelMedic
 }
 
@@ -514,7 +558,7 @@ Response MeleeDareMedic
 }
 Rule MeleeDareMedic
 {
-	criteria ConceptRequestDuel IsMedic
+	criteria ConceptRequestDuel IsMedic MedicNotCustomPlayermodel
 	Response MeleeDareMedic
 }
 
@@ -528,7 +572,7 @@ Response RejectedDuelMedic
 }
 Rule RejectedDuelMedic
 {
-	criteria ConceptDuelRejected IsMedic
+	criteria ConceptDuelRejected IsMedic MedicNotCustomPlayermodel
 	Response RejectedDuelMedic
 }
 
@@ -546,7 +590,7 @@ Response PlayerGoMedic
 }
 Rule PlayerGoMedic
 {
-	criteria ConceptPlayerGo IsMedic
+	criteria ConceptPlayerGo IsMedic MedicNotCustomPlayermodel
 	Response PlayerGoMedic
 }
 
@@ -558,7 +602,7 @@ Response PlayerHeadLeftMedic
 }
 Rule PlayerHeadLeftMedic
 {
-	criteria ConceptPlayerLeft  IsMedic
+	criteria ConceptPlayerLeft  IsMedic MedicNotCustomPlayermodel
 	Response PlayerHeadLeftMedic
 }
 
@@ -570,7 +614,7 @@ Response PlayerHeadRightMedic
 }
 Rule PlayerHeadRightMedic
 {
-	criteria ConceptPlayerRight  IsMedic
+	criteria ConceptPlayerRight  IsMedic MedicNotCustomPlayermodel
 	Response PlayerHeadRightMedic
 }
 
@@ -582,7 +626,7 @@ Response PlayerHelpMedic
 }
 Rule PlayerHelpMedic
 {
-	criteria ConceptPlayerHelp IsMedic
+	criteria ConceptPlayerHelp IsMedic MedicNotCustomPlayermodel
 	Response PlayerHelpMedic
 }
 
@@ -593,7 +637,7 @@ Response PlayerHelpCaptureMedic
 }
 Rule PlayerHelpCaptureMedic
 {
-	criteria ConceptPlayerHelp IsMedic IsOnCappableControlPoint
+	criteria ConceptPlayerHelp IsMedic MedicNotCustomPlayermodel IsOnCappableControlPoint
 	ApplyContext "MedicHelpCap:1:10"
 	Response PlayerHelpCaptureMedic
 }
@@ -608,7 +652,7 @@ Response PlayerHelpCapture2Medic
 }
 Rule PlayerHelpCapture2Medic
 {
-	criteria ConceptPlayerHelp IsMedic IsOnCappableControlPoint IsHelpCapMedic
+	criteria ConceptPlayerHelp IsMedic MedicNotCustomPlayermodel IsOnCappableControlPoint IsHelpCapMedic
 	Response PlayerHelpCapture2Medic
 }
 
@@ -620,7 +664,7 @@ Response PlayerHelpDefendMedic
 }
 Rule PlayerHelpDefendMedic
 {
-	criteria ConceptPlayerHelp IsMedic IsOnFriendlyControlPoint
+	criteria ConceptPlayerHelp IsMedic MedicNotCustomPlayermodel IsOnFriendlyControlPoint
 	Response PlayerHelpDefendMedic
 }
 
@@ -632,7 +676,7 @@ Response PlayerMedicMedic
 }
 Rule PlayerMedicMedic
 {
-	criteria ConceptPlayerMedic IsMedic
+	criteria ConceptPlayerMedic IsMedic MedicNotCustomPlayermodel
 	Response PlayerMedicMedic
 }
 
@@ -641,7 +685,7 @@ Response PlayerAskForBallMedic
 }
 Rule PlayerAskForBallMedic
 {
-	criteria ConceptPlayerAskForBall IsMedic
+	criteria ConceptPlayerAskForBall IsMedic MedicNotCustomPlayermodel
 	Response PlayerAskForBallMedic
 }
 
@@ -652,7 +696,7 @@ Response PlayerMoveUpMedic
 }
 Rule PlayerMoveUpMedic
 {
-	criteria ConceptPlayerMoveUp  IsMedic
+	criteria ConceptPlayerMoveUp  IsMedic MedicNotCustomPlayermodel
 	Response PlayerMoveUpMedic
 }
 
@@ -664,7 +708,7 @@ Response PlayerNoMedic
 }
 Rule PlayerNoMedic
 {
-	criteria ConceptPlayerNo  IsMedic
+	criteria ConceptPlayerNo  IsMedic MedicNotCustomPlayermodel
 	Response PlayerNoMedic
 }
 
@@ -675,7 +719,7 @@ Response PlayerThanksMedic
 }
 Rule PlayerThanksMedic
 {
-	criteria ConceptPlayerThanks IsMedic
+	criteria ConceptPlayerThanks IsMedic MedicNotCustomPlayermodel
 	Response PlayerThanksMedic
 }
 
@@ -690,7 +734,7 @@ Response KilledPlayerAssistMedic
 }
 Rule KilledPlayerAssistMedic
 {
-	criteria ConceptPlayerThanks IsMedic IsARecentKill KilledPlayerDelay MedicNotAssistSpeech
+	criteria ConceptPlayerThanks IsMedic MedicNotCustomPlayermodel IsARecentKill KilledPlayerDelay MedicNotAssistSpeech
 	ApplyContext "MedicAssistSpeech:1:20"
 	Response KilledPlayerAssistMedic
 }
@@ -704,7 +748,7 @@ Response PlayerYesMedic
 }
 Rule PlayerYesMedic
 {
-	criteria ConceptPlayerYes  IsMedic
+	criteria ConceptPlayerYes  IsMedic MedicNotCustomPlayermodel
 	Response PlayerYesMedic
 }
 
@@ -720,7 +764,7 @@ Response PlayerActivateChargeMedic
 }
 Rule PlayerActivateChargeMedic
 {
-	criteria ConceptPlayerActivateCharge IsMedic
+	criteria ConceptPlayerActivateCharge IsMedic MedicNotCustomPlayermodel
 	Response PlayerActivateChargeMedic
 }
 
@@ -732,7 +776,7 @@ Response PlayerChargeReadyMedic
 }
 Rule PlayerChargeReadyMedic
 {
-	criteria ConceptPlayerChargeReady IsMedic
+	criteria ConceptPlayerChargeReady IsMedic MedicNotCustomPlayermodel
 	Response PlayerChargeReadyMedic
 }
 
@@ -743,7 +787,7 @@ Response PlayerCloakedSpyMedic
 }
 Rule PlayerCloakedSpyMedic
 {
-	criteria ConceptPlayerCloakedSpy IsMedic
+	criteria ConceptPlayerCloakedSpy IsMedic MedicNotCustomPlayermodel
 	Response PlayerCloakedSpyMedic
 }
 
@@ -753,7 +797,7 @@ Response PlayerDispenserHereMedic
 }
 Rule PlayerDispenserHereMedic
 {
-	criteria ConceptPlayerDispenserHere IsMedic
+	criteria ConceptPlayerDispenserHere IsMedic MedicNotCustomPlayermodel
 	Response PlayerDispenserHereMedic
 }
 
@@ -765,7 +809,7 @@ Response PlayerIncomingMedic
 }
 Rule PlayerIncomingMedic
 {
-	criteria ConceptPlayerIncoming IsMedic
+	criteria ConceptPlayerIncoming IsMedic MedicNotCustomPlayermodel
 	Response PlayerIncomingMedic
 }
 
@@ -776,7 +820,7 @@ Response PlayerSentryAheadMedic
 }
 Rule PlayerSentryAheadMedic
 {
-	criteria ConceptPlayerSentryAhead IsMedic
+	criteria ConceptPlayerSentryAhead IsMedic MedicNotCustomPlayermodel
 	Response PlayerSentryAheadMedic
 }
 
@@ -786,7 +830,7 @@ Response PlayerSentryHereMedic
 }
 Rule PlayerSentryHereMedic
 {
-	criteria ConceptPlayerSentryHere IsMedic
+	criteria ConceptPlayerSentryHere IsMedic MedicNotCustomPlayermodel
 	Response PlayerSentryHereMedic
 }
 
@@ -796,7 +840,7 @@ Response PlayerTeleporterHereMedic
 }
 Rule PlayerTeleporterHereMedic
 {
-	criteria ConceptPlayerTeleporterHere IsMedic
+	criteria ConceptPlayerTeleporterHere IsMedic MedicNotCustomPlayermodel
 	Response PlayerTeleporterHereMedic
 }
 
@@ -815,7 +859,7 @@ Response PlayerBattleCryMedic
 }
 Rule PlayerBattleCryMedic
 {
-	criteria ConceptPlayerBattleCry IsMedic
+	criteria ConceptPlayerBattleCry IsMedic MedicNotCustomPlayermodel
 	Response PlayerBattleCryMedic
 }
 
@@ -834,7 +878,7 @@ Response MeleeDareCombatMedic
 }
 Rule MeleeDareCombatMedic
 {
-	criteria ConceptPlayerBattleCry IsWeaponMelee IsMedic IsCrosshairEnemy
+	criteria ConceptPlayerBattleCry IsWeaponMelee IsMedic MedicNotCustomPlayermodel IsCrosshairEnemy
 	Response MeleeDareCombatMedic
 }
 //End custom
@@ -850,7 +894,7 @@ Response PlayerCheersMedic
 }
 Rule PlayerCheersMedic
 {
-	criteria ConceptPlayerCheers IsMedic
+	criteria ConceptPlayerCheers IsMedic MedicNotCustomPlayermodel
 	Response PlayerCheersMedic
 }
 
@@ -862,7 +906,7 @@ Response PlayerGoodJobMedic
 }
 Rule PlayerGoodJobMedic
 {
-	criteria ConceptPlayerGoodJob IsMedic
+	criteria ConceptPlayerGoodJob IsMedic MedicNotCustomPlayermodel
 	Response PlayerGoodJobMedic
 }
 
@@ -883,7 +927,7 @@ Response PlayerJeersMedic
 }
 Rule PlayerJeersMedic
 {
-	criteria ConceptPlayerJeers IsMedic
+	criteria ConceptPlayerJeers IsMedic MedicNotCustomPlayermodel
 	Response PlayerJeersMedic
 }
 
@@ -899,7 +943,7 @@ Response PlayerLostPointMedic
 }
 Rule PlayerLostPointMedic
 {
-	criteria ConceptPlayerLostPoint IsMedic
+	criteria ConceptPlayerLostPoint IsMedic MedicNotCustomPlayermodel
 	Response PlayerLostPointMedic
 }
 
@@ -915,7 +959,7 @@ Response PlayerNegativeMedic
 }
 Rule PlayerNegativeMedic
 {
-	criteria ConceptPlayerNegative IsMedic
+	criteria ConceptPlayerNegative IsMedic MedicNotCustomPlayermodel
 	Response PlayerNegativeMedic
 }
 
@@ -926,7 +970,7 @@ Response PlayerNiceShotMedic
 }
 Rule PlayerNiceShotMedic
 {
-	criteria ConceptPlayerNiceShot IsMedic
+	criteria ConceptPlayerNiceShot IsMedic MedicNotCustomPlayermodel
 	Response PlayerNiceShotMedic
 }
 
@@ -949,7 +993,7 @@ Response PlayerTauntsMedic
 }
 Rule PlayerPositiveMedic
 {
-	criteria ConceptPlayerPositive IsMedic
+	criteria ConceptPlayerPositive IsMedic MedicNotCustomPlayermodel
 	Response PlayerPositiveMedic
 	Response PlayerTauntsMedic
 }
@@ -964,7 +1008,7 @@ Response MvMBombDroppedMedic
 }
 Rule MvMBombDroppedMedic
 {
-	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsMedic 
+	criteria ConceptMvMBombDropped 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel 
 	Response MvMBombDroppedMedic
 }
 
@@ -974,7 +1018,7 @@ Response MvMBombCarrierUpgrade1Medic
 }
 Rule MvMBombCarrierUpgrade1Medic
 {
-	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsMedic 
+	criteria ConceptMvMBombCarrierUpgrade1 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade1Medic
 }
 
@@ -984,7 +1028,7 @@ Response MvMBombCarrierUpgrade2Medic
 }
 Rule MvMBombCarrierUpgrade2Medic
 {
-	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsMedic 
+	criteria ConceptMvMBombCarrierUpgrade2 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade2Medic
 }
 
@@ -994,7 +1038,7 @@ Response MvMBombCarrierUpgrade3Medic
 }
 Rule MvMBombCarrierUpgrade3Medic
 {
-	criteria ConceptMvMBombCarrierUpgrade3 5PercentChance IsMvMDefender IsMedic 
+	criteria ConceptMvMBombCarrierUpgrade3 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel 
 	Response MvMBombCarrierUpgrade3Medic
 }
 
@@ -1004,7 +1048,7 @@ Response MvMDefenderDiedScoutMedic
 }
 Rule MvMDefenderDiedScoutMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimScout IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedScoutMedic
 }
 
@@ -1014,7 +1058,7 @@ Response MvMDefenderDiedSpyMedic
 }
 Rule MvMDefenderDiedSpyMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSpy IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedSpyMedic
 }
 
@@ -1024,7 +1068,7 @@ Response MvMDefenderDiedHeavyMedic
 }
 Rule MvMDefenderDiedHeavyMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimHeavy IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedHeavyMedic
 }
 
@@ -1034,7 +1078,7 @@ Response MvMDefenderDiedSoldierMedic
 }
 Rule MvMDefenderDiedSoldierMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSoldier IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSoldier IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedSoldierMedic
 }
 
@@ -1044,7 +1088,7 @@ Response MvMDefenderDiedMedicMedic
 }
 Rule MvMDefenderDiedMedicMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimMedic IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedMedicMedic
 }
 
@@ -1054,7 +1098,7 @@ Response MvMDefenderDiedDemomanMedic
 }
 Rule MvMDefenderDiedDemomanMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimDemoman IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedDemomanMedic
 }
 
@@ -1064,7 +1108,7 @@ Response MvMDefenderDiedPyroMedic
 }
 Rule MvMDefenderDiedPyroMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimPyro IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedPyroMedic
 }
 
@@ -1074,7 +1118,7 @@ Response MvMDefenderDiedSniperMedic
 }
 Rule MvMDefenderDiedSniperMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimSniper IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedSniperMedic
 }
 
@@ -1084,7 +1128,7 @@ Response MvMDefenderDiedEngineerMedic
 }
 Rule MvMDefenderDiedEngineerMedic
 {
-	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsMedic 
+	criteria ConceptMvMDefenderDied 50PercentChance IsMvMDefender IsVictimEngineer IsMedic MedicNotCustomPlayermodel 
 	Response MvMDefenderDiedEngineerMedic
 }
 
@@ -1095,7 +1139,7 @@ Response MvMFirstBombPickupMedic
 }
 Rule MvMFirstBombPickupMedic
 {
-	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMFirstBombPickup 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMFirstBombPickupMedic
 }
 
@@ -1105,7 +1149,7 @@ Response MvMBombPickupMedic
 }
 Rule MvMBombPickupMedic
 {
-	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMBombPickup 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMBombPickupMedic
 }
 
@@ -1115,7 +1159,7 @@ Response MvMSniperCalloutMedic
 }
 Rule MvMSniperCalloutMedic
 {
-	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMSniperCallout 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMSniperCalloutMedic
 }
 
@@ -1125,7 +1169,7 @@ Response MvMSentryBusterMedic
 }
 Rule MvMSentryBusterMedic
 {
-	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMSentryBuster 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMSentryBusterMedic
 }
 
@@ -1135,7 +1179,7 @@ Response MvMSentryBusterDownMedic
 }
 Rule MvMSentryBusterDownMedic
 {
-	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMSentryBusterDown 20PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMSentryBusterDownMedic
 }
 
@@ -1145,7 +1189,7 @@ Response MvMLastManStandingMedic
 }
 Rule MvMLastManStandingMedic
 {
-	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMLastManStanding 20PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMLastManStandingMedic
 }
 
@@ -1157,7 +1201,7 @@ Response MvMEncourageMoneyMedic
 }
 Rule MvMEncourageMoneyMedic
 {
-	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMEncourageMoney 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMEncourageMoneyMedic
 }
 
@@ -1169,7 +1213,7 @@ Response MvMEncourageUpgradeMedic
 }
 Rule MvMEncourageUpgradeMedic
 {
-	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMEncourageUpgrade 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMEncourageUpgradeMedic
 }
 
@@ -1182,7 +1226,7 @@ Response MvMUpgradeCompleteMedic
 }
 Rule MvMUpgradeCompleteMedic
 {
-	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMUpgradeComplete 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMUpgradeCompleteMedic
 }
 
@@ -1192,7 +1236,7 @@ Response MvMGiantCalloutMedic
 }
 Rule MvMGiantCalloutMedic
 {
-	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMGiantCallout 20PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMGiantCalloutMedic
 }
 
@@ -1202,7 +1246,7 @@ Response MvMGiantHasBombMedic
 }
 Rule MvMGiantHasBombMedic
 {
-	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMGiantHasBomb 20PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMGiantHasBombMedic
 }
 
@@ -1213,7 +1257,7 @@ Response MvMSappedRobotMedic
 }
 Rule MvMSappedRobotMedic
 {
-	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMSappedRobot 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMSappedRobotMedic
 }
 
@@ -1223,7 +1267,7 @@ Response MvMTankCalloutMedic
 }
 Rule MvMTankCalloutMedic
 {
-	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMTankCallout 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMTankCalloutMedic
 }
 
@@ -1233,7 +1277,7 @@ Response MvMTankDeployingMedic
 }
 Rule MvMTankDeployingMedic
 {
-	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMTankDeploying 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMTankDeployingMedic
 }
 
@@ -1245,7 +1289,7 @@ Response MvMAttackTheTankMedic
 }
 Rule MvMAttackTheTankMedic
 {
-	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMAttackTheTank 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMAttackTheTankMedic
 }
 
@@ -1255,7 +1299,7 @@ Response MvMTauntMedic
 }
 Rule MvMTauntMedic
 {
-	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMTaunt 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMTauntMedic
 }
 
@@ -1265,7 +1309,7 @@ Response MvMWaveStartMedic
 }
 Rule MvMWaveStartMedic
 {
-	criteria ConceptMvMWaveStart 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMWaveStart 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMWaveStartMedic
 }
 
@@ -1277,7 +1321,7 @@ Response MvMWaveWinMedic
 }
 Rule MvMWaveWinMedic
 {
-	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMWaveWin 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMWaveWinMedic
 }
 
@@ -1290,7 +1334,7 @@ Response MvMWaveLoseMedic
 }
 Rule MvMWaveLoseMedic
 {
-	criteria ConceptMvMWaveLose 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMWaveLose 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMWaveLoseMedic
 }
 
@@ -1300,7 +1344,7 @@ Response MvMMoneyPickupMedic
 }
 Rule MvMMoneyPickupMedic
 {
-	criteria ConceptMvMMoneyPickup 5PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMMoneyPickup 5PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMMoneyPickupMedic
 }
 
@@ -1310,7 +1354,7 @@ Response MvMGiantKilledMedic
 }
 Rule MvMGiantKilledMedic
 {
-	criteria ConceptMvMGiantKilled 50PercentChance IsMvMDefender IsMedic
+	criteria ConceptMvMGiantKilled 50PercentChance IsMvMDefender IsMedic MedicNotCustomPlayermodel
 	Response MvMGiantKilledMedic
 }
 
@@ -1329,7 +1373,7 @@ Response CartMovingBackwardsDefenseMedic
 }
 Rule CartMovingBackwardsDefenseMedic                                                     
 {
-	criteria ConceptCartMovingBackward IsOnDefense IsMedic MedicNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance                                                                                                                                                          
+	criteria ConceptCartMovingBackward IsOnDefense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingBackwardD IsNotDisguised 75PercentChance                                                                                                                                                          
 	ApplyContext "SaidCartMovingBackwardD:1:20"
 	Response CartMovingBackwardsDefenseMedic                                                     
 }
@@ -1340,7 +1384,7 @@ Response CartMovingBackwardsOffenseMedic
 }
 Rule CartMovingBackwardsOffenseMedic                                                     
 {
-	criteria ConceptCartMovingBackward IsOnOffense IsMedic MedicNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance                                                                                                                                                          
+	criteria ConceptCartMovingBackward IsOnOffense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingBackwardO IsNotDisguised 75PercentChance                                                                                                                                                          
 	ApplyContext "SaidCartMovingBackwardO:1:20"
 	Response CartMovingBackwardsOffenseMedic                                                     
 }
@@ -1351,7 +1395,7 @@ Response CartMovingForwardDefenseMedic
 }
 Rule CartMovingForwardDefenseMedic                                                       
 {
-	criteria ConceptCartMovingForward IsOnDefense IsMedic MedicNotSaidCartMovingForwardD IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingForward IsOnDefense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingForwardD IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingForwardD:1:20"
 	Response CartMovingForwardDefenseMedic                                                       
 }
@@ -1371,7 +1415,7 @@ Response CartMovingForwardOffenseMedic
 }
 Rule CartMovingForwardOffenseMedic                                                       
 {
-	criteria ConceptCartMovingForward IsOnOffense IsMedic MedicNotSaidCartMovingForwardO IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingForward IsOnOffense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingForwardO IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingForwardO:1:20"
 	Response CartMovingForwardOffenseMedic                                                       
 }
@@ -1381,7 +1425,7 @@ Response CartMovingStoppedDefenseMedic
 }
 Rule CartMovingStoppedDefenseMedic                                                       
 {
-	criteria ConceptCartMovingStopped IsOnDefense IsMedic MedicNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingStopped IsOnDefense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingStoppedD IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingStoppedD:1:20"
 	Response CartMovingStoppedDefenseMedic                                                       
 }
@@ -1394,7 +1438,7 @@ Response CartMovingStoppedOffenseMedic
 }
 Rule CartMovingStoppedOffenseMedic                                                       
 {
-	criteria ConceptCartMovingStopped IsOnOffense IsMedic MedicNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance                                                                                                                                                            
+	criteria ConceptCartMovingStopped IsOnOffense IsMedic MedicNotCustomPlayermodel MedicNotSaidCartMovingStoppedO IsNotDisguised 75PercentChance                                                                                                                                                            
 	ApplyContext "SaidCartMovingStoppedO:1:20"
 	Response CartMovingStoppedOffenseMedic                                                       
 }

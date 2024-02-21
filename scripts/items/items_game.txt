@@ -20547,7 +20547,7 @@
 				"hidden secondary max ammo penalty"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"32767"
+					"value"				"84"
 				}
 				"clip size penalty HIDDEN"
 				{
@@ -20809,7 +20809,7 @@
 				"hidden secondary max ammo penalty"
 				{
 					"attribute_class"	"mult_maxammo_secondary"
-					"value"				"800"
+					"value"				"80"
 				}
 				"dmg pierces resists absorbs"
 				{
@@ -20962,7 +20962,7 @@
 				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.533"
+					"value"	"0.73"
 				}
 				"hidden primary max ammo bonus"
 				{
@@ -20979,10 +20979,15 @@
 					"attribute_class"	"cw_reload_singly"
 					"value"	"1"
 				}
-				"bullets per shot bonus"
+				"bullets per shot bonus HIDDEN"
 				{
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "7"
+				}
+				"weapon spread bonus HIDDEN"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "3"
 				}
 				"cw secondary attack mode"
 				{
@@ -20992,6 +20997,11 @@
 				"secondary atk fire rate"
 				{
 					"attribute_class"	"secondary_atk_fire_rate"
+					"value"	"1.03"
+				}
+				"cw separate primary fire from secondary"
+				{
+					"attribute_class"	"cw_separate_primary_secondary"
 					"value"	"1"
 				}
 				"clip size penalty HIDDEN"
@@ -21479,10 +21489,15 @@
 					"attribute_class"	"cw_reload_singly"
 					"value"	"1"
 				}
+				"secondary atk fire rate"
+				{
+					"attribute_class"	"secondary_atk_fire_rate"
+					"value"	"0.5"
+				}
 				"cw secondary attack mode"
 				{
 					"attribute_class"	"cw_secondary_attack_mode"
-					"value"	"1"
+					"value"	"3"
 				}
 				"reload time increased hidden"
 				{
@@ -21500,7 +21515,7 @@
 				"sound_single_shot"		"Pistol.Fire"
 				"sound_burst"			"Pistol.DualFire"
 				"sound_reload"			"Pistol_L4D.ClipLocked"
-				"tracer_effect"	"bullet_incendiary_tracer01"
+				"tracer_effect"	"bullet_ar2_tracer01"
 				"animation_replacement"
 				{
 					"ACT_VM_DRAW"	"ACT_VM_DEPLOY"
@@ -22009,6 +22024,238 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"6922"
+		{
+			"name"	"SMG1"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_custom_primary"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "HK MP7"
+			"baseitem"	"0"
+			"item_name"	"SMG1"
+			"item_description"	""
+			"item_slot"	"primary"
+			"equip_region"	"hat"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"item_iconname"		"SMG1"
+			"item_logname"		"SMG1"
+			"image_inventory"	"backpack/weapons/smg1"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_smg1.mdl"
+			"model_world"	"models/weapons/w_smg1.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+
+			}
+			"attributes"
+			{
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.54"
+				}
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"225"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.5"
+				}
+				"cw secondary attack mode"
+				{
+					"attribute_class"	"cw_secondary_attack_mode"
+					"value"	"1"
+				}
+				"secondary atk fire rate"
+				{
+					"attribute_class"	"secondary_atk_fire_rate"
+					"value"	"1.0"
+				}
+				"cw separate primary fire from secondary"
+				{
+					"attribute_class"	"cw_separate_primary_secondary"
+					"value"	"1"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"3.75"
+				}
+				"damage mult secondary atk"
+				{
+					"attribute_class"	"mult_dmg_secondary_atk"
+					"value"	"3"
+				}
+				"weapon spread bonus HIDDEN"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value" "1.4"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SMG1.Single"
+				"sound_burst"		"Weapon_SMG1.Burst"
+				"sound_double_shot"		"Weapon_SMG1.Double"
+				"sound_reload"		"Weapon_SMG1.Reload"
+				"sound_empty"		"Weapon_SMG1.Empty"
+				"animation_replacement"
+				{
+					"ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_SMG1"
+					"ACT_MP_RUN_PRIMARY"	"ACT_HL2MP_RUN_SMG1"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_HL2MP_SWIM_SMG1"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"				
+					"ACT_MP_RELOAD_STAND_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MP_ATTACK_STAND_SECONDARY"
+				}
+				//"muzzle_flash"		"muzzle_bignasty"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"6923"
+		{
+			"name"	"Crossbow"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_weapon_custom_primary"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Improvised Weapon"
+			"baseitem"	"0"
+			"item_name"	"Makeshift Crossbow"
+			"item_description"	""
+			"item_slot"	"primary"
+			"attach_to_hands"	"2"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"item_iconname"		"Crossbow"
+			"item_logname"		"crossbow"
+			"image_inventory"	"backpack/weapons/xbow"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/weapons/c_crossbow.mdl"
+			"model_world"	"models/weapons/w_crossbow.mdl"
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+
+			}
+			"attributes"
+			{
+				"hidden primary max ammo bonus"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"6"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"6"
+				}
+				"cw secondary attack mode"
+				{
+					"attribute_class"	"cw_secondary_attack_mode"
+					"value"	"3"
+				}
+				"secondary atk fire rate"
+				{
+					"attribute_class"	"secondary_atk_fire_rate"
+					"value"	"0.35"
+				}
+				"cw separate primary fire from secondary"
+				{
+					"attribute_class"	"cw_separate_primary_secondary"
+					"value"	"1"
+				}
+				"clip size penalty HIDDEN"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"0.08333"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"10"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value" "5"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value" "models/crossbow_bolt.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Crossbow.Single"
+				"sound_burst"		"Weapon_Crossbow.Burst"
+				"sound_reload"		"Weapon_Crossbow.Reload"
+				"sound_empty"		""
+				"animation_replacement"
+				{
+					"ACT_MP_STAND_PRIMARY"	"ACT_HL2MP_IDLE_SMG1"
+					"ACT_MP_RUN_PRIMARY"	"ACT_HL2MP_RUN_SMG1"
+					"ACT_MP_AIRWALK_PRIMARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_SWIM_PRIMARY"	"ACT_HL2MP_SWIM_SMG1"
+					"ACT_MP_JUMP_PRIMARY"	"ACT_HL2MP_JUMP_SMG1"
+					"ACT_MP_CROUCH_PRIMARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
+					"ACT_MP_CROUCHWALK_PRIMARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
+					"ACT_MP_RELOAD_STAND_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY"	"ACT_HL2MP_RELOAD_RPG"				
+					"ACT_MP_RELOAD_STAND_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP"	"ACT_HL2MP_RELOAD_RPG"
+					"ACT_MP_ATTACK_STAND_PRIMARY"	"ACT_MP_ATTACK_STAND_SECONDARY"
+				}
+				//"muzzle_flash"		"muzzle_bignasty"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}		
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -31414,6 +31661,7 @@
 		}
 		"42002"
 		{
+		// Uses bitwise damage types. Check https://developer.valvesoftware.com/wiki/Damage_types and shareddefs.h/tf_shareddefs.h!
 			"name"	"cw add dmgtype"
 			"attribute_class"	"cw_add_dmgtype"
 			"description_string"	"#Attrib_LunchboxAddsMinicrits"
@@ -31434,6 +31682,8 @@
 		}
 		"42004"
 		{
+		//	1 is HL2 SMG/Beta AR2 grenade. Uses the weapon's secondary ammunition type
+		//	2 is a HL2/HL1 styled shotgun double shot. (Literally primary fires twice with no delay.)
 			"name"	"cw secondary attack mode"
 			"attribute_class"	"cw_secondary_attack_mode"
 			"description_string"	"#Attrib_LunchboxAddsMinicrits"
@@ -31497,13 +31747,14 @@
 		}
 		"42010"
 		{
+		// Default secondary fire rate is 0 seconds- this replaces it with something else. 0 is instant, so replace it unless you want weird results!
 			"name"	"secondary atk fire rate"
 			"attribute_class"	"secondary_atk_fire_rate"
-			"attribute_type"	"float"
 			"description_string"	"#Attrib_TauntSoundSuccess"
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 		"42011"
 		{
@@ -31534,6 +31785,7 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
+			"stored_as_integer"	"0"
 		}
 		"42014"
 		{
@@ -31590,6 +31842,7 @@
 			"name"	"chill duration"
 			"attribute_class"	"chill_duration"
 			"hidden"	"0"
+			"description_format"	"value_is_additive"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
@@ -31598,6 +31851,99 @@
 			"name"	"freeze duration"
 			"attribute_class"	"freeze_duration"
 			"hidden"	"0"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42021"
+		{
+		// Separates secondary and primary fire rates- think the Stickybomb Launcher vs. the HL2 Shotgun.
+		//	0 is separate (default), nonzero is entwined
+			"name"	"cw separate primary fire from secondary"
+			"attribute_class"	"cw_separate_primary_secondaryfire"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"1"
+		}
+		"42022"
+		{
+			"name"	"bullets per shot bonus HIDDEN"
+			"attribute_class"	"mult_bullets_per_shot"
+			"description_string"	"#Attrib_BulletsPerShot_Bonus"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42023"
+		{
+			"name"	"weapon spread bonus HIDDEN"
+			"attribute_class"	"mult_spread_scale"
+			"description_string"	"#Attrib_BulletsPerShot_Bonus"
+			"description_format"	"value_is_inverted_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42024"
+		{
+			"name"	"heal rate penalty on wearer"
+			"attribute_class"	"mult_medigun_healrate_on_wearer"
+			"description_string"	"#Attrib_HealRate_Negative"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"42025"
+		{
+			"name"	"heal rate bonus on wearer"
+			"attribute_class"	"mult_medigun_healrate_on_wearer"
+			"description_string"	"#Attrib_HealRate_Positive"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42026"
+		{
+			"name"	"damage mult secondary atk"
+			"attribute_class"	"mult_dmg_secondary_atk"
+			"description_string"	"#Attrib_DamageDone_Negative"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"42027"
+		{
+			"name"	"arrow override impact sound"
+			"attribute_class"	"arrow_override_impact_sound"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_DamageDone_Negative"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}
+		"42028"
+		{
+			"name"	"Projectile speed increased HIDDEN"
+			"attribute_class"	"mult_projectile_speed"
+			"description_string"	"#Attrib_ProjectileSpeed_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42028"
+		{
+			"name"	"Projectile gravity increased HIDDEN"
+			"attribute_class"	"mult_projectile_gravity"
+			"description_string"	"#Attrib_ProjectileSpeed_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}

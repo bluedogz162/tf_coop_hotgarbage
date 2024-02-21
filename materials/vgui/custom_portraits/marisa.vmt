@@ -1,5 +1,29 @@
 "UnlitGeneric"
 {
-	"$basetexture" "backpack/playermodels/marisa_high"
-	"$translucent" 1
+	"$basetexture" "backpack/playermodels/marisa_hurty"
+	"$translucent" "1"
+	"$playerhealth" 	"0"
+	"$half"		"112"
+	"$one" 		"1"
+	"$zero"		"0"
+
+	Proxies
+	{
+	
+	
+	    PlayerHealth
+        {
+            resultVar     	"$playerhealth"     
+        }
+
+		LessOrEqual	
+     	{
+          	 LessEqualVar      "$one"
+          	 greaterVar         "$zero"
+          	 srcVar1            "$playerhealth"
+           	 srcVar2            "$half"            
+          	 resultVar          "$frame"    
+       	}
+	
+	}
 }

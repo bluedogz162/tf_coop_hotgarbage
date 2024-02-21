@@ -19,6 +19,47 @@ Criterion "SniperNotSaidCartMovingStoppedO" "SaidCartMovingStoppedO" "!=1" "requ
 Criterion "SniperNotAwardSpeech" "SniperAwardSpeech" "!=1" "required" weight 0
 Criterion "SniperNotAssistSpeech" "SniperAssistSpeech" "!=1" "required" weight 0
 Criterion "SniperNotHoldStill" "SniperHoldStill" "!=1" "required" weight 0
+Criterion "SniperNotCustomPlayermodel" "playermodel" "models/player/sniper.mdl" "required" weight 0
+
+
+Response PlayerSniperDeath
+{
+	speak "Sniper.Death" weight 2
+}
+Rule PlayerSniperDeath
+{
+	criteria ConceptPlayerDeath IsSniper SniperNotCustomPlayermodel
+	Response PlayerSniperDeath
+}
+
+Response PlayerSniperDeathCrit
+{
+	speak "Sniper.CritDeath" weight 2
+}
+Response PlayerSniperDeathMelee
+{
+	speak "Sniper.MeleeDeath" weight 2
+}
+Response PlayerSniperDeathExplosion
+{
+	speak "Sniper.ExplosionDeath" weight 2
+}
+Rule PlayerSniperDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsSniper SniperNotCustomPlayermodel
+	Response PlayerSniperDeathCrit
+}
+Rule PlayerSniperDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsSniper SniperNotCustomPlayermodel
+	Response PlayerSniperDeathExplosion
+}
+Rule PlayerSniperDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsSniper SniperNotCustomPlayermodel
+	Response PlayerSniperDeathMelee
+}
+
 
 
 Response PlayerCloakedSpyDemomanSniper

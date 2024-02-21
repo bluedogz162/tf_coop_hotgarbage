@@ -15,6 +15,46 @@ Criterion "IsNotEngyFistSwung" "EngyFistSwung" "!=1" "required" weight 0
 Criterion "EngineerNotInvulnerableSpeech" "EngineerInvulnerableSpeech" "!=1" "required" weight 0
 Criterion "IsMiniSentryKill" "MiniSentryKill" "1" "required" weight 0
 Criterion "IsSentryKill" "SentryKill" "1" "required" weight 0
+Criterion "EngineerNotCustomPlayermodel" "playermodel" "models/player/engineer.mdl" "required" weight 0
+
+Response PlayerEngineerDeath
+{
+	speak "Engineer.Death" weight 2
+}
+Rule PlayerEngineerDeath
+{
+	criteria ConceptPlayerDeath IsEngineer EngineerNotCustomPlayermodel
+	Response PlayerEngineerDeath
+}
+
+Response PlayerEngineerDeathCrit
+{
+	speak "Engineer.CritDeath" weight 2
+}
+Response PlayerEngineerDeathMelee
+{
+	speak "Engineer.MeleeDeath" weight 2
+}
+Response PlayerEngineerDeathExplosion
+{
+	speak "Engineer.ExplosionDeath" weight 2
+}
+Rule PlayerEngineerDeathCrit
+{
+	criteria ConceptPlayerDeathCrit IsEngineer EngineerNotCustomPlayermodel
+	Response PlayerEngineerDeathCrit
+}
+Rule PlayerEngineerDeathExplosion
+{
+	criteria ConceptPlayerDeathExplosion IsEngineer EngineerNotCustomPlayermodel
+	Response PlayerEngineerDeathExplosion
+}
+Rule PlayerEngineerDeathMelee
+{
+	criteria ConceptPlayerDeathMelee IsEngineer EngineerNotCustomPlayermodel
+	Response PlayerEngineerDeathMelee
+}
+
 
 Response PlayerCloakedSpyDemomanEngineer
 {
