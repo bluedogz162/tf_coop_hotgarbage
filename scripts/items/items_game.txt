@@ -10969,10 +10969,15 @@
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 			"attributes"
 			{
-				"freeze_duration"
+				"override projectile type"
 				{
-					"attribute_class"	"freeze_duration"
-					"value" "15"
+					"attribute_class"	"override_projectile_type"
+					"value" "2"
+				}
+				"explosion particle override"
+				{
+					"attribute_class"	"explosion_particle_override"
+					"value" "muzzle_bignasty"
 				}
 			}
 			"visuals"
@@ -19799,7 +19804,7 @@
 			"image_inventory"	"backpack/weapons/scythe"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_player"	"models/weapons/v_sythe.mdl"
+			"model_player"	"models/weapons/c_sythe.mdl"
 			"model_world"	"models/weapons/w_sythe.mdl"
 			"attach_to_hands"	"2"
 			"inspect_panel_dist" "50"
@@ -21009,6 +21014,11 @@
 					"attribute_class"	"mult_clipsize"
 					"value"	"0.5"
 				}
+				"doubleblast DISPLAY ONLY"
+				{
+					"attribute_class"	"doubleblast_DISPLAY_ONLY"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -22110,6 +22120,11 @@
 					"attribute_class"	"mult_bullets_per_shot"
 					"value" "1.4"
 				}
+				"ubgl DISPLAY ONLY"
+				{
+					"attribute_class"	"ubgl_DISPLAY_ONLY"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -22163,7 +22178,7 @@
 			"item_quality"	"unique"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
-			"item_iconname"		"Crossbow"
+			"item_iconname"		"crossbow"
 			"item_logname"		"crossbow"
 			"image_inventory"	"backpack/weapons/xbow"
 			"image_inventory_size_w"		"128"
@@ -22189,7 +22204,7 @@
 				"fire rate penalty HIDDEN"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"	"6"
+					"value"	"1"
 				}
 				"cw secondary attack mode"
 				{
@@ -22214,17 +22229,27 @@
 				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"10"
+					"value"	"6.67"
 				}
 				"override projectile type"
 				{
 					"attribute_class"	"override_projectile_type"
-					"value" "5"
+					"value" "35"
+				}
+				"cw add dmgtype"
+				{
+					"attribute_class"	"cw_add_dmgtype"
+					"value" "10"
 				}
 				"custom projectile model"
 				{
 					"attribute_class"	"custom_projectile_model"
 					"value" "models/crossbow_bolt.mdl"
+				}
+				"has scope DISPLAY ONLY"
+				{
+					"attribute_class"	"has_scope_DISPLAY_ONLY"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -31684,6 +31709,7 @@
 		{
 		//	1 is HL2 SMG/Beta AR2 grenade. Uses the weapon's secondary ammunition type
 		//	2 is a HL2/HL1 styled shotgun double shot. (Literally primary fires twice with no delay.)
+		//	3 is sniper zoom, no charge
 			"name"	"cw secondary attack mode"
 			"attribute_class"	"cw_secondary_attack_mode"
 			"description_string"	"#Attrib_LunchboxAddsMinicrits"
@@ -31946,6 +31972,53 @@
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
+		}
+		"42029"
+		{
+			"name"	"explosion particle override"
+			"attribute_class"	"explosion_particle_override"
+			"attribute_type"	"string"
+			"description_string"	"#Attrib_TauntSoundSuccess"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+		}
+		"42030"
+		{
+			"name"	"Rocket gravity increased HIDDEN"
+			"attribute_class"	"mod_rocket_gravity"
+			"description_string"	"#Attrib_ProjectileSpeed_Increased"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42031"
+		{
+			"name"	"has scope DISPLAY ONLY"
+			"attribute_class"	"has_scope_DISPLAY_ONLY"
+			"description_string"	"#Attrib_AddScope"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}
+		"42032"
+		{
+			"name"	"ubgl DISPLAY ONLY"
+			"attribute_class"	"ubgl_DISPLAY_ONLY"
+			"description_string"	"#Attrib_UBGL"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}		
+		"42033"
+		{
+			"name"	"doubleblast DISPLAY ONLY"
+			"attribute_class"	"doubleblast_DISPLAY_ONLY"
+			"description_string"	"#Attrib_DoubleBlast"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
 		}
 	}
 	"attribute_controlled_attached_particles"

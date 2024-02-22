@@ -3522,7 +3522,15 @@
 			"width"	"96"
 			"height"	"32"
 		}
-
+		"crossbow_bolt"
+		{
+			"dfile"	"HUD/d_images_hl2"
+			"dnegfile"	"HUD/dneg_images_hl2"
+			"x"	"0"
+			"y"	"0"
+			"width"	"96"
+			"height"	"32"
+		}
 		"shotgun"
 		{
 			"dfile"	"HUD/d_images_hl2"

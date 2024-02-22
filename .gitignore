@@ -36,3 +36,5 @@ media/viewed.res
 media/viewed.res
 *.bat
 *.lnk
+modelsounds.cache
+demoheader.tmp
