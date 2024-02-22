@@ -22280,7 +22280,164 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
-		}		
+		}	
+		"6924"
+		{
+			"name"	"Big Slappy"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 69 Mann Ass"
+			"item_name"	"Big Slappy"
+			"item_description"	"Model by Coolchou Zhao"
+			"item_slot"	"misc"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/workshop/player/items/scout/slappy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
+			"model_world"	"models/player/scout.mdl"
+			"extra_wearable"	"models/player/big_slappy.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			"attributes"
+			{
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}	
+		"6925"
+		{
+			"name"	"Big Slappy (Femscout) Skirt"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 69 Gal Ass"
+			"item_name"	"Big Slappy (Femscout)"
+			"item_description"	"Model by Coolchou Zhao
+			'It's a nice ass... but the skirt grants no tactical advantage whatsoever.'"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"unique"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/workshop/player/items/scout/slappy"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
+			"model_world"	"models/player/slappy_femscout/scout.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			"attributes"
+			{
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}	
+		"6926"
+		{
+			"name"	"Big Slappy (Femscout) No Skirt"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 69420 Gal Ass"
+			"item_name"	"Big Slappy (Femscout, No Skirt)"
+			"item_description"	"Model by Coolchou Zhao
+			'THIS IS: BIG SLAPPY.'"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"item_quality"	"collectors"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"image_inventory"	"backpack/big_slappy_femscout_noskirt"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
+			"model_world"	"models/player/slappy_femscout_noskirt/scout.mdl"
+			"used_by_classes"
+			{
+				"scout" "1"
+			}
+			"attributes"
+			{
+				"boots falling stomp"
+				{
+					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}	
+			
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
