@@ -22302,7 +22302,7 @@
 			"item_type_name"	"Level 69 Mann Ass"
 			"item_name"	"Big Slappy"
 			"item_description"	"Model by Coolchou Zhao"
-			"item_slot"	"misc"
+			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
@@ -22353,14 +22353,17 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 69 Gal Ass"
 			"item_name"	"Big Slappy (Femscout)"
-			"item_description"	"Model by Coolchou Zhao
-			'It's a nice ass... but the skirt grants no tactical advantage whatsoever.'"
+			"item_description"	"Model by MindyK, AyesDyef, 
+			Sage J. Fox (Sierra Foxtrot),
+			Brandon "Darkomni" Johnson, and donan1985
+			'It's a nice ass... but the skirt grants no
+			tactical advantage whatsoever.'"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/workshop/player/items/scout/slappy"
+			"image_inventory"	"backpack/slappy_femscout_skirt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
@@ -22405,14 +22408,16 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 69420 Gal Ass"
 			"item_name"	"Big Slappy (Femscout, No Skirt)"
-			"item_description"	"Model by Coolchou Zhao
+			"item_description"	"Model by MindyK, AyesDyef, 
+			Sage J. Fox (Sierra Foxtrot),
+			Brandon "Darkomni" Johnson, and donan1985
 			'THIS IS: BIG SLAPPY.'"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"collectors"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/big_slappy_femscout_noskirt"
+			"image_inventory"	"backpack/slappy_femscout_noskirt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"

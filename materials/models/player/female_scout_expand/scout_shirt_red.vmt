@@ -2,7 +2,6 @@
 {
 	"$basetexture" "models/player/female_scout_expand/scout_shirt_red"
 	"$bumpmap" "models/player/female_scout_expand/scout_shirt_normal"
-
 	"$phong" "1"
 	"$phongboost" "0.1"
 	"$phongexponenttexture" "models/player/female_scout_expand/scout_shirt_phongexponent"
