@@ -22255,7 +22255,7 @@
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_Crossbow.Single"
-				"sound_burst"		"Weapon_Crossbow.Burst"
+				"sound_burst"		"Weapon_Crossbow.Single"
 				"sound_reload"		"Weapon_Crossbow.Reload"
 				"sound_empty"		""
 				"animation_replacement"
