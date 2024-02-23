@@ -19681,7 +19681,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 1 Waifu"
 			"item_name"	"Miku"
-			"item_description"	"Model by Yu Higuchi"
+			"item_description"	"Model port by Litronom... I think"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -19765,10 +19765,10 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"		"0"
 				}
-				"damage bonus HIDDEN"
+				"view height multiplier"
 				{
 					"attribute_class"	"view_height_multiplier"
-					"value"		"0.8"
+					"value"		"0.88"
 				}
 			}
 			"attach_to_hands"	"0"
@@ -19837,7 +19837,6 @@
 							"animation_replacement"
 				{
 				    "ACT_VM_HITCENTER"	"ACT_VM_MISSCENTER"
-					"ACT_VM_SWINGHARD"	"ACT_VM_MISSCENTER"
 					"ACT_MP_STAND_MELEE"	"ACT_HL2MP_IDLE_MELEE"
 					"ACT_MP_RUN_MELEE"	"ACT_HL2MP_RUN_MELEE"
 					"ACT_MP_SWIM_MELEE"	"ACT_HL2MP_SWIM_MELEE"
@@ -20034,7 +20033,6 @@
 			}
 			"attributes"
 			{
-
 			}
 			"visuals"
 			{
@@ -21255,6 +21253,11 @@
 					"attribute_class"	"voice_pitch_scale"
 					"value"				"0"
 				}
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"0.88"
+				}
 			}
 			"visuals"
 			{
@@ -21761,7 +21764,7 @@
 			"model_player"	"models/weapons/tfc/v_tfc_crowbar.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
-			"item_quality"	"unique"
+			"item_quality"	"vintage"
 			"propername"	"1"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
@@ -22025,6 +22028,11 @@
 				{
 					"attribute_class"		"override_footstep_sound_set"
 					"value"		"11"
+				}
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"1.02"
 				}
 			}
 			"visuals"
@@ -22311,8 +22319,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/weapons/c_models/c_scout_arms.mdl"
-			"model_world"	"models/player/scout.mdl"
-			"extra_wearable"	"models/player/big_slappy.mdl"
+			"model_world"	"models/player/big_booty_scout/scout.mdl"
 			"used_by_classes"
 			{
 				"scout" "1"
@@ -22327,6 +22334,7 @@
 			}
 			"visuals"
 			{
+
 			}
 			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
@@ -22353,11 +22361,7 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 69 Gal Ass"
 			"item_name"	"Big Slappy (Femscout)"
-			"item_description"	"Model by MindyK, AyesDyef, 
-			Sage J. Fox (Sierra Foxtrot),
-			Brandon "Darkomni" Johnson, and donan1985
-			'It's a nice ass... but the skirt grants no
-			tactical advantage whatsoever.'"
+			"item_description"	"'It's a nice ass... but the skirt grants no tactical advantage whatsoever.'"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
@@ -22377,6 +22381,11 @@
 				"boots falling stomp"
 				{
 					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+				"femscout slappy authors DISPLAY ONLY"
+				{
+					"attribute_class"	"femscout_slappy_authors_DISPLAY_ONLY"
 					"value" "1"
 				}
 			}
@@ -22408,13 +22417,9 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 69420 Gal Ass"
 			"item_name"	"Big Slappy (Femscout, No Skirt)"
-			"item_description"	"Model by MindyK, AyesDyef, 
-			Sage J. Fox (Sierra Foxtrot),
-			Brandon "Darkomni" Johnson, and donan1985
-			'THIS IS: BIG SLAPPY.'"
+			"item_description"	"'THIS IS: BIG SLAPPY.'"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
-			"item_quality"	"collectors"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
 			"image_inventory"	"backpack/slappy_femscout_noskirt"
@@ -22431,6 +22436,11 @@
 				"boots falling stomp"
 				{
 					"attribute_class"	"boots_falling_stomp"
+					"value" "1"
+				}
+				"femscout slappy authors DISPLAY ONLY"
+				{
+					"attribute_class"	"femscout_slappy_authors_DISPLAY_ONLY"
 					"value" "1"
 				}
 			}
@@ -32178,6 +32188,24 @@
 			"name"	"doubleblast DISPLAY ONLY"
 			"attribute_class"	"doubleblast_DISPLAY_ONLY"
 			"description_string"	"#Attrib_DoubleBlast"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}
+		"42034"
+		{
+			"name"	"view height multiplier"
+			"attribute_class"	"view_height_multiplier"
+			"description_string"	"#Attrib_DoubleBlast"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"neutral"
+		}
+		"42035"
+		{
+			"name"	"femscout slappy authors DISPLAY ONLY"
+			"attribute_class"	"femscout_slappy_authors_DISPLAY_ONLY"
+			"description_string"	"Attrib_FemscoutSlappyAuthors"
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"neutral"
