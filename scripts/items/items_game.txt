@@ -12387,6 +12387,7 @@
 				"usable_gc"		"1"
 			}
 			"show_in_armory"	"0"
+			"baseitem"	"0"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_TFBirthday"
@@ -12397,7 +12398,6 @@
 			"item_quality"		"unique"
 			"min_ilevel"	"5"
 			"max_ilevel"	"5"
-			"holiday_restriction"	"birthday"
 			"used_by_classes"
 			{
 				"scout"		"1"
@@ -13495,7 +13495,7 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"show_in_armory"	"0"
+			"baseitem"	"1"
 			"armory_desc"		"action noisemaker"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_Winter2011"
@@ -17812,7 +17812,7 @@
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon"
 			"item_iconname"	"physcannon"
-			"item_slot"	"action"
+			"item_slot"	"utility2"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -17890,7 +17890,7 @@
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon_mega"
 			"item_iconname"	"physcannon_mega"
-			"item_slot"	"action"
+			"item_slot"	"primary2"
 			"item_quality"	"rarity4"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -17974,7 +17974,7 @@
 			"item_name"		"#TF_Weapon_Physgun"
 			"item_logname"	"physcannon"
 			"item_iconname"	"physcannon"
-			"item_slot"	"action"
+			"item_slot"	"secondary2"
 			"item_quality"	"developer"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18046,7 +18046,7 @@
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"action"
+			"item_slot"	"utility"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18124,7 +18124,7 @@
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"action"
+			"item_slot"	"utility"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18386,7 +18386,7 @@
 			"item_description"	"yes"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"action"
+			"item_slot"	"utility"
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -21729,7 +21729,12 @@
 				{
 					"attribute_class"		"player_model_scale"
 					"value"		"0.85"
-				}					
+				}	
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"15"
+				}				
 
 			}
 			"visuals"
@@ -21760,7 +21765,7 @@
 			"image_inventory"	"backpack/weapons/hl2_crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"	"models/weapons/w_crowbar.mdl"
+			"model_world"	"models/w_crowbar.mdl"
 			"model_player"	"models/weapons/tfc/v_tfc_crowbar.mdl"
 			"attach_to_hands" "0"
 			"inspect_panel_dist" "40"
@@ -21867,6 +21872,11 @@
 					"attribute_class"		"player_model_scale"
 					"value"		"0.845"
 				}	
+				"restore health on kill"
+				{
+					"attribute_class"	"restore_health_on_kill"
+					"value"	"15"
+				}				
 
 			}
 			"visuals"
