@@ -22558,7 +22558,7 @@
 				"view height multiplier"
 				{
 					"attribute_class"	"view_height_multiplier"
-					"value"		"0.75"
+					"value"		"0.78"
 				}
 				"air dash count +"
 				{
