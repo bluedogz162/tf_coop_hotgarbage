@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
  $baseTexture "l4d\models\w_models\Pistol/W_Pistol_Reference"
- $bumpmap "l4d/effects/flat_normal" 
+ $bumpmap "dev/flat_normal" 
  $phong 0
  $phongboost 1
  $phongexponent 20

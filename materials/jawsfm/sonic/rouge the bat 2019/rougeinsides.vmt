@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_Insides_dif"
+	"$bumpmap" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_Empty_nrm"
+
+	"$phong" "1"
+	"$phongexponent" "25"
+	"$phongboost" "1.5"	
+	"$phongfresnelranges"	"[.2 .5 1]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "4"	
+	"$rimlightboost" "2"	
+}

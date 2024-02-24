@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/playermodels/gura"
+	"$translucent" 1
+}

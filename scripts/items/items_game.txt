@@ -19628,6 +19628,16 @@
 					"attribute_class"	"chance_of_bitches_increase"
 					"value"	"5"
 				}
+				"dmg from ranged reduced always"
+				{
+					"attribute_class"	"dmg_from_ranged"
+					"value"	"0.5"
+				}
+				"dmg from melee reduced always"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"0.5"
+				}
 			}
 			"visuals"
 			{
@@ -19743,13 +19753,13 @@
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 1 Shark"
 			"item_name"	"Gawr Gura"
-			"item_description"	"Model by Hololive/Cover"
+			"item_description"	"Model by Hololive, port by Gemins"
 			"item_slot"	"misc2"
 			"equip_region"		"disconnected_floating_item"
 			"item_quality"	"unique"
 			"min_ilevel"	"20"
 			"max_ilevel"	"20"
-			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory"	"backpack/playermodels/gura"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/gemins/hololive/gawrgura_player.mdl"
@@ -19770,6 +19780,16 @@
 					"attribute_class"	"view_height_multiplier"
 					"value"		"0.88"
 				}
+				"dmg from ranged reduced always"
+				{
+					"attribute_class"	"dmg_from_ranged"
+					"value"	"0.35"
+				}
+				"dmg from melee increased always"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"4"
+				}	
 			}
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
@@ -20756,6 +20776,26 @@
 		//			"attribute_class"		"voice_pitch_scale"
 		//			"value"		"0"
 		//		}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
+				}
+				"mod injured speed boost"
+				{
+					"attribute_class"	"movespeed_bonus_injured"
+					"value"	"1"
+				}
+				"dmg from ranged reduced always"
+				{
+					"attribute_class"	"dmg_from_ranged"
+					"value"	"0.75"
+				}
+				"dmg from melee reduced always"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"0.75"
+				}
 			}
 			"visuals"
 			{
@@ -21584,7 +21624,7 @@
 			"max_ilevel"	"10"
 			"show_in_armory"	"1"
 			"attach_to_hands"	"2"
-			"image_inventory"	"backpack/weapons/l4d_pistol"
+			"image_inventory"	"backpack/weapons/dragcolt"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"
@@ -21762,7 +21802,7 @@
 			-Dr. Seuss"
 			"item_slot"	"melee"
 			"show_in_armory"	"1"
-			"image_inventory"	"backpack/weapons/hl2_crowbar"
+			"image_inventory"	"backpack/weapons/hl1_crowbar"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"	"models/w_crowbar.mdl"
@@ -21787,6 +21827,16 @@
 				{
 					"attribute_class"	"mult_crit_chance"
 					"value"	"0"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.7"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"2.50"
 				}
 			}
 			"visuals"
@@ -22143,6 +22193,11 @@
 					"attribute_class"	"ubgl_DISPLAY_ONLY"
 					"value"	"1"
 				}
+				"maxammo lfegrenades2 increased"
+				{
+					"attribute_class"	"mult_maxammo_lfegrenades2"
+					"value" "3"
+				}
 			}
 			"visuals"
 			{
@@ -22462,7 +22517,78 @@
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
 			}	
-			
+			"6927"
+		{
+			"name"	"Rouge the Bat (Classic Outfit)"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Level 1 Furry Awakening"
+			"item_name"	"Rouge The Bat (Classic)"
+			"item_description"	"SEGA cooked.
+			Model by JawSFM, ChromaKoros"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_quality"		"unique"
+			"image_inventory"	"backpack/playermodels/rouge_classic"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/jawsfm/sonic/rouge the bat 2019/rouge_arms.mdl"
+			"model_world"	"models/jawsfm/sonic/rouge the bat 2019/rougebodysuit.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"0.75"
+				}
+				"air dash count +"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"7"
+				}	
+				"damage force increase"
+				{
+					"attribute_class"	"damage_force_reduction"
+					"value" "1.5"
+				}	
+				"dmg from ranged reduced always"
+				{
+					"attribute_class"	"dmg_from_ranged"
+					"value"	"0.65"
+				}
+				"dmg from melee increased always"
+				{
+					"attribute_class"	"dmg_from_melee"
+					"value"	"1.4"
+				}				
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}			
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -32220,6 +32346,86 @@
 			"hidden"	"0"
 			"effect_type"	"neutral"
 		}
+		"42036"
+		{
+			"name"	"dmg from ranged reduced HIDDEN"
+			"attribute_class"	"dmg_from_ranged"
+			"description_string"	"#Attrib_DmgFromRanged_Reduced"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42037"
+		{
+			"name"	"dmg from melee increased HIDDEN"
+			"attribute_class"	"dmg_from_melee"
+			"description_string"	"#Attrib_DmgFromMelee_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"1"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}		
+		"42038"
+		{
+			"name"	"dmg from ranged reduced always"
+			"attribute_class"	"dmg_from_ranged"
+			"description_string"	"#Attrib_DmgFromRanged_ReducedI"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42039"
+		{
+			"name"	"dmg from ranged increased always"
+			"attribute_class"	"dmg_from_ranged"
+			"description_string"	"#Attrib_DmgFromRanged_IncreasedI"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
+		"42040"
+		{
+			"name"	"dmg from melee reduced always"
+			"attribute_class"	"dmg_from_melee"
+			"description_string"	"#Attrib_DmgFromMelee_DecreasedI"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42041"
+		{
+			"name"	"dmg from melee increased always"
+			"attribute_class"	"dmg_from_melee"
+			"description_string"	"#Attrib_DmgFromMelee_IncreasedI"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}	
+		"42042"
+		{
+			"name"	"mod injured speed boost"
+			"attribute_class"	"movespeed_bonus_injured"
+			"description_string"	"#Attrib_ShovelSpeedBoost"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"42043"
+		{
+			"name"	"air dash count +"
+			"attribute_class"	"air_dash_count"
+			"description_string"	"#Attrib_AirDashCountNotAtomizerStatsLmfao"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}		
 	}
 	"attribute_controlled_attached_particles"
 	{

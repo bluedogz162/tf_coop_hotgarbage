@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_SwimsuitsB_dif"
+	"$bumpmap" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_Empty_nrm"
+
+	"$phong" "1"
+	"$phongexponent" "15"
+	"$phongboost" "4"	
+	//"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.2 .5 1]"
+	$basemapalphaphongmask "1"  //take phong mask from basetexture alpha instead of normal map alpha channel
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "4"	
+	"$rimlightboost" "2"	
+
+	$nocull 1
+}

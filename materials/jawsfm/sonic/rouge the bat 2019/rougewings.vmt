@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_Wings_dif"
+	"$bumpmap" "JawSFM\Sonic\Rouge the Bat 2019\Rouge_Wings_nrm"
+
+	"$phong" "1"
+	"$phongexponent" "10"
+	"$phongboost" ".8"	
+	//"$lightwarptexture" "models/player/pyro/pyro_lightwarp"
+	"$phongfresnelranges"	"[.15 .5 1]"
+	"$halflambert" "0"
+
+	// Rim lighting parameters
+	"$rimlight" "1"
+	"$rimlightexponent" "4"	
+	"$rimlightboost" "2"	
+}
