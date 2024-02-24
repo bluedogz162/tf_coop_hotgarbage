@@ -22536,7 +22536,7 @@
 			"propername" "1"
 			"show_in_armory"	"1"
 			"item_type_name"	"Level 1 Furry Awakening"
-			"item_name"	"Rouge The Bat (Classic)"
+			"item_name"	"#PMTest1"
 			"item_description"	"SEGA cooked.
 			Model by JawSFM, ChromaKoros"
 			"item_slot"	"misc2"
