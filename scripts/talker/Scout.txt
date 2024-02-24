@@ -27,8 +27,8 @@ Criterion "ScoutNotAwardSpeech" "ScoutAwardSpeech" "!=1" "required" weight 0
 Criterion "ScoutNotDrinkReadySpeech" "ScoutDrinkReadySpeech" "!=1" "required" weight 0
 Criterion "ScoutIsNotCrit" "ScoutIsCrit" "1" "required" weight 0
 Criterion "ScoutHasFired" "ScoutFired" "1" "required" weight 0
-Criterion "ScoutNotCustomPlayermodel" "playermodel" "models/player/scout.mdl" 
-Criterion "ScoutNotCustomPlayermodel" "playermodel" "models/player/big_booty_scout/scout.mdl" 
+Criterion "ScoutNotCustomPlayermodel" "playermodel" "models/player/scout.mdl" weight 2
+Criterion "ScoutNotCustomPlayermodel" "playermodel" "models/player/big_booty_scout/scout.mdl" weight 2
 
 
 Response PlayerScoutDeath

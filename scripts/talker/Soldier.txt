@@ -14,7 +14,7 @@ Criterion "IsHelpCapSoldier" "SoldierHelpCap" "1" "required" weight 0
 Criterion "SoldierNotAssistSpeech" "SoldierAssistSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotInvulnerableSpeech" "SoldierInvulnerableSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotAwardSpeech" "SoldierAwardSpeech" "!=1" "required" weight 0
-Criterion "SoldierNotCustomPlayermodel" "playermodel" "models/player/Soldier.mdl" "required" weight 0
+Criterion "SoldierNotCustomPlayermodel" "playermodel" "models/player/Soldier.mdl" "required" 
 
 
 Response PlayerSoldierDeath
