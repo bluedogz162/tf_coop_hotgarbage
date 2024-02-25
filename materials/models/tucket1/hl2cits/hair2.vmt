@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/tucket1\hl2cits/hair1"
+//	"$bumpmap" "models/tucket1/heather/zofia cap bump"
+	$alphatest 1
+	$allowAlphaToCoverage 1
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+}

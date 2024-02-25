@@ -19790,6 +19790,11 @@
 					"attribute_class"	"dmg_from_melee"
 					"value"	"4"
 				}	
+				"ignored by leeches"
+				{
+					"attribute_class"	"ignored_by_leeches"
+					"value"	"1"
+				}
 			}
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
@@ -21615,14 +21620,14 @@
 			"item_type_name"	"Pistol"
 			"item_name"	"Dragon's Colt"
 			"item_description"	"'New model pending'"
-			"item_logname"	"pep_pistol"
-			"item_iconname"	"pep_pistol"
 			"item_slot"	"secondary"
 			"item_quality"	"unique"
 			"anim_slot"		"secondary"
 			"min_ilevel"	"10"
 			"max_ilevel"	"10"
 			"show_in_armory"	"1"
+			"item_logname"	"dragoncolt"
+			"item_iconname"		"pistol"
 			"attach_to_hands"	"2"
 			"image_inventory"	"backpack/weapons/dragcolt"
 			"image_inventory_size_w"		"128"
@@ -22535,7 +22540,7 @@
 			"loadondemand" "1"
 			"propername" "1"
 			"show_in_armory"	"1"
-			"item_type_name"	"Level 1 Furry Awakening"
+			"item_type_name"	"Level 1 Furry Awakening + Gem Thief"
 			"item_name"	"Rouge The Bat (Classic)"
 			"item_description"	"SEGA cooked.
 			Model by JawSFM, ChromaKoros"
@@ -22588,7 +22593,193 @@
 			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
-			}			
+			}	
+			"6928"
+		{
+			"name"	"Black Ops A(s)sassin"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Specialized Soldier"
+			"item_name"	"Black Ops A(s)sassin"
+			"item_description"	"Valve cooked even harder.
+			Model by Mr. Tucket"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_quality"		"unique"
+			"image_inventory"	"backpack/playermodels/assassin"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/tucket1/hl2_cits/female02_c_arms.mdl"
+			"model_world"	"models/tucket1/hl2_cits/srp_hassassin_f02.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"1.06"
+				}
+				"air dash count +"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"1"
+				}	
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.50"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"2"
+				}
+				"crouch adds stealth"
+				{
+					"attribute_class"	"mod_addcond_crouched"
+					"value"	"65" //TF_COND_STEALTHED_USER_BUFF
+				}
+
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}
+		"6929"
+		{
+			"name" "Wildcard CW Silenced USP"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_custom"
+			"craft_class"	"weapon"
+			"baseitem"		"0"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"HK USP (+ Silencer)"
+			"item_name"	"Whisper"
+			"item_description"	""
+			"item_logname"	"whisper"
+			"item_iconname"	"pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"anim_slot"		"secondary"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"2"
+			"image_inventory"	"backpack/weapons/usp_silenced"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/weapons/c_models/c_pist_usp.mdl"
+			"model_world"	"models/weapons/w_pist_usp_silencer.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"wildcard"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" "0.50"
+				}				
+				"cw add dmgtype"
+				{
+					"attribute_class"	"cw_add_dmgtype"
+					"value"	"33554434"
+				}
+				"revolver use hit locations"
+				{
+					"attribute_class"	""
+					"value"	"1"
+				}
+				"hidden secondary max ammo penalty"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"128"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"	"0.25"
+				}
+				"weapon is silenced"
+				{
+					"attribute_class"	"mod_weapon_silenced_mode"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_UrbanProfessional.Single"
+				"sound_burst"			"Weapon_UrbanProfessional.SingleCrit"
+				"sound_reload"			"Pistol_L4D.ClipLocked"
+				"animation_replacement"
+				{
+					"ACT_VM_DRAW"	"ACT_VM_DRAW_SILENCED"
+					"ACT_VM_PRIMARYATTACK"	"ACT_VM_PRIMARYATTACK_SILENCED"
+					"ACT_VM_DRYFIRE"	"ACT_VM_DRYFIRE_SILENCED"
+					"ACT_VM_RELOAD"	"ACT_VM_RELOAD_SILENCED"
+					"ACT_VM_IDLE"	"ACT_VM_IDLE_SILENCED"
+					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_PISTOL"
+					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_PISTOL"
+					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_PISTOL"
+					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_PISTOL"
+					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_PISTOL"
+					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_PISTOL"
+					"ACT_MP_ATTACK_STAND_SECONDARY"	"ACT_HL2MP_ATTACK_PISTOL"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -32425,7 +32616,75 @@
 			"hidden"	"0"
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
-		}		
+		}
+		"42044"
+		{
+			"name"	"weapon is silenced"
+			"attribute_class"	"mod_weapon_silenced_mode"
+			"description_string"	"#Attrib_WeaponSilenced"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}	
+		"42045"
+		{
+			"name"	"weapon is thumper"
+			"attribute_class"	"mod_weapon_silenced_mode"
+			"description_string"	"#Attrib_WeaponThumper"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}	
+		"42046"
+		{
+			"name"	"weapon baits bugs"
+			"attribute_class"	"mod_weapon_silenced_mode"
+			"description_string"	"#Attrib_WeaponBaitsBugs"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}	
+		"42047"
+		{
+			"name"	"weapon is quiet"
+			"attribute_class"	"mod_weapon_silenced_mode"
+			"description_string"	"#Attrib_WeaponQuiet"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}	
+		"42048"
+		{
+			"name"	"crouch adds stealth"
+			"attribute_class"	"mod_addcond_crouched"
+			"description_string"	"Attrib_CrouchCloak"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}	
+		"42049"
+		{
+			"name"	"smack delay"
+			"attribute_class"	"smackdelay"
+			"description_string"	"Attrib_CrouchCloak"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}	
+		"42050"
+		{
+			"name"	"ignored by leeches"
+			"attribute_class"	"ignored_by_leeches"
+			"description_string"	"Attrib_LeechIgnore"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}	
 	}
 	"attribute_controlled_attached_particles"
 	{

@@ -1,0 +1,14 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models\Tea\Characters\nudefem02\Bikini\Bikini_Cloth_Col_C"
+	"$bumpmap" "models\Tea\Characters\nudefem02\Bikini\Bikini_Cloth_N"
+	"$nocull" "1"
+	"$color2"	"[0 0 0]"
+
+	"$phong" 			"1"
+	"$phongexponent" 		"5"
+	"$phongboost"		"9"
+	"$phongfresnelranges"	"[.05 .1 .2]"
+	"$blendtintbybasealpha" 1
+
+}

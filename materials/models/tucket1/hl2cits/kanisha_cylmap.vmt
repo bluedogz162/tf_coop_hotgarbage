@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "models\tucket1/hl2cits\kanisha_cylmap"
+	"$bumpmap"     "models\tucket1/hl2cits\kanisha_cylmap_n"
+	
+	"$phong" 1
+	"$phongboost" 0.1
+	"$phongexponent" 0.5
+	"$phongtint" "[1 1 1]"
+	"$phongfresnelranges" "[0.2 .85 30]"
+	"$phongalbedotint" "1"
+	
+	"$detail"			"models/tucket1/hl2cits/detail"
+	"$detailscale"		"15"
+	"$detailblendmode"		"0"
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+}

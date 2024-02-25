@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/weapons/usp_silenced_large"
+	"$translucent" 1
+}

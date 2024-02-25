@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{
+
+"$baseTexture" "models\tucket1\hl2cits\police_misc"
+"$bumpmap" "models\tucket1\hl2cits\police_misc_normal"
+	
+$phong 1
+$phongboost "1"
+$phongexponent 9
+$phongtint "[.85 .85 1]"
+$phongfresnelranges "[.3 4 30]"
+$ambientocclusion 1
+$selfillum 1
+	"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+}

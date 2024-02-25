@@ -1,0 +1,22 @@
+vertexlitgeneric
+{
+"$basetexture" 		"models/tucket1\hl2cits/genitals_interior"
+"$bumpmap" 			"models/tucket1\hl2cits/genitals_interior_n"
+
+	"$phong"				"1"
+	"$phongboost"			"1.5"
+	"$phongexponent"		"16"
+	"$phongtint"			"[1 .65 .55]"
+	"$phongfresnelranges"	"[.5 .85 30]"
+	
+	"$detail"			"models/tucket1\hl2cits/detail"
+	"$detailscale"		"15"
+	"$detailblendmode"		"0"
+		"$cloakPassEnabled" "1"
+	"Proxies"
+	{
+		"spy_invis"
+		{
+		}
+	}
+}
