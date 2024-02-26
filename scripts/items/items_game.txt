@@ -23002,8 +23002,8 @@
 			{
 				"player_bodygroups"
 				{
-					"Pants"	"3"
-					"Armor"	"3"
+					"Pants"	"2"
+					"Armor"	"2"
 					"Arms"	"1"
 				}
 			}
