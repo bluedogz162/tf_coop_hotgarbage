@@ -19635,7 +19635,7 @@
 				}
 				"dmg from melee reduced always"
 				{
-					"attribute_class"	"dmg_from_melee"
+					"attribute_class"	"mult_dmgtaken_from_melee"
 					"value"	"0.5"
 				}
 			}
@@ -19787,13 +19787,18 @@
 				}
 				"dmg from melee increased always"
 				{
-					"attribute_class"	"dmg_from_melee"
+					"attribute_class"	"mult_dmgtaken_from_melee"
 					"value"	"4"
 				}	
 				"ignored by leeches"
 				{
 					"attribute_class"	"ignored_by_leeches"
 					"value"	"1"
+				}			
+				"can't drown"
+				{
+					"attribute_class"	"mult_dmg_drown"
+					"value"	"-1"
 				}
 			}
 			"attach_to_hands"	"0"
@@ -20798,7 +20803,7 @@
 				}
 				"dmg from melee reduced always"
 				{
-					"attribute_class"	"dmg_from_melee"
+					"attribute_class"	"mult_dmgtaken_from_melee"
 					"value"	"0.75"
 				}
 			}
@@ -22582,7 +22587,7 @@
 				}
 				"dmg from melee increased always"
 				{
-					"attribute_class"	"dmg_from_melee"
+					"attribute_class"	"mult_dmgtaken_from_melee"
 					"value"	"1.4"
 				}				
 			}
@@ -22779,7 +22784,234 @@
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"		"ui/item_light_gun_drop.wav"
 		}
-		
+			"6930"
+		{
+			"name"	"Judith Mossman Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"Double Agent"
+			"item_name"	"Judith Mossman"
+			"item_description"	"Valve cooked, again"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_quality"		"unique"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/tucket1/hl2_cits/female02_c_arms.mdl"
+			"model_world"	"models/player/mossman.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"1.06"
+				}
+				"air dash count +"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"1"
+				}	
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.50"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"2"
+				}
+				"crouch adds stealth"
+				{
+					"attribute_class"	"mod_addcond_crouched"
+					"value"	"65" //TF_COND_STEALTHED_USER_BUFF
+				}
+
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}		
+			"6931"
+		{
+			"name"	"Goth Mossman Playermodel"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"2005, Personified"
+			"item_name"	"Goth Mossman"
+			"item_description"	"Valve cooked, again again. Model by 
+			CROWBAR_XL, and...FakeFactory?!"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_quality"		"unique"
+			"image_inventory"	"backpack/weapons/w_models/w_cigarette_case"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/tucket1/hl2_cits/female02_c_arms.mdl"
+			"model_world"	"models/player/mossmangoth.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" "70"
+				}				
+				"dmg from melee reduced always"
+				{
+					"attribute_class"	"mult_dmgtaken_from_melee"
+					"value"	"0.1"
+				}	
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
+				}
+				"mossman likes"
+				{
+					"attribute_class"	"set_altfire_mode"
+					"value"	"0"
+				}
+				"mossman dislikes"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"0"
+				}
+
+			}
+			"visuals"
+			{
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}		
+			"6932"
+		{
+			"name"	"Black Ops A(s)sassin Bikini"
+			"first_sale_date"	"2012/12/20"
+			"prefab"	"valve base_misc"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"craft_class"	"hat"
+			"craft_material_type"	"hat"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+				"can_craft_if_purchased"	"1"
+			}
+			"loadondemand" "1"
+			"propername" "1"
+			"show_in_armory"	"1"
+			"item_type_name"	"'Specialized' Soldier"
+			"item_name"	"ASSASSin (Bikini)"
+			"item_description"	"Ideal for tropical operations.
+			Model by Mr. Tucket"
+			"item_slot"	"misc2"
+			"equip_region"		"disconnected_floating_item"
+			"min_ilevel"	"20"
+			"max_ilevel"	"20"
+			"item_quality"		"unique"
+			"image_inventory"	"backpack/playermodels/assassin"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/tucket1/hl2_cits/female02_c_arms.mdl"
+			"model_world"	"models/tucket1/hl2_cits/srp_hassassin_f02.mdl"
+			"used_by_classes"
+			{
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"1.06"
+				}
+				"air dash count +"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"1"
+				}	
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.50"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"	"1.6"
+				}
+				"crouch adds stealth"
+				{
+					"attribute_class"	"mod_addcond_crouched"
+					"value"	"65" //TF_COND_STEALTHED_USER_BUFF
+				}
+				"can't drown"
+				{
+					"attribute_class"	"mult_dmg_drown"
+					"value"	"-1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"Pants"	"3"
+					"Armor"	"3"
+					"Arms"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
+			"drop_sound"			"vo/medic_sf13_influx_big03.wav"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -22833,6 +23065,7 @@
 				"camera_dist_up"		"-10"
 			}
 		}
+	
 		"30572"
 		{
 			"name"		"Taunt: The Boston Breakdance"
@@ -32685,6 +32918,57 @@
 			"hidden"	"0"
 			"stored_as_integer"	"0"
 		}	
+		"42051"
+		{
+			"name"	"can't drown"
+			"attribute_class"	"mult_dmg_drown"
+			"description_string"	"Attrib_DrownIgnore"
+			"description_format"	"value_is_additive"
+			"effect_type"	"positive"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}	
+		"42052"
+		{
+			"name"	"drown damage decreased"
+			"attribute_class"	"mult_dmg_drown"
+			"description_string"	"Attrib_DrownDmgDecr"
+			"description_format"	"value_is_percentage"
+			"effect_type"	"positive"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}	
+		"42053"
+		{
+			"name"	"drown damage increased"
+			"attribute_class"	"mult_dmg_drown"
+			"description_string"	"Attrib_DrownDmgIncr"
+			"description_format"	"value_is_percentage"
+			"effect_type"	"negative"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}
+		"42054"
+		{
+			"name"	"mossman likes"
+			"attribute_class"	""
+			"description_string"	"Attrib_GothMossmanLikes"
+			"description_format"	"value_is_percentage"
+			"effect_type"	"positive"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}			
+		"42055"
+		{
+			"name"	"mossman dislikes"
+			"attribute_class"	""
+			"description_string"	"Attrib_GothMossmanDisLikes"
+			"description_format"	"value_is_percentage"
+			"effect_type"	"negative"
+			"hidden"	"0"
+			"stored_as_integer"	"0"
+		}			
+		
 	}
 	"attribute_controlled_attached_particles"
 	{

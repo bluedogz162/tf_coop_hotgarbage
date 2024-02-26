@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/Mossmangoth/mossman_face"
+	"$bumpmap" "models/Mossmangoth/mossman_head_normal"
+	"$halflambert" 1
+	"$nodecal" "1"
+}
