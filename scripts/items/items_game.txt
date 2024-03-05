@@ -9295,10 +9295,11 @@
 			}
 			"item_logname"	"fryingpan"
 			"item_iconname"	"fryingpan"
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_FryingPan"
 			"item_name"	"#TF_Unique_FryingPan"
 			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
 			"image_inventory"	"backpack/player/items/all_class/all_pan"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
@@ -19800,6 +19801,16 @@
 					"attribute_class"	"mult_dmg_drown"
 					"value"	"-1"
 				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
+				}
+				"swim speed increased"
+				{
+					"attribute_class"	"mult_player_movespeed_water"
+					"value"	"2.2"
+				}
 			}
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
@@ -21067,6 +21078,17 @@
 					"attribute_class"	"doubleblast_DISPLAY_ONLY"
 					"value"	"1"
 				}
+				"cw primary fire punch angle max"
+				{
+					"attribute_class"	"cw_primaryfire_punch_maxangle"
+					"value"	"3"
+				}
+				"cw primary fire punch angle min"
+				{
+					"attribute_class"	"cw_primaryfire_punch_minangle"
+					"value"	"-3"
+				}
+
 			}
 			"visuals"
 			{
@@ -21430,20 +21452,20 @@
 					"attribute_class"	"mult_maxammo_secondary"
 					"value" "6060"
 				}
-				"cw add dmgtype"
-				{
-					"attribute_class"	"cw_add_dmgtype"
-					"value"	"1"
-				}
-				"cw set reload singly"
-				{
-					"attribute_class"	"cw_reload_singly"
-					"value"	"1"
-				}
 				"reload time increased hidden"
 				{
 					"attribute_class"	"mult_reload_time_hidden"
 					"value"	"0.4"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"	"2"
+				}
+				"mod rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"	"1"
 				}
 			}
 			"visuals"
@@ -22463,6 +22485,11 @@
 					"attribute_class"	"femscout_slappy_authors_DISPLAY_ONLY"
 					"value" "1"
 				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.1"
+				}
 			}
 			"visuals"
 			{
@@ -22517,6 +22544,11 @@
 				{
 					"attribute_class"	"femscout_slappy_authors_DISPLAY_ONLY"
 					"value" "1"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"voice_pitch_scale"
+					"value"		"1.1"
 				}
 			}
 			"visuals"
@@ -22589,7 +22621,12 @@
 				{
 					"attribute_class"	"mult_dmgtaken_from_melee"
 					"value"	"1.4"
-				}				
+				}	
+				"acceleration increased"
+				{
+					"attribute_class"	"mult_move_accel"
+					"value"	"0.4"
+				}					
 			}
 			"visuals"
 			{
@@ -22960,7 +22997,7 @@
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_player"	"models/tucket1/hl2_cits/female02_c_arms.mdl"
-			"model_world"	"models/tucket1/hl2_cits/srp_hassassin_f02.mdl"
+			"model_world"	"models/tucket1/hl2_cits/srp_hassassin_f02_bikini.mdl"
 			"used_by_classes"
 			{
 				"wildcard" "1"
@@ -22997,14 +23034,22 @@
 					"attribute_class"	"mult_dmg_drown"
 					"value"	"-1"
 				}
+				"move speed penalty"
+				{
+					"attribute_class"	"mult_player_movespeed"
+					"value"	"0.85"
+				}
+				"swim speed increased"
+				{
+					"attribute_class"	"mult_player_movespeed_water"
+					"value"	"1.85"
+				}
 			}
 			"visuals"
 			{
 				"player_bodygroups"
 				{
-					"Pants"	"2"
 					"Armor"	"2"
-					"Arms"	"1"
 				}
 			}
 			"mouse_pressed_sound"	"vo/medic_sf13_influx_big03.wav"
@@ -23012,6 +23057,313 @@
 			"attach_to_hands"	"0"
 			"attach_to_hands_vm_only"	"1"
 			}
+		"6933"
+		{
+			"name" "Ice Pistol"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_handgun_scout_secondary"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Pistol"
+			"item_name"	"Snowy Sidearm"
+			"item_description"	"Refrigerating bullets?
+			How's that supposed to work?
+			Chills enemies on hit (5 sec.)"
+			"item_logname"	"pep_pistol"
+			"item_iconname"	"pep_pistol"
+			"item_slot"	"secondary"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"1"
+			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"inspect_panel_dist" 			"31"
+			"model_player"	"models/paintedweapons/c_pistol_ice.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+				"chill duration"
+				{
+					"attribute_class"	"chill_duration"
+					"value" "5"
+				}
+			}
+			"visuals"
+			{
+				"tracer_effect"	"bullet_ice_tracer01"
+				"sound_single_shot"		"Weapon_PickPocket_Pistol.Single"
+				"sound_burst"			"Weapon_PickPocket_Pistol.SingleCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"6934"
+		{
+			"name"	"Reimu Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Shrine Maiden"
+			"baseitem"	"0"
+			"item_name"	"Reimu Hakurei"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by schwarz"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/reimu"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/reimu/c_soldier_arms.mdl"
+			"model_world"	"models/player/reimu/soldier.mdl"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
+		"6935"
+		{
+			"name" "Uberdosis"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"first_sale_date" "2012/06/27"
+			"item_class"	"tf_weapon_crossbow"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"item_type_name"	"#TF_Weapon_Crossbow"
+			"item_name"	"Uberdosis"
+			"item_description"	""
+			"item_logname"	"crossbow"
+			"item_iconname"	"crossbow"
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"baseitem" "0"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"show_in_armory"	"1"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" 			"31"
+			"image_inventory"	"backpack/workshop/weapons/c_models/c_crusaders_crossbow/c_crusaders_crossbow"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/workshop/weapons/c_models/c_crusaders_crossbow/c_crusaders_crossbow.mdl"
+			"capabilities"
+			{
+				"can_collect" "1"
+			}
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"
+			}
+			"attributes"
+			{
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"5"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"	"0.10"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"0.75"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"4"
+				}
+				"can headshot"
+				{
+					"attribute_class"	"can_headshot"
+					"value"	"1"
+				}
+				"heal rate penalty"
+				{
+					"attribute_class"	"mult_medigun_healrate"
+					"value"	"0.55"
+				}
+				"crossbow has scope"
+				{
+					"attribute_class"	"mod_crossbow_secondaryfire"
+					"value"	"1"
+				}
+				"projectile model scale"
+				{
+					"attribute_class"	"projectile_model_scale"
+					"value"	"0.33"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value" "models/crossbow_bolt_hd.mdl"
+				}
+				"cw primary fire punch angle max"
+				{
+					"attribute_class"	"cw_primaryfire_punch_maxangle"
+					"value"	"3"
+				}
+				"cw primary fire punch angle min"
+				{
+					"attribute_class"	"cw_primaryfire_punch_minangle"
+					"value"	"-3"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Crossbow.Single"
+				"sound_burst"		"Weapon_Crossbow.Single"
+				"sound_reload"		"Weapon_Crossbow.Reload"
+			}
+			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
+			"drop_sound"		"ui/item_light_gun_drop.wav"
+		}
+		"6936"
+		{
+			"name"	"Spying Pan"
+			"first_sale_date"	"2011/03/08"
+			"show_in_armory"	"1"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_taunt_damage"		"1"
+			}
+			"item_name"	"Spying Pan"
+			"item_description"	"Backstab does not insta-kill"
+			"item_class"	"tf_weapon_tfc_umbrella"
+			"propername"	"0"
+			"item_logname"	"fryingpan"
+			"item_iconname"	"fryingpan"
+			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
+			"inspect_panel_dist" "35"
+			"image_inventory"	"backpack/player/items/all_class/all_pan"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_frying_pan/c_frying_pan.mdl"
+			"attach_to_hands"	"1"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"used_by_classes"
+			{
+				"spy"	"1"
+			
+			}
+			"attributes"
+			{
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"2.0"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"3.5"
+				}	
+				"crit forces victim to laugh"
+				{
+					"attribute_class"	"crit_forces_victim_to_laugh"
+					"value" "1"
+				}
+				"crit from behind"
+				{
+					"attribute_class"	"crit_from_behind"
+					"value" "1"
+				}				
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -32968,7 +33320,73 @@
 			"hidden"	"0"
 			"stored_as_integer"	"0"
 		}			
-		
+		"42056"
+		{
+			"name"	"add projectile gravity" //Only works on tf_weapon_custom at the moment, will be added to other weapons, adds gravity to projectiles of weapons that don't normally have it- mult_projectile_gravity doesn't work because it's multiplying by zero
+			"attribute_class"	"add_projectile_gravity"
+			"description_format"	"value_is_additive"
+			"effect_type"	"neutral"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}	
+		"42057"
+		{
+			"name"	"cw primary fire punch angle max" 
+			"attribute_class"	"cw_primaryfire_punch_maxangle"
+			"description_format"	"value_is_additive"
+			"effect_type"	"neutral"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}		
+		"42058"
+		{
+			"name"	"cw primary fire punch angle min" 
+			"attribute_class"	"cw_primaryfire_punch_minangle"
+			"description_format"	"value_is_additive"
+			"effect_type"	"neutral"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}		
+		"42059"
+		{
+			"name"	"swim speed increased"
+			"attribute_class"	"mult_player_movespeed_water"
+			"description_string"	"#Attrib_WaterSpeedIncr"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}	
+		"42060"
+		{
+			"name"	"swim speed decreased"
+			"attribute_class"	"mult_player_movespeed_water"
+			"description_string"	"#Attrib_WaterSpeedDecr"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}		
+		"42061"
+		{
+			"name"	"crossbow has scope"
+			"attribute_class"	"mod_crossbow_secondaryfire"
+			"description_string"	"#Attrib_AddScope"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}	
+		"42062"
+		{
+			"name"	"can headshot"
+			"attribute_class"	"can_headshot"
+			"description_string"	"#Attrib_RevolverUseHitLocations"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"neutral"
+		}			
 	}
 	"attribute_controlled_attached_particles"
 	{

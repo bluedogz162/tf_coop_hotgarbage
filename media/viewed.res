@@ -8,4 +8,12 @@
 	{
 		"viewed"		"1"
 	}
+	"d2_prison_04"
+	{
+		"viewed"		"1"
+	}
+	"d2_prison_05"
+	{
+		"viewed"		"1"
+	}
 }
