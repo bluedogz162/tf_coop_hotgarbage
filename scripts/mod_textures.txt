@@ -4360,5 +4360,28 @@
 			"width"	"96"
 			"height"	"32"
 		}
+		
+				"leek"
+		{
+			"dfile"	"HUD/leeked"
+			"dnegfile"	"HUD/leeked"
+			"x"	"0"
+			"y"	"0"
+			"width"	"256"
+			"height"	"128"
+		}
+		"gohei"
+		{
+			"dfile"	"HUD/killicons/gohei"
+			"dnegfile"	"HUD/killicons/gohei_dneg"
+			"x"	"0"
+			"y"	"0"
+			"width"	"128"
+			"height"	"64"
+		}	
+		
+		
+		
+		
 	}
 }

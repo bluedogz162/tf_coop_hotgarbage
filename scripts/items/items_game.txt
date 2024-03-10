@@ -4081,7 +4081,7 @@
 			"craft_material_type"	"weapon"
 			"item_name"	"#TF_Weapon_PDA_Engineer_Builder"
 			"item_type_name"	"#TF_Weapon_PDA_Engineer"
-			"item_slot"	"pda"
+			"item_slot"	"utility2"
 			"item_quality"	"unique"
 			"min_ilevel"	"1"
 			"max_ilevel"	"99"
@@ -6720,7 +6720,7 @@
 			"craft_material_type"	"weapon"
 			"item_name"	"#TF_Weapon_PDA_Engineer_Builder"
 			"item_type_name"	"#TF_Weapon_PDA_Engineer"
-			"item_slot"	"pda"
+			"item_slot"	"utility2"
 			"item_quality"	"normal"
 			"baseitem" "1"
 			"min_ilevel"	"1"
@@ -6816,7 +6816,7 @@
 			"craft_material_type"	"weapon"
 			"item_name"	"#TF_Weapon_Disguise_Kit"
 			"item_type_name"	"#TF_Weapon_Disguise_Kit_Type"
-			"item_slot"	"pda"
+			"item_slot"	"utility2"
 			"item_quality"	"normal"
 			"baseitem" "1"
 			"min_ilevel"	"1"
@@ -13496,11 +13496,11 @@
 				"usable"		"1"
 				"usable_gc"		"1"
 			}
-			"baseitem"	"1"
-			"armory_desc"		"action noisemaker"
+			"baseitem"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Party_Favor"
 			"item_name"	"#TF_NoiseMaker_Winter2011"
-			"item_slot"	"action"
+			"item_slot"	"pda"
 			"image_inventory"	"backpack/crafting/noisemaker_xmas"
 			"image_inventory_size_w"	"128"
 			"image_inventory_size_h"	"82"
@@ -16467,45 +16467,7 @@
 				}
 			}
 		}
-		"1155"
-		{
-			"name"	"TF_WEAPON_PASSTIME_GUN"
-			"tags"
-			{
-			}
-			"item_class"	"tf_weapon_passtime_gun"
-			"craft_class"	""	
-			"craft_material_type"	"" 
-			"item_type_name"	"#Weapon_Passtime_Gun"
-			"item_name"	"#Weapon_Passtime_Gun"
-			"item_slot"	"utility"
-			"anim_slot"	"MELEE_ALLCLASS"
-			"attach_to_hands"	"1"
-			"hidden"	"1"
-			"show_in_armory"	"0"
-			"item_quality"	"normal"
-			"baseitem"	"1"
-			"min_ilevel"	"1"
-			"max_ilevel"	"1"
-			"image_inventory"	"backpack/weapons/w_models/w_wrench"
-			"image_inventory_size_w"		"128"
-			"image_inventory_size_h"		"82"
-			"model_player" "models/passtime/ball/passtime_ball.mdl"
-			"used_by_classes"
-			{
-				"demoman"	"1"
-				"heavy"	"1"
-				"engineer" "1"
-				"medic"	"1"
-				"sniper" "1"
-				"spy" "1"
-				"pyro" "1"
-				"soldier"	"1"
-				"scout"	"1"
-			}
-			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
-			"drop_sound"		"ui/item_heavy_gun_drop.wav"
-		}
+
 		"1157"
 		{
 			"name"	"Taunt: Kazotsky Kick"
@@ -17724,7 +17686,7 @@
 		{
 			"name"	"Activated Campaign 3 Pass"
 			"item_class"	"tf_wearable"	
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Tracker"
 			"item_name"			"#TF_ActivatedCampaign3Pass"
 			"item_description"	"#TF_ActivatedCampaign3Pass_desc"						
@@ -17813,7 +17775,7 @@
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon"
 			"item_iconname"	"physcannon"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -17891,7 +17853,7 @@
 			"item_name"		"#TF_Weapon_Physcannon"
 			"item_logname"	"physcannon_mega"
 			"item_iconname"	"physcannon_mega"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"rarity4"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -17975,7 +17937,7 @@
 			"item_name"		"#TF_Weapon_Physgun"
 			"item_logname"	"physcannon"
 			"item_iconname"	"physcannon"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"developer"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18047,7 +18009,7 @@
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18125,7 +18087,7 @@
 			"item_name"		"#TF_Weapon_Portalgun"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"99"
@@ -18387,7 +18349,7 @@
 			"item_description"	"yes"
 			"item_logname"	"skull"
 			"item_iconname"	"skull"
-			"item_slot"	"utility"
+			"item_slot"	"action"
 			"item_quality"	"normal"
 			"min_ilevel"	"1"
 			"max_ilevel"	"1"
@@ -20702,7 +20664,7 @@
 			"item_type_name" "Magical Implement"
 			"baseitem"	"0"
 			"item_name"	"Megumin's Explosion Staff"
-			"item_description"	""
+			"item_description"	"Model by Aregularhuman"
 			"item_slot"	"primary"
 			"anim_slot"	"MELEE_ALLCLASS"
 			"equip_region"	"hat"
@@ -20725,7 +20687,7 @@
 				"mod ammo per shot"
 				{
 					"attribute_class"	"mod_ammo_per_shot"
-					"value"	"5"
+					"value"	"10"
 				}
 				"mod max primary clip override"
 				{
@@ -20741,6 +20703,11 @@
 				{
 					"attribute_class"	"mult_dmg"
 					"value"	"3.5"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value" "0.8"
 				}
 			}
 			"visuals"
@@ -21298,7 +21265,6 @@
 			"drop_type"	"drop"
 			"model_player"	"models/player/koishi/c_spy_arms.mdl"
 			"model_world"	"models/player/koishi/spy.mdl"
-			"response_criteria"		"keiner"
 			"used_by_classes"
 			{
 				"spy"	"1"
@@ -21308,7 +21274,7 @@
 				"move speed bonus"
 				{
 					"attribute_class"		"mult_player_movespeed"
-					"value"		"1.25"
+					"value"		"1.15"
 				}
 				"max health additive penalty"
 				{
@@ -23090,7 +23056,7 @@
 			"max_ilevel"	"10"
 			"show_in_armory"	"1"
 			"attach_to_hands"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_pistol"
+			"image_inventory"	"backpack/weapons/pisterice"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"inspect_panel_dist" 			"31"
@@ -23363,6 +23329,150 @@
 				"sound_melee_miss"	"Weapon_Machete.Miss"
 				"sound_burst"		"Weapon_Machete.MissCrit"
 			}
+		}
+		"3937"
+		{
+			"name"	"Leek"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"leek"
+			"item_iconname"	"leek"
+			"show_in_armory"	"1"
+			"item_type_name"	"Vegetable"
+			"item_name"	"Leek"
+			"item_description" "Model by Aregularhuman"
+			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
+			"image_inventory"	"backpack/weapons/leek"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/leek/c_prinny_knife.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"xifier_class_remap"	"Frying Pan"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+			{
+				"always tradable"
+				{
+					"attribute_class"	"always_tradable"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_BaseballBat.HitFlesh"
+				"sound_melee_hit_world"		"Weapon_BaseballBat.HitFlesh"
+				"sound_melee_miss"	"Weapon_Machete.Miss"
+				"sound_burst"		"Weapon_Machete.MissCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"3938"
+		{
+			"name"	"Gohei"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"gohei"
+			"item_iconname"	"gohei"
+			"show_in_armory"	"1"
+			"item_type_name"	"Wand"
+			"item_name"	"Gohei"
+			"item_description" "Model by Aregularhuman"
+			"item_slot"	"melee"
+			"image_inventory"	"backpack/weapons/gohei"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/gohei/c_riding_crop.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"xifier_class_remap"	"Frying Pan"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"	"1.75"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.50"
+				}
+				"speed buff ally"
+				{
+					"attribute_class"	"speed_buff_ally"
+					"value"	"1"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"	"1.7"
+				}
+				"melee bounds multiplier"
+				{
+					"attribute_class"	"melee_bounds_multiplier"
+					"value"	"1.55"
+				}
+				"deploy time increased"
+				{
+					"attribute_class"	"mult_deploy_time"
+					"value"	"1.33"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_miss"		"DisciplineDevice.Swing"
+				"sound_melee_hit"		"DisciplineDevice.Impact"
+				"sound_melee_hit_world"	"DisciplineDevice.HitWorld"
+				"sound_melee_burst"		"DisciplineDevice.ImpactCrit"
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
 		"30570"
 		{

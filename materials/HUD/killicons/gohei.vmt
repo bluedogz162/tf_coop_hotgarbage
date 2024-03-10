@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "HUD/killicons/gohei"
+	"$translucent" 1
+}
