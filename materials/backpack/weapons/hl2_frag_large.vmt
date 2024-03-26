@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/weapons/hl2_frag"
+	"$translucent" 1
+}

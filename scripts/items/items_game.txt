@@ -12086,7 +12086,9 @@
 				"sound_burst"			"Weapon_QuakeRPG.SingleCrit"
 				"sound_deploy"			"Weapon_QuakeRPG.Draw"
 				"sound_reload"			"Weapon_QuakeRPG.Reload"
-				"sound_special1"		"Weapon_QuakeRPG.Explode"
+				"sound_special1" "Weapon_QuakeRPG.Explode"
+				"sound_special3" "Weapon_QuakeRPG.Explode"
+				"sound_special2" "Weapon_QuakeRPG.Explode"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -12436,6 +12438,74 @@
 			}
 			"mouse_pressed_sound" 	"Game.HappyBirthdayNoiseMaker"
 			"drop_sound"		"ui/item_metal_scrap_drop.wav"
+		}
+		"940"
+		{
+			"name"	"Ghostly Gibus"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name""#TF_Wearable_Hat"
+			"item_name"	"Ghostly Gibus"
+			"item_description"	""
+			"item_slot"	"head"
+			"equip_region"	"hat"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/player/items/all_class/ghostly_gibus_demo"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player_per_class"
+			{
+				"scout"	"models/player/items/all_class/ghostly_gibus_scout.mdl"
+				"soldier"	"models/player/items/all_class/ghostly_gibus_soldier.mdl"
+				"pyro"	"models/player/items/all_class/ghostly_gibus_pyro.mdl"
+				"demoman"	"models/player/items/all_class/ghostly_gibus_demo.mdl"
+				"heavy"	"models/player/items/all_class/ghostly_gibus_heavy.mdl"
+				"engineer"	"models/player/items/all_class/ghostly_gibus_engineer.mdl"
+				"medic"	"models/player/items/all_class/ghostly_gibus_medic.mdl"
+				"sniper"	"models/player/items/all_class/ghostly_gibus_sniper.mdl"
+				"spy"	"models/player/items/all_class/ghostly_gibus_spy.mdl"
+			}
+			"drop_type"	"drop"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"sniper"	"1"
+				"soldier"	"1"
+				"demoman"	"1"
+				"medic"	"1"
+				"heavy"	"1"
+				"spy" "1"
+				"engineer" "1"
+				"pyro" "1"
+			}
+			"attributes"
+			{
+				"cannot trade"
+				{
+					"attribute_class"	"cannot_trade"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
 		"572"
 		{
@@ -19098,9 +19168,9 @@
 				"can_deal_critical_damage"	"1"
 				"can_deal_long_distance_damage"	"1"
 			}
-			"show_in_armory"	"0"
+			"show_in_armory"	"1"
 			"item_type_name"	"#TF_Weapon_RocketLauncher"
-			"item_name"	"#TF_Weapon_RocketLauncher"
+			"item_name"	"Retrorocket"
 			"item_slot"	"primary"
 			"item_quality"	"unique"
 			"propername"	"1"
@@ -19120,6 +19190,30 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -5"				
+			}
+			"attributes"
+			{
+				"explosion particle override"
+				{
+					"attribute_class"	"explosion_particle_override"
+					"value" "tfc_explosion1"
+				}
+				"blast radius increased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value" "1.25"
+				}
+				"reload time increased DISPLAY"
+				{
+					"attribute_class"	"mult_reload_time_display_only"
+					"value" "1.4"
+				}
+			}
+			"visuals"
+			{
+				"sound_special1" "BaseExplosionEffect_TFC.Sound"
+				"sound_special3" "BaseExplosionEffect_TFC.Sound"
+				"sound_special2" "BaseExplosionEffect_TFC.Sound"
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
@@ -19490,6 +19584,7 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"		"10 0 -7"
+				"override_projectile_type"		"1"
 			}
 		}
 				"9043"
@@ -23330,7 +23425,7 @@
 				"sound_burst"		"Weapon_Machete.MissCrit"
 			}
 		}
-		"3937"
+		"6937"
 		{
 			"name"	"Leek"
 			"item_class"	"saxxy"
@@ -23390,7 +23485,7 @@
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
 		}
-		"3938"
+		"6938"
 		{
 			"name"	"Gohei"
 			"item_class"	"saxxy"
@@ -23473,6 +23568,220 @@
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"6939"
+		{
+			"name"	"Head item base"
+			"first_sale_date"		"2000/01/01"
+			"item_class"			"no_entity"
+			"craft_class"			"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"baseitem"	"1"
+			"item_type_name"	""
+			"item_name"	"No Item"
+			"item_description"	""
+			"item_slot"		"head"
+			"anim_slot"		"FORCE_NOT_USED"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"image_inventory"	"effects/transparent"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"act_as_wearable" "1"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"0"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"soldier" "1"
+				"pyro" "1"
+				"demoman" "1"
+				"heavy" "1"
+				"engineer" "1"
+				"medic" "1"
+				"sniper" "1"
+				"spy" "1"
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"6940"
+		{
+			"name"	"HL2 Frag"
+			"first_sale_date"		"2000/05/01"
+			"item_class"			"tf_weapon_custom_slot3"
+			"craft_class"			"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"baseitem"	"0"
+			"item_type_name"	"Explosive"
+			"item_name"	"Fragmentation Grenade"
+			"item_description"	"Occupies melee slot.
+			Alternate between number keys and \n
+			scroll wheel to select it or your melee."
+			"item_slot"		"head"
+			"anim_slot"		"melee"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"image_inventory"	"backpack/weapons/hl2_frag"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"act_as_wearable" "1"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"0"
+			"used_by_classes"
+			{
+				"soldier" "1"
+				"pyro" "1"
+				"demoman" "1"
+				"heavy" "1"
+				"sniper" "1"
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"31"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"15.0"
+				}
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"1"
+				}
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"	"-1"
+				}
+				"maxammo lfegrenades1 increased"
+				{
+					"attribute_class"	"mult_maxammo_lfegrenades1"
+					"value" "3"
+				}
+				"mod use lfe grenade ammo type"
+				{
+					"attribute_class"	"mod_use_lfegrenade_ammo_type"
+					"value" "1"
+				}
+				//"custom projectile model"
+				//{
+				//	"attribute_class"	"custom_projectile_model"
+				//	"value"				"models/workshop/weapons/c_models/c_quadball/w_quadball_grenade.mdl"
+				//}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"null"
+				"sound_burst"		"null"
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"6941"
+		{
+			"name"	"Airboat Gun"
+			"prefab"	"valve"
+			"first_sale_date"	"2010/09/29"
+			"item_class"	"tf_weapon_minigun"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_mvm_penetration_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+				"can_be_festivized"		"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"#TF_Weapon_Minigun"
+			"item_name"	"Airboat Gun"
+			"item_slot"	"primary"
+			"item_logname"	"handheld_airboat_gun"
+			"item_iconname"	"airboat_gun"
+			"image_inventory"	"backpack/weapons/airboatgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_airboatgun.mdl"
+			"inspect_panel_dist" "88"
+			"attach_to_hands"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"used_by_classes"
+			{
+				"heavy"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -9"
+			}
+			"attributes"
+			{
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value" "2.0"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"0.25"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"	"0"
+				}
+
+			}
+			"visuals"
+			{
+				"sound_reload"	"Weapon_Minifun.Reload"
+				"sound_empty"	"Weapon_Minifun.ClipEmpty"
+				"sound_double_shot"	"NPC_AttackHelicopter.FireGun"
+				"sound_special1"	"NPC_AttackHelicopter.ChargeGun"
+				"sound_special2"	"NPC_AttackHelicopter.ChargeDownGun"
+				"sound_special3"	"Nope"
+				"sound_burst"	"NPC_AttackHelicopter.FireGun"
+				"tracer_effect"	"bullet_ar2_tracer01"
+				"muzzle_flash"	"muzzle_airboatgun_flare"
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
 		}
 		"30570"
 		{
@@ -32917,7 +33226,7 @@
 			"name"	"maxammo lfegrenades1 increased"
 			"attribute_class"	"mult_maxammo_lfegrenades1"
 			"description_string"	"#Attrib_MaxammoPrimary_Increased"
-			"description_format"	"value_is_percentage"
+			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"armory_desc"	"on_wearer"
@@ -32928,7 +33237,7 @@
 			"name"	"maxammo lfegrenades2 increased"
 			"attribute_class"	"mult_maxammo_lfegrenades2"
 			"description_string"	"#Attrib_MaxammoPrimary_Increased"
-			"description_format"	"value_is_percentage"
+			"description_format"	"value_is_additive"
 			"hidden"	"1"
 			"effect_type"	"positive"
 			"armory_desc"	"on_wearer"
@@ -33496,7 +33805,36 @@
 			"description_format"	"value_is_additive"
 			"hidden"	"0"
 			"effect_type"	"neutral"
-		}			
+		}	
+		"42063"
+		{
+			"name"	"cw primary fire punch exponent" //multiplies current punch angle per shot
+			"attribute_class"	"cw_primaryfire_punch_exponent"
+			"description_format"	"value_is_additive"
+			"effect_type"	"neutral"
+			"hidden"	"1"
+			"stored_as_integer"	"0"
+		}
+		"42064"
+		{
+			"name"	"mod use lfe grenade ammo type"
+			"attribute_class"	"mod_use_lfegrenade_ammo_type"
+			"description_string"	"#Attrib_UseMetalAmmoType"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"1"
+		}		
+		"42065"
+		{
+			"name"	"Reload time increased DISPLAY"
+			"attribute_class"	"mult_reload_time_display_only"
+			"description_string"	"#Attrib_ReloadTime_Increased"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
 	}
 	"attribute_controlled_attached_particles"
 	{

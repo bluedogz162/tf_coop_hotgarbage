@@ -12,5 +12,26 @@ d1_trainstation_05
 				wpnprogress "0"
 			} 
 		}
+		create 
+		{
+			classname "filter_activator_class"
+			origin "0 0 0"
+			values 
+			{
+				targetname "stupid"
+				filterclass "npc_headcrab"
+			} 
+		}
+		edit
+		{
+		
+			classname "func_door"
+			targetname "kleiner_teleport_lift_1"
+			values 
+			{
+				dmg "0"
+				filtername "stupid"
+			}
+		}
 	}
 }

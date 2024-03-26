@@ -101,7 +101,7 @@ particles_manifest
 	"file"		"particles/ep1_fx.pcf"
 //hotgarbage, l4d2
 		"file"		"particles/l4d2/weapon_fx_l4d2.pcf"
-		"file"		"particles/test/evil_ass_kleiner_beam.pcf"
+		"file"		"!particles/hotgarbage.pcf"
 //hl2
 	"file"		"!particles/blood_impact_hl2.pcf"
 	"file"		"particles/vehicle.pcf"

@@ -1,0 +1,9 @@
+lfce_devtest
+{
+	player
+	{
+		addcond "6"
+		spawn_sound	"Icicle.TurnToIce"
+	}
+
+}
