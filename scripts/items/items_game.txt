@@ -23639,7 +23639,7 @@
 			"item_description"	"Occupies melee slot.
 			Alternate between number keys and \n
 			scroll wheel to select it or your melee."
-			"item_slot"	"melee"
+			"item_slot"		"head"
 			"anim_slot"		"melee"
 			"item_quality"	"unique"
 			"propername"	"1"
