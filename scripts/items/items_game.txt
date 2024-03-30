@@ -23786,6 +23786,11 @@
 					"attribute_class"	"mult_minigun_spinup_time"
 					"value" "2.5"
 				}
+				"maxammo primary increased"
+		                {
+                		    "attribute_class"    "mult_maxammo_primary"
+		                    "value"            "5"
+                		}
 			}
 			"visuals"
 			{
