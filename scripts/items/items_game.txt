@@ -5140,11 +5140,6 @@
 					"attribute_class"	"provide_on_active"
 					"value" "1"
 				}
-				"reload time increased hidden"
-				{
-					"attribute_class"	"mult_reload_time_hidden"
-					"value"	"1.5"
-				}
 				"disable fancy class select anim"
 				{
 					"attribute_class"	"disable_fancy_class_select_anim"
@@ -12495,6 +12490,11 @@
 					"attribute_class"	"cannot_trade"
 					"value"				"1"
 				}
+				"set item tint RGB"
+				{
+					"attribute_class"	"set_item_tint_rgb"
+					"value"				"50 50 50"
+				}
 			}
 			"visuals"
 			{
@@ -14428,7 +14428,7 @@
 			"show_in_armory"	"0"
 			"item_type_name""Lack of Hat"
 			"item_name"	"No Item"
-			"item_description"	""
+			"item_description"	"NOTE: All hats may have clipping issues with playermodels."
 			"item_slot"	"head"
 			"equip_region"	"hat"
 			"item_quality"	"unique"
@@ -23582,16 +23582,16 @@
 			}
 			"show_in_armory"	"1"
 			"baseitem"	"1"
-			"item_type_name"	""
+			"item_type_name"	"Lack Of Item"
 			"item_name"	"No Item"
-			"item_description"	""
+			"item_description"	"NOTE: All hats may have clipping issues with playermodels."
 			"item_slot"		"head"
 			"anim_slot"		"FORCE_NOT_USED"
 			"item_quality"	"unique"
 			"propername"	"1"
 			"min_ilevel"	"1"
 			"max_ilevel"	"100"
-			"image_inventory"	"effects/transparent"
+			"image_inventory"	"vgui/glyph_close_x"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"act_as_wearable" "1"
@@ -23787,10 +23787,10 @@
 					"value" "2.5"
 				}
 				"maxammo primary increased"
-		                {
-                		    "attribute_class"    "mult_maxammo_primary"
-		                    "value"            "5"
-                		}
+		        {
+					"attribute_class"    "mult_maxammo_primary"
+		            "value"            "5"
+                }
 			}
 			"visuals"
 			{
@@ -23806,6 +23806,122 @@
 			}
 			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
 			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+		}
+		"6942"
+		{
+			"name"	"Head item remove"
+			"first_sale_date"		"2000/01/01"
+			"item_class"			"tf_wearable"
+			"craft_class"			"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"show_in_armory"	"1"
+			"baseitem"	"0"
+			"item_type_name"	"Hat Remover 9000"
+			"item_name"	"Remove Hat(s)"
+			"item_description"	""
+			"item_slot"		"head"
+			"anim_slot"		"FORCE_NOT_USED"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"1"
+			"max_ilevel"	"100"
+			"model_player"	"models/empty.mdl"
+			"image_inventory"	"hud/cart_blocked"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"attach_to_hands"	"1"
+			"attach_to_hands_vm_only"	"0"
+			"used_by_classes"
+			{
+				"scout"	"1"
+				"soldier" "1"
+				"pyro" "1"
+				"demoman" "1"
+				"heavy" "1"
+				"engineer" "1"
+				"medic" "1"
+				"sniper" "1"
+				"spy" "1"
+				"wildcard" "1"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"			"1"
+					"headphones"	"1"
+				}
+			}
+			"mouse_pressed_sound"	"ui/item_pack_pickup.wav"
+			"drop_sound"		"ui/item_pack_drop.wav"
+		}
+		"6943"
+		{
+			"name"	"Suika Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "JAPANESE GOBLIN"
+			"baseitem"	"0"
+			"item_name"	"Ibuki Suika"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by Akari"
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/suika"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/suika/c_demo_arms.mdl"
+			"model_world"	"models/player/suika/demo.mdl"
+			"used_by_classes"
+			{
+				"demoman"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+				"view height multiplier"
+				{
+					"attribute_class"	"view_height_multiplier"
+					"value"		"0.9"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
 		"30570"
 		{
@@ -33868,6 +33984,7 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
+
 	}
 	"attribute_controlled_attached_particles"
 	{
