@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "vgui/custom_portraits/aya"
+	"$translucent" 1
+}

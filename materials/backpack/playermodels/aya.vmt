@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "backpack/playermodels/aya"
+	"$translucent" 1
+}

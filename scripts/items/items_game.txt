@@ -23923,6 +23923,88 @@
 			"mouse_pressed_sound" 	"ui/item_hat_pickup.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"6944"
+		{
+			"name"	"Aya Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "Bird?"
+			"baseitem"	"0"
+			"item_name"	"Aya Shameimaru"
+			"item_description"	"Model ported by Loyalists on GameBanana
+			Original model by たからばこ.
+			Eagle Eye: While crouching, weapons are more accurate."
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/aya"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/player/aya/c_scout_arms.mdl"
+			"model_world"	"models/player/aya/scout.mdl"
+			"used_by_classes"
+			{
+				"scout"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+				"move speed bonus"
+				{
+					"attribute_class"		"mult_player_movespeed"
+					"value"		"1.15"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"-45"
+				}
+				"replace class portrait"
+				{
+					"attribute_class"	"replace_class_portrait"
+					"value"		"custom_portraits/aya"
+				}
+				"air dash count +"
+				{
+					"attribute_class"	"air_dash_count"
+					"value"	"2"
+				}
+				"patient overheal bonus"
+				{
+					"attribute_class"	"mult_patient_overheal_penalty"
+					"value"	"2"
+				}
+				"crouch adds stealth"
+				{
+					"attribute_class"	"mod_addcond_crouched"
+					"value"	"139" //HGF_COND_HALF_SPREAD
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"sound/npc/crow/crow3.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -33984,7 +34066,17 @@
 			"effect_type"	"negative"
 			"stored_as_integer"	"0"
 		}
-
+		"42067"
+		{
+			"name"	"patient overheal bonus"
+			"attribute_class"	"mult_patient_overheal_penalty"
+			"description_string"	"#Attrib_PatientOverheal_Bonus"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
+			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}
 	}
 	"attribute_controlled_attached_particles"
 	{
