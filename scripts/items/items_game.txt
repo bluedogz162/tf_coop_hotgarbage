@@ -24005,6 +24005,160 @@
 			"mouse_pressed_sound" 	"sound/npc/crow/crow3.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"6945"
+		{
+			"name"	"Aqua's Staff"
+			"item_class"	"saxxy"
+			"prefab"	"weapon_melee_allclass"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"			"1"
+				"can_deal_critical_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+			}
+			"item_logname"	"aquastaff"
+			"item_iconname"	"skull"
+			"show_in_armory"	"1"
+			"item_class"		"tf_weapon_bonesaw"
+			"item_type_name"	"Magical Implement"
+			"item_name"	"Aqua's Staff"
+			"item_description" "Model port by Litronom
+			Just a reskin of the Ubersaw for now."
+			"item_slot"	"melee"
+			"anim_slot"	"melee_allclass"
+			"image_inventory"	"backpack/weapons/aquastaff"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_aqua_staff.mdl"
+			"attach_to_hands"	"1"
+			"inspect_panel_dist" "40"
+			"item_quality"	"unique"
+			"propername"	"1"
+			"min_ilevel"	"5"
+			"max_ilevel"	"5"
+			"xifier_class_remap"	"Frying Pan"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -7"
+			}
+			"attributes"
+			{
+				"add uber charge on hit red"
+				{
+					"attribute_class"	"add_onhit_ubercharge_red"
+					"value"	"0.25"
+				}
+				"add uber charge on hit blu"
+				{
+					"attribute_class"	"add_onhit_ubercharge_blu"
+					"value"	"0.20"
+				}
+				"add uber charge on hit grn"
+				{
+					"attribute_class"	"add_onhit_ubercharge_grn"
+					"value"	"0.15"
+				}
+				"add uber charge on hit ylw"
+				{
+					"attribute_class"	"add_onhit_ubercharge_ylw"
+					"value"	"0.15"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"	"1.2"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"	"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value" "1"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
+			"drop_sound"		"ui/item_metal_weapon_drop.wav"
+		}
+		"6946"
+		{
+			"name"	"Aqua Playermodel"
+			"prefab"		"base_hat"
+			"hidden"	"0"
+			"item_class"	"tf_wearable"
+			"capabilities"
+			{
+				"paintable"		"1"
+				"nameable"		"1"
+			}
+			"loadondemand" "1"
+			"show_in_armory"	"1"
+			"item_type_name" "The Blue Thing"
+			"baseitem"	"0"
+			"item_name"	"Aqua"
+			"item_description"	"Model ported by Litronom."
+			"item_slot"	"misc2"
+			"anim_slot"	"FORCE_NOT_USED"
+			"equip_region"	"hat"
+			"attach_to_hands"	"0"
+			"attach_to_hands_vm_only"	"1"
+			"item_quality"	"unique"
+			"min_ilevel"	"10"
+			"max_ilevel"	"10"
+			"image_inventory"	"backpack/playermodels/aqua"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"drop_type"	"drop"
+			"model_player"	"models/custom/player/a_arms/a_arms1_engineer.mdl"
+			"model_world"	"models/custom/player/aqua/aqua.mdl"
+			"used_by_classes"
+			{
+				"medic"	"1"
+			}
+			"attributes"
+			{
+				"voice pitch scale"
+				{
+					"attribute_class"		"voice_pitch_scale"
+					"value"		"0"
+				}
+				"move speed bonus"
+				{
+					"attribute_class"		"mult_player_movespeed"
+					"value"		"0.90"
+				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"		"25"
+				}
+				"health regen"
+				{
+					"attribute_class"	"add_health_regen"
+					"value"	"2"
+				}
+			}
+			"visuals"
+			{
+
+			}
+			"mouse_pressed_sound" 	"sound/npc/crow/crow3.wav"
+			"drop_sound" 			"ui/item_hat_drop.wav"
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
