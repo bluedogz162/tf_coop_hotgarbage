@@ -1,0 +1,5 @@
+"SpriteCard"
+{
+	"$basetexture" "effects/hotelmario"
+	"$alphatest" 1
+}

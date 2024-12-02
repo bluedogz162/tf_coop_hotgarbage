@@ -23730,6 +23730,100 @@
 			"mouse_pressed_sound" 	"sound/npc/crow/crow3.wav"
 			"drop_sound" 			"ui/item_hat_drop.wav"
 		}
+		"6947"
+		{
+			"name"	"The Test Weapon"
+			"first_sale_date"	"2011/03/23"
+			"item_class"	"tf_weapon_rocketlauncher"
+			"craft_class"	"weapon"
+			"craft_material_type"	"weapon"
+			"capabilities"
+			{
+				"nameable"		"1"
+				"can_craft_count"	"1"
+			}
+			"tags"
+			{
+				"can_deal_damage"		"1"
+				"can_deal_gib_damage"	"1"
+				"can_be_equipped_by_soldier_or_demo"	"1"
+				"can_deal_posthumous_damage"	"1"
+				"can_deal_critical_damage"	"1"
+				"can_deal_long_distance_damage"	"1"
+			}
+			"show_in_armory"	"1"
+			"item_type_name"	"Y.T.P.-grade Weapon"
+			"item_name"	"Dinner Blaster MK. 9001"
+			"item_description"	"ChatYTP uses a large-dinner model....."
+			"item_slot"	"primary"
+			"item_quality"	"unique"
+			"item_logname"	"DINNER BLASTER"
+			"item_iconname"	"dinnerblaster"
+			"propername"	"1"
+			"min_ilevel"	"25"
+			"max_ilevel"	"25"
+			"inspect_panel_dist" "68"
+			"image_inventory"	"backpack/weapons/dinnerblaster"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"	"models/weapons/c_models/c_dinnerblaster/c_dinnerblaster.mdl"
+			"attach_to_hands" "1"
+			"used_by_classes"
+			{
+				"soldier"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 -3 -10"				
+			}
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"		"ui/item_heavy_gun_drop.wav"
+			"attributes"
+			{
+				"explosion particle override"
+				{
+					"attribute_class"	"explosion_particle_override"
+					"value" "muzzle_bignasty"
+				}
+				"clip size bonus"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"	"1.5"
+				}
+				"blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value" "0.33"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_ytprocket3.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"	"Weapon_YouTubePoop.Single"
+				"sound_burst" "Weapon_YouTubePoop.Single"
+				"sound_special1"		"Weapon_Airstrike.Explosion"
+				"animation_replacement"{
+					"ACT_VM_RELOAD"	"ACT_PRIMARY_VM_RELOAD_2"
+					"ACT_RELOAD_START"	"ACT_PRIMARY_RELOAD_START_2"
+					"ACT_RELOAD_FINISH"	"ACT_PRIMARY_RELOAD_FINISH_2"
+					"ACT_MP_RELOAD_STAND"	"ACT_MP_RELOAD_STAND_PRIMARY_2"
+					"ACT_MP_RELOAD_STAND_LOOP"	"ACT_MP_RELOAD_STAND_PRIMARY_2"
+					"ACT_MP_RELOAD_STAND_END"	"ACT_MP_RELOAD_STAND_PRIMARY_END_2"
+					"ACT_MP_RELOAD_CROUCH"	"ACT_MP_RELOAD_CROUCH_PRIMARY_2"
+					"ACT_MP_RELOAD_CROUCH_END"	"ACT_MP_RELOAD_CROUCH_PRIMARY_END_2"
+					"ACT_MP_RELOAD_CROUCH_LOOP"	"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP_2"
+					"ACT_MP_RELOAD_AIRWALK"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_2"
+					"ACT_MP_RELOAD_AIRWALK_END"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_END_2"
+					"ACT_MP_RELOAD_AIRWALK_LOOP"	"ACT_MP_RELOAD_AIRWALK_PRIMARY_LOOP_2"
+				
+				}
+				"muzzle_flash"		"muzzle_bignasty"
+			}
+		}
 		"30570"
 		{
 			"name"		"Pool Party Taunt"
@@ -33800,6 +33894,16 @@
 			"hidden"	"0"
 			"effect_type"	"positive"
 			"armory_desc"	"on_wearer"
+			"stored_as_integer"	"0"
+		}
+		"42068"
+		{
+			"name"	"clip size bonus DISPLAY ONLY"
+			"attribute_class"	"mult_clipsize_DISPLAY"
+			"description_string"	"#Attrib_ClipSize_Positive"
+			"description_format"	"value_is_percentage"
+			"hidden"	"0"
+			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
 	}

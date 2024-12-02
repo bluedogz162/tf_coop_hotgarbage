@@ -360,3 +360,15 @@
 	"wave"			"weapons/usp/usp_slideback2.wav"
 	
 }
+"Weapon_YouTubePoop.Single"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"  	"SNDLVL_GUNFIRE"
+	"pitch"		"100"
+
+	"rndwave"
+	{
+		"wave"	")shitty/ytp_single.wav"
+	}
+}

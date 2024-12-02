@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "effects/green"
+	"$translucent" 1
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+}

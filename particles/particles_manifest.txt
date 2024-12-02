@@ -158,4 +158,5 @@ particles_manifest
 	"file"		"particles/grenade_fx.pcf"
 	"file"		"particles/rocket_fx.pcf"
 	"file"		"particles/ge_muzzle_fx.pcf"
+	"file"		"particles/shitty.pcf"
 }

@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/c_dinnerblaster/plaque"
+	"$translucent" 1
+	"$model" 1
+	"$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+}
